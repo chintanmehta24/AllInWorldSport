@@ -7466,8 +7466,7 @@ body.x-desktop {
 
 @font-face {
   font-family: "OpenSansBold";
-  src: url('/stylesheets/fonts/truetype');
-  src: url('/stylesheets/fonts/truetype?#iefix') format('eot'), "../fonts/OpenSans-ExtraBold.ttf";
+  src: "../fonts/OpenSans-ExtraBold.ttf";
 }
 
 /* line 12, ../sass/app.scss */
@@ -7512,50 +7511,95 @@ body.x-desktop {
   background-image: url("../images/login_background.jpg");
   background-position: center;
   background-size: cover;
+  /*
+    @media screen and (max-width:420px){
+      .twitter-facebook-btn-cls{
+        .x-horizontal.x-layout-box{
+          @include st-box-orient(vertical, important);
+          @include st-box-align(center);
+          @include st-box-pack(center);
+          .twitter-btn-cls, .facebook-btn-cls{
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 1em;
+          }
+        }
+      }
+    }
+  */
 }
-/* line 37, ../sass/app.scss */
+/* line 34, ../sass/app.scss */
 .login-cls.x-form .x-scroll-container {
   background-color: transparent;
 }
-/* line 39, ../sass/app.scss */
+/* line 36, ../sass/app.scss */
 .login-cls.x-form .x-scroll-container .x-form-inner {
   padding: 1em;
 }
-/* line 43, ../sass/app.scss */
+/* line 40, ../sass/app.scss */
 .login-cls.x-form .logo-cls {
   height: 9em;
   background-color: transparent;
   margin-bottom: 1em;
 }
-/* line 48, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 .login-cls.x-form .field-cls.x-field {
   min-height: 2em;
   margin-bottom: 1em;
 }
-/* line 51, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 .login-cls.x-form .field-cls.x-field .x-form-field {
+  -webkit-box-shadow: 1px 1px 0px 1px #888888;
+  -moz-box-shadow: 1px 1px 0px 1px #888888;
+  box-shadow: 1px 1px 0px 1px #888888;
   min-height: 2em;
   padding: 0.2em 0.75em;
   -webkit-text-fill-color: black;
 }
-/* line 57, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .login-cls.x-form .separator-cls {
   height: 0;
-  margin: 0.75em 0;
-  border: 2px solid #d3252e;
+  margin: 1.5em 0;
+  border: 0.125em solid #d3252e;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
-/* line 62, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
+.login-cls.x-form .separator-cls .x-innerhtml {
+  background-color: #d3252e;
+  background-none: none;
+  color: white;
+  width: 2em;
+  line-height: 2;
+  margin-top: -1em;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 73, ../sass/app.scss */
 .login-cls.x-form .forgot-btn-cls {
   height: 1.5em;
 }
-/* line 64, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 .login-cls.x-form .forgot-btn-cls .x-button-label, .login-cls.x-form .forgot-btn-cls .x-badge {
   text-align: left;
   font-weight: normal;
   text-decoration: underline;
   font-size: 0.9em;
 }
-/* line 71, ../sass/app.scss */
+/* line 82, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls {
   padding: 0.5em 2em;
   -webkit-border-radius: 2em;
@@ -7567,11 +7611,11 @@ body.x-desktop {
   background-color: #d3252e;
   border: 0;
 }
-/* line 76, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls .x-button-label, .login-cls.x-form .login-btn-cls .x-badge {
   color: white;
 }
-/* line 79, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -7580,7 +7624,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 83, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 .login-cls.x-form .login-info {
   font-family: OpenSansBold;
   font-size: 0.75em;
@@ -7588,7 +7632,7 @@ body.x-desktop {
   text-align: center;
   margin-bottom: 1em;
 }
-/* line 90, ../sass/app.scss */
+/* line 119, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls, .login-cls.x-form .facebook-btn-cls {
   border: 0;
   -webkit-border-radius: 0.25em;
@@ -7596,51 +7640,37 @@ body.x-desktop {
   -ms-border-radius: 0.25em;
   -o-border-radius: 0.25em;
   border-radius: 0.25em;
-  background-image: none;
   padding: 0;
-  min-width: 10em;
+  min-width: 7.71875em;
+  max-width: 7.71875em;
+  width: 7.71875em;
+  height: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* line 96, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls .x-button-label, .login-cls.x-form .twitter-btn-cls .x-badge, .login-cls.x-form .facebook-btn-cls .x-button-label, .login-cls.x-form .facebook-btn-cls .x-badge {
-  color: white;
-  line-height: 2.5em;
+  visibility: hidden;
 }
-/* line 100, ../sass/app.scss */
-.login-cls.x-form .twitter-btn-cls .x-button-icon, .login-cls.x-form .facebook-btn-cls .x-button-icon {
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 2.5em;
-  width: 2.5em;
+/* line 133, ../sass/app.scss */
+.login-cls.x-form .twitter-btn-cls.x-button-pressing, .login-cls.x-form .facebook-btn-cls.x-button-pressing {
+  opacity: 0.90;
 }
-/* line 109, ../sass/app.scss */
+/* line 137, ../sass/app.scss */
 .login-cls.x-form .facebook-btn-cls {
+  background-image: url("../images/facebook.png");
   background-color: #3258ad;
   margin-right: 0.5em;
 }
-/* line 115, ../sass/app.scss */
-.login-cls.x-form .facebook-btn-cls.x-button-pressing {
-  background-image: none;
-  background-color: #3258ad;
-  background-image: -webkit-linear-gradient(top, #274485, #2c4e99 10%, #3258ad 65%, #3359af);
-  background-image: -moz-linear-gradient(top, #274485, #2c4e99 10%, #3258ad 65%, #3359af);
-  background-image: -o-linear-gradient(top, #274485, #2c4e99 10%, #3258ad 65%, #3359af);
-  background-image: linear-gradient(top, #274485, #2c4e99 10%, #3258ad 65%, #3359af);
-}
-/* line 119, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls {
-  background-color: #00acec;
   margin-left: 0.5em;
-}
-/* line 125, ../sass/app.scss */
-.login-cls.x-form .twitter-btn-cls.x-button-pressing {
-  background-image: none;
   background-color: #00acec;
-  background-image: -webkit-linear-gradient(top, #0087b9, #0099d3 10%, #00acec 65%, #00aeef);
-  background-image: -moz-linear-gradient(top, #0087b9, #0099d3 10%, #00acec 65%, #00aeef);
-  background-image: -o-linear-gradient(top, #0087b9, #0099d3 10%, #00acec 65%, #00aeef);
-  background-image: linear-gradient(top, #0087b9, #0099d3 10%, #00acec 65%, #00aeef);
+  background-image: url("../images/twitter.png");
 }
 
-/* line 132, ../sass/app.scss */
+/* line 150, ../sass/app.scss */
 .dashboard-cls .dashboard-btn-cls.x-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

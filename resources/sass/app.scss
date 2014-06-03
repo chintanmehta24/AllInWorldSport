@@ -7,7 +7,7 @@ $base-color: #333;
 @import 'sencha-touch/default/all';
 
 // @include icon('user');
-@include font-face("OpenSansBold", "../fonts/OpenSans-ExtraBold.ttf", truetype);
+@include font-face("OpenSansBold", "../fonts/OpenSans-ExtraBold.ttf");
 
 .navigation-cls.x-dataview{
   width: 320px;
@@ -31,9 +31,6 @@ $base-color: #333;
   background-image: url("../images/login_background.jpg");
   background-position: center;
   background-size: cover;
-  // .top-toolbar-cls{
-    // border-bottom: 4px solid rgba(251, 224, 23, 1);
-  // }
   .x-scroll-container{
     background-color: transparent;
     .x-form-inner{
@@ -49,6 +46,7 @@ $base-color: #333;
     min-height:2em;
     margin-bottom: 1em;
     .x-form-field {
+      @include box-shadow(1px 1px 0px 1px #888);
       min-height:2em;
       padding: 0.2em 0.75em;
       -webkit-text-fill-color: black;
@@ -56,8 +54,21 @@ $base-color: #333;
   }
   .separator-cls{
     height: 0;
-    margin:0.75em 0;
-    border: 2px solid rgba(211,37,46,1);
+    margin:1.5em 0;
+    border: 0.125em solid rgba(211,37,46,1);
+    @include st-box-align(center);
+    @include st-box-pack(center);
+    .x-innerhtml{
+      background-color: rgba(211,37,46,1);
+      background-none: none;
+      color:  white;
+      width: 2em;
+      line-height: 2;
+      margin-top: -1em;
+      @include st-box();
+      @include st-box-pack(center);
+      @include border-radius(50%);
+    }
   }
   .forgot-btn-cls{
     height: 1.5em;
@@ -87,44 +98,51 @@ $base-color: #333;
       text-align: center;
       margin-bottom: 1em;
   }
+/*
+  @media screen and (max-width:420px){
+    .twitter-facebook-btn-cls{
+      .x-horizontal.x-layout-box{
+        @include st-box-orient(vertical, important);
+        @include st-box-align(center);
+        @include st-box-pack(center);
+        .twitter-btn-cls, .facebook-btn-cls{
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+*/
+  $share-btn-height: 2em;
+  $share-btn-width: (3.859375 * $share-btn-height);
   .twitter-btn-cls, .facebook-btn-cls{
     border: 0;
     @include border-radius(0.25em);
-    background-image: none;
     padding: 0;
-    min-width:10em;
+    min-width: $share-btn-width;
+    max-width: $share-btn-width;
+    width: $share-btn-width;
+    height: $share-btn-height;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     .x-button-label{
-      color: white;
-      line-height: 2.5em;
-    }
-    .x-button-icon{
-      background-color: rgba(255, 255, 255, 0.1);
-      height: 2.5em;
-      width: 2.5em;
-    }
-  }
-  $fb-color: rgba(50, 88, 173, 1);
-  $twitter-color: rgba(0, 172, 236, 1);
-
-  .facebook-btn-cls{
-    background-color: $fb-color;
-    margin-right: 0.5em;
-    .x-button-icon{
-      
+      visibility: hidden;
     }
     &.x-button-pressing{
-      @include background-gradient($fb-color, recessed);
+      opacity: 0.90;
     }
+  }
+  .facebook-btn-cls{
+    background-image: url("../images/facebook.png");
+    background-color: rgba(50, 88, 173, 1);
+    margin-right: 0.5em;
   }
   .twitter-btn-cls{
-    background-color: $twitter-color;
     margin-left: 0.5em;
-    .x-button-icon{
-      
-    }
-    &.x-button-pressing{
-      @include background-gradient($twitter-color, recessed);
-    }
+    background-color: rgba(0, 172, 236, 1);
+    background-image: url("../images/twitter.png");
   }
 }
 

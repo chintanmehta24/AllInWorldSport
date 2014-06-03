@@ -14,7 +14,10 @@ Ext.application({
     name: 'AllInOneWorldSport',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+        'Ext.field.Password',
+        'Ext.field.Email',
+        'Ext.Img'
     ],
     
     controllers: [
@@ -23,7 +26,9 @@ Ext.application({
 
     views: [
         'Main',
-        'Navigation'
+        'Login',
+        'Navigation',
+        'Dashboard'
     ],
 
     icon: {
@@ -49,6 +54,8 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
+        Ext.Viewport.add(Ext.create("AllInOneWorldSport.view.Login"));
+/*
         Ext.Viewport.add(Ext.create('AllInOneWorldSport.view.Main'));
         Ext.Viewport.add({
             xtype: "navigation",
@@ -56,6 +63,8 @@ Ext.application({
             bottom: 0,
             right: "100%"
         });
+*/
+        
     },
 
     onUpdated: function() {

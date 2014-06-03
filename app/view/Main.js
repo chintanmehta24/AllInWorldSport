@@ -20,12 +20,11 @@ Ext.define('AllInOneWorldSport.view.Main', {
             {
                 title: 'Dashboard',
                 iconCls: 'home',
-
-                html: [
-                    "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
-                    "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
-                    "and refresh to change what's rendered here."
-                ].join("")
+                xtype: "panel",
+                layout: "card",
+                items: [{
+                	xtype: "dashboard"
+                }]
             },
             {
                 title: "New Bet",

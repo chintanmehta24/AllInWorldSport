@@ -7,6 +7,7 @@ $base-color: #333;
 @import 'sencha-touch/default/all';
 
 // @include icon('user');
+@include font-face("OpenSansBold", "../fonts/OpenSans-ExtraBold.ttf", truetype);
 
 .navigation-cls.x-dataview{
   width: 320px;
@@ -22,5 +23,115 @@ $base-color: #333;
     &.x-item-selected{
       @include background-gradient(lighten($base-color, 15%), "recessed");
     }
+  }
+}
+
+.login-cls.x-form{
+  background-color: transparent;
+  background-image: url("../images/login_background.jpg");
+  background-position: center;
+  background-size: cover;
+  // .top-toolbar-cls{
+    // border-bottom: 4px solid rgba(251, 224, 23, 1);
+  // }
+  .x-scroll-container{
+    background-color: transparent;
+    .x-form-inner{
+      padding: 1em;
+    }
+  }
+  .logo-cls{
+    height: 9em;
+    background-color: transparent;
+    margin-bottom: 1em;
+  }
+  .field-cls.x-field{
+    min-height:2em;
+    margin-bottom: 1em;
+    .x-form-field {
+      min-height:2em;
+      padding: 0.2em 0.75em;
+      -webkit-text-fill-color: black;
+    }
+  }
+  .separator-cls{
+    height: 0;
+    margin:0.75em 0;
+    border: 2px solid rgba(211,37,46,1);
+  }
+  .forgot-btn-cls{
+    height: 1.5em;
+    .x-button-label{
+      text-align: left;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 0.9em;
+    }
+  }
+  .login-btn-cls{
+    padding: 0.5em 2em;
+    @include border-radius(2em);
+    @include background-gradient(rgba(211,37,46,1), plain);
+    border: 0;
+    .x-button-label{
+      color: white;
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(211,37,46,1), recessed);
+    }
+  }
+  .login-info{
+      font-family: OpenSansBold;
+      font-size: 0.75em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1em;
+  }
+  .twitter-btn-cls, .facebook-btn-cls{
+    border: 0;
+    @include border-radius(0.25em);
+    background-image: none;
+    padding: 0;
+    min-width:10em;
+    .x-button-label{
+      color: white;
+      line-height: 2.5em;
+    }
+    .x-button-icon{
+      background-color: rgba(255, 255, 255, 0.1);
+      height: 2.5em;
+      width: 2.5em;
+    }
+  }
+  $fb-color: rgba(50, 88, 173, 1);
+  $twitter-color: rgba(0, 172, 236, 1);
+
+  .facebook-btn-cls{
+    background-color: $fb-color;
+    margin-right: 0.5em;
+    .x-button-icon{
+      
+    }
+    &.x-button-pressing{
+      @include background-gradient($fb-color, recessed);
+    }
+  }
+  .twitter-btn-cls{
+    background-color: $twitter-color;
+    margin-left: 0.5em;
+    .x-button-icon{
+      
+    }
+    &.x-button-pressing{
+      @include background-gradient($twitter-color, recessed);
+    }
+  }
+}
+
+.dashboard-cls{
+  .dashboard-btn-cls.x-button{
+      @include border-radius(0);
+      border:0;
+      margin: 0.35em;
   }
 }

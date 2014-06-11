@@ -14,17 +14,35 @@ Ext.define("AllInOneWorldSport.view.Login", {
 		}, {
 			xtype : "textfield",
 			hidden: true,
-			name : "name",
-			placeHolder : "Name",
+			name : "DisplayName",
+			placeHolder : "Display Name",
+			cls : "field-cls"
+		}, {
+			xtype : "textfield",
+			hidden: true,
+			name : "FirstName",
+			placeHolder : "First Name",
+			cls : "field-cls"
+		}, {
+			xtype : "textfield",
+			hidden: true,
+			name : "LastName",
+			placeHolder : "Last Name",
 			cls : "field-cls"
 		}, {
 			xtype : "emailfield",
-			name : "username",
+			hidden: true,
+			name : "EmailAddress",
+			placeHolder : "Email Address",
+			cls : "field-cls"
+		}, {
+			xtype : "emailfield",
+			name : "LoginName",
 			placeHolder : "User Name",
 			cls : "field-cls"
 		}, {
 			xtype : "passwordfield",
-			name : "password",
+			name : "Password",
 			placeHolder : "Password",
 			cls : "field-cls"
 		}, {
@@ -53,7 +71,8 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			}, {
 				xtype : "button",
 				cls : "login-btn-cls",
-				text : "LOGIN"
+				text : "LOGIN",
+				action: "doLogin"
 			}]
 		}, {
 			xtype : "container",
@@ -80,16 +99,17 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			}, {
 				xtype : "button",
 				cls : "login-btn-cls",
-				text : "REGISTER"
+				text : "REGISTER",
+				action: "doRegister"
 			}]
 		}, {
 			xtype : "label",
 			cls : "separator-cls",
-			html : "Or"
+			html : "OR"
 		}, {
 			xtype : "label",
 			cls : "login-info",
-			html : "LOGIN USING YOUR FACEBOOK OR TWITTER ACCOUNT"
+			html : "REGISTER USING YOUR FACEBOOK OR TWITTER ACCOUNT"
 		}, {
 			xtype : "container",
 			layout : {
@@ -122,15 +142,26 @@ Ext.define("AllInOneWorldSport.view.Login", {
 		var me = this,
 			loginContainer = me.down("#loginBtnContainer"),
 			registerContainer = me.down("#registerBtnContainer"),
-			nameField = me.down("textfield[name=name]");
+			DisplayName = me.down("textfield[name=DisplayName]"),
+			FirstName = me.down("textfield[name=FirstName]"),
+			LastName = me.down("textfield[name=LastName]"),
+			EmailAddress = me.down("emailfield[name=EmailAddress]");
 		if(loginContainer.isHidden()){
 			loginContainer.show();
-			nameField.hide();
 			registerContainer.hide();
+
+			DisplayName.hide();
+			FirstName.hide();
+			LastName.hide();
+			EmailAddress.hide();
 		}else{
 			loginContainer.hide();
-			nameField.show();
 			registerContainer.show();
+
+			DisplayName.show();
+			FirstName.show();
+			LastName.show();
+			EmailAddress.show();
 		}
 	}
 });

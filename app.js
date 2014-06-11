@@ -17,7 +17,9 @@ Ext.application({
         'Ext.MessageBox',
         'Ext.field.Password',
         'Ext.field.Email',
-        'Ext.Img'
+        'Ext.Img',
+        'Ext.Label',
+        'AllInOneWorldSport.Global'
     ],
     
     controllers: [

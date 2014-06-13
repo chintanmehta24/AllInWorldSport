@@ -23,14 +23,16 @@ Ext.application({
     ],
     
     controllers: [
-        "Main"
+        "Main",
+        "MainMenu"
     ],
 
     views: [
         'Main',
         'Login',
         'Navigation',
-        'Dashboard'
+        'Dashboard',
+        'MainMenu'
     ],
 
     icon: {
@@ -56,7 +58,13 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create("AllInOneWorldSport.view.Login"));
+        var login = Ext.create("AllInOneWorldSport.view.Login");
+        Ext.Viewport.add({
+        	xtype: "panel",
+        	layout: "card",
+        	itemId: "mainviewport",
+        	items:[login]
+        });
 /*
         Ext.Viewport.add(Ext.create('AllInOneWorldSport.view.Main'));
         Ext.Viewport.add({

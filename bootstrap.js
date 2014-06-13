@@ -49,7 +49,12 @@ Ext.Loader.addClassPathMappings({
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
+  "AllInOneWorldSport.Global": [],
+  "AllInOneWorldSport.controller.Main": [],
+  "AllInOneWorldSport.view.Dashboard": [],
+  "AllInOneWorldSport.view.Login": [],
   "AllInOneWorldSport.view.Main": [],
+  "AllInOneWorldSport.view.Navigation": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -775,8 +780,19 @@ Ext.ClassManager.addNameAlternateMappings({
   ]
 });
 Ext.ClassManager.addNameAliasMappings({
+  "AllInOneWorldSport.Global": [],
+  "AllInOneWorldSport.controller.Main": [],
+  "AllInOneWorldSport.view.Dashboard": [
+    "widget.dashboard"
+  ],
+  "AllInOneWorldSport.view.Login": [
+    "widget.login"
+  ],
   "AllInOneWorldSport.view.Main": [
     "widget.main"
+  ],
+  "AllInOneWorldSport.view.Navigation": [
+    "widget.navigation"
   ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],

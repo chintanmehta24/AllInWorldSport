@@ -7538,7 +7538,7 @@ body.x-desktop {
 }
 /* line 40, ../sass/app.scss */
 .login-cls.x-form .logo-cls {
-  height: 9em;
+  height: 11em;
   background-color: transparent;
   margin-bottom: 1em;
 }
@@ -7559,8 +7559,9 @@ body.x-desktop {
 /* line 55, ../sass/app.scss */
 .login-cls.x-form .separator-cls {
   height: 0;
+  font-weight: bold;
   margin: 1.5em 0;
-  border: 0.125em solid #d3252e;
+  border: 0.1em solid #d3252e;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -7568,7 +7569,7 @@ body.x-desktop {
   -ms-flex-pack: center;
   justify-content: center;
 }
-/* line 61, ../sass/app.scss */
+/* line 62, ../sass/app.scss */
 .login-cls.x-form .separator-cls .x-innerhtml {
   background-color: #d3252e;
   background-none: none;
@@ -7588,18 +7589,18 @@ body.x-desktop {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 73, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .login-cls.x-form .forgot-btn-cls {
   height: 1.5em;
 }
-/* line 75, ../sass/app.scss */
+/* line 76, ../sass/app.scss */
 .login-cls.x-form .forgot-btn-cls .x-button-label, .login-cls.x-form .forgot-btn-cls .x-badge {
   text-align: left;
   font-weight: normal;
   text-decoration: underline;
   font-size: 0.9em;
 }
-/* line 82, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls {
   padding: 0.5em 2em;
   -webkit-border-radius: 2em;
@@ -7611,11 +7612,11 @@ body.x-desktop {
   background-color: #d3252e;
   border: 0;
 }
-/* line 87, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls .x-button-label, .login-cls.x-form .login-btn-cls .x-badge {
   color: white;
 }
-/* line 90, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 .login-cls.x-form .login-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -7624,7 +7625,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 94, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .login-cls.x-form .login-info {
   font-family: OpenSansBold;
   font-size: 0.75em;
@@ -7632,7 +7633,7 @@ body.x-desktop {
   text-align: center;
   margin-bottom: 1em;
 }
-/* line 119, ../sass/app.scss */
+/* line 120, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls, .login-cls.x-form .facebook-btn-cls {
   border: 0;
   -webkit-border-radius: 0.25em;
@@ -7649,28 +7650,28 @@ body.x-desktop {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 130, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls .x-button-label, .login-cls.x-form .twitter-btn-cls .x-badge, .login-cls.x-form .facebook-btn-cls .x-button-label, .login-cls.x-form .facebook-btn-cls .x-badge {
   visibility: hidden;
 }
-/* line 133, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls.x-button-pressing, .login-cls.x-form .facebook-btn-cls.x-button-pressing {
   opacity: 0.90;
 }
-/* line 137, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 .login-cls.x-form .facebook-btn-cls {
   background-image: url("../images/facebook.png");
-  background-color: #3258ad;
+  /*background-color: rgba(50, 88, 173, 1);*/
   margin-right: 0.5em;
 }
-/* line 142, ../sass/app.scss */
+/* line 143, ../sass/app.scss */
 .login-cls.x-form .twitter-btn-cls {
   margin-left: 0.5em;
-  background-color: #00acec;
+  /*background-color: rgba(0, 172, 236, 1);*/
   background-image: url("../images/twitter.png");
 }
 
-/* line 150, ../sass/app.scss */
+/* line 151, ../sass/app.scss */
 .dashboard-cls .dashboard-btn-cls.x-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

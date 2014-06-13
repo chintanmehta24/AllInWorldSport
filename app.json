@@ -40,6 +40,9 @@
      */
     "js": [
         {
+            "path": "cordova.js"
+        },
+        {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
         },

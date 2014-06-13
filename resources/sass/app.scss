@@ -38,7 +38,7 @@ $base-color: #333;
     }
   }
   .logo-cls{
-    height: 9em;
+    height: 11em;
     background-color: transparent;
     margin-bottom: 1em;
   }
@@ -54,8 +54,9 @@ $base-color: #333;
   }
   .separator-cls{
     height: 0;
+    font-weight: bold;
     margin:1.5em 0;
-    border: 0.125em solid rgba(211,37,46,1);
+    border: 0.1em solid rgba(211,37,46,1);
     @include st-box-align(center);
     @include st-box-pack(center);
     .x-innerhtml{
@@ -136,12 +137,12 @@ $base-color: #333;
   }
   .facebook-btn-cls{
     background-image: url("../images/facebook.png");
-    background-color: rgba(50, 88, 173, 1);
+    /*background-color: rgba(50, 88, 173, 1);*/
     margin-right: 0.5em;
   }
   .twitter-btn-cls{
     margin-left: 0.5em;
-    background-color: rgba(0, 172, 236, 1);
+    /*background-color: rgba(0, 172, 236, 1);*/
     background-image: url("../images/twitter.png");
   }
 }
@@ -152,4 +153,7 @@ $base-color: #333;
       border:0;
       margin: 0.35em;
   }
+}
+.main-menu-cls{
+  
 }

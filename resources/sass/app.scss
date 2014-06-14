@@ -202,5 +202,91 @@ $base-color: #333;
 }
 
 .games-list-cls{
-  
+  background-color: transparent;
+  background-image: url("../images/gamesevent_background.jpg");
+  background-size: cover;
+  background-position: center;  
+  .search-field-cls{
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0,0.2);
+      background-image: none;
+      .x-form-label{
+          background-color: transparent;
+          background-image: none;
+          color: white;
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          line-height: 2;
+      }
+      .x-field-input{
+        &:before{
+          top: 0.5em;
+          right: 0.5em;
+          left: auto;
+        }
+      }
+      .x-input-el {
+        margin-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 2em;
+      }
+  }
+  .game-event-cls{
+    padding: 0.5em;
+    margin: 0 0.25em 0.25em;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    .headerdetail, .participats{
+      @include st-box();
+      @include st-box-orient(horizontal);
+      > div{
+        width: 0 !important;
+        @include st-box-flex(1);
+      }
+    }
+    .headerdetail{
+        font-size: 0.75em;
+        line-height:2;
+        &:first-child{
+          
+        }
+        &:last-child{
+          text-align: right;
+        }
+    }
+    .participats{
+        font-size: 1.125em;
+        @include st-box();
+        .thumb{
+          background-color: white;
+          width: 2em;
+          height: 2em;
+          @include border-radius(2em);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          position:absolute;
+          top: 0;
+          right: 0;
+        }
+        > div{
+          position:relative;
+          &:first-child{
+            text-align: right;
+            margin-right: 0.5em;
+            padding-right: 2.5em;
+          }
+          &:last-child{
+            margin-left: 0.5em;
+            padding-left: 2.5em;
+            .thumb{
+              right: auto;
+              left: 0;
+            }
+          }
+        }
+    }
+  }
 }

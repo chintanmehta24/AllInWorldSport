@@ -20,7 +20,8 @@ Ext.application({
         'Ext.field.Email',
         'Ext.Img',
         'Ext.Label',
-        'AllInOneWorldSport.Global'
+        'AllInOneWorldSport.Global',
+        'Ext.field.Search'
     ],
     
     controllers: [

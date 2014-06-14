@@ -7755,3 +7755,116 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
   background-image: linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
 }
+
+/* line 204, ../sass/app.scss */
+.games-list-cls {
+  background-color: transparent;
+  background-image: url("../images/gamesevent_background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* line 209, ../sass/app.scss */
+.games-list-cls .search-field-cls {
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: none;
+}
+/* line 213, ../sass/app.scss */
+.games-list-cls .search-field-cls .x-form-label {
+  background-color: transparent;
+  background-image: none;
+  color: white;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 2;
+}
+/* line 223, ../sass/app.scss */
+.games-list-cls .search-field-cls .x-field-input:before {
+  top: 0.5em;
+  right: 0.5em;
+  left: auto;
+}
+/* line 229, ../sass/app.scss */
+.games-list-cls .search-field-cls .x-input-el {
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 2em;
+}
+/* line 236, ../sass/app.scss */
+.games-list-cls .game-event-cls {
+  padding: 0.5em;
+  margin: 0 0.25em 0.25em;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/* line 241, ../sass/app.scss */
+.games-list-cls .game-event-cls .headerdetail, .games-list-cls .game-event-cls .participats {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+/* line 244, ../sass/app.scss */
+.games-list-cls .game-event-cls .headerdetail > div, .games-list-cls .game-event-cls .participats > div {
+  width: 0 !important;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+/* line 249, ../sass/app.scss */
+.games-list-cls .game-event-cls .headerdetail {
+  font-size: 0.75em;
+  line-height: 2;
+}
+/* line 255, ../sass/app.scss */
+.games-list-cls .game-event-cls .headerdetail:last-child {
+  text-align: right;
+}
+/* line 259, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats {
+  font-size: 1.125em;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+}
+/* line 262, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats .thumb {
+  background-color: white;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+  border-radius: 2em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 274, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats > div {
+  position: relative;
+}
+/* line 276, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats > div:first-child {
+  text-align: right;
+  margin-right: 0.5em;
+  padding-right: 2.5em;
+}
+/* line 281, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats > div:last-child {
+  margin-left: 0.5em;
+  padding-left: 2.5em;
+}
+/* line 284, ../sass/app.scss */
+.games-list-cls .game-event-cls .participats > div:last-child .thumb {
+  right: auto;
+  left: 0;
+}

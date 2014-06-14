@@ -14,6 +14,7 @@ Ext.application({
     name: 'AllInOneWorldSport',
 
     requires: [
+    	'AllInOneWorldSport.proxy.AWSProxy',
         'Ext.MessageBox',
         'Ext.field.Password',
         'Ext.field.Email',
@@ -26,13 +27,23 @@ Ext.application({
         "Main",
         "MainMenu"
     ],
+    
+    models: [
+    	"GameList"
+    ],
+    
+    stores: [
+    	"GameLists"
+    ],
 
     views: [
         'Main',
         'Login',
         'Navigation',
         'Dashboard',
-        'MainMenu'
+        'MainMenu',
+        'GamesList',
+        'AboutGame'
     ],
 
     icon: {

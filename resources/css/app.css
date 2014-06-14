@@ -7681,3 +7681,77 @@ body.x-desktop {
   border: 0;
   margin: 0.35em;
 }
+
+/* line 157, ../sass/app.scss */
+.main-menu-cls {
+  background-color: transparent;
+  background-image: url("../images/mainmenu_background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/* line 162, ../sass/app.scss */
+.main-menu-cls > .x-inner {
+  background-color: transparent;
+  background-image: url("../images/logo_mainmenu.png");
+  background-size: 6em;
+  background-position: 1em 1em;
+  background-repeat: no-repeat;
+}
+/* line 169, ../sass/app.scss */
+.main-menu-cls .play-btn-cls.x-button {
+  background-color: #f5fd09;
+  background-image: none;
+  margin: 0.25em 0;
+  border: 0;
+  font-size: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+}
+/* line 176, ../sass/app.scss */
+.main-menu-cls .play-btn-cls.x-button .x-button-label, .main-menu-cls .play-btn-cls.x-button .x-badge {
+  font-family: "OpenSansBold";
+}
+/* line 179, ../sass/app.scss */
+.main-menu-cls .play-btn-cls.x-button.x-button-pressing {
+  background-image: none;
+  background-color: #f5fd09;
+  background-image: -webkit-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
+  background-image: -moz-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
+  background-image: -o-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
+  background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
+}
+/* line 183, ../sass/app.scss */
+.main-menu-cls .action-btn-cls.x-button {
+  background-color: rgba(211, 37, 46, 0.65);
+  background-image: none;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  margin: 0.75em 0 0.75em 0.75em;
+  padding: 0.5em 0.25em;
+}
+/* line 190, ../sass/app.scss */
+.main-menu-cls .action-btn-cls.x-button .x-button-label, .main-menu-cls .action-btn-cls.x-button .x-badge {
+  font-family: "OpenSansBold";
+  color: white;
+  font-size: 1em;
+}
+/* line 195, ../sass/app.scss */
+.main-menu-cls .action-btn-cls.x-button:last-child {
+  margin-right: 0.75em;
+}
+/* line 198, ../sass/app.scss */
+.main-menu-cls .action-btn-cls.x-button.x-button-pressing {
+  background-image: none;
+  background-color: rgba(211, 37, 46, 0.65);
+  background-image: -webkit-linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
+  background-image: -moz-linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
+  background-image: -o-linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
+  background-image: linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
+}

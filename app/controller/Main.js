@@ -101,9 +101,11 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		var form = btn.up("login"),
 			values = form.getValues(),
 			GLOBAL = AllInOneWorldSport.Global,
+			currentUser = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 		data = {
 			"LoginName" : values.LoginName,
 			"Password" : values.Password,
+			"MemberId" : currentUser ? currentUser.MemberId : "",
 			"token" : GLOBAL.getAccessToken()
 		};
 		Ext.Viewport.setMasked({

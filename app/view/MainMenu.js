@@ -15,15 +15,17 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				type:'hbox',
 				pack:'center'
 			},
+			defaults: {
+				xtype:'button',
+				flex: 1,
+				cls: "action-btn-cls"
+			},
 			items:[
 			{
-				xtype:'button',
 				text:'GET<br>COINS'
 			},{
-				xtype:'button',
 				text:'BETS'
 			},{
-				xtype:'button',
 				text:'FREE<br>STUFF'
 			}]
 		},{
@@ -35,6 +37,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			},
 			items:[{
 				xtype:'button',
+				cls: "play-btn-cls",
 				action: "playBtnMainMenu",
 				text:'PLAY'
 			}]
@@ -44,12 +47,15 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				type:'hbox',
 				pack:'center'
 			},
+			defaults: {
+				xtype:'button',
+				flex: 1,
+				cls: "action-btn-cls"
+			},
 			items:[
 			{
-				xtype:'button',
 				text:'INVITE<br>FRIENDS'
 			},{
-				xtype:'button',
 				text:'ACCOUNT<br>SETTINGS'
 			}]
 		},{
@@ -58,15 +64,16 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				type:'hbox',
 				pack:'center'
 			},
-			items:[
-			{
+			defaults: {
 				xtype:'button',
+				flex: 1,
+				cls: "action-btn-cls"
+			},
+			items:[{
 				text:'MY<br>PROFILE'
 			},{
-				xtype:'button',
 				text:'LEADER<br>BOARDS'
 			},{
-				xtype:'button',
 				text:'I NEED<br>TICKETS'
 			}]
 		}]

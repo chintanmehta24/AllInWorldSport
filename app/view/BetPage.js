@@ -26,6 +26,7 @@ Ext.define("AllInOneWorldSport.view.BetPage",{
 					flex: 1
 				},{
 					xtype: "button",
+					action: "doBetNow",
 					text: "Bet"
 				}]
 			},
@@ -37,6 +38,7 @@ Ext.define("AllInOneWorldSport.view.BetPage",{
 		}, {
 			xtype: "button",
 			text: "ABOUT THE GAME",
+			action: "showAboutBetBtn",
 			cls: "about-btn-cls"
 		}],
 		listeners:[{

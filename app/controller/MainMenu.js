@@ -10,10 +10,21 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             	tap: "onPlayBtnTap"
             },
             "gameslist":{
-            	itemtap : "onGameEventSelected"
+            	itemtap : function(ths, index, target, record){
+            		ths.down("button[action=betBtnGameList]").setDisabled(false);
+            	}
+            },
+            "gameslist button[action=betBtnGameList]":{
+            	tap: "onGameEventSelected"
+            },
+            "betpage button[action=showAboutBetBtn]": {
+            	tap: "onShowAboutGame"
+            },
+            "betpage button[action=doBetNow]": {
+            	tap: "doBetNow"
             },
             "aboutgame button[action=betNowAboutGame]": {
-            	tap: "onBetNowBtnTap"
+            	tap: "backToBetNow"
             }
         }
     },
@@ -35,22 +46,14 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		mainPanel.animateActiveItem(gameList, {type: "slide", duration: 450});
     },
     
-    onGameEventSelected: function(list, index, target, record, e, eObj){
-		var viewport = Ext.Viewport,
-			mainPanel = viewport.down("#mainviewport");
-		var aboutgame = mainPanel.down("aboutgame");
-		if(!aboutgame){
-			aboutgame = mainPanel.add({
-				xtype: "aboutgame"
-			});
+    onGameEventSelected: function(btn){
+    	var list = btn.up("gameslist"),
+    		selectedRec = list.getSelection();
+		if(!selectedRec.length){
+			return;
 		}
-		aboutgame.setGameEventRecord(record);
-		mainPanel.animateActiveItem(aboutgame, {type: "slide", duration: 450});
-    },
-    
-    onBetNowBtnTap: function(btn){
-		var viewport = Ext.Viewport,
-			aboutGame = btn.up("aboutgame"),
+		var record = selectedRec[0],
+			viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport");
 		var betpage = mainPanel.down("betpage");
 		if(!betpage){
@@ -58,8 +61,61 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				xtype: "betpage"
 			});
 		}
+		betpage.setGameEventRecord(record);
+		mainPanel.animateActiveItem(betpage, {type: "slide", duration: 450});
+    },
+    
+    onShowAboutGame: function(btn){
+		var viewport = Ext.Viewport,
+			aboutGame = btn.up("betpage"),
+			mainPanel = viewport.down("#mainviewport");
+		var betpage = mainPanel.down("aboutgame");
+		if(!betpage){
+			betpage = mainPanel.add({
+				xtype: "aboutgame"
+			});
+		}
 		var rec = aboutGame.getGameEventRecord();
 		betpage.setGameEventRecord(rec);
 		mainPanel.animateActiveItem(betpage, {type: "slide", duration: 450});
+    },
+    
+    backToBetNow: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			betpage = mainPanel.down("betpage");
+		if(!betpage){
+			betpage = mainPanel.add({
+				xtype: "betpage"
+			});
+		}
+		mainPanel.animateActiveItem(betpage, {type: "slide",direction: "right", out: true, duration: 450});
+    },
+    
+    doBetNow: function(btn){
+    	var container = btn.up("container"),
+    		mainPage = container.up("betpage"),
+    		record = mainPage.getGameEventRecord(),
+    		selectedTeam = null;
+		switch(container.getItemId()){
+			case "firstTeamAction": 
+				selectedTeam = record.get("EventParticipants")[0];
+				break;
+			case "secondTeamAction":
+				selectedTeam = record.get("EventParticipants")[1];
+				break;
+		}
+
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			betdetail = mainPanel.down("betdetail");
+		if(!betdetail){
+			betdetail = mainPanel.add({
+				xtype: "betdetail"
+			});
+		}
+		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
+											"<div class='infotext'>To Win <span style='font-wieght: bold'>OR</span> No Pont Spread</div>");
+		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
     }
 });

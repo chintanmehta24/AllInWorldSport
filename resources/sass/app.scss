@@ -45,8 +45,10 @@ $base-color: #333;
   .field-cls.x-field{
     min-height:2em;
     margin-bottom: 1em;
-    .x-form-field {
+    .x-component-outer{
       @include box-shadow(1px 1px 0px 1px #888);
+    }
+    .x-form-field {
       min-height:2em;
       padding: 0.2em 0.75em;
       -webkit-text-fill-color: black;
@@ -115,7 +117,7 @@ $base-color: #333;
     }
   }
 */
-  $share-btn-height: 2em;
+  $share-btn-height: 1.85em;
   $share-btn-width: (3.859375 * $share-btn-height);
   .twitter-btn-cls, .facebook-btn-cls{
     border: 0;
@@ -249,16 +251,20 @@ $base-color: #333;
     .headerdetail{
         font-size: 0.75em;
         line-height:2;
-        &:first-child{
-          
-        }
-        &:last-child{
-          text-align: right;
+        > div{
+          &:first-child{
+            
+          }
+          &:last-child {
+            @include ellipsis();
+            text-align: right;
+          }
         }
     }
     .participats{
-        font-size: 1.125em;
+/*        font-size: 1.125em;*/
         @include st-box();
+        line-height: 2;
         .thumb{
           background-color: white;
           width: 2em;
@@ -269,24 +275,126 @@ $base-color: #333;
           background-repeat: no-repeat;
           position:absolute;
           top: 0;
-          right: 0;
+          right: 0.25em;
         }
         > div{
           position:relative;
           &:first-child{
             text-align: right;
-            margin-right: 0.5em;
             padding-right: 2.5em;
           }
           &:last-child{
-            margin-left: 0.5em;
             padding-left: 2.5em;
             .thumb{
               right: auto;
-              left: 0;
+              left: 0.25em;
             }
           }
         }
+    }
+  }
+}
+
+.about-game-cls{
+  background-color: transparent;
+  background-image: url("../images/aboutgame_background.jpg");
+  background-size: cover;
+  background-position: center;  
+  .team-name-cls {
+      color: white;
+      font-size: 1.75em;
+      margin: 0.35em 0;
+      font-weight: bold;
+  }
+  .vs-text-cls {
+      font-size: 1.25em;
+      color: white;
+      font-weight: bold;
+  }
+  .place-detail-cls{
+      font-size: 1.12em;
+      color: white;
+      text-align: center;
+      margin-bottom: 1em;
+      line-height: 1.5;
+  }
+  .bet-btn-cls{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.25em 0;
+    border: 0;
+    font-size: 1.25em;
+    padding: 0.35em 1.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
+    }
+  }
+}
+
+.bet-page-cls{
+  background-color: transparent;
+  background-image: url("../images/betdetails_background.jpg");
+  background-size: cover;
+  background-position: center;  
+  .bet-container-cls{
+    .x-form-fieldset-title {
+        font-size: 1.5em;
+        margin: 0.5em 0;
+        text-align: center;
+        color: white;
+    }
+    .x-form-fieldset-inner{
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+      @incldue border-radius(0);
+    }
+    .team-detail-cls{
+        padding: 0.5em 0.75em;
+        background: rgba(white, 0.2);
+        margin-bottom: 0.75em;
+        .x-label {
+          line-height: 2;
+          padding-right: 0.75em;
+          font-size: 1.125em;
+          font-weight: bold; 
+          @include ellipsis();
+          color: white;
+        }
+        .x-button{
+            padding: 0 1.5em;
+            @include border-radius(1em);
+            @include background-gradient(rgba(211,37,46,1), plain);
+            border: 0;
+            font-size: 0.9em;
+            .x-button-label{
+              color: white;
+              line-height: 1.5;
+            }
+            &.x-button-pressing{
+              @include background-gradient(rgba(211,37,46,1), recessed);
+            }
+        }
+    }
+  }
+  .about-btn-cls.x-button{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.25em auto;
+    max-width: 12em;
+    border: 0;
+    font-size: 1.125em;
+    padding: 0.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
     }
   }
 }

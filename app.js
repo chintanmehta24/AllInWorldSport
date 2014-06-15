@@ -44,7 +44,8 @@ Ext.application({
         'Dashboard',
         'MainMenu',
         'GamesList',
-        'AboutGame'
+        'AboutGame',
+        'BetPage'
     ],
 
     icon: {

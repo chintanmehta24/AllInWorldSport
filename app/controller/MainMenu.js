@@ -11,6 +11,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             },
             "gameslist":{
             	itemtap : "onGameEventSelected"
+            },
+            "aboutgame button[action=betNowAboutGame]": {
+            	tap: "onBetNowBtnTap"
             }
         }
     },
@@ -41,6 +44,22 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				xtype: "aboutgame"
 			});
 		}
+		aboutgame.setGameEventRecord(record);
 		mainPanel.animateActiveItem(aboutgame, {type: "slide", duration: 450});
+    },
+    
+    onBetNowBtnTap: function(btn){
+		var viewport = Ext.Viewport,
+			aboutGame = btn.up("aboutgame"),
+			mainPanel = viewport.down("#mainviewport");
+		var betpage = mainPanel.down("betpage");
+		if(!betpage){
+			betpage = mainPanel.add({
+				xtype: "betpage"
+			});
+		}
+		var rec = aboutGame.getGameEventRecord();
+		betpage.setGameEventRecord(rec);
+		mainPanel.animateActiveItem(betpage, {type: "slide", duration: 450});
     }
 });

@@ -11,7 +11,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			ui: "plain",
 			iconAlign: "left",
 			icon: "resources/images/cancel-bet.png",
-			cls: "canecl-btn-cls"
+			cls: "canecl-btn-cls",
+			action: "cancelBet"
 		},{
 			xtype: "label",
 			cls: "field-label-cls",
@@ -35,29 +36,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			cls: "field-label-cls",
 			html: "HOW MUCH DO YOU WANT TO BET?"
 		},{
-			xtype :"selectfield",
-			autoSelect: false,
-			usePicker: false,
-			labelAlign: "top",
-			defaultTabletPickerConfig: {
-				height: 320
-			},
-			options: [{
-				text: "$100",
-				value: 100
-			},{
-				text: "$200",
-				value: 200
-			},{
-				text: "$300",
-				value: 300
-			},{
-				text: "$400",
-				value: 400
-			},{
-				text: "$500",
-				value: 500
-			}]
+			xtype :"textfield",
 		}, {
 			xtype :"label",
 			cls: "field-label-cls",
@@ -73,7 +52,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			items: [{
 				text: "FRIENDS"
 			},{
-				text: "ENIMIES"
+				text: "ENEMIES"
 			},{
 				text: "CELEBRITIES"
 			},{

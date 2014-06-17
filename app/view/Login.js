@@ -110,7 +110,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			xtype : "label",
 			cls : "login-info",
 			itemId: "loginInfoText",
-			html : "REGISTER USING YOUR FACEBOOK OR TWITTER ACCOUNT"
+			html : "LOGIN USING YOUR FACEBOOK OR TWITTER ACCOUNT"
 		}, {
 			xtype : "container",
 			layout : {
@@ -145,27 +145,28 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			registerContainer = me.down("#registerBtnContainer"),
 			DisplayName = me.down("textfield[name=DisplayName]"),
 			FirstName = me.down("textfield[name=FirstName]"),
-			LastName = me.down("textfield[name=LastName]"),
-			EmailAddress = me.down("emailfield[name=EmailAddress]"),
+			// LastName = me.down("textfield[name=LastName]"),
+			// EmailAddress = me.down("emailfield[name=EmailAddress]"),
 			infoText = me.down("#loginInfoText");
 		if(loginContainer.isHidden()){
 			loginContainer.show();
 			registerContainer.hide();
 
 			DisplayName.hide();
-			FirstName.hide();
-			LastName.hide();
-			EmailAddress.hide();
+			// FirstName.hide();
+			// LastName.hide();
+			// EmailAddress.hide();
 			infoText.setHtml("LOGIN USING YOUR FACEBOOK OR TWITTER ACCOUNT");
 		}else{
 			loginContainer.hide();
 			registerContainer.show();
 
 			DisplayName.show();
-			FirstName.show();
-			LastName.show();
-			EmailAddress.show();
+			// FirstName.show();
+			// LastName.show();
+			// EmailAddress.show();
 			infoText.setHtml("REGISTER USING YOUR FACEBOOK OR TWITTER ACCOUNT");
 		}
+		me.reset();
 	}
 });

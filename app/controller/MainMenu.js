@@ -25,6 +25,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             },
             "aboutgame button[action=betNowAboutGame]": {
             	tap: "backToBetNow"
+            },
+            "betdetail button[action=cancelBet]": {
+            	tap: "doCancelBet"
+            },
+            "betdetail button[action=finalizeBet]": {
+            	tap: "doConfirmBet"
             }
         }
     },
@@ -117,5 +123,30 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
 											"<div class='infotext'>To Win <span style='font-wieght: bold'>OR</span> No Pont Spread</div>");
 		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
+    },
+    
+    doCancelBet: function(){
+    	Ext.Msg.confirm("Confirmation", "Are you sure you want to cancel bet?", function(btn){
+    		if(btn == "yes"){
+				var viewport = Ext.Viewport,
+					mainPanel = viewport.down("#mainviewport"),
+					mainMenu = mainPanel.down("mainmenu");
+				if(!mainMenu){
+					mainMenu = mainPanel.add({xtype: "mainmenu"});
+				}
+				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+    		}
+    	});
+    },
+    
+    doConfirmBet: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			mainMenu = mainPanel.down("mainmenu");
+		if(!mainMenu){
+			mainMenu = mainPanel.add({xtype: "mainmenu"});
+		}
+		mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
     }
 });

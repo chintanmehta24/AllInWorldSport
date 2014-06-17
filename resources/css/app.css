@@ -7816,7 +7816,7 @@ body.x-desktop {
 /* line 254, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .eventname {
   position: absolute;
-  font-size: 0.75em;
+  font-size: 0.60em;
   right: 0.5em;
   top: 0.25em;
 }
@@ -7873,8 +7873,9 @@ body.x-desktop {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   font-size: 0.85em;
+  text-align: center;
 }
-/* line 291, ../sass/app.scss */
+/* line 292, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats .thumb {
   background-color: white;
   width: 2em;
@@ -7888,18 +7889,18 @@ body.x-desktop {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* line 301, ../sass/app.scss */
+/* line 302, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item.x-item-selected {
   background-image: none;
   background-color: transparent;
 }
-/* line 304, ../sass/app.scss */
+/* line 305, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item.x-item-selected .x-innerhtml {
   background-color: rgba(255, 255, 255, 0.75);
   background-image: none;
   color: black;
 }
-/* line 311, ../sass/app.scss */
+/* line 312, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -7914,11 +7915,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 320, ../sass/app.scss */
+/* line 321, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls .x-button-label, .games-list-cls.x-list-normal .betgame-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 323, ../sass/app.scss */
+/* line 324, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -7928,27 +7929,28 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 329, ../sass/app.scss */
+/* line 330, ../sass/app.scss */
 .about-game-cls {
   background-color: transparent;
   background-image: url("../images/aboutgame_background.jpg");
   background-size: cover;
   background-position: center;
 }
-/* line 334, ../sass/app.scss */
+/* line 335, ../sass/app.scss */
 .about-game-cls .team-name-cls {
   color: white;
   font-size: 1.75em;
   margin: 0.35em 0;
   font-weight: bold;
+  text-align: center;
 }
-/* line 340, ../sass/app.scss */
+/* line 342, ../sass/app.scss */
 .about-game-cls .vs-text-cls {
   font-size: 1.25em;
   color: white;
   font-weight: bold;
 }
-/* line 345, ../sass/app.scss */
+/* line 347, ../sass/app.scss */
 .about-game-cls .place-detail-cls {
   font-size: 1.12em;
   color: white;
@@ -7956,7 +7958,7 @@ body.x-desktop {
   margin-bottom: 1em;
   line-height: 1.5;
 }
-/* line 352, ../sass/app.scss */
+/* line 354, ../sass/app.scss */
 .about-game-cls .bet-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -7970,11 +7972,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 360, ../sass/app.scss */
+/* line 362, ../sass/app.scss */
 .about-game-cls .bet-btn-cls .x-button-label, .about-game-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 363, ../sass/app.scss */
+/* line 365, ../sass/app.scss */
 .about-game-cls .bet-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -7984,34 +7986,34 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 369, ../sass/app.scss */
+/* line 371, ../sass/app.scss */
 .bet-page-cls {
   background-color: transparent;
-  background-image: url("../images/betdetails_background.jpg");
+  background-image: url("../images/betpage_background.jpg");
   background-size: cover;
   background-position: center;
 }
-/* line 375, ../sass/app.scss */
+/* line 377, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .x-form-fieldset-title {
   font-size: 1.5em;
   margin: 0.5em 0;
   text-align: center;
   color: white;
 }
-/* line 381, ../sass/app.scss */
+/* line 383, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .x-form-fieldset-inner {
   border: 0;
   background-color: transparent;
   background-image: none;
   @incldue border-radius(0);
 }
-/* line 387, ../sass/app.scss */
+/* line 389, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls {
   padding: 0.5em 0.75em;
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 0.75em;
 }
-/* line 391, ../sass/app.scss */
+/* line 393, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-label {
   line-height: 2;
   padding-right: 0.75em;
@@ -8021,8 +8023,9 @@ body.x-desktop {
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
+  text-transform: uppercase;
 }
-/* line 399, ../sass/app.scss */
+/* line 402, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button {
   padding: 0 1.5em;
   -webkit-border-radius: 1em;
@@ -8035,12 +8038,12 @@ body.x-desktop {
   border: 0;
   font-size: 0.9em;
 }
-/* line 405, ../sass/app.scss */
+/* line 408, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-button-label, .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-badge {
   color: white;
   line-height: 1.5;
 }
-/* line 409, ../sass/app.scss */
+/* line 412, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -8049,7 +8052,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 415, ../sass/app.scss */
+/* line 418, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button {
   background-color: #f5fd09;
   background-image: none;
@@ -8064,11 +8067,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 424, ../sass/app.scss */
+/* line 427, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button .x-button-label, .bet-page-cls .about-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 427, ../sass/app.scss */
+/* line 430, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -8078,54 +8081,53 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 433, ../sass/app.scss */
+/* line 436, ../sass/app.scss */
 .bet-detail-cls {
   background-color: transparent;
   background-image: url("../images/betdetails_background.jpg");
   background-size: cover;
   background-position: center;
 }
-/* line 438, ../sass/app.scss */
+/* line 441, ../sass/app.scss */
 .bet-detail-cls .x-scroll-container {
   background-color: transparent;
   background-image: none;
 }
-/* line 442, ../sass/app.scss */
+/* line 445, ../sass/app.scss */
 .bet-detail-cls .canecl-btn-cls {
   margin-left: auto;
   max-width: 10em;
 }
-/* line 445, ../sass/app.scss */
+/* line 448, ../sass/app.scss */
 .bet-detail-cls .canecl-btn-cls .x-button-label, .bet-detail-cls .canecl-btn-cls .x-badge {
   color: #d4d2d2;
   text-align: left;
 }
-/* line 450, ../sass/app.scss */
+/* line 453, ../sass/app.scss */
 .bet-detail-cls .x-label.field-label-cls {
   color: white;
   font-family: 'OpenSansBold';
   font-size: 1.25em;
   padding-top: 1em;
   padding-bottom: 0.5em;
-  text-transform: uppercase;
 }
-/* line 457, ../sass/app.scss */
+/* line 459, ../sass/app.scss */
 .bet-detail-cls .x-label.field-label-cls .infotext {
   text-transform: none;
   font-size: 0.65em;
 }
-/* line 462, ../sass/app.scss */
-.bet-detail-cls .x-field-select {
+/* line 464, ../sass/app.scss */
+.bet-detail-cls .x-field {
   background-color: transparent;
   background-image: none;
   min-height: 2em;
   max-width: 15em;
 }
-/* line 467, ../sass/app.scss */
-.bet-detail-cls .x-field-select .x-input-el {
+/* line 469, ../sass/app.scss */
+.bet-detail-cls .x-field .x-input-el {
   min-height: 2em;
 }
-/* line 471, ../sass/app.scss */
+/* line 473, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -8140,11 +8142,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 480, ../sass/app.scss */
+/* line 482, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls .x-button-label, .bet-detail-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 483, ../sass/app.scss */
+/* line 485, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -8153,12 +8155,12 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
-/* line 487, ../sass/app.scss */
+/* line 489, ../sass/app.scss */
 .bet-detail-cls .btn-container-cls {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
-/* line 491, ../sass/app.scss */
+/* line 493, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls {
   background-color: #d3252e;
   background-image: none;
@@ -8171,18 +8173,19 @@ body.x-desktop {
   margin-right: 0.5em;
   padding: 0.5em;
   font-size: 0.9em;
+  text-transform: uppercase;
 }
-/* line 499, ../sass/app.scss */
+/* line 502, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls .x-button-label, .bet-detail-cls .bet-action-cls .x-badge {
   font-family: "OpenSansBold";
   color: white;
   font-size: 0.75em;
 }
-/* line 504, ../sass/app.scss */
+/* line 507, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls:last-child {
   margin-right: 0;
 }
-/* line 507, ../sass/app.scss */
+/* line 510, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls.x-button-pressing {
   background-image: none;
   background-color: rgba(211, 37, 46, 0.65);

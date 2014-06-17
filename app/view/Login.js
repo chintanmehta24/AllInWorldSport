@@ -15,27 +15,27 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			xtype : "textfield",
 			hidden: true,
 			name : "DisplayName",
-			placeHolder : "Display Name",
+			placeHolder : "Name",
 			cls : "field-cls"
-		}, {
-			xtype : "textfield",
-			hidden: true,
-			name : "FirstName",
-			placeHolder : "First Name",
-			cls : "field-cls"
-		}, {
-			xtype : "textfield",
-			hidden: true,
-			name : "LastName",
-			placeHolder : "Last Name",
-			cls : "field-cls"
-		}, {
-			xtype : "emailfield",
-			hidden: true,
-			name : "EmailAddress",
-			placeHolder : "Email Address",
-			cls : "field-cls"
-		}, {
+		// }, {
+			// xtype : "textfield",
+			// hidden: true,
+			// name : "FirstName",
+			// placeHolder : "First Name",
+			// cls : "field-cls"
+		// }, {
+			// xtype : "textfield",
+			// hidden: true,
+			// name : "LastName",
+			// placeHolder : "Last Name",
+			// cls : "field-cls"
+		// }, {
+			// xtype : "emailfield",
+			// hidden: true,
+			// name : "EmailAddress",
+			// placeHolder : "Email Address",
+			// cls : "field-cls"
+		// }, {
 			xtype : "emailfield",
 			name : "LoginName",
 			placeHolder : "User Name",

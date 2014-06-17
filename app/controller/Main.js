@@ -29,9 +29,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		data = {
 			"Member" : {
 				"DisplayName" : values.DisplayName,
-				"FirstName" : values.FirstName,
-				"LastName" : values.LastName,
-				"EmailAddress" : values.EmailAddress,
+				// "FirstName" : values.FirstName,
+				"FirstName" : values.DisplayName,
+				"LastName" : "",//values.LastName,
+				"EmailAddress" : "",//values.EmailAddress,
 				"LoginName" : values.LoginName,
 				"Password" : values.Password,
 

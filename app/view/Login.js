@@ -35,7 +35,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			// name : "EmailAddress",
 			// placeHolder : "Email Address",
 			// cls : "field-cls"
-		// }, {
+		}, {
 			xtype : "emailfield",
 			name : "LoginName",
 			placeHolder : "User Name",

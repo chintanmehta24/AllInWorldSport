@@ -106,7 +106,6 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		data = {
 			"LoginName" : values.LoginName,
 			"Password" : values.Password,
-			"MemberId" : currentUser ? currentUser.MemberId : "",
 			"token" : GLOBAL.getAccessToken()
 		};
 		Ext.Viewport.setMasked({

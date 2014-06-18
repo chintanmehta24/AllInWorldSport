@@ -32,7 +32,7 @@ $base-color: #333;
   background-color: transparent;
   background-image: url("../images/login_background.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   .x-scroll-container{
     background-color: transparent;
     .x-form-inner{
@@ -161,7 +161,7 @@ $base-color: #333;
 .main-menu-cls{
   background-color: transparent;
   background-image: url("../images/mainmenu_background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;  
   > .x-inner{
     background-color: transparent;
@@ -208,7 +208,7 @@ $base-color: #333;
 .games-list-cls.x-list-normal{
   background-color: transparent;
   background-image: url("../images/gamesevent_background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;  
   .search-field-cls{
       padding: 0.5em;
@@ -247,15 +247,15 @@ $base-color: #333;
     }
     .date{
       position: absolute;
-      left: 0.5em;
-      top: 0.25em;
-      font-size: 0.75em;
+      left: 0.75em;
+      top: 0.4em;
+      font-size: 0.6em;
     }
     .eventname{
       position: absolute;
       font-size: 0.60em; //change
-      right: 0.5em;
-      top: 0.25em;
+      right: 0.75em;
+      top: 0.4em;
     }
     .participats{
       @include st-box();
@@ -330,7 +330,7 @@ $base-color: #333;
 .about-game-cls{
   background-color: transparent;
   background-image: url("../images/aboutgame_background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;  
   .team-name-cls {
       color: white;
@@ -371,7 +371,7 @@ $base-color: #333;
 .bet-page-cls{
   background-color: transparent;
   background-image: url("../images/betpage_background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;  
   .bet-container-cls{
     .x-form-fieldset-title {
@@ -384,18 +384,18 @@ $base-color: #333;
       border: 0;
       background-color: transparent;
       background-image: none;
-      @incldue border-radius(0);
+      @include border-radius(0);
     }
     .team-detail-cls{
         padding: 0.5em 0.75em;
         background: rgba(white, 0.2);
         margin-bottom: 0.75em;
         .x-label {  
-          line-height: 2;
+          // line-height: 2;
           padding-right: 0.75em;
           font-size: 1.125em;
           font-weight: bold; 
-          @include ellipsis();
+          // @include ellipsis();
           color: white;
           text-transform: uppercase;
         }
@@ -436,7 +436,7 @@ $base-color: #333;
 .bet-detail-cls{
   background-color: transparent;
   background-image: url("../images/betdetails_background.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;  
   .x-scroll-container{
     background-color: transparent;
@@ -466,7 +466,12 @@ $base-color: #333;
     background-image: none;
     min-height: 2em;
     max-width: 15em;
+    .x-component-outer{
+      background-color: white;
+    }
     .x-input-el{
+      background-color: transparent;
+      background-image: none;
       min-height: 2em;
     }
   }

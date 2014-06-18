@@ -5,8 +5,8 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 		cls: "games-list-cls",
 		store: "GameLists",
 		itemCls: "game-event-cls",
-		itemTpl: [//"<div class='headerdetail'>",
-					"<div class='date'>{StartDate}</div>",
+		itemTpl: new Ext.XTemplate([//"<div class='headerdetail'>",
+					"<div class='date'>{StartDate:this.getDate}</div>",
 					"<div class='eventname'>{EventName}</div>",
 				  //"</div>",					
 				  "<div class='participats'><tpl for='EventParticipants'>",
@@ -19,7 +19,11 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 						"</tpl>",
 						// "<div class='thumb' style='background-image:url(\"{ImageURL}\")'></div>",
 					"</div>",
-				  "</tpl></div>"],
+				  "</tpl></div>"].join(""), {
+				  	getDate: function(date){
+						return Ext.Date.format(date, "D, M dS");
+				  	}
+				  }),
 		items: [{
 			xtype: "searchfield",
 			label: "Team:",

@@ -56,7 +56,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			{
 				text:'INVITE<br>FRIENDS'
 			},{
-				text:'ACCOUNT<br>SETTINGS'
+				text:'I NEED<br>TICKETS'
 			}]
 		},{
 			xtype : 'container',
@@ -74,7 +74,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			},{
 				text:'LEADER<br>BOARDS'
 			},{
-				text:'I NEED<br>TICKETS'
+				text:'ACCOUNT<br>SETTINGS'
 			}]
 		}]
 	}

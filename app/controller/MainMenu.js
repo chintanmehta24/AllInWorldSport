@@ -121,7 +121,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
-											"<div class='infotext'>To Win <span style='font-wieght: bold'>OR</span> No Pont Spread</div>");
+											"<div class='infotext'>To Win by <span style='font-wieght: bold'>OR</span> No Point Spread</div>");
 		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
     },
     

@@ -27,7 +27,7 @@ Ext.define("AllInOneWorldSport.view.BetPage",{
 				},{
 					xtype: "button",
 					action: "doBetNow",
-					text: "Bet"
+					text: "BET"
 				}]
 			},
 			items: [{

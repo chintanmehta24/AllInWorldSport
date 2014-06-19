@@ -117,9 +117,11 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			betdetail = mainPanel.down("betdetail");
 		if(!betdetail){
 			betdetail = mainPanel.add({
-				xtype: "betdetail"
+				xtype: "betdetail",
+				gameEventRecord: record
 			});
 		}
+		betdetail.down("[name=EventParticipantId]").setValue(selectedTeam.EventParticipantId);
 		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
 											"<div class='infotext'>To Win by <span style='font-wieght: bold'>OR</span> No Point Spread</div>");
 		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
@@ -139,14 +141,53 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
     	});
     },
     
-    doConfirmBet: function(){
-		var viewport = Ext.Viewport,
+    doConfirmBet: function(btn){
+		var me = this,
+			betdetailForm = btn.up("betdetail"),
+			values = betdetailForm.getValues(),
+			record = betdetailForm.getGameEventRecord(),
+			viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport"),
-			mainMenu = mainPanel.down("mainmenu");
-		if(!mainMenu){
-			mainMenu = mainPanel.add({xtype: "mainmenu"});
-		}
-		mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
-    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
+			mainMenu = mainPanel.down("mainmenu"),
+			currentUser = Ext.decode(localStorage.CURRENT_LOGIN_USER);
+		Ext.Ajax.request({
+			url : AllInOneWorldSport.Global.SERVER_URL + "/BET",
+			method : "POST",
+			dataType : 'json',
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			xhr2 : true,
+			disableCaching : false,
+			jsonData : {
+				Amount: 0,
+	            BetCode: 4,
+	            EventId: record.get("EventId"),
+	            EventParticipantId: values.EventParticipantId,
+	            Friends: [], //["1627aea5-8e0a-4371-9022-9b504344e724"],
+	            MemberId: currentUser.MemberId,
+	            Odds: 0,
+	            Spread: values.Spread,
+	            token: AllInOneWorldSport.Global.getAccessToken()
+			},
+			success : function(responce) {
+				var data = Ext.decode(responce.responseText);
+				console.log(data);
+				if(data.errorReason && data.errorReason.ReasonCode){
+					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					return;
+				}
+				if(!mainMenu){
+					mainMenu = mainPanel.add({xtype: "mainmenu"});
+				}
+				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+		    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
+			},
+			failure : function(responce) {
+				Ext.Viewport.setMasked(false);
+				Ext.Msg.alert('Communication Error');
+				console.log(responce);
+			}
+		});
     }
 });

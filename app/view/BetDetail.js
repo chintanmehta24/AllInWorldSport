@@ -18,13 +18,17 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			cls: "field-label-cls",
 			itemId: "teamToBet"
 		}, {
+			xtype: "textfield",
+			hidden: true,
+			name: "EventParticipantId"
+		}, {
 			xtype :"selectfield",
 			autoSelect: false,
 			usePicker: false,
 			defaultTabletPickerConfig: {
 				height: 320
 			},
-			name: "PointSpread",
+			name: "Spread",
 			options: [{
 				text: "1",
 				value: "1"
@@ -50,7 +54,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			html: "HOW MUCH DO YOU WANT TO BET?"
 		},{
 			xtype :"textfield",
-			name: "HowMuchBet"
+			name: "Amount"
 		}, {
 			xtype :"label",
 			cls: "field-label-cls",
@@ -87,8 +91,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 		var me = this;
 		// me.reset();
 		me.setValues({
-			PointSpread: null,
-			HowMuchBet: ""
+			Spread: null,
+			Amount: ""
 		});
 	}
 });

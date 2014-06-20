@@ -155,7 +155,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
     		}
     	});
     },
-    
+		
     doConfirmBet: function(btn){
 		var me = this,
 			betdetailForm = btn.up("betdetail"),

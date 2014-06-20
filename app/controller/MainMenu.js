@@ -9,6 +9,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             "mainmenu button[action=playBtnMainMenu]":{
             	tap: "onPlayBtnTap"
             },
+            "mainmenu button[action=viewprofile]":{
+            	tap: "onProfileBtnTap"
+            },
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -50,6 +53,18 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		mainPanel.animateActiveItem(gameList, {type: "slide", duration: 450});
+    },
+    
+    onProfileBtnTap: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport");
+		var profile = mainPanel.down("profile");
+		if(!profile){
+			profile = mainPanel.add({
+				xtype: "profile"
+			});
+		}
+		mainPanel.animateActiveItem(profile, {type: "slide", duration: 450});
     },
     
     onGameEventSelected: function(btn){

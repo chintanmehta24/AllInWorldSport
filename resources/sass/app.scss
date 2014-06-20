@@ -4,6 +4,7 @@
 $base-color: #333;
 
 @import 'sencha-touch/default';
+$form-field-height: 2em;
 @import 'sencha-touch/default/all';
 
 // @include icon('user');
@@ -45,13 +46,13 @@ $base-color: #333;
     margin-bottom: 1em;
   }
   .field-cls.x-field{
-    min-height:2em;
+    // min-height:2em;
     margin-bottom: 1em;
     .x-component-outer{
       @include box-shadow(1px 1px 0px 1px #888);
     }
     .x-form-field {
-      min-height:2em;
+      // min-height:2em;
       padding: 0.2em 0.75em;
       -webkit-text-fill-color: black;
     }
@@ -234,7 +235,7 @@ $base-color: #333;
         margin-left: 0;
         padding-top: 0;
         padding-bottom: 0;
-        min-height: 2em;
+        // min-height: 2em;
       }
   }
   .game-event-cls.x-list-item{
@@ -464,7 +465,7 @@ $base-color: #333;
   .x-field{
     background-color: transparent;
     background-image: none;
-    min-height: 2em;
+    // min-height: 2em;
     max-width: 15em;
     .x-component-outer{
       background-color: white;
@@ -472,7 +473,7 @@ $base-color: #333;
     .x-input-el{
       background-color: transparent;
       background-image: none;
-      min-height: 2em;
+      // min-height: 2em;
     }
   }
   .bet-btn-cls{
@@ -514,6 +515,107 @@ $base-color: #333;
     }
     &.x-button-pressing{
       @include background-gradient(rgba(211,37,46,0.65), "recessed");
+    }
+  }
+}
+.profile-cls{
+  background-color: darkgreen;
+  .x-scroll-container {
+    background-color: transparent;
+    background-image: none;
+  }
+  .x-form-fieldset-title {
+      font-family: "OpenSansBold";
+      text-shadow: none;
+      color: #f5fd09;
+      text-transform: uppercase;
+  }
+  .x-form-fieldset{
+    margin: 0.5em 1em 1em;
+    .x-form-fieldset-inner{
+      @include border-radius(0);
+      border: 0;
+      background-color: transparent;
+      background-image: none;
+    }
+    .x-field{
+      margin: 0.5em 0;
+      border: 0;
+      .x-form-label{
+        font-family: "OpenSansBold";
+        border: 0;
+        text-shadow: none;
+        background-color: transparent;
+        background-image: none;
+        padding: 0 0.5em 0 0;
+        line-height: 2.25;
+        font-size: 0.8em;
+        text-align: right;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 5em;
+      }
+    }
+    .photo-preview-cls{
+      width: 5em;
+      height: 5em;
+      background-image: url("../images/person.png");
+      background-position: center;
+      background-size: cover;
+      margin-right: 0.2em;
+    }
+    .photo-action-btn.x-button{
+      @include border-radius(0);
+      height: 2.45em;
+      width: 5em;
+      border: 0;
+      @include background-gradient(rgba(black, 0.4), plain);
+      .x-button-label{
+          text-transform: uppercase;
+          color: white;
+          font-size: 0.75em;
+      }
+      &.x-button-pressing{
+        @include background-gradient(rgba(black, 0.4), "recessed");
+      }
+    }
+  }
+  .profile-action-btn.x-button{
+      background-color: rgba(211, 37, 46, 1);
+      background-image: none;
+      @include st-box-flex(1);
+      @include border-radius(1em);
+      border: 0;
+      margin-left: 0.75em;
+      padding: 0.5em 1em;
+      &:last-child{
+        margin-right: 0.75em;
+      }
+      .x-button-label{
+        font-family: "OpenSansBold";
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.7em;
+      }
+      &.x-button-pressing{
+        @include background-gradient(rgba(211, 37, 46, 1), "recessed");
+      }
+  }
+  .profile-save-btn{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.75em auto;
+    max-width: 12em;
+    border: 0;
+    font-size: 1.125em;
+    padding: 0.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
     }
   }
 }

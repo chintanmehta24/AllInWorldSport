@@ -52,8 +52,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				flex: 1,
 				cls: "action-btn-cls"
 			},
-			items:[
-			{
+			items:[{
 				text:'INVITE<br>FRIENDS'
 			},{
 				text:'I NEED<br>TICKETS'
@@ -70,7 +69,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				cls: "action-btn-cls"
 			},
 			items:[{
-				text:'MY<br>PROFILE'
+				text:'MY<br>PROFILE',
+				action: "viewprofile"
 			},{
 				text:'LEADER<br>BOARDS'
 			},{

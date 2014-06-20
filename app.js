@@ -46,7 +46,9 @@ Ext.application({
         'GamesList',
         'AboutGame',
         'BetPage',
-        'BetDetail'
+        'BetDetail',
+        
+        'Profile'
     ],
 
     icon: {

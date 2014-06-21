@@ -81,6 +81,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		layout: "hbox",
     		defaults: {
     			xtype: "button",
+    			flex: 1,
     			cls: "profile-action-btn"
     		},
     		items: [{

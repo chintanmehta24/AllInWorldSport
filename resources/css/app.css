@@ -8248,7 +8248,11 @@ body.x-desktop {
   font-weight: bold;
   width: 5em;
 }
-/* line 560, ../sass/app.scss */
+/* line 558, ../sass/app.scss */
+.profile-cls .x-form-fieldset .x-field .x-form-label > * {
+  font-size: 0.8em;
+}
+/* line 563, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-preview-cls {
   width: 5em;
   height: 5em;
@@ -8257,7 +8261,7 @@ body.x-desktop {
   background-size: cover;
   margin-right: 0.2em;
 }
-/* line 568, ../sass/app.scss */
+/* line 571, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8270,13 +8274,13 @@ body.x-desktop {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 574, ../sass/app.scss */
+/* line 577, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-button-label, .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-badge {
   text-transform: uppercase;
   color: white;
   font-size: 0.75em;
 }
-/* line 579, ../sass/app.scss */
+/* line 582, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button.x-button-pressing {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.4);
@@ -8285,34 +8289,35 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 65%, rgba(1, 1, 1, 0.4));
   background-image: linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 65%, rgba(1, 1, 1, 0.4));
 }
-/* line 584, ../sass/app.scss */
+/* line 587, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button {
   background-color: #d3252e;
   background-image: none;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  -ms-border-radius: 1em;
-  -o-border-radius: 1em;
-  border-radius: 1em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
+  border-radius: 1.5em;
   border: 0;
   margin-left: 0.75em;
   padding: 0.5em 1em;
 }
-/* line 592, ../sass/app.scss */
+/* line 595, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button:last-child {
   margin-right: 0.75em;
 }
-/* line 595, ../sass/app.scss */
+/* line 598, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button .x-button-label, .profile-cls .profile-action-btn.x-button .x-badge {
   font-family: "OpenSansBold";
   text-transform: uppercase;
   color: white;
   font-size: 0.7em;
+  white-space: normal;
 }
-/* line 601, ../sass/app.scss */
+/* line 605, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -8321,7 +8326,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 605, ../sass/app.scss */
+/* line 609, ../sass/app.scss */
 .profile-cls .profile-save-btn {
   background-color: #f5fd09;
   background-image: none;
@@ -8336,11 +8341,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 614, ../sass/app.scss */
+/* line 618, ../sass/app.scss */
 .profile-cls .profile-save-btn .x-button-label, .profile-cls .profile-save-btn .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 617, ../sass/app.scss */
+/* line 621, ../sass/app.scss */
 .profile-cls .profile-save-btn.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;

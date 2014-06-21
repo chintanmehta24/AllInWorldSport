@@ -555,6 +555,9 @@ $form-field-height: 2em;
         text-transform: uppercase;
         font-weight: bold;
         width: 5em;
+        > * {
+          font-size: 0.8em;
+        }
       }
     }
     .photo-preview-cls{
@@ -585,7 +588,7 @@ $form-field-height: 2em;
       background-color: rgba(211, 37, 46, 1);
       background-image: none;
       @include st-box-flex(1);
-      @include border-radius(1em);
+      @include border-radius(1.5em);
       border: 0;
       margin-left: 0.75em;
       padding: 0.5em 1em;
@@ -597,6 +600,7 @@ $form-field-height: 2em;
         text-transform: uppercase;
         color: white;
         font-size: 0.7em;
+        white-space: normal;
       }
       &.x-button-pressing{
         @include background-gradient(rgba(211, 37, 46, 1), "recessed");

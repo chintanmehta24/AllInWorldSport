@@ -10,6 +10,7 @@ $form-field-height: 2em;
 // @include icon('user');
 // @include font-face("OpenSansBold", "../fonts/OpenSans-ExtraBold.ttf");
 @include font-face("OpenSansBold", inline-font-files("OpenSans-ExtraBold.ttf", truetype));
+@include font-face("OpenSansLight", inline-font-files("OpenSans-Light.ttf", truetype));
  
 
 .navigation-cls.x-dataview{
@@ -519,7 +520,10 @@ $form-field-height: 2em;
   }
 }
 .profile-cls{
-  background-color: darkgreen;
+  background-color: transparent;
+  background-image: url("../images/profile_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;  
   .x-scroll-container {
     background-color: transparent;
     background-image: none;

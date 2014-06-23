@@ -57,6 +57,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			xtype: "selectfield",
     			label: "teams",
     			name: "Participant1",
+				id:"Participant1ID",
     			options: [{
     				text: "team1",
     				value: "value1"
@@ -68,6 +69,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			xtype: "selectfield",
     			label: "&nbsp;",
     			name: "Participant2",
+				id:"Participant2ID",
     			options: [{
     				text: "team1",
     				value: "value1"
@@ -94,7 +96,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     	}, {
     		xtype: "button",
     		text: "Save Changes",
-    		cls: "profile-save-btn"
+    		cls: "profile-save-btn",
+			action: "saveProfile",
     	}]
     }
 });

@@ -30,11 +30,13 @@ Ext.application({
     ],
     
     models: [
-    	"GameList"
+    	"GameList",
+		"ListParticipants"
     ],
     
     stores: [
-    	"GameLists"
+    	"GameLists",
+		"ListParticipants"
     ],
 
     views: [

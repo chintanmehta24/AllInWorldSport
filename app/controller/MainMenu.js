@@ -34,7 +34,10 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             },
             "betdetail button[action=finalizeBet]": {
             	tap: "doConfirmBet"
-            }
+            },
+			"profile button[action=saveProfile]":{
+				tap : "saveProfile"
+			},
         }
     },
     
@@ -65,6 +68,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		mainPanel.animateActiveItem(profile, {type: "slide", duration: 450});
+		this.getListParticipant();
     },
     
     onGameEventSelected: function(btn){
@@ -204,5 +208,128 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				console.log(responce);
 			}
 		});
-    }
+    },
+	
+	getListParticipant:function(){
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		
+		Ext.Ajax.request({
+			url : AllInOneWorldSport.Global.SERVER_URL + "/ListParticipants",
+			method : "POST",
+			dataType : 'json',
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			xhr2 : true,
+			disableCaching : false,
+			jsonData : {
+				League:"NFL",
+				GroupType: "Conference",
+	            token: AllInOneWorldSport.Global.getAccessToken()
+			},
+			success : function(responce) {
+				Ext.Viewport.setMasked(false);
+				
+				var data = Ext.decode(responce.responseText);
+				console.log(data);
+				if(data.errorReason && data.errorReason.ReasonCode){
+					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					return;
+				}
+				Ext.getStore("ListParticipants").setData(data);
+				var options = [];
+				options[0] = {
+						text:"Select Team",
+						value:""
+				}
+				for(var i=0;i<data.length;i++){
+					options[i+1] = {
+						text:data[i].Name,
+						value:i
+					}
+				}
+				
+				Ext.getCmp("Participant1ID").setOptions(options);
+				Ext.getCmp("Participant2ID").setOptions(options)
+				
+				
+			},
+			failure : function(responce) {
+				Ext.Viewport.setMasked(false);
+				Ext.Msg.alert('Communication Error');
+				console.log(responce);
+			}
+		});
+	},
+	
+	saveProfile:function(){
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		
+		var particpantValue1 = Ext.getCmp("Participant1ID").getValue();
+		var particpantValue2 = Ext.getCmp("Participant2ID").getValue();
+		var Participants = [];
+		var participantStore = Ext.getStore("ListParticipants");
+		if(particpantValue1 == ""){
+		}
+		else{
+			Participants[0]={
+				ParticipantId : participantStore.getAt(particpantValue1).data.ParticipantId,
+				TypeCode : participantStore.getAt(particpantValue1).data.TypeCode
+			}
+		}
+		
+		if(particpantValue2 == ""){
+		}
+		else{
+			Participants[1]={
+				ParticipantId : participantStore.getAt(particpantValue2).data.ParticipantId,
+				TypeCode : participantStore.getAt(particpantValue2).data.TypeCode
+			}
+		}
+		
+		
+		
+		Ext.Ajax.request({
+			url : AllInOneWorldSport.Global.SERVER_URL + "/UpdateProfile",
+			method : "POST",
+			dataType : 'json',
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			xhr2 : true,
+			disableCaching : false,
+			jsonData : {
+				Member:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,
+				Participants : Participants,
+	            token: AllInOneWorldSport.Global.getAccessToken()
+			},
+			success : function(responce) {
+				Ext.Viewport.setMasked(false);
+				
+				var data = Ext.decode(responce.responseText);
+				console.log(data);
+				if(data.errorReason && data.errorReason.ReasonCode){
+					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					return;
+				}
+				if(!mainMenu){
+					mainMenu = mainPanel.add({xtype: "mainmenu"});
+				}
+				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+				
+			},
+			failure : function(responce) {
+				Ext.Viewport.setMasked(false);
+				Ext.Msg.alert('Communication Error');
+				console.log(responce);
+			}
+		});
+	},
+	
 });

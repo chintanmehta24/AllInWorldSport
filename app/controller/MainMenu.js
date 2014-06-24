@@ -215,94 +215,54 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			xtype : "loadmask",
 			message : "Please wait"
 		});
-		
-		Ext.Ajax.request({
-			url : AllInOneWorldSport.Global.SERVER_URL + "/ListParticipants",
-			method : "POST",
-			dataType : 'json',
-			headers : {
-				'Content-Type' : 'application/json'
-			},
-			xhr2 : true,
-			disableCaching : false,
-			jsonData : {
+		Ext.getStore("ListParticipants").load({
+			jsonData: {
 				League:"NFL",
-				GroupType: "Conference",
-	            token: AllInOneWorldSport.Global.getAccessToken()
+				GroupType: "Conference"
 			},
-			success : function(responce) {
+			callback: function(records, operation, success){
 				Ext.Viewport.setMasked(false);
-				
-				var data = Ext.decode(responce.responseText);
-				console.log(data);
-				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
-					return;
-				}
-				Ext.getStore("ListParticipants").setData(data);
-				var options = [];
-				options[0] = {
-						text:"Select Team",
-						value:""
-				}
-				for(var i=0;i<data.length;i++){
-					options[i+1] = {
-						text:data[i].Name,
-						value:i
+				if(!success){
+					var data = Ext.decode(operation.getResponse().responseText);
+					if(data && data.errorReason && data.errorReason.ReasonCode){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+						return;
 					}
 				}
-				
-				Ext.getCmp("Participant1ID").setOptions(options);
-				Ext.getCmp("Participant2ID").setOptions(options)
-				
-				
-			},
-			failure : function(responce) {
-				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
-				console.log(responce);
 			}
 		});
 	},
 	
-	saveProfile:function(){
+	saveProfile:function(btn){
+		var me = this,
+			formPanel = btn.up("profile"),
+			values = formPanel.getValues(),
+			ParticipantTeams = formPanel.query("[name=Participant]");
+		if(values.Participant.length !== 2 && Ext.isEmpty(values.Participant[0]) && Ext.isEmpty(values.Participant[1])){
+			Ext.Msg.alert("Error", "Please select the team");
+			return;
+		}
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
 		});
 		
-		var particpantValue1 = Ext.getCmp("Participant1ID").getValue();
-		var particpantValue2 = Ext.getCmp("Participant2ID").getValue();
 		var Participants = [];
-		var participantStore = Ext.getStore("ListParticipants");
-		if(particpantValue1 == ""){
-		}
-		else{
-			Participants[0]={
-				ParticipantId : participantStore.getAt(particpantValue1).data.ParticipantId,
-				TypeCode : participantStore.getAt(particpantValue1).data.TypeCode
-			}
-		}
-		
-		if(particpantValue2 == ""){
-		}
-		else{
-			Participants[1]={
-				ParticipantId : participantStore.getAt(particpantValue2).data.ParticipantId,
-				TypeCode : participantStore.getAt(particpantValue2).data.TypeCode
-			}
-		}
+		var participate1 = ParticipantTeams[0].getRecord(),
+			participate2 = ParticipantTeams[1].getRecord();
+		Participants = [{
+			ParticipantId : participate1.get("ParticipantId"),
+			TypeCode : participate1.get("TypeCode")
+		}, {
+			ParticipantId : participate2.get("ParticipantId"),
+			TypeCode : participate2.get("TypeCode")
+		}];
 		
 		
 		
 		Ext.Ajax.request({
 			url : AllInOneWorldSport.Global.SERVER_URL + "/UpdateProfile",
 			method : "POST",
-			dataType : 'json',
-			headers : {
-				'Content-Type' : 'application/json'
-			},
-			xhr2 : true,
 			disableCaching : false,
 			jsonData : {
 				Member:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,

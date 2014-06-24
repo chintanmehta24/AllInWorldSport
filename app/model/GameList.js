@@ -39,9 +39,9 @@ Ext.define('AllInOneWorldSport.model.GameList', {
         }
     },
     dateConvert:function(value, rec){
-    	value = String(value);
-    	value = value.replace(/\D+/g,"");
-    	value = parseInt(value);
-    	return new Date(value);
+    	// value = String(value);
+    	// value = value.replace(/\D+/g,"");
+    	// value = parseInt(value);
+    	return Ext.Date.parseFunctions.MS(value, true);
     }
 });

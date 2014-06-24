@@ -56,27 +56,23 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		}, {
     			xtype: "selectfield",
     			label: "teams",
-    			name: "Participant1",
-				id:"Participant1ID",
-    			options: [{
-    				text: "team1",
-    				value: "value1"
-    			}, {
-    				text: "team2",
-    				value: "value2"
-    			}]
+    			name: "Participant",
+				// id:"Participant1ID",
+				autoSelect: false,
+				placeHolder: "Select Team",
+				store: "ListParticipants",
+				displayField: "Name",
+				valueField: "ParticipantId"
     		}, {
     			xtype: "selectfield",
     			label: "&nbsp;",
-    			name: "Participant2",
-				id:"Participant2ID",
-    			options: [{
-    				text: "team1",
-    				value: "value1"
-    			}, {
-    				text: "team2",
-    				value: "value2"
-    			}]
+    			name: "Participant",
+				// id:"Participant2ID",
+				autoSelect: false,
+				placeHolder: "Select Team",
+				store: "ListParticipants",
+				displayField: "Name",
+				valueField: "ParticipantId"
     		}]
     	},{
     		xtype: "container",

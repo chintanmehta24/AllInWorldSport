@@ -1,7 +1,7 @@
 Ext.define('AllInOneWorldSport.store.ListParticipants', {
     extend: 'Ext.data.Store',
 	config:{
-		model: "AllInOneWorldSport.model.ListParticipants",
+		model: "AllInOneWorldSport.model.ListParticipant",
 		autoLoad: false
 	},
 	constructor: function(){

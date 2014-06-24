@@ -21,7 +21,9 @@ Ext.application({
         'Ext.Img',
         'Ext.Label',
         'AllInOneWorldSport.Global',
-        'Ext.field.Search'
+        'Ext.field.Search',
+        'Ext.form.FieldSet',
+        'Ext.field.Select'
     ],
     
     controllers: [
@@ -31,7 +33,7 @@ Ext.application({
     
     models: [
     	"GameList",
-		"ListParticipants"
+		"ListParticipant"
     ],
     
     stores: [

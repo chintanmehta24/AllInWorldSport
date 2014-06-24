@@ -83,6 +83,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
 					return;
 				}
+				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				Ext.Msg.alert('Success', "You are successfully register");
 				var mainMenu = mainPanel.down("mainmenu");
@@ -127,6 +128,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
 					return;
 				}
+				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				Ext.Msg.alert('Success', "You are successfully login");
 				var mainMenu = mainPanel.down("mainmenu");

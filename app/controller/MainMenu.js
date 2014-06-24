@@ -257,15 +257,22 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			ParticipantId : participate2.get("ParticipantId"),
 			TypeCode : participate2.get("TypeCode")
 		}];
-		
-		
-		
+		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
+			loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
 		Ext.Ajax.request({
 			url : AllInOneWorldSport.Global.SERVER_URL + "/UpdateProfile",
 			method : "POST",
 			disableCaching : false,
 			jsonData : {
-				Member:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,
+				Member: {
+					DisplayName: current_user.Member.FirstName,
+	                FirstName: current_user.Member.FirstName,
+	                LastName: current_user.Member.LastName,
+	                LoginName: loginName,//current_user,
+	                EmailAddress: current_user.Member.EmailAddress,
+	                PrimaryPhone: current_user.Member.PrimaryPhone,
+	                MemberId: current_user.MemberId
+				},//Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,
 				Participants : Participants,
 	            token: AllInOneWorldSport.Global.getAccessToken()
 			},

@@ -7809,20 +7809,22 @@ body.x-desktop {
   background: rgba(255, 255, 255, 0.4);
 }
 /* line 250, ../sass/app.scss */
-.games-list-cls.x-list-normal .game-event-cls.x-list-item .date {
+.games-list-cls.x-list-normal .game-event-cls.x-list-item .date, .games-list-cls.x-list-normal .game-event-cls.x-list-item .eventname {
   position: absolute;
-  left: 0.75em;
-  top: 0.4em;
+  font-family: "OpenSansLight";
+  font-weight: bold;
   font-size: 0.6em;
+  top: 0.75em;
 }
-/* line 256, ../sass/app.scss */
+/* line 257, ../sass/app.scss */
+.games-list-cls.x-list-normal .game-event-cls.x-list-item .date {
+  left: 1em;
+}
+/* line 260, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .eventname {
-  position: absolute;
-  font-size: 0.60em;
-  right: 0.75em;
-  top: 0.4em;
+  right: 1em;
 }
-/* line 262, ../sass/app.scss */
+/* line 263, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats {
   display: flex;
   display: -webkit-box;
@@ -7836,7 +7838,7 @@ body.x-desktop {
   padding-top: 0.5em;
   width: 100%;
 }
-/* line 268, ../sass/app.scss */
+/* line 269, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats > div {
   display: flex;
   display: -webkit-box;
@@ -7852,23 +7854,23 @@ body.x-desktop {
   align-items: center;
   width: 0 !important;
 }
-/* line 274, ../sass/app.scss */
+/* line 275, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats > div:last-child {
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
-/* line 276, ../sass/app.scss */
+/* line 277, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats > div:last-child .thumb {
   margin-right: 0.5em;
   margin-left: 0.25em;
 }
-/* line 282, ../sass/app.scss */
+/* line 283, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats > div:first-child .thumb {
   margin-left: 0.5em;
   margin-right: 0.25em;
 }
-/* line 288, ../sass/app.scss */
+/* line 289, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats .teamname {
   width: 0 !important;
   -webkit-box-flex: 1;
@@ -7877,7 +7879,7 @@ body.x-desktop {
   font-size: 0.85em;
   text-align: center;
 }
-/* line 294, ../sass/app.scss */
+/* line 295, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item .participats .thumb {
   background-color: white;
   width: 2em;
@@ -7891,18 +7893,18 @@ body.x-desktop {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* line 304, ../sass/app.scss */
+/* line 305, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item.x-item-selected {
   background-image: none;
   background-color: transparent;
 }
-/* line 307, ../sass/app.scss */
+/* line 308, ../sass/app.scss */
 .games-list-cls.x-list-normal .game-event-cls.x-list-item.x-item-selected .x-innerhtml {
   background-color: rgba(255, 255, 255, 0.75);
   background-image: none;
   color: black;
 }
-/* line 314, ../sass/app.scss */
+/* line 315, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -7917,11 +7919,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 323, ../sass/app.scss */
+/* line 324, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls .x-button-label, .games-list-cls.x-list-normal .betgame-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 326, ../sass/app.scss */
+/* line 327, ../sass/app.scss */
 .games-list-cls.x-list-normal .betgame-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -7931,14 +7933,14 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 332, ../sass/app.scss */
+/* line 333, ../sass/app.scss */
 .about-game-cls {
   background-color: transparent;
   background-image: url("../images/aboutgame_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 337, ../sass/app.scss */
+/* line 338, ../sass/app.scss */
 .about-game-cls .team-name-cls {
   color: white;
   font-size: 1.75em;
@@ -7946,13 +7948,13 @@ body.x-desktop {
   font-weight: bold;
   text-align: center;
 }
-/* line 344, ../sass/app.scss */
+/* line 345, ../sass/app.scss */
 .about-game-cls .vs-text-cls {
   font-size: 1.25em;
   color: white;
   font-weight: bold;
 }
-/* line 349, ../sass/app.scss */
+/* line 350, ../sass/app.scss */
 .about-game-cls .place-detail-cls {
   font-size: 1.12em;
   color: white;
@@ -7960,7 +7962,7 @@ body.x-desktop {
   margin-bottom: 1em;
   line-height: 1.5;
 }
-/* line 356, ../sass/app.scss */
+/* line 357, ../sass/app.scss */
 .about-game-cls .bet-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -7974,11 +7976,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 364, ../sass/app.scss */
+/* line 365, ../sass/app.scss */
 .about-game-cls .bet-btn-cls .x-button-label, .about-game-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 367, ../sass/app.scss */
+/* line 368, ../sass/app.scss */
 .about-game-cls .bet-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -7988,21 +7990,21 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 373, ../sass/app.scss */
+/* line 374, ../sass/app.scss */
 .bet-page-cls {
   background-color: transparent;
   background-image: url("../images/betpage_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 379, ../sass/app.scss */
+/* line 380, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .x-form-fieldset-title {
   font-size: 1.5em;
   margin: 0.5em 0;
   text-align: center;
   color: white;
 }
-/* line 385, ../sass/app.scss */
+/* line 386, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .x-form-fieldset-inner {
   border: 0;
   background-color: transparent;
@@ -8013,13 +8015,13 @@ body.x-desktop {
   -o-border-radius: 0;
   border-radius: 0;
 }
-/* line 391, ../sass/app.scss */
+/* line 392, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls {
   padding: 0.5em 0.75em;
   background: rgba(255, 255, 255, 0.2);
   margin-bottom: 0.75em;
 }
-/* line 395, ../sass/app.scss */
+/* line 396, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-label {
   padding-right: 0.75em;
   font-size: 1.125em;
@@ -8027,7 +8029,7 @@ body.x-desktop {
   color: white;
   text-transform: uppercase;
 }
-/* line 404, ../sass/app.scss */
+/* line 405, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button {
   padding: 0 1.5em;
   -webkit-border-radius: 1em;
@@ -8040,12 +8042,12 @@ body.x-desktop {
   border: 0;
   font-size: 0.9em;
 }
-/* line 410, ../sass/app.scss */
+/* line 411, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-button-label, .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-badge {
   color: white;
   line-height: 1.5;
 }
-/* line 414, ../sass/app.scss */
+/* line 415, ../sass/app.scss */
 .bet-page-cls .bet-container-cls .team-detail-cls .x-button.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -8054,7 +8056,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 420, ../sass/app.scss */
+/* line 421, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button {
   background-color: #f5fd09;
   background-image: none;
@@ -8069,11 +8071,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 429, ../sass/app.scss */
+/* line 430, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button .x-button-label, .bet-page-cls .about-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 432, ../sass/app.scss */
+/* line 433, ../sass/app.scss */
 .bet-page-cls .about-btn-cls.x-button.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -8083,29 +8085,29 @@ body.x-desktop {
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
 
-/* line 438, ../sass/app.scss */
+/* line 439, ../sass/app.scss */
 .bet-detail-cls {
   background-color: transparent;
   background-image: url("../images/betdetails_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 443, ../sass/app.scss */
+/* line 444, ../sass/app.scss */
 .bet-detail-cls .x-scroll-container {
   background-color: transparent;
   background-image: none;
 }
-/* line 447, ../sass/app.scss */
+/* line 448, ../sass/app.scss */
 .bet-detail-cls .canecl-btn-cls {
   margin-left: auto;
   max-width: 10em;
 }
-/* line 450, ../sass/app.scss */
+/* line 451, ../sass/app.scss */
 .bet-detail-cls .canecl-btn-cls .x-button-label, .bet-detail-cls .canecl-btn-cls .x-badge {
   color: #d4d2d2;
   text-align: left;
 }
-/* line 455, ../sass/app.scss */
+/* line 456, ../sass/app.scss */
 .bet-detail-cls .x-label.field-label-cls {
   color: white;
   font-family: 'OpenSansBold';
@@ -8113,27 +8115,27 @@ body.x-desktop {
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
-/* line 461, ../sass/app.scss */
+/* line 462, ../sass/app.scss */
 .bet-detail-cls .x-label.field-label-cls .infotext {
   text-transform: none;
   font-size: 0.65em;
 }
-/* line 466, ../sass/app.scss */
+/* line 467, ../sass/app.scss */
 .bet-detail-cls .x-field {
   background-color: transparent;
   background-image: none;
   max-width: 15em;
 }
-/* line 471, ../sass/app.scss */
+/* line 472, ../sass/app.scss */
 .bet-detail-cls .x-field .x-component-outer {
   background-color: white;
 }
-/* line 474, ../sass/app.scss */
+/* line 475, ../sass/app.scss */
 .bet-detail-cls .x-field .x-input-el {
   background-color: transparent;
   background-image: none;
 }
-/* line 480, ../sass/app.scss */
+/* line 481, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls {
   background-color: #f5fd09;
   background-image: none;
@@ -8148,11 +8150,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 489, ../sass/app.scss */
+/* line 490, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls .x-button-label, .bet-detail-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 492, ../sass/app.scss */
+/* line 493, ../sass/app.scss */
 .bet-detail-cls .bet-btn-cls.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -8161,12 +8163,12 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
 }
-/* line 496, ../sass/app.scss */
+/* line 497, ../sass/app.scss */
 .bet-detail-cls .btn-container-cls {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
-/* line 500, ../sass/app.scss */
+/* line 501, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls {
   background-color: #d3252e;
   background-image: none;
@@ -8181,17 +8183,17 @@ body.x-desktop {
   font-size: 0.9em;
   text-transform: uppercase;
 }
-/* line 509, ../sass/app.scss */
+/* line 510, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls .x-button-label, .bet-detail-cls .bet-action-cls .x-badge {
   font-family: "OpenSansBold";
   color: white;
   font-size: 0.75em;
 }
-/* line 514, ../sass/app.scss */
+/* line 515, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls:last-child {
   margin-right: 0;
 }
-/* line 517, ../sass/app.scss */
+/* line 518, ../sass/app.scss */
 .bet-detail-cls .bet-action-cls.x-button-pressing {
   background-image: none;
   background-color: rgba(211, 37, 46, 0.65);
@@ -8201,30 +8203,30 @@ body.x-desktop {
   background-image: linear-gradient(top, rgba(168, 29, 37, 0.65), rgba(189, 33, 41, 0.65) 10%, rgba(211, 37, 46, 0.65) 65%, rgba(213, 37, 46, 0.65));
 }
 
-/* line 522, ../sass/app.scss */
+/* line 523, ../sass/app.scss */
 .profile-cls {
   background-color: transparent;
   background-image: url("../images/profile_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 527, ../sass/app.scss */
+/* line 528, ../sass/app.scss */
 .profile-cls .x-scroll-container {
   background-color: transparent;
   background-image: none;
 }
-/* line 531, ../sass/app.scss */
+/* line 532, ../sass/app.scss */
 .profile-cls .x-form-fieldset-title {
   font-family: "OpenSansBold";
   text-shadow: none;
   color: #f5fd09;
   text-transform: uppercase;
 }
-/* line 537, ../sass/app.scss */
+/* line 538, ../sass/app.scss */
 .profile-cls .x-form-fieldset {
   margin: 0.5em 1em 1em;
 }
-/* line 539, ../sass/app.scss */
+/* line 540, ../sass/app.scss */
 .profile-cls .x-form-fieldset .x-form-fieldset-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8235,12 +8237,12 @@ body.x-desktop {
   background-color: transparent;
   background-image: none;
 }
-/* line 545, ../sass/app.scss */
+/* line 546, ../sass/app.scss */
 .profile-cls .x-form-fieldset .x-field {
   margin: 0.5em 0;
   border: 0;
 }
-/* line 548, ../sass/app.scss */
+/* line 549, ../sass/app.scss */
 .profile-cls .x-form-fieldset .x-field .x-form-label {
   font-family: "OpenSansBold";
   border: 0;
@@ -8256,11 +8258,11 @@ body.x-desktop {
   font-weight: bold;
   width: 5em;
 }
-/* line 562, ../sass/app.scss */
+/* line 563, ../sass/app.scss */
 .profile-cls .x-form-fieldset .x-field .x-form-label > * {
   font-size: 0.8em;
 }
-/* line 567, ../sass/app.scss */
+/* line 568, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-preview-cls {
   width: 5em;
   height: 5em;
@@ -8269,7 +8271,7 @@ body.x-desktop {
   background-size: cover;
   margin-right: 0.2em;
 }
-/* line 575, ../sass/app.scss */
+/* line 576, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8282,13 +8284,13 @@ body.x-desktop {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 581, ../sass/app.scss */
+/* line 582, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-button-label, .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-badge {
   text-transform: uppercase;
   color: white;
   font-size: 0.75em;
 }
-/* line 586, ../sass/app.scss */
+/* line 587, ../sass/app.scss */
 .profile-cls .x-form-fieldset .photo-action-btn.x-button.x-button-pressing {
   background-image: none;
   background-color: rgba(0, 0, 0, 0.4);
@@ -8297,7 +8299,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 65%, rgba(1, 1, 1, 0.4));
   background-image: linear-gradient(top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 65%, rgba(1, 1, 1, 0.4));
 }
-/* line 591, ../sass/app.scss */
+/* line 592, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button {
   background-color: #d3252e;
   background-image: none;
@@ -8313,11 +8315,11 @@ body.x-desktop {
   margin-left: 0.75em;
   padding: 0.5em 1em;
 }
-/* line 599, ../sass/app.scss */
+/* line 600, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button:last-child {
   margin-right: 0.75em;
 }
-/* line 602, ../sass/app.scss */
+/* line 603, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button .x-button-label, .profile-cls .profile-action-btn.x-button .x-badge {
   font-family: "OpenSansBold";
   text-transform: uppercase;
@@ -8325,7 +8327,7 @@ body.x-desktop {
   font-size: 0.7em;
   white-space: normal;
 }
-/* line 609, ../sass/app.scss */
+/* line 610, ../sass/app.scss */
 .profile-cls .profile-action-btn.x-button.x-button-pressing {
   background-image: none;
   background-color: #d3252e;
@@ -8334,7 +8336,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
   background-image: linear-gradient(top, #a81d25, #bd2129 10%, #d3252e 65%, #d5252e);
 }
-/* line 613, ../sass/app.scss */
+/* line 614, ../sass/app.scss */
 .profile-cls .profile-save-btn {
   background-color: #f5fd09;
   background-image: none;
@@ -8349,11 +8351,11 @@ body.x-desktop {
   -o-border-radius: 1em;
   border-radius: 1em;
 }
-/* line 622, ../sass/app.scss */
+/* line 623, ../sass/app.scss */
 .profile-cls .profile-save-btn .x-button-label, .profile-cls .profile-save-btn .x-badge {
   font-family: "OpenSansBold";
 }
-/* line 625, ../sass/app.scss */
+/* line 626, ../sass/app.scss */
 .profile-cls .profile-save-btn.x-button-pressing {
   background-image: none;
   background-color: #f5fd09;
@@ -8361,4 +8363,62 @@ body.x-desktop {
   background-image: -moz-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
   background-image: -o-linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
   background-image: linear-gradient(top, #cad102, #e3eb02 10%, #f5fd09 65%, #f5fd0c);
+}
+
+/* line 632, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar {
+  background-color: rgba(255, 255, 255, 0.15);
+  background-image: none;
+  padding: 0;
+  border: 0;
+}
+/* line 637, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* line 643, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls:last-child {
+  border-right: 0;
+}
+/* line 646, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 650, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon:before {
+  content: "";
+}
+/* line 653, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.back {
+  background-image: url("../icons/back.png");
+}
+/* line 656, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.home {
+  background-image: url("../icons/home.png");
+}
+/* line 659, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.chat {
+  background-image: url("../icons/chat.png");
+}
+/* line 662, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.friends {
+  background-image: url("../icons/friends.png");
+}
+/* line 665, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.coins {
+  background-image: url("../icons/coins.png");
+}
+/* line 668, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.global {
+  background-image: url("../icons/global.png");
 }

@@ -247,17 +247,18 @@ $form-field-height: 2em;
       padding: 0.5em;
       background: rgba(255,255,255,0.4);
     }
-    .date{
+    .date, .eventname{
       position: absolute;
-      left: 0.75em;
-      top: 0.4em;
+      font-family: "OpenSansLight";
+      font-weight: bold;
       font-size: 0.6em;
+      top: 0.75em;
+    }
+    .date{
+      left: 1em;
     }
     .eventname{
-      position: absolute;
-      font-size: 0.60em; //change
-      right: 0.75em;
-      top: 0.4em;
+      right: 1em;
     }
     .participats{
       @include st-box();
@@ -624,6 +625,49 @@ $form-field-height: 2em;
     }
     &.x-button-pressing{
       @include background-gradient(rgba(245,253,9,1), "recessed");
+    }
+  }
+}
+
+.nav-toolbar-cls.x-toolbar {
+  background-color: rgba(white, 0.15);
+  background-image: none;
+  padding: 0;
+  border: 0;
+  .nav-btn-cls {
+    margin: 0;
+    padding: 0;
+    height: auto;    
+    @include border-radius(0);
+    border-right: 1px solid rgba(white, 0.5);
+    &:last-child{
+      border-right: 0;
+    }
+    .x-button-icon{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      &:before{
+        content: "";
+      }
+      &.back{
+        background-image: url("../icons/back.png");
+      }
+      &.home{
+        background-image: url("../icons/home.png");
+      }
+      &.chat{
+        background-image: url("../icons/chat.png");
+      }
+      &.friends{
+        background-image: url("../icons/friends.png");
+      }
+      &.coins{
+        background-image: url("../icons/coins.png");
+      }
+      &.global{
+        background-image: url("../icons/global.png");
+      }
     }
   }
 }

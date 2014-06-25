@@ -10,6 +10,9 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			pack: 'center'
 		},
 		items : [{
+			xtype: "navbar",
+			docked: "top"
+		},{
 			xtype : 'container',
 			layout:{
 				type:'hbox',

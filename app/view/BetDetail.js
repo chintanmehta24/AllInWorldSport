@@ -54,71 +54,15 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			html: "HOW MUCH DO YOU WANT TO BET?"
 		},
 		{
-			xtype: "container",
-			layout: "hbox",
-			items:[
-				{
-					xtype: "button",
-					text : "-",
-					listeners : {
-						element : 'element',
-						taphold : function() {
-							timeMinusInterval = setInterval(function(){
-								console.log(11)
-								var amtTxt = Ext.getCmp('amountID');
-								var value = parseInt(amtTxt.getValue());
-								var newVal = value - 50;
-								if(value > 50)
-									amtTxt.setValue(newVal);
-							},200);
-							
-						},
-						touchend: function() {
-       
-						   
-							clearInterval(timeMinusInterval)
-							
-							
-											  
-						},
-					}
-				},
-				{
-					xtype :"textfield",
-					name: "Amount",
-					id:"amountID",
-					disabled: true,
-					readOnly: true,
-				}, 
-				{
-					xtype: "button",
-					text : "+",
-					listeners : {
-						element : 'element',
-						taphold : function() {
-							timePlusInterval = setInterval(function(){
-								console.log(11)
-								var amtTxt = Ext.getCmp('amountID');
-								var value = parseInt(amtTxt.getValue());
-								var newVal = value + 50;
-								if(value < 2000)
-									amtTxt.setValue(newVal);
-							},200);
-							
-						},
-						touchend: function() {
-       
-						   
-							clearInterval(timePlusInterval)
-							
-							
-											  
-						},
-					}
-				},
-			]
-		},
-		
+			xtype :"spinnerfield",
+			name: "Amount",
+			id:"amountID",
+			groupButtons: false,
+			minValue: 50,
+			maxValue: 2000,
+			increment: 50,
+			value: 50
+		}, 
 		{
 			xtype :"label",
 			cls: "field-label-cls",

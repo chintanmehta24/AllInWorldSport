@@ -215,19 +215,37 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			xtype : "loadmask",
 			message : "Please wait"
 		});
-		Ext.getStore("ListParticipants").load({
+		var participantStore_1 = Ext.getStore("ListParticipants1"),
+			participantStore_2 = Ext.getStore("ListParticipants2"),
+			callbackFn = function(records, operation, success){
+				Ext.Viewport.setMasked(false);
+				var data = Ext.decode(operation.getResponse().responseText);
+				if(data && data.errorReason && data.errorReason.ReasonCode){
+					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					return;
+				}
+			};
+		participantStore_1.load({
 			jsonData: {
 				League:"NFL",
 				GroupType: "Conference"
 			},
 			callback: function(records, operation, success){
-				Ext.Viewport.setMasked(false);
 				if(!success){
-					var data = Ext.decode(operation.getResponse().responseText);
-					if(data && data.errorReason && data.errorReason.ReasonCode){
-						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
-						return;
-					}
+					callbackFn.apply(this, arguments);
+				}else{
+					participantStore_2.load({
+						jsonData: {
+							League:"NCAA",
+							GroupType: "Conference"
+						},
+						callback: function(records, operation, success){
+							Ext.Viewport.setMasked(false);
+							if(!success){
+								callbackFn.apply(this, arguments);
+							}
+						}
+					});
 				}
 			}
 		});
@@ -251,6 +269,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		var Participants = [];
 		var participate1 = ParticipantTeams[0].getRecord(),
 			participate2 = ParticipantTeams[1].getRecord();
+		Participants.push(participate1.getData());
+		Participants.push(participate2.getData());
+/*
 		Participants = [{
 			ParticipantId : participate1.get("ParticipantId"),
 			TypeCode : participate1.get("TypeCode")
@@ -258,6 +279,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			ParticipantId : participate2.get("ParticipantId"),
 			TypeCode : participate2.get("TypeCode")
 		}];
+*/
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 			loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
 		Ext.Ajax.request({
@@ -287,6 +309,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
 					return;
 				}
+				var viewport = Ext.Viewport,
+					mainPanel = viewport.down("#mainviewport"),
+					mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}

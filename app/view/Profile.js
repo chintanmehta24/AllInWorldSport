@@ -60,7 +60,9 @@ Ext.define('AllInOneWorldSport.view.Profile', {
 				// id:"Participant1ID",
 				autoSelect: false,
 				placeHolder: "Select Team",
-				store: "ListParticipants",
+				store: Ext.create("AllInOneWorldSport.store.ListParticipants",{
+					storeId: "ListParticipants1"
+				}),
 				displayField: "Name",
 				valueField: "ParticipantId"
     		}, {
@@ -70,7 +72,9 @@ Ext.define('AllInOneWorldSport.view.Profile', {
 				// id:"Participant2ID",
 				autoSelect: false,
 				placeHolder: "Select Team",
-				store: "ListParticipants",
+				store:  Ext.create("AllInOneWorldSport.store.ListParticipants",{
+					storeId: "ListParticipants2"
+				}),
 				displayField: "Name",
 				valueField: "ParticipantId"
     		}]

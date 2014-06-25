@@ -51,7 +51,7 @@ Ext.application({
         'AboutGame',
         'BetPage',
         'BetDetail',
-        
+        'NavigationBar',
         'Profile'
     ],
 

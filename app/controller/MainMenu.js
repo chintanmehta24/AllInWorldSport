@@ -238,6 +238,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			formPanel = btn.up("profile"),
 			values = formPanel.getValues(),
 			ParticipantTeams = formPanel.query("[name=Participant]");
+			
 		if(values.Participant.length !== 2 && Ext.isEmpty(values.Participant[0]) && Ext.isEmpty(values.Participant[1])){
 			Ext.Msg.alert("Error", "Please select the team");
 			return;
@@ -264,12 +265,13 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			method : "POST",
 			disableCaching : false,
 			jsonData : {
+				MemberId: current_user.MemberId,
 				Member: {
 					DisplayName: current_user.Member.FirstName,
-	                FirstName: current_user.Member.FirstName,
+	                FirstName: values.FirstName,
 	                LastName: current_user.Member.LastName,
 	                LoginName: loginName,//current_user,
-	                EmailAddress: current_user.Member.EmailAddress,
+	                EmailAddress: values.Email,
 	                PrimaryPhone: current_user.Member.PrimaryPhone,
 	                MemberId: current_user.MemberId
 				},//Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,

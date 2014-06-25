@@ -8422,3 +8422,23 @@ body.x-desktop {
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.global {
   background-image: url("../icons/global.png");
 }
+/* line 672, ../sass/app.scss */
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-badge {
+  top: 0.5em;
+  right: auto;
+  left: 50%;
+  background-color: yellow;
+  background-image: none;
+  color: black;
+  border: 0;
+  font-size: 0.5em;
+  font-weight: normal;
+  font-family: OpenSansBold;
+  text-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+  border-radius: 1em;
+}

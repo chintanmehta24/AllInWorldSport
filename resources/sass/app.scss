@@ -669,5 +669,20 @@ $form-field-height: 2em;
         background-image: url("../icons/global.png");
       }
     }
+    .x-badge{
+        top: 0.5em;
+        right: auto;
+        left: 50%;
+        background-color: yellow;
+        background-image: none;
+        color: black;
+        border: 0;
+        font-size: 0.5em;
+        font-weight: normal;
+        font-family: OpenSansBold;
+        text-shadow: none;
+        box-shadow: none;      
+        @include border-radius(1em);
+    }
   }
 }

@@ -27,9 +27,11 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "friends"
     	},{
-    		iconCls: "back"
+    		iconCls: "back",
+    		badge: "4"
     	},{
-    		iconCls: "coins"
+    		iconCls: "coins",
+    		badge: "25K"
     	},{
     		iconCls: "global"
     	},{

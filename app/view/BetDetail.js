@@ -52,10 +52,74 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			xtype :"label",
 			cls: "field-label-cls",
 			html: "HOW MUCH DO YOU WANT TO BET?"
-		},{
-			xtype :"textfield",
-			name: "Amount"
-		}, {
+		},
+		{
+			xtype: "container",
+			layout: "hbox",
+			items:[
+				{
+					xtype: "button",
+					text : "-",
+					listeners : {
+						element : 'element',
+						taphold : function() {
+							timeMinusInterval = setInterval(function(){
+								console.log(11)
+								var amtTxt = Ext.getCmp('amountID');
+								var value = parseInt(amtTxt.getValue());
+								var newVal = value - 50;
+								if(value > 50)
+									amtTxt.setValue(newVal);
+							},200);
+							
+						},
+						touchend: function() {
+       
+						   
+							clearInterval(timeMinusInterval)
+							
+							
+											  
+						},
+					}
+				},
+				{
+					xtype :"textfield",
+					name: "Amount",
+					id:"amountID",
+					disabled: true,
+					readOnly: true,
+				}, 
+				{
+					xtype: "button",
+					text : "+",
+					listeners : {
+						element : 'element',
+						taphold : function() {
+							timePlusInterval = setInterval(function(){
+								console.log(11)
+								var amtTxt = Ext.getCmp('amountID');
+								var value = parseInt(amtTxt.getValue());
+								var newVal = value + 50;
+								if(value < 2000)
+									amtTxt.setValue(newVal);
+							},200);
+							
+						},
+						touchend: function() {
+       
+						   
+							clearInterval(timePlusInterval)
+							
+							
+											  
+						},
+					}
+				},
+			]
+		},
+		
+		{
 			xtype :"label",
 			cls: "field-label-cls",
 			html: "WHO DO YOU WANT TO BET?"
@@ -92,7 +156,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 		// me.reset();
 		me.setValues({
 			Spread: null,
-			Amount: ""
+			Amount: "50"
 		});
 	}
 });

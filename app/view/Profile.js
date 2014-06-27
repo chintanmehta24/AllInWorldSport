@@ -4,6 +4,9 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     config: {
     	cls: "profile-cls",
     	items: [{
+			xtype: "navbar",
+			docked: "top"
+		},{
     		xtype: "fieldset",
     		title: "Profile",
     		defaults: {
@@ -13,18 +16,18 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		},
     		items: [{
     			name: "FirstName",
-    			label: "name"
-    		}, {
+    			label: "name",
+			}, {
     			name: "Email",
-    			label: "e-mail"
-    		}, {
+    			label: "e-mail",
+			}, {
     			name: "AboutMe",
     			label: "about me",
-    			xtype: "textareafield"
-    		}, {
+    			xtype: "textareafield",
+			}, {
     			name: "Status",
-    			label: "status"
-    		}, {
+    			label: "status",
+			}, {
     			xtype: "container",
     			layout: {
     				type: "hbox",
@@ -99,5 +102,20 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		cls: "profile-save-btn",
 			action: "saveProfile",
     	}]
-    }
+    },
+	listeners: {
+		painted: function (element, options) {
+			var me = this;
+			// me.reset();
+			if(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"))!=null)
+			{
+				me.setValues({
+					FirstName: Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.FirstName,
+					Email: Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.EmailAddress,
+					AboutMe:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Notes,
+					Status:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.ProfileStatus,
+				});
+			}
+		}
+	}
 });

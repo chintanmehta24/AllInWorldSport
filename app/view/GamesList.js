@@ -24,7 +24,12 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 						return Ext.Date.format(date, "D, M dS");
 				  	}
 				  }),
-		items: [{
+		items: [
+		{
+			xtype: "navbar",
+			docked: "top"
+		},
+		{
 			xtype: "searchfield",
 			label: "Team:",
 			cls: 'search-field-cls',

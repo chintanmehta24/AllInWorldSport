@@ -10,6 +10,9 @@ Ext.define("AllInOneWorldSport.view.BetPage",{
 			pack: "center"
 		},
 		items: [{
+			xtype: "navbar",
+			docked: "top"
+		},{
 			xtype: "fieldset",
 			title: "WHO WILL WIN",
 			cls: "bet-container-cls",

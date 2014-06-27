@@ -21,13 +21,14 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     		iconMask: true
     	},
     	items: [{
-    		iconCls: "back"
+    		iconCls: "back",
+			action: "backNavigation",
     	},{
     		iconCls: "chat"
     	},{
     		iconCls: "friends"
     	},{
-    		iconCls: "back",
+    		iconCls: "tickets",
     		badge: "4"
     	},{
     		iconCls: "coins",
@@ -35,7 +36,8 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "global"
     	},{
-    		iconCls: "home"
+    		iconCls: "home",
+			action: "homeNavigation",
     	}]
     }
 });

@@ -8422,6 +8422,9 @@ body.x-desktop {
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.global {
   background-image: url("../icons/global.png");
 }
+.nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.tickets {
+  background-image: url("../icons/tickets.png");
+}
 /* line 672, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-badge {
   top: 0.5em;

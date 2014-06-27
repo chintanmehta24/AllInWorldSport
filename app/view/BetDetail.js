@@ -6,6 +6,9 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 		gameEventRecord: null,
 		cls: "bet-detail-cls",
 		items:[{
+			xtype: "navbar",
+			docked: "top"
+		},{
 			xtype: "button",
 			text: "CANCEL BET",
 			ui: "plain",

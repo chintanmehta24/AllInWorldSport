@@ -91,6 +91,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", duration: 450});
+				
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
@@ -136,6 +137,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", duration: 450});
+				
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);

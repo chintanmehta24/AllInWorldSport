@@ -668,6 +668,9 @@ $form-field-height: 2em;
       &.global{
         background-image: url("../icons/global.png");
       }
+	  &.tickets{
+        background-image: url("../icons/tickets.png");
+      }
     }
     .x-badge{
         top: 0.5em;

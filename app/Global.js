@@ -3,6 +3,7 @@ Ext.define('AllInOneWorldSport.Global',{
 	SESSION: null,
 	CURRENT_LOGIN_USER: null,
 	SERVER_URL: "http://home.terrificsoftware.com:8085/PowerPlayService",
+	NavigationStack : [],
 	UTF8: {
 		// public method for url encoding
 		encode : function(string) {
@@ -99,5 +100,9 @@ Ext.define('AllInOneWorldSport.Global',{
 			"SessionRowKey" : sessionkey,
 			"TimeStamp" : timestamp
 		};
+	},
+	
+	clearNavigationStack:function(){
+		NavigationStack=[];
 	}
 });

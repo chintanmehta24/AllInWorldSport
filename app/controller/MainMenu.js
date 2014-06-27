@@ -38,6 +38,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"profile button[action=saveProfile]":{
 				tap : "saveProfile"
 			},
+			"button[action=backNavigation]":{
+				tap : "backNavigation"
+			},
+			"button[action=homeNavigation]":{
+				tap : "homeNavigation"
+			},
         }
     },
     
@@ -55,7 +61,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				xtype: "gameslist"
 			});
 		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(gameList, {type: "slide", duration: 450});
+		
     },
     
     onProfileBtnTap: function(){
@@ -67,6 +75,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				xtype: "profile"
 			});
 		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(profile, {type: "slide", duration: 450});
 		this.getListParticipant();
     },
@@ -87,7 +96,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		betpage.setGameEventRecord(record);
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(betpage, {type: "slide", duration: 450});
+		
     },
     
     onShowAboutGame: function(btn){
@@ -102,7 +113,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		var rec = aboutGame.getGameEventRecord();
 		betpage.setGameEventRecord(rec);
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(betpage, {type: "slide", duration: 450});
+		
     },
     
     backToBetNow: function(){
@@ -115,6 +128,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		mainPanel.animateActiveItem(betpage, {type: "slide",direction: "right", out: true, duration: 450});
+		AllInOneWorldSport.Global.NavigationStack.pop();
     },
     
     doBetNow: function(btn){
@@ -143,7 +157,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		betdetail.down("[name=EventParticipantId]").setValue(selectedTeam.EventParticipantId);
 		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
 											"<div class='infotext'>To Win by <span style='font-wieght: bold'>OR</span> No Point Spread</div>");
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
+		
     },
     
     doCancelBet: function(){
@@ -156,6 +172,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+				AllInOneWorldSport.Global.NavigationStack = [];
     		}
     	});
     },
@@ -201,6 +218,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
 		    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
+				AllInOneWorldSport.Global.NavigationStack = [];
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
@@ -295,7 +313,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 	                LoginName: loginName,//current_user,
 	                EmailAddress: values.Email,
 	                PrimaryPhone: current_user.Member.PrimaryPhone,
-	                MemberId: current_user.MemberId
+	                MemberId: current_user.MemberId,
+					WebURL:values.Status,
+					Notes:values.AboutMe,
 				},//Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member,
 				Participants : Participants,
 	            token: AllInOneWorldSport.Global.getAccessToken()
@@ -316,6 +336,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
+				AllInOneWorldSport.Global.NavigationStack = [];
 				
 			},
 			failure : function(responce) {
@@ -324,6 +345,28 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				console.log(responce);
 			}
 		});
+	},
+	
+	backNavigation:function(){
+		
+		
+		var View = AllInOneWorldSport.Global.NavigationStack.pop();
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport");
+		
+		mainPanel.animateActiveItem(View, {type: "slide",direction: "right", duration: 450});
+		
+	},
+	
+	homeNavigation:function(){
+		AllInOneWorldSport.Global.NavigationStack = [];
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport");
+		var mainMenu = mainPanel.down("mainmenu");
+		if(!mainMenu){
+			mainMenu = mainPanel.add({xtype: "mainmenu"});
+		}
+		mainPanel.animateActiveItem(mainMenu, {type: "slide",direction: "right", duration: 450});
 	},
 	
 });

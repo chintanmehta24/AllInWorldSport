@@ -9,10 +9,10 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			type : 'vbox',
 			pack: 'center'
 		},
-		items : [{
+		items : [/*{
 			xtype: "navbar",
 			docked: "top"
-		},{
+		},*/{
 			xtype : 'container',
 			layout:{
 				type:'hbox',

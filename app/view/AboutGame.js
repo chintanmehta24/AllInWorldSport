@@ -10,6 +10,9 @@ Ext.define("AllInOneWorldSport.view.AboutGame",{
 			align: "center"
 		},
 		items: [{
+			xtype: "navbar",
+			docked: "top"
+		},{
 			xtype :"label",
 			itemId: "firstTeamId",
 			cls: "team-name-cls"

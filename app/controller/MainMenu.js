@@ -262,6 +262,21 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 							if(!success){
 								callbackFn.apply(this, arguments);
 							}
+							var teams = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Teams
+							for(var i = 0;i<teams.length;i++){
+								if(teams[i].Status == "Favorite")
+								{
+									if(teams[i].LeagueName == "NFL"){
+										if(Ext.getCmp('Participant1ID')!=null)
+											Ext.getCmp('Participant1ID').setValue(teams[i].ParticipantId);
+										
+									}
+									else if(teams[i].LeagueName == "NCAA"){
+										if(Ext.getCmp('Participant2ID')!=null)
+										Ext.getCmp('Participant2ID').setValue(teams[i].ParticipantId);
+									}
+								}
+							}
 						}
 					});
 				}

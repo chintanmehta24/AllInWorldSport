@@ -60,7 +60,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			xtype: "selectfield",
     			label: "teams",
     			name: "Participant",
-				// id:"Participant1ID",
+				id:"Participant1ID",
 				autoSelect: false,
 				placeHolder: "Select Team",
 				store: Ext.create("AllInOneWorldSport.store.ListParticipants",{
@@ -72,7 +72,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			xtype: "selectfield",
     			label: "&nbsp;",
     			name: "Participant",
-				// id:"Participant2ID",
+				 id:"Participant2ID",
 				autoSelect: false,
 				placeHolder: "Select Team",
 				store:  Ext.create("AllInOneWorldSport.store.ListParticipants",{
@@ -116,6 +116,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
 					Status:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.ProfileStatus,
 				});
 			}
+			
 		}
 	}
 });

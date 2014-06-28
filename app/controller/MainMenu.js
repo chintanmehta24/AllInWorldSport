@@ -344,6 +344,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
 					return;
 				}
+				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				var viewport = Ext.Viewport,
 					mainPanel = viewport.down("#mainviewport"),
 					mainMenu = mainPanel.down("mainmenu");

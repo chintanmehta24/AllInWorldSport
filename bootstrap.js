@@ -24,6 +24,7 @@
 
 Ext.Loader.addClassPathMappings({
   "AllInOneWorldSport": "app",
+  "AllInOneWorldSport.view.AccountSettings": "app/view/AccountSetting.js",
   "Ext": "touch/src",
   "Ext-more": "touch/src/core/Ext-more.js",
   "Ext.DomHelper": "touch/src/dom/Helper.js",
@@ -51,10 +52,32 @@ Ext.Loader.addClassPathMappings({
 Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.Global": [],
   "AllInOneWorldSport.controller.Main": [],
+  "AllInOneWorldSport.controller.MainMenu": [],
+  "AllInOneWorldSport.controller.Navigation": [],
+  "AllInOneWorldSport.model.GameList": [],
+  "AllInOneWorldSport.model.ListParticipant": [],
+  "AllInOneWorldSport.proxy.AWSProxy": [],
+  "AllInOneWorldSport.store.GameLists": [],
+  "AllInOneWorldSport.store.ListParticipants": [],
+  "AllInOneWorldSport.view.AboutGame": [],
+  "AllInOneWorldSport.view.AccountSettings": [],
+  "AllInOneWorldSport.view.BetDetail": [],
+  "AllInOneWorldSport.view.BetPage": [],
+  "AllInOneWorldSport.view.BuyCoins": [],
   "AllInOneWorldSport.view.Dashboard": [],
+  "AllInOneWorldSport.view.GamesList": [],
   "AllInOneWorldSport.view.Login": [],
   "AllInOneWorldSport.view.Main": [],
+  "AllInOneWorldSport.view.MainMenu": [],
+  "AllInOneWorldSport.view.ManageFriendList": [],
+  "AllInOneWorldSport.view.MyBet": [],
   "AllInOneWorldSport.view.Navigation": [],
+  "AllInOneWorldSport.view.NavigationBar": [],
+  "AllInOneWorldSport.view.NextDrawing": [],
+  "AllInOneWorldSport.view.Profile": [],
+  "AllInOneWorldSport.view.TicketRules": [],
+  "AllInOneWorldSport.view.WinnerCircle": [],
+  "AllInOneWorldSport.view.WonPopUp": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -782,8 +805,35 @@ Ext.ClassManager.addNameAlternateMappings({
 Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.Global": [],
   "AllInOneWorldSport.controller.Main": [],
+  "AllInOneWorldSport.controller.MainMenu": [],
+  "AllInOneWorldSport.controller.Navigation": [],
+  "AllInOneWorldSport.model.GameList": [],
+  "AllInOneWorldSport.model.ListParticipant": [],
+  "AllInOneWorldSport.proxy.AWSProxy": [
+    "proxy.awsajax"
+  ],
+  "AllInOneWorldSport.store.GameLists": [],
+  "AllInOneWorldSport.store.ListParticipants": [],
+  "AllInOneWorldSport.view.AboutGame": [
+    "widget.aboutgame"
+  ],
+  "AllInOneWorldSport.view.AccountSettings": [
+    "widget.accountsetting"
+  ],
+  "AllInOneWorldSport.view.BetDetail": [
+    "widget.betdetail"
+  ],
+  "AllInOneWorldSport.view.BetPage": [
+    "widget.betpage"
+  ],
+  "AllInOneWorldSport.view.BuyCoins": [
+    "widget.buycoins"
+  ],
   "AllInOneWorldSport.view.Dashboard": [
     "widget.dashboard"
+  ],
+  "AllInOneWorldSport.view.GamesList": [
+    "widget.gameslist"
   ],
   "AllInOneWorldSport.view.Login": [
     "widget.login"
@@ -791,8 +841,35 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.view.Main": [
     "widget.main"
   ],
+  "AllInOneWorldSport.view.MainMenu": [
+    "widget.mainmenu"
+  ],
+  "AllInOneWorldSport.view.ManageFriendList": [
+    "widget.managefriendlist"
+  ],
+  "AllInOneWorldSport.view.MyBet": [
+    "widget.mybet"
+  ],
   "AllInOneWorldSport.view.Navigation": [
     "widget.navigation"
+  ],
+  "AllInOneWorldSport.view.NavigationBar": [
+    "widget.navbar"
+  ],
+  "AllInOneWorldSport.view.NextDrawing": [
+    "widget.nextdrawing"
+  ],
+  "AllInOneWorldSport.view.Profile": [
+    "widget.profile"
+  ],
+  "AllInOneWorldSport.view.TicketRules": [
+    "widget.ticketrules"
+  ],
+  "AllInOneWorldSport.view.WinnerCircle": [
+    "widget.winnercircle"
+  ],
+  "AllInOneWorldSport.view.WonPopUp": [
+    "widget.wonpopup"
   ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],

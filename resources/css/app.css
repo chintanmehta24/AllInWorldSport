@@ -8422,10 +8422,11 @@ body.x-desktop {
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.global {
   background-image: url("../icons/global.png");
 }
+/* line 671, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.tickets {
   background-image: url("../icons/tickets.png");
 }
-/* line 672, ../sass/app.scss */
+/* line 675, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-badge {
   top: 0.5em;
   right: auto;
@@ -8444,4 +8445,91 @@ body.x-desktop {
   -ms-border-radius: 1em;
   -o-border-radius: 1em;
   border-radius: 1em;
+}
+
+/* line 693, ../sass/app.scss */
+.friends-list-cls {
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 695, ../sass/app.scss */
+.friends-list-cls .x-scroll-scroller {
+  padding: 0 1em;
+}
+/* line 698, ../sass/app.scss */
+.friends-list-cls .overlay-title-cls {
+  padding: 0.5em 1em;
+  background: rgba(211, 211, 211, 0.9);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 704, ../sass/app.scss */
+.friends-list-cls .friend-cls {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+/* line 712, ../sass/app.scss */
+.friends-list-cls .friend-cls:last-child {
+  margin-bottom: 0.5em;
+}
+/* line 715, ../sass/app.scss */
+.friends-list-cls .friend-cls:after {
+  width: 1.5em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  background-color: #f4f4f4;
+  background-size: auto 0.75em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/select-disable.png");
+}
+/* line 730, ../sass/app.scss */
+.friends-list-cls .friend-cls.x-item-selected:after {
+  background-image: url("../images/select-enable.png");
+}
+/* line 734, ../sass/app.scss */
+.friends-list-cls .friend-cls .thumb {
+  width: 3em;
+  height: 3em;
+  background-size: 3.5em 3.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 741, ../sass/app.scss */
+.friends-list-cls .friend-cls .status {
+  width: 2em;
+  height: 2em;
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+/* line 749, ../sass/app.scss */
+.friends-list-cls .friend-cls .status.disable {
+  background-image: url("../images/status-disable.png");
+}
+/* line 751, ../sass/app.scss */
+.friends-list-cls .friend-cls .status.enable {
+  background-image: url("../images/status-enable.png");
+}
+/* line 755, ../sass/app.scss */
+.friends-list-cls .friend-cls .title {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }

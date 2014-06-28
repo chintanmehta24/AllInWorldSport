@@ -29,10 +29,10 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     		iconCls: "friends"
     	},{
     		iconCls: "tickets",
-    		badge: "4"
+    		badgeText: "4"
     	},{
     		iconCls: "coins",
-    		badge: "25K"
+    		badgeText: "25K"
     	},{
     		iconCls: "global"
     	},{

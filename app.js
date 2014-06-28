@@ -23,12 +23,15 @@ Ext.application({
         'AllInOneWorldSport.Global',
         'Ext.field.Search',
         'Ext.form.FieldSet',
-        'Ext.field.Select'
+        'Ext.field.Select',
+        'AllInOneWorldSport.store.ListParticipants'
     ],
     
     controllers: [
         "Main",
-        "MainMenu"
+        "MainMenu",
+        "Navigation",
+        "Profile"
     ],
     
     models: [
@@ -52,7 +55,8 @@ Ext.application({
         'BetPage',
         'BetDetail',
         'NavigationBar',
-        'Profile'
+        'Profile',
+        'ManageFriendList'
     ],
 
     icon: {

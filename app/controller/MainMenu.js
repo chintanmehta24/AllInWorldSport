@@ -37,13 +37,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             },
 			"profile button[action=saveProfile]":{
 				tap : "saveProfile"
-			},
-			"button[action=backNavigation]":{
-				tap : "backNavigation"
-			},
-			"button[action=homeNavigation]":{
-				tap : "homeNavigation"
-			},
+			}
         }
     },
     
@@ -262,7 +256,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 							if(!success){
 								callbackFn.apply(this, arguments);
 							}
-							var teams = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Teams
+							var teams = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Teams;
 							for(var i = 0;i<teams.length;i++){
 								if(teams[i].Status == "Favorite")
 								{
@@ -361,28 +355,5 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				console.log(responce);
 			}
 		});
-	},
-	
-	backNavigation:function(){
-		
-		
-		var View = AllInOneWorldSport.Global.NavigationStack.pop();
-		var viewport = Ext.Viewport,
-			mainPanel = viewport.down("#mainviewport");
-		
-		mainPanel.animateActiveItem(View, {type: "slide",direction: "right", duration: 450});
-		
-	},
-	
-	homeNavigation:function(){
-		AllInOneWorldSport.Global.NavigationStack = [];
-		var viewport = Ext.Viewport,
-			mainPanel = viewport.down("#mainviewport");
-		var mainMenu = mainPanel.down("mainmenu");
-		if(!mainMenu){
-			mainMenu = mainPanel.add({xtype: "mainmenu"});
-		}
-		mainPanel.animateActiveItem(mainMenu, {type: "slide",direction: "right", duration: 450});
-	},
-	
+	}	
 });

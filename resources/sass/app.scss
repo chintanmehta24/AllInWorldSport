@@ -689,3 +689,71 @@ $form-field-height: 2em;
     }
   }
 }
+
+.friends-list-cls{
+    background: rgba(255, 255, 255, 0.9);
+    .x-scroll-scroller{
+      padding: 0 1em;
+    }
+    .overlay-title-cls {
+        padding: 0.5em 1em;
+        background: rgba(211, 211, 211, 0.9);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .friend-cls{
+        @include st-box();
+        @include st-box-orient(horizontal);
+        @include st-box-align(center);
+        margin-top: 0.5em;
+        padding: 0.5em;
+        background: rgba(255, 255, 255, 0.7);
+        position: relative;
+        &:last-child{
+          margin-bottom: 0.5em;
+        }
+        &:after{
+          width: 1.5em;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          content: " ";
+          position: absolute;
+          z-index: 1;
+          background-color: #f4f4f4;
+          background-size: auto 0.75em;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("../images/select-disable.png");
+        }
+        &.x-item-selected{
+          &:after{
+            background-image: url("../images/select-enable.png");
+          }          
+        }
+        .thumb{
+          width: 3em;
+          height: 3em;
+          background-size: 3.5em 3.5em;
+          background-repeat: no-repeat;
+          background-position: center;          
+        }
+        .status{
+          width: 2em;
+          height: 2em;
+          background-size: contain;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          margin-right: 0.5em;
+          margin-left: 0.5em;          
+          &.disable{
+            background-image: url("../images/status-disable.png");          }
+          &.enable{
+            background-image: url("../images/status-enable.png");
+          }
+        }
+        .title{
+          @include st-box-flex(1);
+        }
+    }
+}

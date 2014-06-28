@@ -92,7 +92,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		items: [{
     			text: "buy coins"
     		},{
-    			text: "my friends"
+    			text: "my friends",
+    			action: "showMyfriends"
     		},{
     			text: "account settings"
     		}]
@@ -101,22 +102,20 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     		text: "Save Changes",
     		cls: "profile-save-btn",
 			action: "saveProfile",
-    	}]
-    },
-	listeners: {
-		painted: function (element, options) {
-			var me = this;
-			// me.reset();
-			if(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"))!=null)
-			{
-				me.setValues({
-					FirstName: Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.FirstName,
-					Email: Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.EmailAddress,
-					AboutMe:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Notes,
-					Status:Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.ProfileStatus,
-				});
+    	}],
+    	listeners: {
+			painted: function (element, options) {
+				var me = this,
+					current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+				if(current_user){
+					me.setValues({
+						FirstName: current_user.Member.FirstName,
+						Email: current_user.Member.EmailAddress,
+						AboutMe: current_user.Member.Notes,
+						Status: current_user.Member.ProfileStatus,
+					});
+				}
 			}
-			
 		}
-	}
+    }
 });

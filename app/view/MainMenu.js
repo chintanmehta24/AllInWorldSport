@@ -58,7 +58,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			items:[{
 				text:'INVITE<br>FRIENDS'
 			},{
-				text:'I NEED<br>TICKETS'
+				text:'I NEED<br>TICKETS',
+				action: "gotoTicketRules",
 			}]
 		},{
 			xtype : 'container',

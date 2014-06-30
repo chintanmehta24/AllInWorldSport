@@ -56,7 +56,8 @@ Ext.application({
         'BetDetail',
         'NavigationBar',
         'Profile',
-        'ManageFriendList'
+        'ManageFriendList',
+        'BuyCoins'
     ],
 
     icon: {

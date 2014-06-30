@@ -700,6 +700,7 @@ $form-field-height: 2em;
         background: rgba(211, 211, 211, 0.9);
         text-transform: uppercase;
         font-weight: bold;
+        font-size: 0.8em;
     }
     .friend-cls{
         @include st-box();
@@ -708,6 +709,7 @@ $form-field-height: 2em;
         margin-top: 0.5em;
         padding: 0.5em;
         background: rgba(255, 255, 255, 0.7);
+        border: 1px solid white;
         position: relative;
         &:last-child{
           margin-bottom: 0.5em;
@@ -727,6 +729,7 @@ $form-field-height: 2em;
           background-image: url("../images/select-disable.png");
         }
         &.x-item-selected{
+          background: rgba(227, 227, 227, 0.69);
           &:after{
             background-image: url("../images/select-enable.png");
           }          
@@ -747,13 +750,70 @@ $form-field-height: 2em;
           margin-right: 0.5em;
           margin-left: 0.5em;          
           &.disable{
-            background-image: url("../images/status-disable.png");          }
+            background-image: url("../images/status-disable.png");
+          }
           &.enable{
             background-image: url("../images/status-enable.png");
+          }
+          &.celebrity{
+            background-image: url("../images/status-celebrity.png");
+          }
+          &.enemy{
+            background-image: url("../images/status-enemy.png");
           }
         }
         .title{
           @include st-box-flex(1);
         }
     }
+}
+.profile-buy-coins-cls{
+  background-color: transparent;
+  background-image: url("../images/profile_buy_coins_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;  
+  .x-form-fieldset-title{
+    font-family: "OpenSansBold";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #f5fd09;
+    margin: 0.5em;
+  }
+  .x-form-fieldset-inner{
+    @include border-radius(0);
+    border: 0;
+    background: transparent;
+  }
+  .buy-coins-btn-cls{
+    @include border-radius(0);
+    background-image: none;
+    background-color: rgba(white, 0.4);
+    margin-top: 0.5em;
+    padding: 0.75em 0.75em 1em 0.75em;
+    border: 0;
+    .x-button-icon {
+      height: 2em;
+      width: 5.183em;
+      background-position: left center;
+      background-size: contain;
+    }
+    .x-button-label{
+      text-align: left;
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+    }
+    .x-badge{
+      background: #f5fd09;
+      font-size:0.8em;
+      padding: 0.25em 0.75em;
+      margin: 0;
+      border: 0;
+      @include border-radius(0.75em);
+      text-shadow: none;
+      color: black;
+      bottom: 0.5em;
+      top: auto;
+      right: 0.5em;
+    }
+  }
 }

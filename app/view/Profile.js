@@ -90,7 +90,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			cls: "profile-action-btn"
     		},
     		items: [{
-    			text: "buy coins"
+    			text: "buy coins",
+    			action: "buyIcons"
     		},{
     			text: "my friends",
     			action: "showMyfriends"

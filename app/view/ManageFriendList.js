@@ -13,6 +13,35 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			cls: "overlay-title-cls",
 			docked: "top",
 			html: "manage friends"
+		}, {
+			xtype: "container",
+			layout: {
+				type: "hbox",
+				pack: "end"
+			},
+			docked: "top",
+			defaults: {
+				xtype: "button",
+				ui: "plain",
+				iconMask: true
+			},
+			items: [
+				{
+					iconCls: "lock_open"
+				},
+				{
+					iconCls: "lock_closed"
+				},
+				{
+					iconCls: "add"
+				},
+				{
+					iconCls: "delete"
+				},
+				{
+					iconCls: "team"
+				}
+			]
 		}],
 		itemCls: "friend-cls",
 		cls: "friends-list-cls",
@@ -29,11 +58,11 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 				Name: "Friend Name 2"
 			}, {
 				Url: "resources/images/person.png",
-				Status: "disable",
+				Status: "celebrity",
 				Name: "Friend Name 3"
 			}, {
 				Url: "resources/images/person.png",
-				Status: "enable",
+				Status: "enemy",
 				Name: "Friend Name 4"
 			}, {
 				Url: "resources/images/person.png",
@@ -45,5 +74,6 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 				Name: "Friend Name 6"
 			}]
 		}
-	}
+	},
+	
 });

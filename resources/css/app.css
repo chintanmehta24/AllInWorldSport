@@ -8461,8 +8461,9 @@ body.x-desktop {
   background: rgba(211, 211, 211, 0.9);
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 0.8em;
 }
-/* line 704, ../sass/app.scss */
+/* line 705, ../sass/app.scss */
 .friends-list-cls .friend-cls {
   display: flex;
   display: -webkit-box;
@@ -8476,13 +8477,14 @@ body.x-desktop {
   margin-top: 0.5em;
   padding: 0.5em;
   background: rgba(255, 255, 255, 0.7);
+  border: 1px solid white;
   position: relative;
 }
-/* line 712, ../sass/app.scss */
+/* line 714, ../sass/app.scss */
 .friends-list-cls .friend-cls:last-child {
   margin-bottom: 0.5em;
 }
-/* line 715, ../sass/app.scss */
+/* line 717, ../sass/app.scss */
 .friends-list-cls .friend-cls:after {
   width: 1.5em;
   right: 0;
@@ -8497,11 +8499,15 @@ body.x-desktop {
   background-repeat: no-repeat;
   background-image: url("../images/select-disable.png");
 }
-/* line 730, ../sass/app.scss */
+/* line 731, ../sass/app.scss */
+.friends-list-cls .friend-cls.x-item-selected {
+  background: rgba(227, 227, 227, 0.69);
+}
+/* line 733, ../sass/app.scss */
 .friends-list-cls .friend-cls.x-item-selected:after {
   background-image: url("../images/select-enable.png");
 }
-/* line 734, ../sass/app.scss */
+/* line 737, ../sass/app.scss */
 .friends-list-cls .friend-cls .thumb {
   width: 3em;
   height: 3em;
@@ -8509,7 +8515,7 @@ body.x-desktop {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 741, ../sass/app.scss */
+/* line 744, ../sass/app.scss */
 .friends-list-cls .friend-cls .status {
   width: 2em;
   height: 2em;
@@ -8519,17 +8525,95 @@ body.x-desktop {
   margin-right: 0.5em;
   margin-left: 0.5em;
 }
-/* line 749, ../sass/app.scss */
+/* line 752, ../sass/app.scss */
 .friends-list-cls .friend-cls .status.disable {
   background-image: url("../images/status-disable.png");
 }
-/* line 751, ../sass/app.scss */
+/* line 755, ../sass/app.scss */
 .friends-list-cls .friend-cls .status.enable {
   background-image: url("../images/status-enable.png");
 }
-/* line 755, ../sass/app.scss */
+/* line 758, ../sass/app.scss */
+.friends-list-cls .friend-cls .status.celebrity {
+  background-image: url("../images/status-celebrity.png");
+}
+/* line 761, ../sass/app.scss */
+.friends-list-cls .friend-cls .status.enemy {
+  background-image: url("../images/status-enemy.png");
+}
+/* line 765, ../sass/app.scss */
 .friends-list-cls .friend-cls .title {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+
+/* line 770, ../sass/app.scss */
+.profile-buy-coins-cls {
+  background-color: transparent;
+  background-image: url("../images/profile_buy_coins_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+/* line 775, ../sass/app.scss */
+.profile-buy-coins-cls .x-form-fieldset-title {
+  font-family: "OpenSansBold";
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #f5fd09;
+  margin: 0.5em;
+}
+/* line 782, ../sass/app.scss */
+.profile-buy-coins-cls .x-form-fieldset-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+/* line 787, ../sass/app.scss */
+.profile-buy-coins-cls .buy-coins-btn-cls {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.5em;
+  padding: 0.75em 0.75em 1em 0.75em;
+  border: 0;
+}
+/* line 794, ../sass/app.scss */
+.profile-buy-coins-cls .buy-coins-btn-cls .x-button-icon {
+  height: 2em;
+  width: 5.183em;
+  background-position: left center;
+  background-size: contain;
+}
+/* line 800, ../sass/app.scss */
+.profile-buy-coins-cls .buy-coins-btn-cls .x-button-label, .profile-buy-coins-cls .buy-coins-btn-cls .x-badge {
+  text-align: left;
+  font-family: "OpenSansBold";
+  text-transform: uppercase;
+}
+/* line 805, ../sass/app.scss */
+.profile-buy-coins-cls .buy-coins-btn-cls .x-badge {
+  background: #f5fd09;
+  font-size: 0.8em;
+  padding: 0.25em 0.75em;
+  margin: 0;
+  border: 0;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  border-radius: 0.75em;
+  text-shadow: none;
+  color: black;
+  bottom: 0.5em;
+  top: auto;
+  right: 0.5em;
 }

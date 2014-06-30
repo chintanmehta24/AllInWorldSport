@@ -27,8 +27,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		if(!buycoins){
 			buycoins = mainPanel.add({xtype: "buycoins"});
 		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(buycoins, {type: "slide", direction: "left", duration: 450});
-		AllInOneWorldSport.Global.NavigationStack.push(buycoins);
+		
 	},
 	
 	saveProfile:function(btn){

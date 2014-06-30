@@ -40,9 +40,9 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 			scrollDock: "bottom",
 			xtype: "button",
 			cls: "betgame-btn-cls",
-			text: "TAP GAME TO BET",
-			action: "betBtnGameList",
-			disabled: true
+			text: "Tap Game TO BET",
+			//action: "betBtnGameList",
+			//disabled: true
 		}],
 		listeners: [{
 			delegate: "searchfield",

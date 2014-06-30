@@ -196,7 +196,7 @@ $form-field-height: 2em;
     .x-button-label{
       font-family: "OpenSansBold";
       color: white;
-      font-size: 1em;
+      font-size: 0.85em;
     }
     &:last-child{
       margin-right: 0.75em;
@@ -854,5 +854,45 @@ $form-field-height: 2em;
         @include st-box-flex(1);
         width: 0px;
       }
+  }
+}
+
+.buytickets-cls{
+  background-color: transparent;
+  background-image: url("../images/ticket_rules_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;  
+  .x-form-fieldset-title{
+    font-family: "OpenSansBold";
+    text-transform: uppercase;
+    font-size: 1.25em;
+    color: white;
+    margin: 0.5em;
+    text-shadow: none;
+  }
+  .x-form-fieldset-inner{
+    @include border-radius(0);
+    border: 0;
+    background: transparent;
+  }
+  .ticket-btn-cls{
+    @include border-radius(0);
+    background-image: none;
+    background-color: rgba(white, 0);
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: 0;
+    .x-button-icon {
+      background-position: left center;
+      background-size: contain;
+    }
+    .x-button-label{
+      color: white;
+      text-align: left;
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+      font-size: 0.8em;
+      white-space: normal;
+    }
   }
 }

@@ -63,7 +63,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			groupButtons: false,
 			minValue: 50,
 			maxValue: 2000,
-			increment: 50,
+			stepValue:50,
 			value: 50
 		}, 
 		{

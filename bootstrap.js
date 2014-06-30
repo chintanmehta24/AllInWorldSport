@@ -54,6 +54,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
   "AllInOneWorldSport.controller.Navigation": [],
+  "AllInOneWorldSport.controller.Profile": [],
   "AllInOneWorldSport.model.GameList": [],
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.proxy.AWSProxy": [],
@@ -807,6 +808,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
   "AllInOneWorldSport.controller.Navigation": [],
+  "AllInOneWorldSport.controller.Profile": [],
   "AllInOneWorldSport.model.GameList": [],
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.proxy.AWSProxy": [

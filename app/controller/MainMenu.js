@@ -12,6 +12,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             "mainmenu button[action=viewprofile]":{
             	tap: "onProfileBtnTap"
             },
+            "mainmenu button[action=gotoLeaderBoard]":{
+            	tap: "goToWinnerCircle"
+            },
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -273,5 +276,16 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				}
 			}
 		});
-	}	
+	},
+	
+	goToWinnerCircle: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			winnercircle = mainPanel.down("winnercircle");
+		if(!winnercircle){
+			winnercircle = mainPanel.add({xtype: "winnercircle"});
+		}
+		mainPanel.animateActiveItem(winnercircle, {type: "slide", direction: "left", duration: 450});
+		AllInOneWorldSport.Global.NavigationStack.push(winnercircle);
+	}
 });

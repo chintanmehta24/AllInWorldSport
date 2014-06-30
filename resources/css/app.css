@@ -8617,3 +8617,58 @@ body.x-desktop {
   top: auto;
   right: 0.5em;
 }
+
+/* line 821, ../sass/app.scss */
+.winner-circle-cls {
+  background-color: transparent;
+  background-image: url("../images/winner_circle_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+/* line 826, ../sass/app.scss */
+.winner-circle-cls .winner-item-cls {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0.5em;
+  background-color: transparent;
+  color: white;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-family: "OpenSansBold";
+  font-size: 0.8em;
+}
+/* line 837, ../sass/app.scss */
+.winner-circle-cls .winner-item-cls .thumb {
+  width: 2em;
+  height: 2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 0.5em;
+}
+/* line 845, ../sass/app.scss */
+.winner-circle-cls .winner-item-cls .date {
+  width: 6.5em;
+}
+/* line 848, ../sass/app.scss */
+.winner-circle-cls .winner-item-cls .prizeName {
+  margin-right: 0.5em;
+  -webkit-box-flex: 1.5;
+  -ms-flex: 1.5 0 auto;
+  flex: 1.5 0 auto;
+  width: 0px;
+}
+/* line 853, ../sass/app.scss */
+.winner-circle-cls .winner-item-cls .winnerName {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  width: 0px;
+}

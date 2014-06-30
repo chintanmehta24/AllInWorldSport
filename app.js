@@ -57,7 +57,8 @@ Ext.application({
         'NavigationBar',
         'Profile',
         'ManageFriendList',
-        'BuyCoins'
+        'BuyCoins',
+        'WinnerCircle'
     ],
 
     icon: {

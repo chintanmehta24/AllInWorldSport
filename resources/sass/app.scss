@@ -817,3 +817,42 @@ $form-field-height: 2em;
     }
   }
 }
+
+.winner-circle-cls{
+  background-color: transparent;
+  background-image: url("../images/winner_circle_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;  
+  .winner-item-cls{
+      @include st-box();
+      @include st-box-orient(horizontal);
+      @include st-box-align(center);
+      margin-top: 0.5em;
+      background-color: transparent;
+      color: white;
+      padding: 0.5em;
+      text-transform: uppercase;
+      font-family: "OpenSansBold";
+      font-size: 0.8em;
+      .thumb{
+        width: 2em;
+        height: 2em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 0.5em;
+      }
+      .date{
+        width: 6.5em;
+      }
+      .prizeName {
+        margin-right: 0.5em;
+        @include st-box-flex(1.5);
+        width: 0px;
+      }
+      .winnerName{
+        @include st-box-flex(1);
+        width: 0px;
+      }
+  }
+}

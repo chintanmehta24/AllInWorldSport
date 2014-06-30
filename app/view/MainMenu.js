@@ -75,7 +75,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				text:'MY<br>PROFILE',
 				action: "viewprofile"
 			},{
-				text:'LEADER<br>BOARDS'
+				text:'LEADER<br>BOARDS',
+				action: "gotoLeaderBoard"
 			},{
 				text:'ACCOUNT<br>SETTINGS'
 			}]

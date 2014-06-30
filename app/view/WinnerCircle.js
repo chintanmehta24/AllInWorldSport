@@ -5,6 +5,11 @@ Ext.define("AllInOneWorldSport.view.WinnerCircle", {
 		items: [{
 			xtype: "navbar",
 			docked: "top"
+		},{
+			xtype: "label",
+			scrollDock: "top",
+			cls: "title-cls",
+			html :"Winner Circle"
 		}],
 		cls: "winner-circle-cls",
 		itemCls: "winner-item-cls",

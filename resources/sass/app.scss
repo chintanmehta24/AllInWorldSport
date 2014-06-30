@@ -822,6 +822,14 @@ $form-field-height: 2em;
 
 .winner-circle-cls{
   @include background-allin("../images/winner_circle_background.jpg");
+  .title-cls{
+    font-family: "OpenSansBold";
+    text-transform: uppercase;
+    font-size: 1.25em;
+    color: #f5fd09;
+    margin: 0.5em;
+    text-shadow: none;
+  }
   .winner-item-cls{
       @include st-box();
       @include st-box-orient(horizontal);

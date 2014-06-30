@@ -18,6 +18,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=gotoTicketRules]":{
             	tap: "gotoTicketRules"
             },
+			"mainmenu button[action=popupWonWindow]":{
+            	tap: "popupWonWindow"
+            },
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		//ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -304,6 +307,17 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(ticketrules, {type: "slide", direction: "left", duration: 450});
+	},
+	
+	popupWonWindow: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			wonpopup = mainPanel.down("wonpopup");
+		if(!wonpopup){
+			wonpopup = mainPanel.add({xtype: "wonpopup"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(wonpopup, {type: "slide", direction: "left", duration: 450});
 	}
 	
 });

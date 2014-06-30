@@ -29,7 +29,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			},{
 				text:'BETS'
 			},{
-				text:'FREE<br>STUFF'
+				text:'FREE<br>STUFF',
+				action: "gotoTicketRules",
 			}]
 		},{
 			xtype:'container',
@@ -59,7 +60,6 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				text:'INVITE<br>FRIENDS'
 			},{
 				text:'I NEED<br>TICKETS',
-				action: "gotoTicketRules",
 			}]
 		},{
 			xtype : 'container',

@@ -58,7 +58,8 @@ Ext.application({
         'Profile',
         'ManageFriendList',
         'BuyCoins',
-        'WinnerCircle'
+        'WinnerCircle',
+        'WonPopUp'
     ],
 
     icon: {

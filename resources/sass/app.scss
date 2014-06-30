@@ -11,7 +11,13 @@ $form-field-height: 2em;
 // @include font-face("OpenSansBold", "../fonts/OpenSans-ExtraBold.ttf");
 @include font-face("OpenSansBold", inline-font-files("OpenSans-ExtraBold.ttf", truetype));
 @include font-face("OpenSansLight", inline-font-files("OpenSans-Light.ttf", truetype));
- 
+
+@mixin background-allin($img-url){
+  background-color: transparent;
+  background-image: url($img-url);
+  background-size: 100% 100%;
+  background-position: center;  
+}
 
 .navigation-cls.x-dataview{
   width: 320px;
@@ -31,10 +37,7 @@ $form-field-height: 2em;
 }
 
 .login-cls.x-form{
-  background-color: transparent;
-  background-image: url("../images/login_background.jpg");
-  background-position: center;
-  background-size: 100% 100%;
+  @include background-allin("../images/login_background.jpg");
   .x-scroll-container{
     background-color: transparent;
     .x-form-inner{
@@ -161,10 +164,7 @@ $form-field-height: 2em;
   }
 }
 .main-menu-cls{
-  background-color: transparent;
-  background-image: url("../images/mainmenu_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/mainmenu_background.jpg");
   > .x-inner{
     background-color: transparent;
     background-image: url("../images/logo_mainmenu.png");
@@ -177,7 +177,7 @@ $form-field-height: 2em;
     background-image: none;
     margin: 0.25em 0;
     border: 0;
-    font-size: 2em;
+    font-size: 1.75em;
     @include border-radius(1em);
     .x-button-label{
       font-family: "OpenSansBold";
@@ -196,7 +196,7 @@ $form-field-height: 2em;
     .x-button-label{
       font-family: "OpenSansBold";
       color: white;
-      font-size: 0.85em;
+      font-size: 0.75em;
     }
     &:last-child{
       margin-right: 0.75em;
@@ -208,10 +208,7 @@ $form-field-height: 2em;
 }
 
 .games-list-cls.x-list-normal{
-  background-color: transparent;
-  background-image: url("../images/gamesevent_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/gamesevent_background.jpg");
   .search-field-cls{
       padding: 0.5em;
       background-color: rgba(0, 0, 0,0.2);
@@ -313,7 +310,7 @@ $form-field-height: 2em;
     }
   }
   .betgame-btn-cls{
-    background-color: rgba(245,253,9,1);
+    background-color: #F5FD94;
     background-image: none;
     margin: 0.25em auto;
     max-width: 12em;
@@ -325,16 +322,13 @@ $form-field-height: 2em;
       font-family: "OpenSansBold";
     }
     &.x-button-pressing{
-      @include background-gradient(rgba(245,253,9,1), "recessed");
+      @include background-gradient(#F5FD94, "recessed");
     }
   }
 }
 
 .about-game-cls{
-  background-color: transparent;
-  background-image: url("../images/aboutgame_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/aboutgame_background.jpg");
   .team-name-cls {
       color: white;
       font-size: 1.75em;
@@ -372,10 +366,7 @@ $form-field-height: 2em;
 }
 
 .bet-page-cls{
-  background-color: transparent;
-  background-image: url("../images/betpage_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/betpage_background.jpg");
   .bet-container-cls{
     .x-form-fieldset-title {
         font-size: 1.5em;
@@ -437,10 +428,7 @@ $form-field-height: 2em;
 }
 
 .bet-detail-cls{
-  background-color: transparent;
-  background-image: url("../images/betdetails_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/betdetails_background.jpg");
   .x-scroll-container{
     background-color: transparent;
     background-image: none;
@@ -452,6 +440,26 @@ $form-field-height: 2em;
       color: #d4d2d2;
       text-align: left;
     }
+  }
+  .x-spinner {
+    .x-spinner-button{
+      background-image: none;
+      border: 0px !important;
+      color: white;
+      &.x-spinner-button-down{
+        background-color: #FF0000;
+        &.x-button-pressed{
+          @include background-gradient(#FF0000, "recessed");
+        }
+      }
+      &.x-spinner-button-up{
+        background-color: #000CE8;
+        &.x-button-pressed{
+          @include background-gradient(#000CE8, "recessed");
+        }
+      }
+    } 
+    
   }
   .x-label.field-label-cls{
       color: white;
@@ -521,10 +529,7 @@ $form-field-height: 2em;
   }
 }
 .profile-cls{
-  background-color: transparent;
-  background-image: url("../images/profile_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/profile_background.jpg");
   .x-scroll-container {
     background-color: transparent;
     background-image: none;
@@ -768,10 +773,7 @@ $form-field-height: 2em;
     }
 }
 .profile-buy-coins-cls{
-  background-color: transparent;
-  background-image: url("../images/profile_buy_coins_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/profile_buy_coins_background.jpg");
   .x-form-fieldset-title{
     font-family: "OpenSansBold";
     text-transform: uppercase;
@@ -819,10 +821,7 @@ $form-field-height: 2em;
 }
 
 .winner-circle-cls{
-  background-color: transparent;
-  background-image: url("../images/winner_circle_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/winner_circle_background.jpg");
   .winner-item-cls{
       @include st-box();
       @include st-box-orient(horizontal);
@@ -833,7 +832,7 @@ $form-field-height: 2em;
       padding: 0.5em;
       text-transform: uppercase;
       font-family: "OpenSansBold";
-      font-size: 0.8em;
+      font-size: 0.75em;
       .thumb{
         width: 2em;
         height: 2em;
@@ -858,10 +857,7 @@ $form-field-height: 2em;
 }
 
 .buytickets-cls{
-  background-color: transparent;
-  background-image: url("../images/ticket_rules_background.jpg");
-  background-size: 100% 100%;
-  background-position: center;  
+  @include background-allin("../images/ticket_rules_background.jpg");
   .x-form-fieldset-title{
     font-family: "OpenSansBold";
     text-transform: uppercase;
@@ -880,7 +876,7 @@ $form-field-height: 2em;
     background-image: none;
     background-color: rgba(white, 0);
     margin-top: 0.5em;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 1.5em;
     border: 0;
     .x-button-icon {
       background-position: left center;
@@ -891,8 +887,55 @@ $form-field-height: 2em;
       text-align: left;
       font-family: "OpenSansBold";
       text-transform: uppercase;
-      font-size: 0.8em;
+      font-size: 0.65em;
       white-space: normal;
+    }
+  }
+}
+
+.won-popup-cls{
+  @include background-allin("../images/won_popup_background.jpg");
+  .way-to-go-cls, .won-msg-cls, .earn-coins-cls{
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0.25em 0;
+  }
+  .way-to-go-cls{
+      .x-innerhtml{
+        font-size: 1.75em;
+        color: #f5fd09;
+      }
+  }
+  .won-msg-cls{
+      .x-innerhtml{
+        font-size: 1.15em;
+        color: white;
+      }
+  }
+  .earn-coins-cls{
+      .x-innerhtml{
+        font-size: 1.25em;
+        color: #d3252e;
+      }
+  }
+  .detail-btn-cls{
+    width: 12em;
+    max-width: 12em;
+    margin: auto;
+    background-color: #f5fd09;
+    background-image: none;
+    @include border-radius(1.5em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+      font-size: 1.25em;
+      color: black;
+    }
+  }
+  .close-btn-cls{
+    .x-button-label{
+      color: #bababa;
     }
   }
 }

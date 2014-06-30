@@ -15,9 +15,13 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             "mainmenu button[action=gotoLeaderBoard]":{
             	tap: "goToWinnerCircle"
             },
+			"mainmenu button[action=gotoTicketRules]":{
+            	tap: "gotoTicketRules"
+            },
             "gameslist":{
             	itemtap : function(ths, index, target, record){
-            		ths.down("button[action=betBtnGameList]").setDisabled(false);
+            		//ths.down("button[action=betBtnGameList]").setDisabled(false);
+					this.onGameEventSelected(record)
             	}
             },
             "gameslist button[action=betBtnGameList]":{
@@ -57,7 +61,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(gameList, {type: "slide", duration: 450});
-		
+		Ext.getStore('GameLists').removeAll();
     },
     
     onProfileBtnTap: function(){
@@ -74,13 +78,14 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		this.getListParticipant();
     },
     
-    onGameEventSelected: function(btn){
-    	var list = btn.up("gameslist"),
+    onGameEventSelected: function(record){
+    	/*var list = btn.up("gameslist"),
     		selectedRec = list.getSelection();
 		if(!selectedRec.length){
 			return;
-		}
-		var record = selectedRec[0],
+		}*/
+		//var record = selectedRec[0],
+		var record = record,
 			viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport");
 		var betpage = mainPanel.down("betpage");
@@ -285,7 +290,20 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		if(!winnercircle){
 			winnercircle = mainPanel.add({xtype: "winnercircle"});
 		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(winnercircle, {type: "slide", direction: "left", duration: 450});
-		AllInOneWorldSport.Global.NavigationStack.push(winnercircle);
+		
+	},
+	
+	gotoTicketRules:function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			ticketrules = mainPanel.down("ticketrules");
+		if(!ticketrules){
+			ticketrules = mainPanel.add({xtype: "ticketrules"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(ticketrules, {type: "slide", direction: "left", duration: 450});
 	}
+	
 });

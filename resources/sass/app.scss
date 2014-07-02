@@ -769,6 +769,7 @@ $form-field-height: 2em;
         }
         .title{
           @include st-box-flex(1);
+          font-family: "opensansbold";
         }
     }
 }
@@ -944,6 +945,78 @@ $form-field-height: 2em;
   .close-btn-cls{
     .x-button-label{
       color: #bababa;
+    }
+  }
+}
+.my-bet-cls{
+  @include background-allin("../images/won_popup_background.jpg");
+  .x-layout-card-item{
+        background-color: rgba(white, 0.4);
+  }
+  .x-tabbar{
+    height: auto;
+    border-bottom: 0px;
+    background: none;
+    padding-top: 0.8em;
+    .x-tab.x-tab-icon{
+      height : auto;
+      background-image: none;
+      @include border-radius(0);
+      min-width: initial;
+      padding: 0em 0.5em;
+      .x-button-icon {
+        height: 2em;
+        width: 2em;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        &.pending{
+          background-image: url("../icons/pending.png");
+        }
+        &.accepted{
+          background-image: url("../icons/accepted.png");
+        }
+        &.rejected{
+          background-image: url("../icons/rejected.png");
+        }
+        &.completed{
+          background-image: url("../icons/completed.png");
+        }
+        &.expired{
+          background-image: url("../icons/expired.png");
+        }
+      }
+      .x-button-label{
+        display: none;
+      }
+      &.x-tab-active{
+        background-color: rgba(white, 0.4);
+      }
+    }
+  }
+  .friends-list-cls{
+    background-color: transparent;
+    margin: 1em;
+    .title-cls{
+        font-family: OpenSansBold;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    .friend-cls{
+      border: 0px;
+      .thumb{
+          height: 2em;
+          width: 2em;
+          background-size: 2.25em;
+      }
+      .status{
+        width: 1.5em;
+        height: 1.5em;
+      }
+      &:after{
+        content: initial;
+      }
     }
   }
 }

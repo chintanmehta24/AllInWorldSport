@@ -10,6 +10,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			},
 			"profile button[action=saveProfile]":{
 				tap : "saveProfile"
+			},
+			"profile button[action=sshowFriends]":{
+				tap : "sshowFriends"
 			}
 		}
 	},
@@ -97,5 +100,12 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 				console.log(responce);
 			}
 		});
+	},
+	sshowFriends: function(){
+		var View = AllInOneWorldSport.Global.NavigationStack.pop();
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport");
+		
+		mainPanel.animateActiveItem(View, {type: "slide",direction: "right", duration: 450});
 	}
 });

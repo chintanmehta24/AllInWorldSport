@@ -21,6 +21,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=popupWonWindow]":{
             	tap: "popupWonWindow"
             },
+			"mainmenu button[action=showMyBets]":{
+            	tap: "showMyBets"
+            },
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		//ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -318,6 +321,17 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(wonpopup, {type: "slide", direction: "left", duration: 450});
+	},
+	
+	showMyBets: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			mybet = mainPanel.down("mybet");
+		if(!mybet){
+			mybet = mainPanel.add({xtype: "mybet"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(mybet, {type: "slide", direction: "left", duration: 450});
 	}
 	
 });

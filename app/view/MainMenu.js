@@ -27,7 +27,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			{
 				text:'GET<br>COINS'
 			},{
-				text:'BETS'
+				text:'BETS',
+				action: "showMyBets"
 			},{
 				text:'FREE<br>STUFF',
 				action: "gotoTicketRules",

@@ -42,7 +42,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			ParticipantTeams = formPanel.query("[name=Participant]");
 			
 		if(!values.Participant || values.Participant.length !== 2 && Ext.isEmpty(values.Participant[0]) && Ext.isEmpty(values.Participant[1])){
-			Ext.Msg.alert("Error", "Please select the team");
+			Ext.Function.defer(function(){
+				Ext.Msg.alert("Error", "Please select the team");
+			},100);
 			return;
 		}
 		
@@ -81,7 +83,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 				Ext.Viewport.setMasked(false);
 				var data = Ext.decode(responce.responseText);
 				if(data.errorReason && data.errorReason.ReasonCode){
+				Ext.Function.defer(function(){
 					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+				},100);
 					return;
 				}
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
@@ -96,7 +100,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 				console.log(responce);
 			}
 		});

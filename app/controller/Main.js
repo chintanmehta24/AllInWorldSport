@@ -80,12 +80,13 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
 					return;
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				// Ext.Msg.alert('Success', "You are successfully register");
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
@@ -95,7 +96,9 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 				console.log(responce);
 			}
 		});
@@ -126,12 +129,13 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
 					return;
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				// Ext.Msg.alert('Success', "You are successfully login");
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
@@ -141,7 +145,9 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 				console.log(responce);
 			}
 		});
@@ -168,7 +174,9 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 				console.log(responce);
 			}
 		});

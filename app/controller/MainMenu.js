@@ -215,19 +215,25 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
 					return;
 				}
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}
 				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
-		    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
+				Ext.Function.defer(function(){
+			    	Ext.Msg.alert("Success", "BET created successfully.", function(btn){});
+				},100);
 				AllInOneWorldSport.Global.NavigationStack = [];
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Communication Error');
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 				console.log(responce);
 			}
 		});
@@ -244,7 +250,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				Ext.Viewport.setMasked(false);
 				var data = Ext.decode(operation.getResponse().responseText);
 				if(data && data.errorReason && data.errorReason.ReasonCode){
-					Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
 					return;
 				}
 			};

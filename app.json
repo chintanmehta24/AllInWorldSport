@@ -77,7 +77,7 @@
         {
             "path": "resources/css/app.css",
             "update": "delta"
-        }
+        },
     ],
 
     /**

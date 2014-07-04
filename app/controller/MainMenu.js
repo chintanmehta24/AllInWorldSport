@@ -24,6 +24,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=showMyBets]":{
             	tap: "showMyBets"
             },
+			"mainmenu button[action=gotoAccountSettings]":{
+				tap: "gotoAccountSettings"
+			},
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		//ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -51,6 +54,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mybet button[action=friendListMyBets]":{
 				tap:"showBetFromFriend"
 			},
+			
         }
     },
     
@@ -354,5 +358,18 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(mybetfromfriend, {type: "slide", direction: "left", duration: 450});
-	}	
+	},
+
+	gotoAccountSettings: function(){
+	
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			accountsettings = mainPanel.down("accountsetting");
+		if(!accountsettings){
+			accountsettings = mainPanel.add({xtype: "accountsetting"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
+	},
+	
 });

@@ -81,7 +81,8 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				text:'LEADER<br>BOARDS',
 				action: "gotoLeaderBoard"
 			},{
-				text:'ACCOUNT<br>SETTINGS'
+				text:'ACCOUNT<br>SETTINGS',
+				action: "gotoAccountSettings"
 			}]
 		}]
 	}

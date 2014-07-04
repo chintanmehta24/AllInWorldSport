@@ -62,6 +62,7 @@ Ext.application({
         'WonPopUp',
         'MyBet',
 		'MyBetFromFriends',
+		'AccountSetting',
     ],
 
     icon: {

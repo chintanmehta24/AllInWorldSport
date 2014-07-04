@@ -8816,7 +8816,7 @@ body.x-desktop {
 }
 /* line 973, ../sass/app.scss */
 .my-bet-cls .x-tabbar .x-tab.x-tab-icon .x-button-icon.pending {
-  background-image: url("../icons/pending.png");
+  /*background-image: url("../icons/pending.png");*/
 }
 /* line 976, ../sass/app.scss */
 .my-bet-cls .x-tabbar .x-tab.x-tab-icon .x-button-icon.accepted {

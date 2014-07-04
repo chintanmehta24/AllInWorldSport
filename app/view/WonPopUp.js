@@ -9,7 +9,7 @@ Ext.define("AllInOneWorldSport.view.WonPopUp", {
 			docked: "top"
 		},{
 			xtype: "image",
-			src: "",
+			src: "resources/images/angry_refree.png",
 			flex: 1
 		},{
 			xtype: "label",

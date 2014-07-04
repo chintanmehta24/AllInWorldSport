@@ -1,0 +1,32 @@
+.my-bet-title .x-form-fieldset-title{
+	color : black;
+	text-shadow: none;
+	margin: 0;
+}
+
+.my-bet-cls .x-inner .x-form-fieldset-inner{
+	background: transparent ;
+	border : 0;
+}
+
+.my-bet-cls .x-button-label{
+text-align: -webkit-auto;
+}
+
+#ext-element-154{
+	text-align: -webkit-right;
+	
+}
+
+#ext-tab-1{
+	background:transparent;
+	color: yellow;
+	font-family: OpenSansBold;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+
+#ext-element-151{
+	text-align: -webkit-right;
+}
+

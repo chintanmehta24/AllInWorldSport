@@ -1,96 +1,52 @@
 Ext.define("AllInOneWorldSport.view.MyBet", {
-	extend : "Ext.tab.Panel",
+	extend : "Ext.Panel",
 	xtype : "mybet",
 	config : {
 		cls: "my-bet-cls",
-		tabBarPosition: "top",
-		tabBar: {
-			layout: {
-				type: "hbox",
-				pack: "center"
-			}
-		},
 		items: [{
 			xtype: "navbar",
 			docked: "top"
-		},{
-			xtype: "panel",
-			title: "",
-			iconCls: "pending",
-			scrollable: "vertical",
+		},
+		{
+			
+			xtype: "fieldset",
+			title: "MY BETS",
+			cls : "my-bet-title",
+			defaults: {
+				xtype: "button",
+				cls: "my-bet-btn-cls",
+				style : 'background: transparent;border: 0;'
+			},
 			items: [{
-				xtype: "dataview",
-				cls: "friends-list-cls",
-				itemCls: "friend-cls",
-				scrollable: null,
-				items: [{
-					xtype: "label",
-					cls: "title-cls",
-					docked: "top",
-					html: "to me"
-				}],
-				itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\")'></div><div class='status {Status}'></div><div class='title'>{Name}</div>",
-				store: {
-					fields: ["Url", "Status", "Name"],
-					data: [{
-						Url: "resources/images/person.png",
-						Status: "disable",
-						Name: "Friend Name 1"
-					}, {
-						Url: "resources/images/person.png",
-						Status: "enable",
-						Name: "Friend Name 2"
-					}, {
-						Url: "resources/images/person.png",
-						Status: "celebrity",
-						Name: "Friend Name 3"
-					}]
+				text: "Friends",
+				action: "friendListMyBets"
+				},{
+					text: "Celebrities",
+				},{
+					text: "Enemies",
+				},{
+					text: "ALL IN",
+				},{
+					text: "Accepted",
+				},{
+					text: "-This Week",
+					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+				},{
+					text: "-Last Week",
+					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+				},{
+					text: "-Date Range",
+					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+				},{
+					text: "Expired",
+				},{
+					text: "Rejected",
 				}
-			},{
-				xtype: "dataview",
-				cls: "friends-list-cls",
-				itemCls: "friend-cls",
-				scrollable: null,
-				items: [{
-					xtype: "label",
-					cls: "title-cls",
-					docked: "top",
-					html: "by me"
-				}],
-				itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\")'></div><div class='status {Status}'></div><div class='title'>{Name}</div>",
-				store: {
-					fields: ["Url", "Status", "Name"],
-					data: [{
-						Url: "resources/images/person.png",
-						Status: "disable",
-						Name: "Friend Name 1"
-					}, {
-						Url: "resources/images/person.png",
-						Status: "enable",
-						Name: "Friend Name 2"
-					}, {
-						Url: "resources/images/person.png",
-						Status: "celebrity",
-						Name: "Friend Name 3"
-					}]
-				}
-			}]
-		},{
-			xtype: "panel",
-			title: "",
-			iconCls: "accepted"
-		},{
-			xtype: "panel",
-			title: "",
-			iconCls: "rejected"
-		},{
-			xtype: "panel",
-			title: "",
-			iconCls: "completed"
-		},{
-			xtype: "panel",
-			title: "",
-			iconCls: "expired"
-		}]
+				
+			],
+			
+			
+		},
+		]
 	}
 });

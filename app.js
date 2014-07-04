@@ -60,7 +60,8 @@ Ext.application({
         'BuyCoins',
         'WinnerCircle',
         'WonPopUp',
-        'MyBet'
+        'MyBet',
+		'MyBetFromFriends',
     ],
 
     icon: {

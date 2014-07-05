@@ -1,0 +1,48 @@
+.profile-buy-coins-cls{
+  @include background-allin("../images/profile_buy_coins_background.jpg");
+  .x-form-fieldset-title{
+    font-family: "OpenSansBold";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #f5fd09;
+    margin: 0.5em;
+  }
+  .x-form-fieldset-inner{
+    @include border-radius(0);
+    border: 0;
+    background: transparent;
+  }
+  .buy-coins-btn-cls{
+    @include border-radius(0);
+    background-image: none;
+    background-color: rgba(white, 0.4);
+    margin-top: 0.5em;
+    padding: 0.75em 0.75em 1em 0.75em;
+    border: 0;
+    .x-button-icon {
+      height: 2em;
+      width: 5.183em;
+      background-position: left center;
+      background-size: contain;
+    }
+    .x-button-label{
+      text-align: left;
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+    .x-badge{
+      background: #f5fd09;
+      font-size:0.8em;
+      padding: 0.25em 0.75em;
+      margin: 0;
+      border: 0;
+      @include border-radius(0.75em);
+      text-shadow: none;
+      color: black;
+      bottom: 0.5em;
+      top: auto;
+      right: 0.5em;
+    }
+  }
+}

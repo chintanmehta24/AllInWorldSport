@@ -1,37 +1,40 @@
 Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
-	extend : "Ext.tab.Panel",
+	extend : "Ext.Panel",
 	xtype : "myBetfromfriends",
 	config : {
 		cls: "my-bet-cls",
-		tabBarPosition: "top",
-		tabBar: {
-			layout: {
-				type: "hbox",
-				pack: "center"
-			},
-		},
-		items: [{
-			xtype: "navbar",
-			docked: "top"
-		},{
-			xtype: "panel",
-			title: "BETS FROM FRIENDS",
-			//iconCls: "pending",
-			style : "margin:0em 1em 1em 1em;",
+		// tabBarPosition: "top",
+		// tabBar: {
+			// layout: {
+				// type: "hbox",
+				// pack: "center"
+			// },
+		// },
+		// items: [{
+			// xtype: "navbar",
+			// docked: "top"
+		// },{
+			// xtype: "panel",
+			// title: "BETS FROM FRIENDS",
+			// //iconCls: "pending",
+			// style : "margin:0em 1em 1em 1em;",
 			scrollable: "vertical",
 			items: [{
+				xtype: "navbar",
+				docked: "top"
+			},{
 				xtype: "dataview",
 				cls: "friends-list-cls",
 				style : "margin:1em;",
 				itemCls: "friend-cls",
 				scrollable: null,
-				items: [/*{
+				items: [{
 					xtype: "label",
 					cls: "title-cls",
+					html: "BETS FROM FRIENDS",
 					docked: "top",
-					html: "to me"
-				}*/],
-				itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\");background-color:red;background-size:85%'></div><div class='status {Status}'></div><div class='title'>{Name}</div>",
+				}],
+				itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\");'></div><div class='status {Status}'></div><div class='title'>{Name}</div>",
 				store: {
 					fields: ["Url", "Status", "Name"],
 					data: [{
@@ -90,6 +93,6 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 					}]
 				}
 			}*/]
-		}]
+		// }]
 	}
 });

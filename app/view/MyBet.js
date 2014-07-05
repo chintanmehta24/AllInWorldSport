@@ -15,11 +15,11 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 			defaults: {
 				xtype: "button",
 				cls: "my-bet-btn-cls",
-				style : 'background: transparent;border: 0;'
+				ui: "plain"
 			},
 			items: [{
-				text: "Friends",
-				action: "friendListMyBets"
+					text: "Friends",
+					action: "friendListMyBets"
 				},{
 					text: "Celebrities",
 				},{
@@ -29,24 +29,20 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 				},{
 					text: "Accepted",
 				},{
-					text: "-This Week",
-					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+					text: " - This Week",
+					cls: ["my-bet-btn-cls", "left-padded-cls"]
 				},{
-					text: "-Last Week",
-					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+					text: " - Last Week",
+					cls: ["my-bet-btn-cls", "left-padded-cls"]
 				},{
-					text: "-Date Range",
-					style : 'marginTop:-0.5em;marginLeft:1em;background: transparent;border: 0;'
+					text: " - Date Range",
+					cls: ["my-bet-btn-cls", "left-padded-cls"]
 				},{
 					text: "Expired",
 				},{
 					text: "Rejected",
 				}
-				
-			],
-			
-			
-		},
-		]
+			]
+		}]
 	}
 });

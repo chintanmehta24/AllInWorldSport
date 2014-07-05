@@ -1,0 +1,94 @@
+.my-bet-cls{
+  @include background-allin("../images/won_popup_background.jpg");
+  .x-layout-card-item{
+        background-color: rgba(white, 0.4);
+  }
+  .my-bet-title .x-form-fieldset-title{
+    color : black;
+    text-shadow: none;
+    margin: 0;
+  }
+  /*
+  .x-tabbar{
+      height: auto;
+      border-bottom: 0px;
+      background: none;
+      padding-top: 0.8em;
+      .x-tab.x-tab-icon{
+        height : auto;
+        background-image: none;
+        @include border-radius(0);
+        min-width: initial;
+        padding: 0em 0.5em;
+        .x-button-icon {
+          height: 2em;
+          width: 2em;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          &.pending{
+            background-image: url("../icons/pending.png");
+          }
+          &.accepted{
+            background-image: url("../icons/accepted.png");
+          }
+          &.rejected{
+            background-image: url("../icons/rejected.png");
+          }
+          &.completed{
+            background-image: url("../icons/completed.png");
+          }
+          &.expired{
+            background-image: url("../icons/expired.png");
+          }
+        }
+        .x-button-label{
+          display: none;
+        }
+        &.x-tab-active{
+          background-color: rgba(white, 0.4);
+        }
+      }
+    }*/
+  .x-form-fieldset-inner{
+    background-color: transparent ;
+    background-image: none;
+    border : 0;
+  }
+  .my-bet-btn-cls{
+    &.left-padded-cls{
+      height: auto;
+      padding-left: 1.25em;
+    }
+    .x-button-label{
+      text-align: left;
+    }
+  }
+  .friends-list-cls{
+    background-color: transparent;
+    margin: 1em;
+    .title-cls{
+        color: yellow;
+        text-align: right;
+        font-family: OpenSansBold;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .friend-cls{
+      border: 0px;
+      .thumb{
+          height: 2em;
+          width: 2em;
+          background-size: 2.25em;
+          border: 2px solid red;
+      }
+      .status{
+        width: 1.5em;
+        height: 1.5em;
+      }
+      &:after{
+        content: initial;
+      }
+    }
+  }
+}

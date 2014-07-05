@@ -1,0 +1,119 @@
+.games-list-cls.x-list-normal{
+  @include background-allin("../images/gamesevent_background.jpg");
+  .search-field-cls{
+      padding: 0.5em;
+      background-color: rgba(0, 0, 0,0.2);
+      background-image: none;
+      .x-form-label{
+          background-color: transparent;
+          background-image: none;
+          color: white;
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          line-height: 2;
+      }
+      .x-field-input{
+        &:before{
+          top: 0.5em;
+          right: 0.5em;
+          left: auto;
+        }
+      }
+      .x-input-el {
+        margin-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        // min-height: 2em;
+      }
+  }
+  .game-event-cls.x-list-item{
+    padding: 0.25em;
+    font-family: "OpenSansBold";
+    border: 0;
+    .x-innerhtml{
+      padding: 0.5em;
+      background: rgba(255,255,255,0.4);
+    }
+    .date, .eventname{
+      position: absolute;
+      font-family: "OpenSansLight";
+      font-weight: bold;
+      font-size: 0.6em;
+      top: 0.75em;
+    }
+    .date{
+      left: 1em;
+    }
+    .eventname{
+      right: 1em;
+    }
+    .participats{
+      @include st-box();
+      @include st-box-orient(horizontal);
+      @include st-box-align(center);
+      padding-top: 0.5em;
+      width: 100%;
+      > div{
+        @include st-box();
+        @include st-box-flex(1);
+        @include st-box-orient(horizontal);
+        @include st-box-align(center);
+        width: 0 !important;
+        &:last-child{
+          @include st-box-direction(reverse);
+          .thumb{
+            margin-right: 0.5em; 
+            margin-left: 0.25em; 
+          }
+        }
+        &:first-child{
+          .thumb{
+            margin-left: 0.5em; 
+            margin-right: 0.25em; 
+          }
+        }
+      }
+      .teamname{
+        width: 0 !important;
+        @include st-box-flex(1);
+        font-size: 0.85em;
+        text-align: center;
+      }
+      .thumb{
+        background-color: white;
+        width: 2em;
+        height: 2em;
+        @include border-radius(2em);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    &.x-item-selected{
+      background-image: none;
+        background-color: transparent;
+      .x-innerhtml{
+        background-color: rgba(255, 255, 255, 0.75);
+        background-image: none;
+        color: black;
+      }
+    }
+  }
+  .betgame-btn-cls{
+    background-color: #F5FD94;
+    background-image: none;
+    margin: 0.25em auto;
+    max-width: 12em;
+    border: 0;
+    font-size: 1.125em;
+    padding: 0.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(#F5FD94, "recessed");
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.login-cls.x-form{
+  @include background-allin("../images/login_background.jpg");
+  .x-scroll-container{
+    background-color: transparent;
+    .x-form-inner{
+      padding: 1em;
+    }
+  }
+  .logo-cls{
+    height: 11em;
+    background-color: transparent;
+    margin-bottom: 1em;
+  }
+  .field-cls.x-field{
+    margin-bottom: 1em;
+    .x-component-outer{
+      @include box-shadow(1px 1px 0px 1px #888);
+    }
+    .x-form-field {
+      padding: 0.2em 0.75em;
+      -webkit-text-fill-color: black;
+    }
+  }
+  .separator-cls{
+    height: 0;
+    font-weight: bold;
+    margin:1.5em 0;
+    border: 0.1em solid rgba(211,37,46,1);
+    @include st-box-align(center);
+    @include st-box-pack(center);
+    .x-innerhtml{
+      background-color: rgba(211,37,46,1);
+      background-none: none;
+      color:  white;
+      width: 2em;
+      line-height: 2;
+      margin-top: -1em;
+      @include st-box();
+      @include st-box-pack(center);
+      @include border-radius(50%);
+    }
+  }
+  .forgot-btn-cls{
+    height: 1.5em;
+    .x-button-label{
+      text-align: left;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 0.9em;
+    }
+  }
+  .login-btn-cls{
+    padding: 0.5em 2em;
+    @include border-radius(2em);
+    @include background-gradient(rgba(211,37,46,1), plain);
+    border: 0;
+    .x-button-label{
+      color: white;
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(211,37,46,1), recessed);
+    }
+  }
+  .login-info{
+      font-family: OpenSansBold;
+      font-size: 0.75em;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1em;
+  }
+  $share-btn-height: 1.85em;
+  $share-btn-width: (3.859375 * $share-btn-height);
+  .twitter-btn-cls, .facebook-btn-cls{
+    border: 0;
+    @include border-radius(0.25em);
+    padding: 0;
+    min-width: $share-btn-width;
+    max-width: $share-btn-width;
+    width: $share-btn-width;
+    height: $share-btn-height;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .x-button-label{
+      visibility: hidden;
+    }
+    &.x-button-pressing{
+      opacity: 0.90;
+    }
+  }
+  .facebook-btn-cls{
+    background-image: url("../images/facebook.png");
+    margin-right: 0.5em;
+  }
+  .twitter-btn-cls{
+    margin-left: 0.5em;
+    background-image: url("../images/twitter.png");
+  }
+}
+

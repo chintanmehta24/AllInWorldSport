@@ -1,0 +1,37 @@
+.about-game-cls{
+  @include background-allin("../images/aboutgame_background.jpg");
+  .team-name-cls {
+      color: white;
+      font-size: 1.75em;
+      margin: 0.35em 0;
+      font-weight: bold;
+      text-align: center;
+  }
+  .vs-text-cls {
+      font-size: 1.25em;
+      color: white;
+      font-weight: bold;
+  }
+  .place-detail-cls{
+      font-size: 1.12em;
+      color: white;
+      text-align: center;
+      margin-bottom: 1em;
+      line-height: 1.5;
+  }
+  .bet-btn-cls{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.25em 0;
+    border: 0;
+    font-size: 1.25em;
+    padding: 0.35em 1.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
+    }
+  }
+}

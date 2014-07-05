@@ -3,11 +3,40 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 	xtype : "accountsetting",
 	config : {
 		cls : "account-setting-cls",
-		style: "background-color: transparent;background-image: url('resources/images/mainmenu_background.jpg');background-size: 100% 100%;background-position: center;",
 		items: [
 			{
 				xtype: "navbar",
 				docked: "top"
+			},
+			{
+				xtype : "container",
+				layout: {
+					type: "hbox",
+					align: "start"
+				},
+				padding: "0.5em 0.5em 0",
+				items: [{
+					xtype: "button",
+					text: "Change Photo",
+					ui: "plain",
+					cls: "profile-photobtn-cls",
+					iconAlign: "top",
+					icon: "resources/images/person.png"
+				}, {
+					xtype: "togglefield",
+					cls: "sound-toggle-cls",
+					label: "Sound",
+					labelAlign: "top"
+				}, {
+					xtype: "sliderfield",
+					cls: "volume-slider-cls",
+					itemId: "volumnSlider",
+					labelAlign: "top",
+					label: "Volume",
+					minValue: 0,
+					maxValue: 100,
+					flex: 1
+				}]
 			},
 			{
 				xtype : "container",
@@ -70,8 +99,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								style : "margin: 0 0 0.75em 0.75em;",
 								flex : 1,
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -81,7 +109,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									},
 									{
 										xtype:'textfield'
-									},
+									}
 								]
 							},
 							{
@@ -89,8 +117,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								flex : 1,
 								style : "margin: 0 0.75em 0 0.75em;",
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -100,7 +127,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									},
 									{
 										xtype:'textfield'
-									},
+									}
 								]
 							}
 						]
@@ -117,8 +144,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								style : "margin: 0 0 0.75em 0.75em;",
 								flex : 1,
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -162,8 +188,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								flex : 1,
 								style : "margin: 0.83em 0.75em 0 0.75em;",
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -199,7 +224,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 											text: "5",
 											value: "5"
 										}]
-									},
+									}
 								]
 							}
 						]
@@ -216,8 +241,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								style : "margin: 0 0 0.75em 0.75em;",
 								flex : 1,
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -227,7 +251,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									},
 									{
 										xtype:'passwordfield'
-									},
+									}
 								]
 							},
 							{
@@ -235,8 +259,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								flex : 1,
 								style : "margin: 0 0.75em 0 0.75em;",
 								layout: {
-									type: "vbox",
-									
+									type: "vbox"
 								},
 								items:[
 									{
@@ -246,14 +269,54 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									},
 									{
 										xtype:'passwordfield'
-									},
+									}
 								]
 							}
 						]
-					},
+					}
 				]
-			}	
-			
-		]
+			}
+		],
+		listeners: [{
+			delegate: "#volumnSlider",
+			event: "change",
+			fn: "onVolumnChange"
+		},{
+			delegate: "#volumnSlider",
+			event: "drag",
+			fn: "onVolumnChange"
+		}]
+	},
+	initialize: function(){
+		var me = this;
+		setTimeout(function(){
+			me.down("#volumnSlider").setValue(60);
+		}, 100);
+	},
+	
+	onVolumnChange: function(sliderField, slider){
+		var maxValue = sliderField.getMaxValue(),
+			minValue = sliderField.getMinValue(),
+			newValue = sliderField.getValue(),
+			gap = Math.abs(maxValue - minValue),
+			percentage = (newValue - minValue) * gap / 100,
+			sliderId = slider.getId(),
+			sliderBaseCls = slider.getBaseCls(),
+			linkId = sliderBaseCls + sliderId,
+			linkDom = Ext.get(linkId);
+		if(!linkDom){
+			var linkDom = document.createElement("style");
+			linkDom.id = linkId;
+			linkDom.type = "text/css";
+			Ext.documentHeadElement.appendChild(linkDom);
+			linkDom = Ext.get(linkId);
+		}
+		linkDom.setHtml("#" + sliderId + "." + sliderBaseCls + ":before{" +
+					"background-image: -webkit-linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 
+					"background-image: -moz-linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 
+					"background-image: -o-linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 
+					"background-image: linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 							
+							"}");
 	}
+	
 });

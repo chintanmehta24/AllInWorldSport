@@ -1,0 +1,101 @@
+.bet-detail-cls{
+  @include background-allin("../images/betdetails_background.jpg");
+  .x-scroll-container{
+    background-color: transparent;
+    background-image: none;
+  }
+  .canecl-btn-cls{
+    margin-left: auto;
+    max-width: 10em;
+    .x-button-label{
+      color: #d4d2d2;
+      text-align: left;
+    }
+  }
+  .x-spinner {
+    .x-spinner-button{
+      background-image: none;
+      border: 0px !important;
+      color: white;
+      &.x-spinner-button-down{
+        background-color: #FF0000;
+        &.x-button-pressed{
+          @include background-gradient(#FF0000, "recessed");
+        }
+      }
+      &.x-spinner-button-up{
+        background-color: #000CE8;
+        &.x-button-pressed{
+          @include background-gradient(#000CE8, "recessed");
+        }
+      }
+    } 
+    
+  }
+  .x-label.field-label-cls{
+      color: white;
+      font-family: 'OpenSansBold';
+      font-size: 1.25em;
+      padding-top: 1em;    
+      padding-bottom: 0.5em;
+      .infotext{
+        text-transform: none;
+        font-size: 0.65em;
+      }
+  }
+  .x-field{
+    background-color: transparent;
+    background-image: none;
+    // min-height: 2em;
+    max-width: 15em;
+    .x-component-outer{
+      background-color: white;
+    }
+    .x-input-el{
+      background-color: transparent;
+      background-image: none;
+      // min-height: 2em;
+    }
+  }
+  .bet-btn-cls{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.75em auto;
+    max-width: 6em;
+    border: 0;
+    font-size: 1.125em;
+    padding: 0.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
+    }
+  }
+  .btn-container-cls{
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+  .bet-action-cls{
+    background-color: rgba(211, 37, 46, 1);
+    background-image: none;
+    border: 0;
+    @include border-radius(1em);
+    margin-right: 0.5em;
+    padding: 0.5em;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    .x-button-label{
+      font-family: "OpenSansBold";
+      color: white;
+      font-size: 0.75em;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(211,37,46,0.65), "recessed");
+    }
+  }
+}

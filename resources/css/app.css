@@ -8768,7 +8768,90 @@ body.x-desktop {
   content: initial;
 }
 
-/* line 37, ../sass/app.scss */
+/* line 1, ../sass/_leaderBoard.scss */
+.leader-board-cls {
+  background-color: transparent;
+  background-image: url("../images/ticket_rules_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+/* line 3, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-title-cls {
+  font-size: 0.7em;
+}
+/* line 6, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-title-cls .row-cls > span {
+  background-color: rgba(211, 37, 46, 0.65);
+  background-image: none;
+  margin-right: 0.5em;
+  padding: 0.5em;
+}
+/* line 11, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-title-cls .row-cls > span:first-child {
+  background-color: rgba(211, 37, 46, 0);
+}
+/* line 14, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-title-cls .row-cls > span:last-child {
+  margin-right: 0;
+}
+/* line 20, ../sass/_leaderBoard.scss */
+.leader-board-cls .leaderlist-title-cls {
+  color: yellow;
+  text-transform: uppercase;
+  font-family: opensansbold;
+  padding: 0 0.5em;
+}
+/* line 26, ../sass/_leaderBoard.scss */
+.leader-board-cls .my-lead-cls {
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.5em;
+}
+/* line 30, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-player-cls {
+  color: white;
+  font-family: "OpenSansBold";
+}
+/* line 33, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-player-cls .row-cls {
+  width: 100%;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0.5em;
+}
+/* line 38, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-player-cls .row-cls > span {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 0% !important;
+  font-size: 0.65em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  text-align: center;
+}
+/* line 46, ../sass/_leaderBoard.scss */
+.leader-board-cls .lead-player-cls .row-cls > span:first-child {
+  -webkit-box-flex: 1.75;
+  -ms-flex: 1.75 0 auto;
+  flex: 1.75 0 auto;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* line 38, ../sass/app.scss */
 .navigation-cls.x-dataview {
   width: 320px;
   background-image: none;
@@ -8778,14 +8861,14 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #262626, #141414 30%, #000000 65%, #000000);
   background-image: linear-gradient(top, #262626, #141414 30%, #000000 65%, #000000);
 }
-/* line 40, ../sass/app.scss */
+/* line 41, ../sass/app.scss */
 .navigation-cls.x-dataview .navigation-item-cls {
   padding: 0 0.6em;
   line-height: 2.25;
   border-bottom: 1px solid #b3b3b3;
   color: #d2d2d2;
 }
-/* line 45, ../sass/app.scss */
+/* line 46, ../sass/app.scss */
 .navigation-cls.x-dataview .navigation-item-cls.x-item-pressed {
   background-image: none;
   background-color: gray;
@@ -8794,7 +8877,7 @@ body.x-desktop {
   background-image: -o-linear-gradient(top, #666666, #737373 10%, #808080 65%, #818181);
   background-image: linear-gradient(top, #666666, #737373 10%, #808080 65%, #818181);
 }
-/* line 48, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 .navigation-cls.x-dataview .navigation-item-cls.x-item-selected {
   background-image: none;
   background-color: #595959;
@@ -8804,7 +8887,7 @@ body.x-desktop {
   background-image: linear-gradient(top, #404040, #4d4d4d 10%, #595959 65%, #5b5b5b);
 }
 
-/* line 55, ../sass/app.scss */
+/* line 56, ../sass/app.scss */
 .dashboard-cls .dashboard-btn-cls.x-button {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8815,14 +8898,14 @@ body.x-desktop {
   margin: 0.35em;
 }
 
-/* line 62, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar {
   background-color: rgba(255, 255, 255, 0.15);
   background-image: none;
   padding: 0;
   border: 0;
 }
-/* line 67, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls {
   margin: 0;
   padding: 0;
@@ -8834,49 +8917,49 @@ body.x-desktop {
   border-radius: 0;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
-/* line 73, ../sass/app.scss */
+/* line 74, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls:last-child {
   border-right: 0;
 }
-/* line 76, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 80, ../sass/app.scss */
+/* line 81, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon:before {
   content: "";
 }
-/* line 83, ../sass/app.scss */
+/* line 84, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.back {
   background-image: url("../icons/back.png");
 }
-/* line 86, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.home {
   background-image: url("../icons/home.png");
 }
-/* line 89, ../sass/app.scss */
+/* line 90, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.chat {
   background-image: url("../icons/chat.png");
 }
-/* line 92, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.friends {
   background-image: url("../icons/friends.png");
 }
-/* line 95, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.coins {
   background-image: url("../icons/coins.png");
 }
-/* line 98, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.global {
   background-image: url("../icons/global.png");
 }
-/* line 101, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-button-icon.tickets {
   background-image: url("../icons/tickets.png");
 }
-/* line 105, ../sass/app.scss */
+/* line 106, ../sass/app.scss */
 .nav-toolbar-cls.x-toolbar .nav-btn-cls .x-badge {
   top: 0.5em;
   right: auto;
@@ -8897,14 +8980,14 @@ body.x-desktop {
   border-radius: 1em;
 }
 
-/* line 124, ../sass/app.scss */
+/* line 125, ../sass/app.scss */
 .winner-circle-cls {
   background-color: transparent;
   background-image: url("../images/winner_circle_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 126, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .winner-circle-cls .title-cls {
   font-family: "OpenSansBold";
   text-transform: uppercase;
@@ -8913,7 +8996,7 @@ body.x-desktop {
   margin: 0.5em;
   text-shadow: none;
 }
-/* line 134, ../sass/app.scss */
+/* line 135, ../sass/app.scss */
 .winner-circle-cls .winner-item-cls {
   display: flex;
   display: -webkit-box;
@@ -8932,7 +9015,7 @@ body.x-desktop {
   font-family: "OpenSansBold";
   font-size: 0.75em;
 }
-/* line 145, ../sass/app.scss */
+/* line 146, ../sass/app.scss */
 .winner-circle-cls .winner-item-cls .thumb {
   width: 2em;
   height: 2em;
@@ -8941,11 +9024,11 @@ body.x-desktop {
   background-position: center;
   margin-right: 0.5em;
 }
-/* line 153, ../sass/app.scss */
+/* line 154, ../sass/app.scss */
 .winner-circle-cls .winner-item-cls .date {
   width: 6.25em;
 }
-/* line 156, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .winner-circle-cls .winner-item-cls .prizeName {
   margin-right: 0.5em;
   -webkit-box-flex: 1.5;
@@ -8953,7 +9036,7 @@ body.x-desktop {
   flex: 1.5 0 auto;
   width: 0px;
 }
-/* line 161, ../sass/app.scss */
+/* line 162, ../sass/app.scss */
 .winner-circle-cls .winner-item-cls .winnerName {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
@@ -8961,14 +9044,14 @@ body.x-desktop {
   width: 0px;
 }
 
-/* line 168, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .buytickets-cls {
   background-color: transparent;
   background-image: url("../images/ticket_rules_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 170, ../sass/app.scss */
+/* line 171, ../sass/app.scss */
 .buytickets-cls .x-form-fieldset-title {
   font-family: "OpenSansBold";
   text-transform: uppercase;
@@ -8977,7 +9060,7 @@ body.x-desktop {
   margin: 0.5em;
   text-shadow: none;
 }
-/* line 178, ../sass/app.scss */
+/* line 179, ../sass/app.scss */
 .buytickets-cls .x-form-fieldset-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8987,7 +9070,7 @@ body.x-desktop {
   border: 0;
   background: transparent;
 }
-/* line 183, ../sass/app.scss */
+/* line 184, ../sass/app.scss */
 .buytickets-cls .ticket-btn-cls {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -9000,12 +9083,12 @@ body.x-desktop {
   padding: 0.5em 0.5em 0.5em 1.5em;
   border: 0;
 }
-/* line 190, ../sass/app.scss */
+/* line 191, ../sass/app.scss */
 .buytickets-cls .ticket-btn-cls .x-button-icon {
   background-position: left center;
   background-size: contain;
 }
-/* line 194, ../sass/app.scss */
+/* line 195, ../sass/app.scss */
 .buytickets-cls .ticket-btn-cls .x-button-label, .buytickets-cls .ticket-btn-cls .x-badge {
   color: white;
   text-align: left;
@@ -9015,36 +9098,36 @@ body.x-desktop {
   white-space: normal;
 }
 
-/* line 205, ../sass/app.scss */
+/* line 206, ../sass/app.scss */
 .won-popup-cls {
   background-color: transparent;
   background-image: url("../images/won_popup_background.jpg");
   background-size: 100% 100%;
   background-position: center;
 }
-/* line 207, ../sass/app.scss */
+/* line 208, ../sass/app.scss */
 .won-popup-cls .way-to-go-cls, .won-popup-cls .won-msg-cls, .won-popup-cls .earn-coins-cls {
   font-family: "OpenSansBold";
   text-transform: uppercase;
   text-align: center;
   margin: 0.25em 0;
 }
-/* line 214, ../sass/app.scss */
+/* line 215, ../sass/app.scss */
 .won-popup-cls .way-to-go-cls .x-innerhtml {
   font-size: 1.75em;
   color: #f5fd09;
 }
-/* line 220, ../sass/app.scss */
+/* line 221, ../sass/app.scss */
 .won-popup-cls .won-msg-cls .x-innerhtml {
   font-size: 1.15em;
   color: white;
 }
-/* line 226, ../sass/app.scss */
+/* line 227, ../sass/app.scss */
 .won-popup-cls .earn-coins-cls .x-innerhtml {
   font-size: 1.25em;
   color: #d3252e;
 }
-/* line 231, ../sass/app.scss */
+/* line 232, ../sass/app.scss */
 .won-popup-cls .detail-btn-cls {
   width: 12em;
   max-width: 12em;
@@ -9057,14 +9140,14 @@ body.x-desktop {
   -o-border-radius: 1.5em;
   border-radius: 1.5em;
 }
-/* line 238, ../sass/app.scss */
+/* line 239, ../sass/app.scss */
 .won-popup-cls .detail-btn-cls .x-button-label, .won-popup-cls .detail-btn-cls .x-badge {
   font-family: "OpenSansBold";
   text-transform: uppercase;
   font-size: 1.25em;
   color: black;
 }
-/* line 246, ../sass/app.scss */
+/* line 247, ../sass/app.scss */
 .won-popup-cls .close-btn-cls .x-button-label, .won-popup-cls .close-btn-cls .x-badge {
   color: #bababa;
 }

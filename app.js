@@ -63,6 +63,7 @@ Ext.application({
         'MyBet',
 		'MyBetFromFriends',
 		'AccountSetting',
+		'LeaderBoard'
     ],
 
     icon: {

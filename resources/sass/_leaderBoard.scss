@@ -1,0 +1,54 @@
+.leader-board-cls{
+  @include background-allin("../images/ticket_rules_background.jpg");
+  .lead-title-cls{
+    font-size: 0.7em;
+    .row-cls{
+      > span{
+        background-color: rgba(211, 37, 46, 0.65);
+        background-image: none;
+        margin-right: 0.5em;
+        padding: 0.5em;
+        &:first-child{
+          background-color: rgba(211, 37, 46, 0);
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .leaderlist-title-cls{
+    color: yellow;
+    text-transform: uppercase;
+    font-family: opensansbold;
+    padding: 0 0.5em;
+  }
+  .my-lead-cls {
+      background: rgba(255,255,255,0.3);
+      margin-bottom: 0.5em;
+  }
+  .lead-player-cls{
+    color: white;
+    font-family: "OpenSansBold";
+    .row-cls{
+      width: 100%;
+      @include st-box();
+      @include st-box-orient(horizontal);
+      padding: 0.5em;
+      > span{
+        @include st-box();
+        @include st-box-pack(center);
+        @include st-box-align(center);
+        width: 0% !important;
+        font-size: 0.65em;
+        @include st-box-flex(1);
+        text-align: center;
+        &:first-child{
+          @include st-box-flex(1.75);
+          @include st-box-pack(start);
+          text-align: left;
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             	tap: "onProfileBtnTap"
             },
             "mainmenu button[action=gotoLeaderBoard]":{
-            	tap: "goToWinnerCircle"
+            	tap: "goToLeaderBoard"
+            	// tap: "goToWinnerCircle"
             },
 			"mainmenu button[action=gotoTicketRules]":{
             	tap: "gotoTicketRules"
@@ -313,6 +314,18 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(winnercircle, {type: "slide", direction: "left", duration: 450});
+		
+	},
+	
+	goToLeaderBoard: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			leaderboard = mainPanel.down("leaderboard");
+		if(!leaderboard){
+			leaderboard = mainPanel.add({xtype: "leaderboard"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(leaderboard, {type: "slide", direction: "left", duration: 450});
 		
 	},
 	

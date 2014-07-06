@@ -287,12 +287,6 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 			fn: "onVolumnChange"
 		}]
 	},
-	initialize: function(){
-		var me = this;
-		setTimeout(function(){
-			me.down("#volumnSlider").setValue(60);
-		}, 100);
-	},
 	
 	onVolumnChange: function(sliderField, slider){
 		var maxValue = sliderField.getMaxValue(),

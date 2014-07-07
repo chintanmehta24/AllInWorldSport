@@ -25,6 +25,23 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			hidden: true,
 			name: "EventParticipantId"
 		}, {
+			xtype: "container",
+			layout: "hbox",
+			margin: "0 0 1em 0",
+			defaults: {
+				xtype: "radiofield",
+				cls: "radio-field-cls",
+				name: "BetPoint",
+				labelWidth: "auto"
+			},
+			items:[{
+				label: "To Win by",
+				value: true
+			}, {
+				label: "No Point Spread",
+				value: false
+			}]
+		},{
 			xtype :"selectfield",
 			autoSelect: false,
 			usePicker: false,
@@ -96,6 +113,10 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 		listeners:[{
 			event: "activate",
 			fn: "onPageActivate"
+		},{
+			delegate: "radiofield[name=BetPoint]",
+			event: "change",
+			fn: "onRadioFieldChange"
 		}]
 	},
 	onPageActivate: function(){
@@ -105,5 +126,10 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			Spread: null,
 			Amount: "50"
 		});
+	},
+	
+	onRadioFieldChange: function(field, newValue){
+		var me = this;
+		me.down("[name=Spread]").setHidden(newValue);
 	}
 });

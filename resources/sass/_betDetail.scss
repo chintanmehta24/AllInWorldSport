@@ -13,21 +13,33 @@
     }
   }
   .x-spinner {
+    .x-component-outer{
+      max-width: 10em;
+    }
     .x-spinner-button{
       background-image: none;
       border: 0px !important;
       color: white;
+      text-indent: 3em;
+      overflow: hidden;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       &.x-spinner-button-down{
-        background-color: #FF0000;
+        background-image: url("../images/minus.png");
+/*
         &.x-button-pressed{
           @include background-gradient(#FF0000, "recessed");
         }
+*/
       }
       &.x-spinner-button-up{
-        background-color: #000CE8;
+        background-image: url("../images/plus.png");
+/*
         &.x-button-pressed{
           @include background-gradient(#000CE8, "recessed");
         }
+*/
       }
     } 
     
@@ -35,7 +47,7 @@
   .x-label.field-label-cls{
       color: white;
       font-family: 'OpenSansBold';
-      font-size: 1.25em;
+      font-size: 1.125em;
       padding-top: 1em;    
       padding-bottom: 0.5em;
       .infotext{
@@ -48,6 +60,12 @@
     background-image: none;
     // min-height: 2em;
     max-width: 15em;
+    .x-form-label{
+        padding: 0 0.5em;
+        line-height: 2;
+        background: white;
+        @include border-radius(0);
+    }
     .x-component-outer{
       background-color: white;
     }
@@ -55,6 +73,27 @@
       background-color: transparent;
       background-image: none;
       // min-height: 2em;
+    }
+    &.x-field-radio {
+      .x-field-input{
+        min-width: 2em;
+        width: 2em;
+      }
+      .x-field-mask{
+        &:before{
+            width: 1.25em;
+            height: 1.25em;
+            top: 0.5em;
+            right: 0.5em;          
+        }
+        &:after{
+          width: 0.375em;
+          height: 0.375em;
+          top: 0.512em;
+          left: auto;
+          right: 0.512em;
+        }
+      }
     }
   }
   .bet-btn-cls{

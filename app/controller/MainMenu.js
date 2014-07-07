@@ -168,8 +168,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			});
 		}
 		betdetail.down("[name=EventParticipantId]").setValue(selectedTeam.EventParticipantId);
-		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName + 
-											"<div class='infotext'>To Win by <span style='font-wieght: bold'>OR</span> No Point Spread</div>");
+		betdetail.down("#teamToBet").setHtml(selectedTeam.FirstName + " " + selectedTeam.LastName); 
+		//"<div class='infotext'>To Win by <span style='font-wieght: bold'>OR</span> No Point Spread</div>");
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(betdetail, {type: "slide", duration: 450});
 		

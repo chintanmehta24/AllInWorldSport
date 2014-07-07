@@ -12,17 +12,22 @@
       text-align: left;
     }
   }
-  .x-spinner {
+  .x-spinner.x-field {
     .x-component-outer{
       max-width: 10em;
+      background-color: transparent;
+      background-image: none;
+      .x-field-input {
+        background-color: white;
+        background-image: none;
+      }
     }
     .x-spinner-button{
       background-image: none;
+      background-color: transparent;
       border: 0px !important;
-      color: white;
-      text-indent: 3em;
-      overflow: hidden;
-      background-size: contain;
+      color: transparent;
+      background-size: 1.25em;
       background-repeat: no-repeat;
       background-position: center;
       &.x-spinner-button-down{
@@ -63,7 +68,8 @@
     .x-form-label{
         padding: 0 0.5em;
         line-height: 2;
-        background: white;
+        color: white;
+        background: transparent;
         @include border-radius(0);
     }
     .x-component-outer{
@@ -75,6 +81,9 @@
       // min-height: 2em;
     }
     &.x-field-radio {
+      .x-component-outer{
+        background-color: transparent;
+      }
       .x-field-input{
         min-width: 2em;
         width: 2em;

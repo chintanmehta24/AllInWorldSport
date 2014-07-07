@@ -21,23 +21,17 @@
       color: white;
     }
   }
-  %fieldBackground{
+  .sound-toggle-cls{
     background-color: transparent;
     background-image: none;
-  }
-  %accountSettingLable{
+    width: 4em;
+    margin: 0 0.5em;
+    .x-form-label{
       background-color: transparent;
       background-image: none;
       padding: 0;
       line-height: 1.5;
       color: white;
-  }
-  .sound-toggle-cls{
-    @extend %fieldBackground;
-    width: 4em;
-    margin: 0 0.5em;
-    .x-form-label{
-      @extend %accountSettingLable;
     }
     .x-toggle{
       @include border-radius(0);
@@ -60,9 +54,14 @@
     }
   }
   .volume-slider-cls{
-    @extend %fieldBackground;
+    background-color: transparent;
+    background-image: none;
     .x-form-label{
-      @extend %accountSettingLable;
+      background-color: transparent;
+      background-image: none;
+      padding: 0;
+      line-height: 1.5;
+      color: white;
     }
     .x-slider{
       height: 1.25em;

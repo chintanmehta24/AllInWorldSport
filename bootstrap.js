@@ -24,7 +24,6 @@
 
 Ext.Loader.addClassPathMappings({
   "AllInOneWorldSport": "app",
-  "AllInOneWorldSport.view.AccountSettings": "app/view/AccountSetting.js",
   "Ext": "touch/src",
   "Ext-more": "touch/src/core/Ext-more.js",
   "Ext.DomHelper": "touch/src/dom/Helper.js",
@@ -61,17 +60,19 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.store.GameLists": [],
   "AllInOneWorldSport.store.ListParticipants": [],
   "AllInOneWorldSport.view.AboutGame": [],
-  "AllInOneWorldSport.view.AccountSettings": [],
+  "AllInOneWorldSport.view.AccountSetting": [],
   "AllInOneWorldSport.view.BetDetail": [],
   "AllInOneWorldSport.view.BetPage": [],
   "AllInOneWorldSport.view.BuyCoins": [],
   "AllInOneWorldSport.view.Dashboard": [],
   "AllInOneWorldSport.view.GamesList": [],
+  "AllInOneWorldSport.view.LeaderBoard": [],
   "AllInOneWorldSport.view.Login": [],
   "AllInOneWorldSport.view.Main": [],
   "AllInOneWorldSport.view.MainMenu": [],
   "AllInOneWorldSport.view.ManageFriendList": [],
   "AllInOneWorldSport.view.MyBet": [],
+  "AllInOneWorldSport.view.MyBetFromFriends": [],
   "AllInOneWorldSport.view.Navigation": [],
   "AllInOneWorldSport.view.NavigationBar": [],
   "AllInOneWorldSport.view.NextDrawing": [],
@@ -678,17 +679,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -830,7 +820,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.view.AboutGame": [
     "widget.aboutgame"
   ],
-  "AllInOneWorldSport.view.AccountSettings": [
+  "AllInOneWorldSport.view.AccountSetting": [
     "widget.accountsetting"
   ],
   "AllInOneWorldSport.view.BetDetail": [
@@ -848,6 +838,9 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.view.GamesList": [
     "widget.gameslist"
   ],
+  "AllInOneWorldSport.view.LeaderBoard": [
+    "widget.leaderboard"
+  ],
   "AllInOneWorldSport.view.Login": [
     "widget.login"
   ],
@@ -862,6 +855,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "AllInOneWorldSport.view.MyBet": [
     "widget.mybet"
+  ],
+  "AllInOneWorldSport.view.MyBetFromFriends": [
+    "widget.myBetfromfriends"
   ],
   "AllInOneWorldSport.view.Navigation": [
     "widget.navigation"
@@ -1685,17 +1681,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],

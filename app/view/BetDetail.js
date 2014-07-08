@@ -100,9 +100,11 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				text: "FRIENDS"
 			},{
 				text: "ENEMIES"
-			},{
+			},
+			/*{
 				text: "CELEBRITIES"
-			},{
+			},*/
+			{
 				text: "ALL IN"
 			}]
 		}, {

@@ -36,7 +36,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			},
 			items:[{
 				label: "To Win by",
-				value: true
+				value: true,
+				checked: true
 			}, {
 				label: "No Point Spread",
 				value: false
@@ -123,7 +124,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 		var me = this;
 		// me.reset();
 		me.setValues({
-			Spread: null,
+			Spread: 1,
 			Amount: "50"
 		});
 	},

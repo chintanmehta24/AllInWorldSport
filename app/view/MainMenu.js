@@ -25,13 +25,14 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 			},
 			items:[
 			{
-				text:'GET<br>COINS'
+				text:'GET<br>COINS',
+				action: "gotoBuyCoins"
 			},{
 				text:'BETS',
 				action: "showMyBets"
 			},{
 				text:'FREE<br>STUFF',
-				action: "gotoTicketRules",
+				
 			}]
 		},{
 			xtype:'container',
@@ -62,6 +63,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				action : "popupWonWindow"
 			},{
 				text:'I NEED<br>TICKETS',
+				action: "gotoTicketRules",
 			}]
 		},{
 			xtype : 'container',

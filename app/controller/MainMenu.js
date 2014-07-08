@@ -28,6 +28,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=gotoAccountSettings]":{
 				tap: "gotoAccountSettings"
 			},
+			"mainmenu button[action=gotoBuyCoins]":{
+				tap: "buyCoins"
+			},
             "gameslist":{
             	itemtap : function(ths, index, target, record){
             		//ths.down("button[action=betBtnGameList]").setDisabled(false);
@@ -383,6 +386,18 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
+	},
+	
+	buyCoins: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			buycoins = mainPanel.down("buycoins");
+		if(!buycoins){
+			buycoins = mainPanel.add({xtype: "buycoins"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(buycoins, {type: "slide", direction: "left", duration: 450});
+		
 	},
 	
 });

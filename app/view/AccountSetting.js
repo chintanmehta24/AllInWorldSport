@@ -3,6 +3,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 	xtype : "accountsetting",
 	config : {
 		cls : "account-setting-cls",
+		scrollable: "vertical",
 		items: [
 			{
 				xtype: "navbar",

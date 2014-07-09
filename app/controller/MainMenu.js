@@ -329,8 +329,33 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(leaderboard, {type: "slide", direction: "left", duration: 450});
+		this.getListOfTopPlayers();
 		
 	},
+	
+	getListOfTopPlayers:function(){
+		var topFivePlayers = Ext.getStore("LeaderBoardTopFivePlayers"),
+		callbackFn = function(records, operation, success){
+				Ext.Viewport.setMasked(false);
+				var data = Ext.decode(operation.getResponse().responseText);
+				if(data && data.errorReason && data.errorReason.ReasonCode){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
+					return;
+				}
+		};
+		topFivePlayers.load({
+					callback: function(records, operation, success){
+						Ext.Viewport.setMasked(false);
+						if(!success){
+							callbackFn.apply(this, arguments);
+						}
+						
+					}
+				});
+	},
+	
 	
 	gotoTicketRules:function(){
 		var viewport = Ext.Viewport,
@@ -386,6 +411,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		}
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
+		
 	},
 	
 	buyCoins: function(){

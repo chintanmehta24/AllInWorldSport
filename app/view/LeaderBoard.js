@@ -43,6 +43,7 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 							 "<span>{HeighestBalance}</span>" ,
 							 "<span>{Tickets}</span>", 
 						"</div>"].join(""),
+			//store : 'LeaderBoardTopFivePlayers',
 			store : {
 				fields: [
 					 "PlayerName" ,

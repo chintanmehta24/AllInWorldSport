@@ -34,7 +34,8 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     		iconCls: "coins",
     		badgeText: "25K"
     	},{
-    		iconCls: "global"
+    		iconCls: "global",
+			action: "accountSettingNavigation",
     	},{
     		iconCls: "home",
 			action: "homeNavigation",

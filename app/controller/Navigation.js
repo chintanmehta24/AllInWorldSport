@@ -7,6 +7,9 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 			},
 			"button[action=homeNavigation]":{
 				tap : "homeNavigation"
+			},
+			"button[action=accountSettingNavigation]":{
+				tap : "accountSettingNavigation"
 			}			
 		}
 	},
@@ -28,6 +31,19 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 			mainMenu = mainPanel.add({xtype: "mainmenu"});
 		}
 		mainPanel.animateActiveItem(mainMenu, {type: "slide",direction: "right", duration: 450});
+	},
+	accountSettingNavigation:function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			accountsettings = mainPanel.down("accountsetting");
+		if(!accountsettings){
+			accountsettings = mainPanel.add({xtype: "accountsetting"});
+		}
+		if(accountsettings != mainPanel.getActiveItem()){
+			AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+			mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
+		
+		}
 	}
 	
 });

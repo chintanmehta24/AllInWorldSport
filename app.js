@@ -31,17 +31,20 @@ Ext.application({
         "Main",
         "MainMenu",
         "Navigation",
-        "Profile"
+        "Profile",
+		"AccountSetting",
     ],
     
     models: [
     	"GameList",
-		"ListParticipant"
+		"ListParticipant",
+		"LeaderBoardTopFivePlayers"
     ],
     
     stores: [
     	"GameLists",
-		"ListParticipants"
+		"ListParticipants",
+		"LeaderBoardTopFivePlayers"
     ],
 
     views: [

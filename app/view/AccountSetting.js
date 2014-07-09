@@ -251,7 +251,9 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										html: "CHANGE PASSWORD"
 									},
 									{
-										xtype:'passwordfield'
+										xtype:'passwordfield',
+										id : 'id_Password',
+										name:'Password'
 									}
 								]
 							},
@@ -269,13 +271,20 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										html: "CONFIRM PASSWORD"
 									},
 									{
-										xtype:'passwordfield'
+										xtype:'passwordfield',
+										id : 'id_ConfirmPassword',
 									}
 								]
 							}
 						]
 					}
 				]
+			},
+			{
+				xtype: "button",
+				text: "CHANGE",
+				cls: "accountsetting-save-btn",
+				action: "saveAccountSetting",
 			}
 		],
 		listeners: [{
@@ -312,6 +321,12 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					"background-image: -o-linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 
 					"background-image: linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 							
 							"}");
+	},
+	listeners: {
+		painted: function (element, options) {
+			var password = Ext.getCmp('id_Password').setValue("");
+			var confirmPassword = Ext.getCmp('id_ConfirmPassword').setValue("");
+		}
 	}
 	
 });

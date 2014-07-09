@@ -86,6 +86,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					return;
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
+				localStorage.setItem("CURRENT_USER_LOGINPASSWORD",values.Password);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
@@ -135,6 +136,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					return;
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
+				localStorage.setItem("CURRENT_USER_LOGINPASSWORD",values.Password);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){

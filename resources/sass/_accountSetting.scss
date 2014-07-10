@@ -114,4 +114,20 @@
     font-size: 0.60em;
     text-align: -webkit-auto;
   }
+  .accountsetting-save-btn{
+    background-color: rgba(245,253,9,1);
+    background-image: none;
+    margin: 0.75em auto;
+    max-width: 8em;
+    border: 0;
+    font-size: 1em;
+    padding: 0.5em;
+    @include border-radius(1em);
+    .x-button-label{
+      font-family: "OpenSansBold";
+    }
+    &.x-button-pressing{
+      @include background-gradient(rgba(245,253,9,1), "recessed");
+    }
+  }
 }

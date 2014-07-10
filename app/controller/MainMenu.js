@@ -19,6 +19,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=gotoTicketRules]":{
             	tap: "gotoTicketRules"
             },
+			"mainmenu button[action=gotoFreeStuff]":{
+            	tap: "gotoNextDrawing"
+            },
 			"mainmenu button[action=popupWonWindow]":{
             	tap: "popupWonWindow"
             },
@@ -268,19 +271,11 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				}
 			};
 		participantStore_1.load({
-			jsonData: {
-				League:"NFL",
-				GroupType: "Conference"
-			},
 			callback: function(records, operation, success){
 				if(!success){
 					callbackFn.apply(this, arguments);
 				}else{
 					participantStore_2.load({
-						jsonData: {
-							League:"NCAA",
-							GroupType: "Conference"
-						},
 						callback: function(records, operation, success){
 							Ext.Viewport.setMasked(false);
 							if(!success){
@@ -357,7 +352,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 	},
 	
 	
-	gotoTicketRules:function(){
+	gotoTicketRules: function(){
 		var viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport"),
 			ticketrules = mainPanel.down("ticketrules");
@@ -367,6 +362,17 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(ticketrules, {type: "slide", direction: "left", duration: 450});
 	},
+	
+	gotoNextDrawing: function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			nextdrawing = mainPanel.down("nextdrawing");
+		if(!nextdrawing){
+			nextdrawing = mainPanel.add({xtype: "nextdrawing"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(nextdrawing, {type: "slide", direction: "left", duration: 450});
+	}, 
 	
 	popupWonWindow: function(){
 		var viewport = Ext.Viewport,

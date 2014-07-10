@@ -32,7 +32,7 @@ Ext.define('AllInOneWorldSport.view.MainMenu', {
 				action: "showMyBets"
 			},{
 				text:'FREE<br>STUFF',
-				
+				action: "gotoFreeStuff"
 			}]
 		},{
 			xtype:'container',

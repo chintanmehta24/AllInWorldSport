@@ -161,26 +161,10 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										defaultTabletPickerConfig: {
 											height: 320
 										},
-										name: "Spread",
-										options: [{
-											text: "1",
-											value: "1"
-										},{
-											text: "2",
-											value: "2"
-										},
-										{
-											text: "3",
-											value: "3"
-										},
-										{
-											text: "4",
-											value: "4"
-										},
-										{
-											text: "5",
-											value: "5"
-										}]
+						    			name: "Participant",
+										store:  "ListParticipants1",
+										displayField: "Name",
+										valueField: "ParticipantId"
 									},
 								]
 							},
@@ -205,26 +189,10 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										defaultTabletPickerConfig: {
 											height: 320
 										},
-										name: "Spread",
-										options: [{
-											text: "1",
-											value: "1"
-										},{
-											text: "2",
-											value: "2"
-										},
-										{
-											text: "3",
-											value: "3"
-										},
-										{
-											text: "4",
-											value: "4"
-										},
-										{
-											text: "5",
-											value: "5"
-										}]
+						    			name: "Participant",
+										store:  "ListParticipants2",
+										displayField: "Name",
+										valueField: "ParticipantId"
 									}
 								]
 							}
@@ -296,6 +264,58 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 			event: "drag",
 			fn: "onVolumnChange"
 		}]
+	},
+	initialize: function(){
+		var me = this;
+		me.on("painted", me.onPainted, me);
+	},
+	
+	onPainted: function(){
+		var me = this,
+			participantStore_1 = Ext.getStore("ListParticipants1"),
+			participantStore_2 = Ext.getStore("ListParticipants2"),
+			callbackFn = function(records, operation, success){
+				Ext.Viewport.setMasked(false);
+				var data = Ext.decode(operation.getResponse().responseText);
+				if(data && data.errorReason && data.errorReason.ReasonCode){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
+					return;
+				}
+			};
+		participantStore_1.load({
+			scope: me,
+			callback: function(records, operation, success){
+				if(!success){
+					callbackFn.apply(this, arguments);
+				}else{
+					participantStore_2.load({
+						scope: this,
+						callback: function(records, operation, success){
+							Ext.Viewport.setMasked(false);
+							if(!success){
+								callbackFn.apply(this, arguments);
+							}
+							var teams = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).Member.Teams,
+								participateFields = this.query("[name=Participant]");
+							for(var i = 0;i<teams.length;i++){
+								if(teams[i].Status == "Favorite")
+								{
+									if(teams[i].LeagueName == "NFL"){
+										participateFields[0].setValue(teams[i].ParticipantId);
+									}
+									else if(teams[i].LeagueName == "NCAA"){
+										participateFields[1].setValue(teams[i].ParticipantId);
+									}
+								}
+							}
+						}
+					});
+				}
+			}
+		});
+		
 	},
 	
 	onVolumnChange: function(sliderField, slider){

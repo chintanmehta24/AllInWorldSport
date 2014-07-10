@@ -1,0 +1,53 @@
+.next-drawing-cls{
+  @include background-allin("../images/next_drawing_background.jpg");
+  >.x-dock{ 
+    .x-panel-inner{
+      padding: 1em;
+    }
+  }
+  padding: 1em;
+  .drawing-title-cls{
+    color: white;
+    font-family :"OpenSansBold";
+    .title-cls{
+      font-size: 1.2em;
+      text-transform: capitalize;
+    }
+    .date-cls{
+      font-size: 0.8em;
+    }
+  }
+  .invite-btn-cls{
+    background: rgba(0,0,0,0.4);
+    border: 0;
+    width: 6em;
+    .x-button-label{
+      color: white;
+      white-space: normal;
+      font-family :"OpenSansLight";
+    }
+  }
+  .main-content-cls{
+    margin : 1em 0;
+    .prize-title-cls, .content-title-cls{
+      color: white;
+      font-family :"OpenSansBold";
+      text-align: center;
+      line-height: 2; 
+    }
+    .prize-title-cls{
+    }
+    .content-title-cls{
+      font-size: 0.8em;
+      background: #2f2f2f;
+    }
+    .x-layout-card-item {
+      background-color: rgba(white, 0.7);
+    }
+  }
+  .bottom-description-cls{
+    font-size: 0.8em;
+    color: white;
+    text-align: justify;
+  }
+}

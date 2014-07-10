@@ -90,7 +90,16 @@ Ext.application({
     launch: function() {
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
-
+		Ext.create("AllInOneWorldSport.store.ListParticipants",{
+			storeId: "ListParticipants1",
+			League:"NFL",
+			GroupType: "Conference"
+		});
+		Ext.create("AllInOneWorldSport.store.ListParticipants",{
+			storeId: "ListParticipants2",
+			League:"NCAA",
+			GroupType: "Conference"
+		});
         // Initialize the main view
         var login = Ext.create("AllInOneWorldSport.view.Login");
         Ext.Viewport.add({

@@ -92,7 +92,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			text: "my friends",
     			action: "showMyfriends"
     		},{
-    			text: "account settings"
+    			text: "account settings",
+				action: "gotoAccountSettings"
     		}]
     	}, {
     		xtype: "button",

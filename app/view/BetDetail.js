@@ -2,6 +2,10 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	extend: "Ext.form.Panel",
 	xtype: "betdetail",
 	config:{
+		scrollable: {
+		    direction: 'vertical',
+		    directionLock: true
+		},
 		padding: "0.5em 0.75em",
 		gameEventRecord: null,
 		cls: "bet-detail-cls",
@@ -97,9 +101,11 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				cls :"bet-action-cls"
 			},
 			items: [{
-				text: "FRIENDS"
+				text: "FRIENDS",
+				action: "showFriendList"
 			},{
-				text: "ENEMIES"
+				text: "ENEMIES",
+				action: "showEnemyList"
 			},
 			/*{
 				text: "CELEBRITIES"
@@ -120,6 +126,14 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			delegate: "radiofield[name=BetPoint]",
 			event: "change",
 			fn: "onRadioFieldChange"
+		}, {
+			delegate : "button[action=showFriendList]",
+			event: "tap",
+			fn: "showFriends"
+		}, {
+			delegate : "button[action=showEnemyList]",
+			event: "tap",
+			fn: "showEnemies"
 		}]
 	},
 	onPageActivate: function(){
@@ -134,5 +148,19 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	onRadioFieldChange: function(field, newValue){
 		var me = this;
 		me.down("[name=Spread]").setHidden(newValue);
+	},
+	
+	showFriends: function(){
+		Ext.Viewport.add({
+			xtype: "managefriendlist",
+			listType: "Friends"
+		}).show();
+	},
+	
+	showEnemies: function(){
+		Ext.Viewport.add({
+			xtype: "managefriendlist",
+			listType: "Enemies"
+		}).show();
 	}
 });

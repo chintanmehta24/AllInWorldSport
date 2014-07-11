@@ -1,7 +1,7 @@
 .friends-list-cls{
     background: rgba(255, 255, 255, 0.9);
     .x-scroll-scroller{
-      padding: 0 1em;
+      padding: 0 0.75em;
     }
     .overlay-title-cls {
         padding: 0.5em 1em;
@@ -57,23 +57,29 @@
           background-repeat: no-repeat;
           margin-right: 0.5em;
           margin-left: 0.5em;          
-          &.disable{
-            background-image: url("../images/status-disable.png");
-          }
-          &.enable{
-            background-image: url("../images/status-enable.png");
-          }
-          &.celebrity{
-            background-image: url("../images/status-celebrity.png");
-          }
-          &.enemy{
-            background-image: url("../images/status-enemy.png");
-          }
         }
         .title{
           font-size: 0.75em;
           @include st-box-flex(1);
           font-family: "opensansbold";
         }
+    }
+    .status.inactive{
+      background-image: url("../images/status-disable.png");
+    }
+    &.enemy-cls{
+      .status.active{
+        background-image: url("../images/status-enemy.png");
+      }
+    }
+    &.celeberity-cls{
+      .status.active{
+        background-image: url("../images/status-celebrity.png");
+      }
+    }
+    &.friend-cls{
+      .status.active{
+        background-image: url("../images/status-friend.png");
+      }
     }
 }

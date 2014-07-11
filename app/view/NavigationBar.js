@@ -36,6 +36,7 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "global",
 			action: "accountSettingNavigation",
+    		badgeText: "1"
     	},{
     		iconCls: "home",
 			action: "homeNavigation",

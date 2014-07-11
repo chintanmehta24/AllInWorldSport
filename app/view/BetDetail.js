@@ -153,6 +153,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	showFriends: function(){
 		Ext.Viewport.add({
 			xtype: "managefriendlist",
+			mode: "MULTI",
+			hideToolbar: true,
 			listType: "Friends"
 		}).show();
 	},
@@ -160,6 +162,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	showEnemies: function(){
 		Ext.Viewport.add({
 			xtype: "managefriendlist",
+			mode: "MULTI",
+			hideToolbar: true,
 			listType: "Enemies"
 		}).show();
 	}

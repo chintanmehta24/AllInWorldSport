@@ -3,6 +3,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 	xtype : "managefriendlist",
 	config : {
 		listType: "Friends", //"Enemies", "Celebrities", "Friends"
+		hideToolbar: false,
 		autoDestory: true,
 		hideOnMaskTap: true,
 		modal: true,
@@ -17,6 +18,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			tpl: "{type}"
 		}, {
 			xtype: "container",
+			itemId: "topToolbar",
 			layout: {
 				type: "hbox",
 				pack: "end"
@@ -94,9 +96,11 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 	initialize: function(){
 		var me = this,
 			listType = me.getListType(),
-			titleCmp = me.down("#titleId");
+			titleCmp = me.down("#titleId"),
+			toolbar = me.down("#topToolbar");
 		me.callParent(arguments);
 		titleCmp.setData({type: listType});
+		toolbar.setHidden(me.getHideToolbar());
 		switch(listType){
 			case "Enemies":
 				me.addCls("enemy-cls");

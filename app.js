@@ -15,16 +15,17 @@ Ext.application({
 
     requires: [
     	'AllInOneWorldSport.proxy.AWSProxy',
+        'AllInOneWorldSport.Global',
         'Ext.MessageBox',
         'Ext.field.Password',
         'Ext.field.Email',
         'Ext.Img',
         'Ext.Label',
-        'AllInOneWorldSport.Global',
         'Ext.field.Search',
         'Ext.form.FieldSet',
         'Ext.field.Select',
-        'AllInOneWorldSport.store.ListParticipants'
+        'Ext.field.Radio',
+        'Ext.field.Spinner'
     ],
     
     controllers: [
@@ -38,13 +39,15 @@ Ext.application({
     models: [
     	"GameList",
 		"ListParticipant",
-		"LeaderBoardTopFivePlayers"
+		"LeaderBoardTopFivePlayers",
+		"Friend"
     ],
     
     stores: [
     	"GameLists",
 		"ListParticipants",
-		"LeaderBoardTopFivePlayers"
+		"LeaderBoardTopFivePlayers",
+		"Friends"
     ],
 
     views: [

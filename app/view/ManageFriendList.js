@@ -49,35 +49,8 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		}],
 		itemCls: "friend-cls",
 		cls: "friends-list-cls",
-		itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\")'></div><div class='status <tpl if=\"Status\">active<tpl else>inactive</tpl>'></div><div class='title'>{Name}</div>",
-		store: {
-			fields: ["Url", "Status", "Name"],
-			data: [{
-				Url: "resources/images/person.png",
-				Status: true,
-				Name: "Friend Name 1"
-			}, {
-				Url: "resources/images/person.png",
-				Status: true,
-				Name: "Friend Name 2"
-			}, {
-				Url: "resources/images/person.png",
-				Status: true,
-				Name: "Friend Name 3"
-			}, {
-				Url: "resources/images/person.png",
-				Status: false,
-				Name: "Friend Name 4"
-			}, {
-				Url: "resources/images/person.png",
-				Status: true,
-				Name: "Friend Name 5"
-			}, {
-				Url: "resources/images/person.png",
-				Status: false,
-				Name: "Friend Name 6"
-			}]
-		},
+		itemTpl: "<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div><div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div><div class='title'>{FullName}</div>",
+		store: "Friends",
 		listeners: [{
 			event: "painted",
 			single: true,
@@ -91,6 +64,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			var _this = this;
 				_this.destroy();
 		}, me);
+		me.getStore().load();
 	},
 	
 	initialize: function(){

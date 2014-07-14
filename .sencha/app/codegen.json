@@ -317,6 +317,18 @@
         "name": "GameList",
         "fields": "EventId:string:null,EventName:string:null"
       }
+    },
+    "app/model/FriendList.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "b440abe61f1cfb3bbc31c9554696b4c7e9e2c329",
+      "parameters": {
+        "appName": "AllInOneWorldSport",
+        "modelNamespace": "AllInOneWorldSport.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "FriendList",
+        "name": "FriendList",
+        "fields": "Balance:auto:null,BetEntries:auto:null,Bets:auto:null,EmailAddress:string:null,FacebookUId:number:null,FirstName:string:null,FullName:string:null,IsOnline:boolean:null,LastName:string:null,MemberId:string:null,Notes:string:null,PhotoUrl:string:null,PrimaryPhone:stirng:null,ProfileStatus:string:null,Teams:auto:null"
+      }
     }
   }
 }

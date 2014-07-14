@@ -134,7 +134,18 @@ Ext.define("AllInOneWorldSport.view.Login", {
 				cls : "twitter-btn-cls",
 				iconCls : "twitter"
 			}]
-		}],
+		},
+		{
+				xtype : "container",
+				html : 'version - 0.21',
+				layout : {
+				type : "hbox",
+				align : "right",
+				pack : "right"
+				},
+				style : "text-align:right;margin-top: 2em;font-size: 0.7em;"
+		}
+		],
 		listeners: [{
 			delegate: "button[action=switchLoginView]",
 			event: "tap",

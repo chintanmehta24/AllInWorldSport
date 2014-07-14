@@ -8,8 +8,8 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 			"button[action=homeNavigation]":{
 				tap : "homeNavigation"
 			},
-			"button[action=accountSettingNavigation]":{
-				tap : "accountSettingNavigation"
+			"button[action=myBetNavigation]":{
+				tap : "myBetNavigation"
 			}			
 		}
 	},
@@ -32,16 +32,16 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 		}
 		mainPanel.animateActiveItem(mainMenu, {type: "slide",direction: "right", duration: 450});
 	},
-	accountSettingNavigation:function(){
+	myBetNavigation:function(){
 		var viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport"),
-			accountsettings = mainPanel.down("accountsetting");
-		if(!accountsettings){
-			accountsettings = mainPanel.add({xtype: "accountsetting"});
+			mybet = mainPanel.down("mybet");
+		if(!mybet){
+			mybet = mainPanel.add({xtype: "mybet"});
 		}
-		if(accountsettings != mainPanel.getActiveItem()){
+		if(mybet != mainPanel.getActiveItem()){
 			AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
-			mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
+			mainPanel.animateActiveItem(mybet, {type: "slide", direction: "left", duration: 450});
 		
 		}
 	}

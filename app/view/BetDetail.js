@@ -160,11 +160,36 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	},
 	
 	showEnemies: function(){
-		Ext.Viewport.add({
-			xtype: "managefriendlist",
-			mode: "MULTI",
-			hideToolbar: true,
-			listType: "Enemies"
-		}).show();
+		var me = this,
+			gameRecord = me.getGameEventRecord(),
+			event = gameRecord.getData(),
+			values = me.getValues(),
+			selectedParticipantId = values.EventParticipantId,
+			typeCode = null,
+			EnemyParticipantId = null;
+        for (var i = 0; i < event.EventParticipants.length; i++) {
+            if (event.EventParticipants[i].ParticipantId != selectedParticipantId ) {
+                EnemyParticipantId = event.EventParticipants[i].ParticipantId;
+                // break;
+            }else{
+                typeCode = event.EventParticipants[1].RoleCode;
+            }
+        }
+		var list = Ext.Viewport.add({
+				xtype: "managefriendlist",
+				mode: "MULTI",
+				hideToolbar: true,
+				listType: "Enemies"
+			}).show(),
+			store = list.getStore();
+		store.clearFilter(true);
+		store.filterFn(function(rec){
+			var data = rec.getData();
+			for(i =0; i<data.Teams.length; i++){
+				if(data.Team[i].TypeCode == typeCode && data.Team[i].Status == "Favorite" && data.Team[i].ParticipantId == EnemyParticipantId)
+					return true;
+			}
+			return false;
+		});
 	}
 });

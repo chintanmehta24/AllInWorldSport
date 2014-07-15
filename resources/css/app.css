@@ -8578,13 +8578,28 @@ body.x-desktop {
 }
 /* line 6, ../sass/_friendsList.scss */
 .friends-list-cls .overlay-title-cls {
-  padding: 0.5em 1em;
+  padding: 0em 1em;
   background: rgba(211, 211, 211, 0.9);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8em;
+  line-height: 2.5;
+  position: relative;
 }
-/* line 13, ../sass/_friendsList.scss */
+/* line 14, ../sass/_friendsList.scss */
+.friends-list-cls .overlay-title-cls .closeList {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.25em;
+  bottom: 0;
+  display: block;
+  background-image: url("../images/cancel-bet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+/* line 27, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls {
   display: flex;
   display: -webkit-box;
@@ -8601,11 +8616,11 @@ body.x-desktop {
   border: 1px solid white;
   position: relative;
 }
-/* line 22, ../sass/_friendsList.scss */
+/* line 36, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls:last-child {
   margin-bottom: 0.5em;
 }
-/* line 25, ../sass/_friendsList.scss */
+/* line 39, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls:after {
   width: 1.5em;
   right: 0;
@@ -8620,15 +8635,15 @@ body.x-desktop {
   background-repeat: no-repeat;
   background-image: url("../images/select-disable.png");
 }
-/* line 39, ../sass/_friendsList.scss */
+/* line 53, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls.x-item-selected {
   background: rgba(227, 227, 227, 0.69);
 }
-/* line 41, ../sass/_friendsList.scss */
+/* line 55, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls.x-item-selected:after {
   background-image: url("../images/select-enable.png");
 }
-/* line 45, ../sass/_friendsList.scss */
+/* line 59, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls .thumb {
   width: 2.5em;
   height: 2.5em;
@@ -8636,7 +8651,7 @@ body.x-desktop {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 52, ../sass/_friendsList.scss */
+/* line 66, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls .status {
   width: 1.5em;
   height: 1.5em;
@@ -8646,7 +8661,7 @@ body.x-desktop {
   margin-right: 0.5em;
   margin-left: 0.5em;
 }
-/* line 61, ../sass/_friendsList.scss */
+/* line 75, ../sass/_friendsList.scss */
 .friends-list-cls .friend-cls .title {
   font-size: 0.75em;
   -webkit-box-flex: 1;
@@ -8654,19 +8669,19 @@ body.x-desktop {
   flex: 1 0 auto;
   font-family: "opensansbold";
 }
-/* line 67, ../sass/_friendsList.scss */
+/* line 81, ../sass/_friendsList.scss */
 .friends-list-cls .status.inactive {
   background-image: url("../images/status-disable.png");
 }
-/* line 71, ../sass/_friendsList.scss */
+/* line 85, ../sass/_friendsList.scss */
 .friends-list-cls.enemy-cls .status.active {
   background-image: url("../images/status-enemy.png");
 }
-/* line 76, ../sass/_friendsList.scss */
+/* line 90, ../sass/_friendsList.scss */
 .friends-list-cls.celeberity-cls .status.active {
   background-image: url("../images/status-celebrity.png");
 }
-/* line 81, ../sass/_friendsList.scss */
+/* line 95, ../sass/_friendsList.scss */
 .friends-list-cls.friend-cls .status.active {
   background-image: url("../images/status-friend.png");
 }

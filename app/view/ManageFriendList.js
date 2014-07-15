@@ -15,7 +15,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			itemId: "titleId",
 			cls: "overlay-title-cls",
 			docked: "top",
-			tpl: "{type}"
+			tpl: "{type}<span class='closeList'></span>"
 		}, {
 			xtype: "container",
 			itemId: "topToolbar",
@@ -64,6 +64,10 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			var _this = this;
 				_this.destroy();
 		}, me);
+		me.down("#titleId").on("tap", function(target){
+			if(target.getTarget(".closeList"))
+				this.closeFriendList();
+		}, me, {element: "element"});
 		me.getStore().load();
 	},
 	
@@ -87,5 +91,8 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 				me.addCls("friend-cls");
 				break;
 		}
+	},
+	closeFriendList: function(){
+		this.hide();
 	}
 });

@@ -4,11 +4,25 @@
       padding: 0 0.75em;
     }
     .overlay-title-cls {
-        padding: 0.5em 1em;
+        padding: 0em 1em;
         background: rgba(211, 211, 211, 0.9);
         text-transform: uppercase;
         font-weight: bold;
         font-size: 0.8em;
+        line-height: 2.5;
+        position: relative;
+        .closeList{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2.25em;
+            bottom: 0;
+            display: block;
+            background-image: url("../images/cancel-bet.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: black;
+        }
     }
     .friend-cls{
         @include st-box();

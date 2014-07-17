@@ -58,9 +58,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             "betdetail button[action=finalizeBet]": {
             	tap: "doConfirmBet"
             },
-			"mybet button[action=friendListMyBets]":{
-				tap:"showBetFromFriend"
-			},
+			
 			
         }
     },
@@ -396,17 +394,6 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		mainPanel.animateActiveItem(mybet, {type: "slide", direction: "left", duration: 450});
 	},
 	
-	showBetFromFriend: function(){
-		var viewport = Ext.Viewport,
-			mainPanel = viewport.down("#mainviewport"),
-			mybetfromfriend = mainPanel.down("myBetfromfriends");
-		if(!mybetfromfriend){
-			mybetfromfriend = mainPanel.add({xtype: "myBetfromfriends"});
-		}
-		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
-		mainPanel.animateActiveItem(mybetfromfriend, {type: "slide", direction: "left", duration: 450});
-	},
-
 	gotoAccountSettings: function(){
 	
 		var viewport = Ext.Viewport,

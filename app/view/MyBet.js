@@ -19,7 +19,7 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 			},
 			items: [{
 					text: "Friends",
-					action: "friendListMyBets"
+					action: "ListMyBets"
 				},{
 					text: "Celebrities",
 				},{

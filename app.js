@@ -34,6 +34,7 @@ Ext.application({
         "Navigation",
         "Profile",
 		"AccountSetting",
+		"MyBets",
     ],
     
     models: [

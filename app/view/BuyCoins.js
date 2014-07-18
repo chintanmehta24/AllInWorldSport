@@ -20,7 +20,7 @@ Ext.define("AllInOneWorldSport.view.BuyCoins", {
 				icon:  "resources/images/buy_coins_1.png",
 				badgeText: "$4.99"
 			},{
-				text: "5000 coin pack",
+				text: "5,000 coin pack",
 				icon:  "resources/images/buy_coins_2.png",
 				badgeText: "$0.99"
 			},{

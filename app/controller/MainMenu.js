@@ -195,6 +195,36 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
     },
 		
     doConfirmBet: function(btn){
+		/******Avinash********/
+		var BetCode="";
+		if(getButtonClicked == "")
+		{
+			Ext.Msg.alert('Error', "Please select atleast one option");
+			return;
+		}
+		else if(getButtonClicked == "ALLIN")
+			BetCode = 4;
+		else
+		{
+			if(participantID.length == 0){
+				Ext.Msg.alert('Error', "Please select atleast 1 user");
+				return;
+			}
+			else{
+				if(getButtonClicked == "Friends")
+					BetCode = 0;
+				else if(getButtonClicked == "Enemies")
+					BetCode = 1;
+			}
+		}
+		
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		/*************/
+	
+	
 		var me = this,
 			betdetailForm = btn.up("betdetail"),
 			values = betdetailForm.getValues(),
@@ -213,17 +243,19 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			xhr2 : true,
 			disableCaching : false,
 			jsonData : {
-				Amount: 0,
-	            BetCode: 4,
+				Amount: values.Amount,
+	            BetCode: BetCode,
 	            EventId: record.get("EventId"),
 	            EventParticipantId: values.EventParticipantId,
-	            Friends: [], //["1627aea5-8e0a-4371-9022-9b504344e724"],
+	            Friends: participantID, //["1627aea5-8e0a-4371-9022-9b504344e724"], //Avinash
 	            MemberId: currentUser.MemberId,
 	            Odds: 0,
 	            Spread: values.Spread,
 	            token: AllInOneWorldSport.Global.getAccessToken()
 			},
 			success : function(responce) {
+				Ext.Viewport.setMasked(false); //Avinash
+				participantID = []; //Avinash
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
@@ -242,6 +274,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				AllInOneWorldSport.Global.NavigationStack = [];
 			},
 			failure : function(responce) {
+				Ext.Viewport.setMasked(false); //Avinash
+				participantID = []; //Avinash
 				Ext.Viewport.setMasked(false);
 				Ext.Function.defer(function(){
 					Ext.Msg.alert('Communication Error');

@@ -84,7 +84,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			id:"amountID",
 			groupButtons: false,
 			minValue: 50,
-			maxValue: 2000,
+			maxValue: 100000,
 			stepValue:50,
 			value: 50
 		}, 
@@ -111,7 +111,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				text: "CELEBRITIES"
 			},*/
 			{
-				text: "ALL IN"
+				text: "ALL IN",
+				action : "setAllIN" //Avinash
 			}]
 		}, {
 			xtype: "button",
@@ -134,6 +135,10 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			delegate : "button[action=showEnemyList]",
 			event: "tap",
 			fn: "showEnemies"
+		}, {
+			delegate : "button[action=setAllIN]",
+			event: "tap",
+			fn: "setAllIN"
 		}]
 	},
 	onPageActivate: function(){
@@ -143,6 +148,8 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			Spread: 1,
 			Amount: "50"
 		});
+		getButtonClicked="";
+		participantID = [];
 	},
 	
 	onRadioFieldChange: function(field, newValue){
@@ -151,15 +158,26 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	},
 	
 	showFriends: function(){
-		Ext.Viewport.add({
+		getButtonClicked = "Friends"; // Avinash
+		var store = Ext.getStore("Friends");
+		store.removeAll();
+		
+		var list = Ext.Viewport.add({
 			xtype: "managefriendlist",
 			mode: "MULTI",
 			hideToolbar: true,
-			listType: "Friends"
+			listType: "Friends",
+			id : "listViewManageFriends"
 		}).show();
+		store = list.getStore();
+		store.clearFilter(true);
 	},
 	
 	showEnemies: function(){
+		getButtonClicked = "Enemies"; // Avinash
+		var store = Ext.getStore("Friends");
+		store.removeAll();
+		
 		var me = this,
 			gameRecord = me.getGameEventRecord(),
 			event = gameRecord.getData(),
@@ -179,17 +197,25 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				xtype: "managefriendlist",
 				mode: "MULTI",
 				hideToolbar: true,
-				listType: "Enemies"
+				listType: "Enemies",
+				id : "listViewManageFriends" //Avinash
 			}).show(),
 			store = list.getStore();
 		store.clearFilter(true);
-		store.filterFn(function(rec){
+		store.filter(function(rec){
 			var data = rec.getData();
 			for(i =0; i<data.Teams.length; i++){
-				if(data.Team[i].TypeCode == typeCode && data.Team[i].Status == "Favorite" && data.Team[i].ParticipantId == EnemyParticipantId)
+				
+				if(data.Team[i].TypeCode == typeCode && data.Team[i].Status == "Favorite" && data.Team[i].ParticipantId == EnemyParticipantId){
 					return true;
+					
+				}
 			}
 			return false;
 		});
-	}
+	},
+	//Avinash
+	setAllIN: function(){
+		getButtonClicked = "ALLIN";
+	},
 });

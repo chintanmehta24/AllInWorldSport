@@ -93,6 +93,14 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		}
 	},
 	closeFriendList: function(){
+		
+		var ListViewManageFriend = Ext.getCmp('listViewManageFriends'); //Avinash
+		participantID = []; //Avinash
+		var record = ListViewManageFriend.getSelection(); //Avinash
+		for(var i = 0 ; i < ListViewManageFriend.getSelectionCount() ; i++){ //Avinash
+			participantID[i]= record[i].data.MemberId; //Avinash
+		} //Avinash
+		
 		this.hide();
 	}
 });

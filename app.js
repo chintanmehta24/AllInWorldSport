@@ -41,14 +41,16 @@ Ext.application({
     	"GameList",
 		"ListParticipant",
 		"LeaderBoardTopFivePlayers",
-		"Friend"
+		"Friend",
+		"MyBets"
     ],
     
     stores: [
     	"GameLists",
 		"ListParticipants",
 		"LeaderBoardTopFivePlayers",
-		"Friends"
+		"Friends",
+		"MyBets"
     ],
 
     views: [

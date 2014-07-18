@@ -24,8 +24,10 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					text: "Celebrities",
 				},{
 					text: "Enemies",
+					action: "ListMyBets"
 				},{
 					text: "ALL IN",
+					action: "ListMyBets"
 				},{
 					text: "Accepted",
 				},{

@@ -30,12 +30,14 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 				scrollable: null,
 				items: [{
 					xtype: "label",
+					id : "myBetFrom", //Avinash
 					cls: "title-cls",
 					html: "BETS FROM FRIENDS",
 					docked: "top",
 				}],
-				itemTpl: "<div class='thumb' style='background-image: url(\"{Url}\");'></div><div class='status {Status}'></div><div class='title'>{Name}</div>",
-				store: {
+				itemTpl: "<div class='thumb' style='background-image: url(resources/images/person.png);'></div><div class='status {IsOnline}'></div><div class='title'>{Profile.FullName}</div>",
+				store : 'MyBets',
+				/*store: {
 					fields: ["Url", "Status", "Name"],
 					data: [{
 						Url: "resources/images/person.png",
@@ -63,7 +65,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 						Status: "celebrity",
 						Name: "Friend Name 6"
 					}]
-				}
+				}*/
 			},/*{
 				xtype: "dataview",
 				cls: "friends-list-cls",

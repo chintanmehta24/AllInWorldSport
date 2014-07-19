@@ -5,7 +5,9 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 			"mybet button[action=ListMyBets]":{
 				tap:"showBetList"
 			},
-			
+			"myBetfromfriends dataview": {
+				itemtap: "onBetFriendListSelect"
+			}
 		}
 	},
 	
@@ -132,4 +134,14 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		});
 	},
 	
+	onBetFriendListSelect: function(ths, index, record, e, eOpts){
+		if(eOpts.getTarget(".action-btns")){
+			if(eOpts.getTarget(".accept-btn")){
+				Ext.Msg.alert("Bet Accepted");
+			}
+			if(eOpts.getTarget(".reject-btn")){
+				Ext.Msg.alert("Bet Rejected");
+			}
+		}
+	}
 });

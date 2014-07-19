@@ -49,7 +49,11 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		}],
 		itemCls: "friend-cls",
 		cls: "friends-list-cls",
-		itemTpl: "<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div><div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div><div class='title'>{FullName}</div>",
+		itemTpl: ["<div class='row-cls'>",
+					"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
+					"<div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div>",
+					"<div class='title'>{FullName}</div>",
+				"</div>"].join(""),
 		store: "Friends",
 		listeners: [{
 			event: "painted",

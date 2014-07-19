@@ -25,9 +25,34 @@
         }
     }
     .friend-cls{
-        @include st-box();
-        @include st-box-orient(horizontal);
-        @include st-box-align(center);
+        .row-cls{
+          @include st-box();
+          @include st-box-orient(horizontal);
+          @include st-box-align(center);
+        }
+        .action-btns{
+          display: none;
+          .spacer-cls{
+            @include st-box-flex(1);
+          }
+          .accept-btn, .reject-btn{
+            padding: 0 1em;
+            line-height: 2;
+            color: white;
+          }
+          .accept-btn{
+            @include background-gradient($confirm-color);
+          }
+          .reject-btn{
+            @include background-gradient($alert-color);
+          }
+        }
+        &.x-item-selected{
+          .action-btns{
+            @include st-box();
+            margin-top: 0.5em;
+          }
+        }
         margin-top: 0.5em;
         padding: 0.25em 1.5em 0.25em 0.25em;
         background: rgba(255, 255, 255, 0.7);

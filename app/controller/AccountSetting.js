@@ -5,7 +5,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			"accountsetting button[action=saveAccountSetting]": {
 				tap: "saveAccountSetting"
 			},
-			"profile button[action=buyIcons]": {
+			/*"profile button[action=buyIcons]": {
 				tap : "buyIcons"
 			},
 			"profile button[action=saveProfile]":{
@@ -13,7 +13,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			},
 			"profile button[action=sshowFriends]":{
 				tap : "sshowFriends"
-			}
+			}*/
 		}
 	},
 	
@@ -21,17 +21,22 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 		var me = this;
 		var password = Ext.getCmp('id_Password').getValue();
 		var confirmPassword = Ext.getCmp('id_ConfirmPassword').getValue();
-		if(password != confirmPassword){
-			Ext.Msg.alert("Password not match...");
+		if(password!="" && confirmPassword!=""){
+			if(password != confirmPassword){
+				Ext.Msg.alert("Password not match...");
+			}
+			else if(password!="" && confirmPassword!="")
+			{
+				me.savePassword(password,btn);
+			}
 		}
-		else if(password!="" && confirmPassword!="")
-		{
-			me.savePassword(password);
-		}
+		else
+			me.saveProfile(btn);
 	},
 	
-	savePassword:function(newPassword)
+	savePassword:function(newPassword,btn)
 	{
+		var me = this;
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
@@ -59,7 +64,9 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 					return;
 				}
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD",newPassword);
-				Ext.Msg.alert("Setting Change");
+				//Ext.Msg.alert("Setting Change");
+				me.saveProfile(btn);
+				
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
@@ -75,27 +82,39 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 	
 	saveProfile:function(btn){
 		var me = this,
-			formPanel = btn.up("profile"),
-			values = formPanel.getValues(),
-			ParticipantTeams = formPanel.query("[name=Participant]");
+			AccountSetting = btn.up("accountsetting"),
+			ParticipantTeams = AccountSetting.query("[name=Participant]"),
+			LoginName = AccountSetting.query("[name=LoginName]"),
+			ChangeStatus = AccountSetting.query("[name=ChangeStatus]"); 
 			
-		if(!values.Participant || values.Participant.length !== 2 && Ext.isEmpty(values.Participant[0]) && Ext.isEmpty(values.Participant[1])){
+		/*if(!values.Participant || values.Participant.length !== 2 && Ext.isEmpty(values.Participant[0]) && Ext.isEmpty(values.Participant[1])){
 			Ext.Function.defer(function(){
 				Ext.Msg.alert("Error", "Please select the team");
 			},100);
 			return;
-		}
+		}*/
 		
 		var Participants = [];
 		var participate1 = ParticipantTeams[0].getRecord(),
 			participate2 = ParticipantTeams[1].getRecord();
 		Participants.push(participate1.getData());
 		Participants.push(participate2.getData());
-		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
-			loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
+		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+			//loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
+			
+		console.log("Display Name = "+current_user.Member.FirstName);
+	     console.log("FirsName = "+current_user.Member.FirstName);
+	    console.log("lastName = "+current_user.Member.LastName);
+		console.log("Email = "+current_user.Member.EmailAddress);
+		console.log("Phone = "+current_user.Member.PrimaryPhone);
+		console.log("Notes = "+current_user.Member.Notes);
+	    console.log("Loginname = "+LoginName[0].getValue());//current_user,
+	               
+		console.log("Status = "+ChangeStatus[0].getValue());	
+		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
-			message : "Please wait"
+			message : "Please wait121"
 		});
 		Ext.Ajax.request({
 			url : AllInOneWorldSport.Global.SERVER_URL + "/UpdateProfile",
@@ -105,14 +124,14 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 				MemberId: current_user.MemberId,
 				Member: {
 					DisplayName: current_user.Member.FirstName,
-	                FirstName: values.FirstName,
+	                FirstName: current_user.Member.FirstName,
 	                LastName: current_user.Member.LastName,
-	                LoginName: loginName,//current_user,
-	                EmailAddress: values.Email,
-	                PrimaryPhone: current_user.Member.PrimaryPhone,
+					EmailAddress: current_user.Member.EmailAddress,
+					PrimaryPhone: current_user.Member.PrimaryPhone,
+					Notes:current_user.Member.Notes,
+	                LoginName: LoginName[0].getValue(),//current_user,
 	                MemberId: current_user.MemberId,
-					WebURL:values.Status,
-					Notes:values.AboutMe,
+					WebURL:ChangeStatus[0].getValue(),
 				},
 				Participants : Participants,
 	            token: AllInOneWorldSport.Global.getAccessToken()
@@ -127,14 +146,16 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 					return;
 				}
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
+				localStorage.setItem("CURRENT_USER_LOGINNAME",LoginName[0].getValue());
+				
+				var View = AllInOneWorldSport.Global.NavigationStack.pop();
 				var viewport = Ext.Viewport,
-					mainPanel = viewport.down("#mainviewport"),
-					mainMenu = mainPanel.down("mainmenu");
-				if(!mainMenu){
-					mainMenu = mainPanel.add({xtype: "mainmenu"});
-				}
-				mainPanel.animateActiveItem(mainMenu, {type: "slide", direction: "right", out: true, duration: 450});
-				AllInOneWorldSport.Global.NavigationStack = [];
+					mainPanel = viewport.down("#mainviewport");
+				mainPanel.animateActiveItem(View, {type: "slide",direction: "right", duration: 450});
+		
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Message','Account Setting Change Successfully');
+				},100);
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
@@ -151,5 +172,6 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			mainPanel = viewport.down("#mainviewport");
 		
 		mainPanel.animateActiveItem(View, {type: "slide",direction: "right", duration: 450});
-	}
+	},
+	
 });

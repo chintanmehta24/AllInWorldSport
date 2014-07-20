@@ -361,6 +361,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 	},
 	
 	getListOfTopPlayers:function(){
+		
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		
 		var topFivePlayers = Ext.getStore("LeaderBoardTopFivePlayers"),
 		callbackFn = function(records, operation, success){
 				Ext.Viewport.setMasked(false);
@@ -378,7 +384,40 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 						if(!success){
 							callbackFn.apply(this, arguments);
 						}
-						
+						Ext.Viewport.setMasked({
+							xtype : "loadmask",
+							message : "Please wait"
+						});
+					}
+				});
+				
+		
+		var friendStore = Ext.getStore('Friends'),
+		callbackFn = function(records, operation, success){
+				Ext.Viewport.setMasked(false);
+				var data = Ext.decode(operation.getResponse().responseText);
+				if(data && data.errorReason && data.errorReason.ReasonCode){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
+					return;
+				}
+		};
+		friendStore.load({
+					callback: function(records, operation, success){
+						Ext.Viewport.setMasked(false);
+						if(!success){
+							callbackFn.apply(this, arguments);
+						}
+						var cnt = 0;
+						friendStore.clearFilter(true);
+						friendStore.filter(function(rec){
+							if(cnt<5){
+								cnt++;
+								return true;
+							}
+							return false;
+						});
 					}
 				});
 	},

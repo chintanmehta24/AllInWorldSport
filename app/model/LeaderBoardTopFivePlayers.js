@@ -3,6 +3,7 @@ Ext.define('AllInOneWorldSport.model.LeaderBoardTopFivePlayers', {
     
     config: {
         fields: [
+			{ name: 'Balance', type : 'auto'},
             { name: 'MemberId', type: 'string' },
 			{ name: 'FullName',type: 'string'},
             { name: 'NumberOfBets', type: 'string' },

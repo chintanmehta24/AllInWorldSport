@@ -7,7 +7,7 @@ Ext.define('AllInOneWorldSport.model.MyBets', {
             { name: 'Entry', type: 'auto' },
             { name: 'Event', type: 'auto' },
 			{ name: 'Profile', type: 'auto' },
-            { name: 'EmailAddress', type: 'string' },
+            { name: 'MyBet', type: 'boolean' },
             { name: 'FacebookUId', type: 'number' },
             { name: 'FirstName', type: 'string' },
             { name: 'FullName', type: 'string' },

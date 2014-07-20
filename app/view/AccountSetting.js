@@ -42,6 +42,72 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 			{
 				xtype : "container",
 				layout: {
+					type: "hbox",
+					align: "start"
+				},
+				padding: "0.5em 0.7em 0",
+				items : [
+					{
+						xtype :"label",
+						cls: "field-label-cls",
+						style : 'font-size: 0.80em;',
+						html: "Level 7",
+						flex : 1,
+					},
+					{
+						xtype : "container",
+						layout: {
+							type: "vbox",
+							pack: "center"
+						},
+						flex: 1,
+						margin: '-1.5em 0 0 0',
+						items : [
+							{
+								xtype :"label",
+								cls: "field-label-cls",
+								html: "COIN BALANCE",
+								
+							},
+							{
+								xtype: "button",
+								text: "8",
+								name : 'CoinBalance',
+								style : 'max-width: 4em;background-color: rgba(245,253,9,1);background-image: none;border: 0;font-size: 1em;'
+								
+								
+							}
+						]
+					},
+					{
+						xtype : "container",
+						layout: {
+							type: "vbox",
+							pack: "center"
+						},
+						margin: '-1.5em 0 0 0',
+						flex: 1,
+						items : [
+							{
+								xtype :"label",
+								cls: "field-label-cls",
+								html: "TICKET BALANCE",
+								
+							},
+							{
+								xtype: "button",
+								text: "8",
+								name : 'TicketBalance',
+								style : 'max-width: 4em;background-color: rgba(245,253,9,1);background-image: none;border: 0;font-size: 1em;'
+								
+							}
+						]
+					}
+				]
+			},
+			{
+				xtype : "container",
+				layout: {
 					type: "vbox",
 					pack: "center"
 				},
@@ -106,10 +172,13 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									{
 										xtype :"label",
 										cls: "field-label-cls",
-										html: "CHANGE SAYING"
+										html: "CHANGE SAYING",
+										
 									},
 									{
-										xtype:'textfield'
+										xtype:'textfield',
+										name : "ChangeStatus",
+										
 									}
 								]
 							},
@@ -124,10 +193,12 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 									{
 										xtype :"label",
 										cls: "field-label-cls",
-										html: "CHANGE PROFILE NAME"
+										html: "CHANGE PROFILE NAME",
+										
 									},
 									{
-										xtype:'textfield'
+										xtype:'textfield',
+										name: "LoginName",
 									}
 								]
 							}
@@ -346,6 +417,22 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 		painted: function (element, options) {
 			var password = Ext.getCmp('id_Password').setValue("");
 			var confirmPassword = Ext.getCmp('id_ConfirmPassword').setValue("");
+			
+			var me = this,
+			current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+			if(current_user){
+				var LoginName = me.query("[name=LoginName]");
+				var ChangeStatus = me.query("[name=ChangeStatus]"); 
+				LoginName[0].setValue(localStorage.getItem("CURRENT_USER_LOGINNAME"));
+				ChangeStatus[0].setValue(current_user.Member.ProfileStatus);
+				
+				var CoinBalance = me.query("[name=CoinBalance]");
+				var TicketBalance = me.query("[name=TicketBalance]");
+				
+				CoinBalance[0].setText(current_user.MemberBalance.CreditBalance);
+				TicketBalance[0].setText(current_user.MemberBalance.TicketBalance);
+				
+			}
 		}
 	}
 	

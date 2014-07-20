@@ -33,7 +33,9 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		mainPanel.animateActiveItem(mybetfromfriend, {type: "slide", direction: "left", duration: 450});
 		
 		var BetFrom = Ext.getCmp('myBetFrom');
-		if(BetCode == 1)
+		if(BetCode == 0)
+			BetFrom.setHtml("BETS FROM FRIENDS");
+		else if(BetCode == 1)
 			BetFrom.setHtml("BETS FROM ENEMIES");
 		else if(BetCode == 4)
 			BetFrom.setHtml("BETS FROM ALL IN")
@@ -83,6 +85,24 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 				store.sync();
 				store.load();
 				
+				store.clearFilter(true);
+				store.filter(function(rec){
+					var data = rec.getData();
+					
+					if(data.Bet.Status == "Pending" && data.MyBet == true){
+						return true;
+						
+					}
+					return false;
+				});
+				
+				if(store.data.length <= 0){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Message', "No Pending Available");
+					},100);
+				}
+				
+				
 				
 			},
 			failure : function(responce) {
@@ -95,7 +115,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		});
 	},
 	
-	AcceptList:function(){
+	AcceptList:function(BetEntryID,index){
 		var me = this;
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 		
@@ -109,7 +129,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 			disableCaching : false,
 			jsonData : {
 				MemberId: current_user.MemberId,
-				BetEntryId: "",
+				BetEntryId: BetEntryID,
 	            token: AllInOneWorldSport.Global.getAccessToken()
 			},
 			success : function(responce) {
@@ -121,7 +141,11 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 					},100);
 					return;
 				}
-				
+				Ext.Function.defer(function(){
+						Ext.Msg.alert('Message', "Bet Accepted Successfully");
+					},100);
+				var store = Ext.getStore("MyBets");
+				store.removeAt(index);
 				
 			},
 			failure : function(responce) {
@@ -135,9 +159,13 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 	},
 	
 	onBetFriendListSelect: function(ths, index, record, e, eOpts){
+		var me = this;
 		if(eOpts.getTarget(".action-btns")){
 			if(eOpts.getTarget(".accept-btn")){
-				Ext.Msg.alert("Bet Accepted");
+				//Ext.Msg.alert("Bet Accepted");
+				var store = Ext.getStore("MyBets");
+				var BetEntryID = store.getAt(index).data.Bet.BetEntryId;
+				me.AcceptList(BetEntryID,index);
 			}
 			if(eOpts.getTarget(".reject-btn")){
 				Ext.Msg.alert("Bet Rejected");

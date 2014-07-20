@@ -36,15 +36,15 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 			xtype: "dataview",
 			itemCls: "lead-player-cls",
 			itemTpl : [ "<div class='row-cls'>",
-							 "<span>{PlayerName}</span>" ,
-							 "<span>{BestWin}</span>" ,
-							 "<span>{MostWin}</span>" ,
-							 "<span>{MostBetCreated}</span>" ,
-							 "<span>{HeighestBalance}</span>" ,
-							 "<span>{Tickets}</span>", 
+							 "<span>{FullName}</span>" ,
+							 "<span>{Balance.BetBalance.WinLossRatio}</span>" ,
+							 "<span>{Balance.BetBalance.NumberOfWins}</span>" ,
+							 "<span>{Balance.BetBalance.NumberOfBetsCreated}</span>" ,
+							 "<span>{Balance.CreditBalance}</span>" ,
+							 "<span>{Balance.TicketBalance}</span>", 
 						"</div>"].join(""),
-			//store : 'LeaderBoardTopFivePlayers',
-			store : {
+			store : 'LeaderBoardTopFivePlayers',
+			/*store : {
 				fields: [
 					 "PlayerName" ,
 					 "BestWin" ,
@@ -84,7 +84,7 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 						"Tickets": 25
 					}
 				]
-			},
+			},*/
 			items: [{
 				xtype: "label",
 				cls: "leaderlist-title-cls",
@@ -96,14 +96,20 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 			xtype: "dataview",
 			itemCls: "lead-player-cls",
 			itemTpl : [ "<div class='row-cls'>",
-							 "<span>{PlayerName}</span>" ,
-							 "<span>{BestWin}</span>" ,
-							 "<span>{MostWin}</span>" ,
-							 "<span>{MostBetCreated}</span>" ,
-							 "<span>{HeighestBalance}</span>" ,
-							 "<span>{Tickets}</span>", 
+							 "<span>{FullName}</span>" ,
+							 "<span>{Balance.BetBalance.WinLossRatio}</span>" ,
+							 "<span>{Balance.BetBalance.NumberOfWins}</span>" ,
+							 "<span>{Balance.BetBalance.NumberOfBetsCreated}</span>" ,
+							 "<span>{Balance.CreditBalance}</span>" ,
+							 "<span>{Balance.TicketBalance}</span>", 
 						"</div>"].join(""),
-			store : {
+			store : 'Friends',
+			listeners: [{
+				event: "painted",
+				single: true,
+				fn: "onPainted"
+			}],
+			/*store : {
 				fields: [
 					 "PlayerName" ,
 					 "BestWin" ,
@@ -143,7 +149,7 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 						"Tickets": 25
 					}
 				]
-			},
+			},*/
 			items: [{
 				xtype: "label",
 				cls: "leaderlist-title-cls",
@@ -154,13 +160,15 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 	},
 	initialize: function(){
 		var me = this;
+		var currentUser = Ext.decode(localStorage.CURRENT_LOGIN_USER);
 		me.down("#myScoreBoard").setData({
 						"PlayerName": "Player 4",
-						"BestWin": 25,
-						"MostWin": 25,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25
+						"BestWin": currentUser.MemberBalance.BetBalance.WinLossRatio,
+						"MostWin": currentUser.MemberBalance.BetBalance.NumberOfWins,
+						"MostBetCreated": currentUser.MemberBalance.BetBalance.NumberOfBetsCreated,
+						"HeighestBalance": currentUser.MemberBalance.CreditBalance,
+						"Tickets": currentUser.MemberBalance.TicketBalance
 		});
+		
 	}
 });

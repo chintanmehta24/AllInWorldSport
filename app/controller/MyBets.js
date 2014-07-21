@@ -14,14 +14,30 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 	showBetList: function(btn){
 		
 		var BetCode = 0;
-		if(btn.getText() == "Friend")
+		var BetStatus = "Pending"
+		if(btn.getText() == "Friend" || btn.name == "AcceptedFriendsBets" || btn.name == "ExpiredFriendsBets" ){
 			BetCode = 0;
-		else if(btn.getText() == "Enemies")
+			if(btn.name == "AcceptedFriendsBets")
+				BetStatus = "Accepted"
+			else if(btn.name == "ExpiredFriendsBets")
+				BetStatus = "Expired"
+		}
+		else if(btn.getText() == "Enemies" || btn.name == "AcceptedEnemiesBets" || btn.name == "ExpiredEnemiesBets"){
 			BetCode = 1;
-		else if(btn.getText() == "ALL IN")
+			if(btn.name == "AcceptedEnemiesBets")
+				BetStatus = "Accepted"
+			else if(btn.name == "ExpiredEnemiesBets")
+				BetStatus = "Expired"
+		}
+		else if(btn.getText() == "ALL IN" || btn.name == "AcceptedALLINBets" || btn.name == "ExpiredALLINBets"){
 			BetCode = 4;
+			if(btn.name == "AcceptedALLINBets")
+				BetStatus = "Accepted"
+			else if(btn.name == "ExpiredALLINBets")
+				BetStatus = "Expired"
+		}
 		
-		this.getBetList(BetCode)
+		this.getBetList(BetCode,BetStatus);
 		
 		var viewport = Ext.Viewport,
 			mainPanel = viewport.down("#mainviewport"),
@@ -43,7 +59,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		
 	},
 	
-	getBetList:function(BetCode){
+	getBetList:function(BetCode,BetStatus){
 		
 		/*var store = Ext.getStore('MyBets');
 		store.load({
@@ -89,7 +105,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 				store.filter(function(rec){
 					var data = rec.getData();
 					
-					if(data.Bet.Status == "Pending" && data.MyBet == true){
+					if(data.Bet.Status == BetStatus && data.MyBet == true){
 						return true;
 						
 					}
@@ -98,7 +114,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 				
 				if(store.data.length <= 0){
 					Ext.Function.defer(function(){
-						Ext.Msg.alert('Message', "No Pending Available");
+						Ext.Msg.alert('Message', "No Bets Available");
 					},100);
 				}
 				

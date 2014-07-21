@@ -31,17 +31,39 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 				},{
 					text: "Accepted",
 				},{
-					text: " - This Week",
-					cls: ["my-bet-btn-cls", "left-padded-cls"]
+					text: " - Friends",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "AcceptedFriendsBets",
+					action: "ListMyBets"
 				},{
-					text: " - Last Week",
-					cls: ["my-bet-btn-cls", "left-padded-cls"]
+					text: " - Enemies",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "AcceptedEnemiesBets",
+					action: "ListMyBets"
 				},{
-					text: " - Date Range",
-					cls: ["my-bet-btn-cls", "left-padded-cls"]
+					text: " - ALL IN",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "AcceptedALLINBets",
+					action: "ListMyBets"
 				},{
 					text: "Expired",
 				},{
+					text: " - Friends",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "ExpiredFriendsBets",
+					action: "ListMyBets"
+				},{
+					text: " - Enemies",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "ExpiredEnemiesBets",
+					action: "ListMyBets"
+				},{
+					text: " - ALL IN",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "ExpiredALLINBets",
+					action: "ListMyBets"
+				},
+				{
 					text: "Rejected",
 				}
 			]

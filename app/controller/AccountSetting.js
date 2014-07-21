@@ -101,20 +101,10 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 		Participants.push(participate2.getData());
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 			//loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
-			
-		console.log("Display Name = "+current_user.Member.FirstName);
-	     console.log("FirsName = "+current_user.Member.FirstName);
-	    console.log("lastName = "+current_user.Member.LastName);
-		console.log("Email = "+current_user.Member.EmailAddress);
-		console.log("Phone = "+current_user.Member.PrimaryPhone);
-		console.log("Notes = "+current_user.Member.Notes);
-	    console.log("Loginname = "+LoginName[0].getValue());//current_user,
-	               
-		console.log("Status = "+ChangeStatus[0].getValue());	
 		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
-			message : "Please wait121"
+			message : "Please wait"
 		});
 		Ext.Ajax.request({
 			url : AllInOneWorldSport.Global.SERVER_URL + "/UpdateProfile",

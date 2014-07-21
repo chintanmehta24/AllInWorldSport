@@ -51,7 +51,8 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 						xtype :"label",
 						cls: "field-label-cls",
 						style : 'font-size: 0.80em;',
-						html: "Level 7",
+						html: "",
+						name: "Level",
 						flex : 1,
 					},
 					{
@@ -345,6 +346,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 				if(current_user){
 					var LoginName = me.query("[name=LoginName]");
 					var ChangeStatus = me.query("[name=ChangeStatus]"); 
+					var Level = me.query("[name=Level]");
 					LoginName[0].setValue(localStorage.getItem("CURRENT_USER_LOGINNAME"));
 					ChangeStatus[0].setValue(current_user.Member.ProfileStatus);
 					
@@ -353,6 +355,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					
 					CoinBalance[0].setText(current_user.MemberBalance.CreditBalance);
 					TicketBalance[0].setText(current_user.MemberBalance.TicketBalance);
+					Level[0].setHtml(current_user.MemberBalance.ExperiencePoint.LevelDescription);
 					
 				}
 			}

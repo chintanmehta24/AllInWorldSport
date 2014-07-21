@@ -334,6 +334,28 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 			delegate: "#volumnSlider",
 			event: "drag",
 			fn: "onVolumnChange"
+		},{
+			event: "painted",
+			fn: function (element, options) {
+				var password = Ext.getCmp('id_Password').setValue("");
+				var confirmPassword = Ext.getCmp('id_ConfirmPassword').setValue("");
+				
+				var me = this,
+				current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+				if(current_user){
+					var LoginName = me.query("[name=LoginName]");
+					var ChangeStatus = me.query("[name=ChangeStatus]"); 
+					LoginName[0].setValue(localStorage.getItem("CURRENT_USER_LOGINNAME"));
+					ChangeStatus[0].setValue(current_user.Member.ProfileStatus);
+					
+					var CoinBalance = me.query("[name=CoinBalance]");
+					var TicketBalance = me.query("[name=TicketBalance]");
+					
+					CoinBalance[0].setText(current_user.MemberBalance.CreditBalance);
+					TicketBalance[0].setText(current_user.MemberBalance.TicketBalance);
+					
+				}
+			}
 		}]
 	},
 	initialize: function(){
@@ -412,28 +434,5 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					"background-image: -o-linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 
 					"background-image: linear-gradient(left, #00deff "+ percentage +"%, transparent "+ percentage +"%);" + 							
 							"}");
-	},
-	listeners: {
-		painted: function (element, options) {
-			var password = Ext.getCmp('id_Password').setValue("");
-			var confirmPassword = Ext.getCmp('id_ConfirmPassword').setValue("");
-			
-			var me = this,
-			current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
-			if(current_user){
-				var LoginName = me.query("[name=LoginName]");
-				var ChangeStatus = me.query("[name=ChangeStatus]"); 
-				LoginName[0].setValue(localStorage.getItem("CURRENT_USER_LOGINNAME"));
-				ChangeStatus[0].setValue(current_user.Member.ProfileStatus);
-				
-				var CoinBalance = me.query("[name=CoinBalance]");
-				var TicketBalance = me.query("[name=TicketBalance]");
-				
-				CoinBalance[0].setText(current_user.MemberBalance.CreditBalance);
-				TicketBalance[0].setText(current_user.MemberBalance.TicketBalance);
-				
-			}
-		}
 	}
-	
 });

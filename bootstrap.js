@@ -50,15 +50,23 @@ Ext.Loader.addClassPathMappings({
 });
 Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.Global": [],
+  "AllInOneWorldSport.controller.AccountSetting": [],
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
+  "AllInOneWorldSport.controller.MyBets": [],
   "AllInOneWorldSport.controller.Navigation": [],
   "AllInOneWorldSport.controller.Profile": [],
+  "AllInOneWorldSport.model.Friend": [],
   "AllInOneWorldSport.model.GameList": [],
+  "AllInOneWorldSport.model.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.model.ListParticipant": [],
+  "AllInOneWorldSport.model.MyBets": [],
   "AllInOneWorldSport.proxy.AWSProxy": [],
+  "AllInOneWorldSport.store.Friends": [],
   "AllInOneWorldSport.store.GameLists": [],
+  "AllInOneWorldSport.store.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.store.ListParticipants": [],
+  "AllInOneWorldSport.store.MyBets": [],
   "AllInOneWorldSport.view.AboutGame": [],
   "AllInOneWorldSport.view.AccountSetting": [],
   "AllInOneWorldSport.view.BetDetail": [],
@@ -806,17 +814,25 @@ Ext.ClassManager.addNameAlternateMappings({
 });
 Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.Global": [],
+  "AllInOneWorldSport.controller.AccountSetting": [],
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
+  "AllInOneWorldSport.controller.MyBets": [],
   "AllInOneWorldSport.controller.Navigation": [],
   "AllInOneWorldSport.controller.Profile": [],
+  "AllInOneWorldSport.model.Friend": [],
   "AllInOneWorldSport.model.GameList": [],
+  "AllInOneWorldSport.model.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.model.ListParticipant": [],
+  "AllInOneWorldSport.model.MyBets": [],
   "AllInOneWorldSport.proxy.AWSProxy": [
     "proxy.awsajax"
   ],
+  "AllInOneWorldSport.store.Friends": [],
   "AllInOneWorldSport.store.GameLists": [],
+  "AllInOneWorldSport.store.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.store.ListParticipants": [],
+  "AllInOneWorldSport.store.MyBets": [],
   "AllInOneWorldSport.view.AboutGame": [
     "widget.aboutgame"
   ],

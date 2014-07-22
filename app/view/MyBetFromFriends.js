@@ -23,7 +23,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 				xtype: "navbar",
 				docked: "top"
 			},{
-				xtype: "dataview",
+					xtype: "dataview",
 				cls: "friends-list-cls",
 				style : "margin:1em;",
 				itemCls: "friend-cls",
@@ -40,11 +40,11 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 							"<div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div>",
 							"<div class='title'>{Profile.FullName}</div>",
 						"</div>",
-						"<div class='row-cls action-btns'>",
+						"<tpl if='Bet.Status==\"Pending\"'><div class='row-cls action-btns'>",
 							"<div class='accept-btn'>Accept</div>",
 							"<div class='spacer-cls'></div>",
 							"<div class='reject-btn'>Reject</div>",
-						"</div>"].join(""),
+						"</div></tpl>"].join(""),
 				// itemTpl: "<div class='thumb' style='background-image: url(resources/images/person.png);'></div>",
 							//"<div class='status {IsOnline}'></div>,",
 							//"<div class='title'>{Profile.FullName}</div>",

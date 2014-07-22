@@ -39,6 +39,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 							"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
 							"<div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div>",
 							"<div class='title'>{Profile.FullName}</div>",
+							"<span class='title'>Amount: {Bet.Amount}</span>",
 						"</div>",
 						"<tpl if='Bet.Status==\"Pending\"'><div class='row-cls action-btns'>",
 							"<div class='accept-btn'>Accept</div>",

@@ -68,15 +68,12 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								xtype :"label",
 								cls: "field-label-cls",
 								html: "COIN BALANCE",
-								
 							},
 							{
 								xtype: "button",
 								text: "8",
 								name : 'CoinBalance',
-								style : 'max-width: 4em;background-color: rgba(245,253,9,1);background-image: none;border: 0;font-size: 1em;'
-								
-								
+								cls: 'balance-btn-cls'
 							}
 						]
 					},
@@ -99,8 +96,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								xtype: "button",
 								text: "8",
 								name : 'TicketBalance',
-								style : 'max-width: 4em;background-color: rgba(245,253,9,1);background-image: none;border: 0;font-size: 1em;'
-								
+								cls: 'balance-btn-cls'
 							}
 						]
 					}

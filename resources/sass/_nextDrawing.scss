@@ -28,7 +28,7 @@
     }
   }
   .main-content-cls{
-    margin : 1em 0;
+    margin : 1em 0 0;
     .prize-title-cls, .content-title-cls{
       color: white;
       font-family :"OpenSansBold";
@@ -42,10 +42,14 @@
       background: #2f2f2f;
     }
     .x-layout-card-item {
+      background-color: transparent;
+    }
+    .x-img.x-img-background {
       background-color: rgba(white, 0.7);
     }
   }
   .bottom-description-cls{
+    padding-top: 1em;
     font-size: 0.8em;
     color: white;
     text-align: justify;

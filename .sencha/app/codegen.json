@@ -41,6 +41,9 @@
     },
     "{modelFileName}.js.tpl.merge": {
       "b440abe61f1cfb3bbc31c9554696b4c7e9e2c329": "eJxtUsFugzAMvfMVVqUqtEXQXaF0h2nX/QDikIJpo6UBkdAxRfn3ObCiVasPsbH9Hi923kcT19gIhSGz17ZG+cGvqDteoYutotixCGwAZDgaVHUKzJ64xjfJtabiVJqOqlWNOKe/3d4agbLWKRR2veS83bgcUMdzGXIIm0FVRrSKoim3+UOykLU9hDfeQ4+GMEUZQcd74/EzKNadFCZkEdtEICi9z8gd5q5YojqbSwa7nXjGPsvqoSHcBChEeSdM2SZ7CiAlcTfoS2jBjyqFptiTLPPdTfFLCe4J0gX/UkQ09Mq77LHoNuHDsP7Qrd3BdNKPJV/NxdXxAXsXxZY9zsKY9d4xcLYYhapxhDyHsWoHZeAVGAPqiVjpDgn94BjYNSRbOEmuPkHSSwHTktJ6qBCu2J9xWrwUFa3iKxk09oC1oI9tQhoXRWUw391P5AeOxqsQ"
+    },
+    "development.properties.merge": {
+      "c45c602c9b6f6f73cace183e9f0bf09c00a3ccf6": "eJytkUuOAjEMBfec4one9w24wyy4QFDc0xbBjhyTEbcfp0F89mRny6l6liccvvl2E44rNyxcCNW0c6aGJNBOZlGgKotjUUOmJV2LoyfjdCoxFx0WymBBgJyas/zOj7k2B6+SOVObw0JtMzw6SEZQKTfwpap5UP5WEpyuXHJQgjecvhL2mToVrRcS34Oks6mMYt5NMfbzYr7l8edWns5DzGrst22vu+QtXjR8BAraFqloyoEZAT7l28cW3i9f4R+b7pUs"
     }
   },
   "targets": {
@@ -328,6 +331,26 @@
         "modelFileName": "FriendList",
         "name": "FriendList",
         "fields": "Balance:auto:null,BetEntries:auto:null,Bets:auto:null,EmailAddress:string:null,FacebookUId:number:null,FirstName:string:null,FullName:string:null,IsOnline:boolean:null,LastName:string:null,MemberId:string:null,Notes:string:null,PhotoUrl:string:null,PrimaryPhone:stirng:null,ProfileStatus:string:null,Teams:auto:null"
+      }
+    },
+    ".sencha/app/development.properties": {
+      "source": "development.properties.merge",
+      "version": "c45c602c9b6f6f73cace183e9f0bf09c00a3ccf6",
+      "parameters": {
+        "viewNamespace": "AllInOneWorldSport.view",
+        "frameworkName": "touch",
+        "frameworkPath": "touch",
+        "senchadir": ".sencha",
+        "appModels": "",
+        "appControllers": "",
+        "appViews": "",
+        "uniqueId": "aededbb0-3f2e-4247-9120-5194fdc56d5c",
+        "appName": "AllInOneWorldSport",
+        "modelNamespace": "AllInOneWorldSport.model",
+        "name": "AllInOneWorldSport",
+        "library": "core",
+        "controllerNamespace": "AllInOneWorldSport.controller",
+        "appStores": ""
       }
     }
   }

@@ -21,8 +21,6 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					text: "Friends",
 					action: "ListMyBets"
 				},{
-					text: "Celebrities",
-				},{
 					text: "Enemies",
 					action: "ListMyBets"
 				},{
@@ -63,9 +61,7 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					name : "ExpiredALLINBets",
 					action: "ListMyBets"
 				},
-				{
-					text: "Rejected",
-				}
+				
 			]
 		}]
 	}

@@ -41,7 +41,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 							"<div class='title'>{Profile.FullName}</div>",
 							"<span class='title'>Amount: {Bet.Amount}</span>",
 						"</div>",
-						"<div class='row-cls'>",
+						"<div class='row-cls' style='font-size:0.7em;'>",
 							"<tpl for='Event.EventParticipants'>",
 								'<tpl if="xindex &gt; 1">',
 									'<div class="title" style="text-align:center;">Vs</div>',

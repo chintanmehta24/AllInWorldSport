@@ -14,9 +14,9 @@ Ext.application({
     name: 'AllInOneWorldSport',
 
     requires: [
+        'Ext.MessageBox',
     	'AllInOneWorldSport.proxy.AWSProxy',
         'AllInOneWorldSport.Global',
-        'Ext.MessageBox',
         'Ext.field.Password',
         'Ext.field.Email',
         'Ext.Img',

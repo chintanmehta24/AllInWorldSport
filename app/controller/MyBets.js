@@ -13,28 +13,30 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 	
 	showBetList: function(btn){
 		
-		var BetCode = 0;
-		var BetStatus = "Pending"
-		if(btn.getText() == "Friend" || btn.name == "AcceptedFriendsBets" || btn.name == "ExpiredFriendsBets" ){
+		var BetCode = 0,
+			btnText = btn.getText(),
+			btnName = btn.getInitialConfig('name');
+		var BetStatus = "Pending";
+		if(btnText == "Friend" || btnName == "AcceptedFriendsBets" || btnName == "ExpiredFriendsBets" ){
 			BetCode = 0;
-			if(btn.name == "AcceptedFriendsBets")
-				BetStatus = "Accepted"
-			else if(btn.name == "ExpiredFriendsBets")
-				BetStatus = "Expired"
+			if(btnName == "AcceptedFriendsBets")
+				BetStatus = "Accepted";
+			else if(btnName == "ExpiredFriendsBets")
+				BetStatus = "Expired";
 		}
-		else if(btn.getText() == "Enemies" || btn.name == "AcceptedEnemiesBets" || btn.name == "ExpiredEnemiesBets"){
+		else if(btnText == "Enemies" || btnName == "AcceptedEnemiesBets" || btnName == "ExpiredEnemiesBets"){
 			BetCode = 1;
-			if(btn.name == "AcceptedEnemiesBets")
-				BetStatus = "Accepted"
-			else if(btn.name == "ExpiredEnemiesBets")
-				BetStatus = "Expired"
+			if(btnName == "AcceptedEnemiesBets")
+				BetStatus = "Accepted";
+			else if(btnName == "ExpiredEnemiesBets")
+				BetStatus = "Expired";
 		}
-		else if(btn.getText() == "ALL IN" || btn.name == "AcceptedALLINBets" || btn.name == "ExpiredALLINBets"){
+		else if(btnText == "ALL IN" || btnName == "AcceptedALLINBets" || btnName == "ExpiredALLINBets"){
 			BetCode = 4;
-			if(btn.name == "AcceptedALLINBets")
-				BetStatus = "Accepted"
-			else if(btn.name == "ExpiredALLINBets")
-				BetStatus = "Expired"
+			if(btnName == "AcceptedALLINBets")
+				BetStatus = "Accepted";
+			else if(btnName == "ExpiredALLINBets")
+				BetStatus = "Expired";
 		}
 		
 		this.getBetList(BetCode,BetStatus);
@@ -54,7 +56,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		else if(BetCode == 1)
 			BetFrom.setHtml("BETS FROM ENEMIES");
 		else if(BetCode == 4)
-			BetFrom.setHtml("BETS FROM ALL IN")
+			BetFrom.setHtml("BETS FROM ALL IN");
 		
 		
 	},

@@ -122,12 +122,12 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								cls: "action-btn-cls",
 								flex: 1,
 							},
-							{
+							/*{
 								xtype : "button",
 								text : "CONNECT TO<br>TWITTER",
 								cls: "action-btn-cls",
 								flex: 1,
-							}
+							}*/
 						]
 					},
 					{

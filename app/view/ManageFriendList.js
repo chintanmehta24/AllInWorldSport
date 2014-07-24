@@ -50,7 +50,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		itemCls: "friend-cls",
 		cls: "friends-list-cls",
 		itemTpl: ["<div class='row-cls'>",
-					"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
+					"<div class='thumb' style='background-image: url(resources/images/person.png)'></div>",//"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
 					"<div class='status <tpl if=\"IsOnline\">active<tpl else>inactive</tpl>'></div>",
 					"<div class='title'>{FullName}</div>",
 				"</div>"].join(""),
@@ -100,7 +100,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		}
 	},
 	saveFriendList: function(){
-		var ListViewManageFriend = this,	//Ext.getCmp('listViewManageFriends'); //Avinash
+		var ListViewManageFriend = this;	//Ext.getCmp('listViewManageFriends'); //Avinash
 		participantID = []; //Avinash
 		var record = ListViewManageFriend.getSelection(); //Avinash
 		for(var i = 0 ; i < ListViewManageFriend.getSelectionCount() ; i++){ //Avinash

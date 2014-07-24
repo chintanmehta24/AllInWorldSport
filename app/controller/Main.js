@@ -14,7 +14,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
             },
             "login button[action=doRegister]": {
             	tap: "doRegister"
-            }
+            },
+			"login button[action=facebookLogin]":{
+				tap : "registerWithFacebook"
+			}
         }
     },
     

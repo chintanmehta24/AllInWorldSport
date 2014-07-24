@@ -1,10 +1,10 @@
 .my-bet-cls{
-  @include background-allin("../images/won_popup_background.jpg");
+  @include background-allin("../images/MyBets.jpg");
   .x-layout-card-item{
         background-color: rgba(white, 0.4);
   }
   .my-bet-title .x-form-fieldset-title{
-    color : black;
+    color : white;
     text-shadow: none;
     margin: 0;
   }
@@ -62,6 +62,7 @@
     }
     .x-button-label{
       text-align: left;
+	  color : white;
     }
   }
   .friends-list-cls{

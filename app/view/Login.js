@@ -131,15 +131,16 @@ Ext.define("AllInOneWorldSport.view.Login", {
 				text : "FACEBOOK",
 				cls : "facebook-btn-cls",
 				iconCls : "facebook",
-			}, {
+				action : "facebookLogin",
+			}, /*{
 				text : "TWITTER",
 				cls : "twitter-btn-cls",
 				iconCls : "twitter"
-			}]
+			}*/]
 		},
 		{
 				xtype : "container",
-				html : 'version - 0.22',
+				html : 'version - 0.23',
 				layout : {
 				type : "hbox",
 				align : "right",

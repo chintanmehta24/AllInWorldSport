@@ -380,14 +380,14 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		};
 		topFivePlayers.load({
 					callback: function(records, operation, success){
-						Ext.Viewport.setMasked(false);
+						//Ext.Viewport.setMasked(false);
 						if(!success){
 							callbackFn.apply(this, arguments);
 						}
-						Ext.Viewport.setMasked({
+						/*Ext.Viewport.setMasked({
 							xtype : "loadmask",
 							message : "Please wait"
-						});
+						});*/
 					}
 				});
 				

@@ -11,17 +11,24 @@
         font-size: 0.8em;
         line-height: 2.5;
         position: relative;
-        .closeList{
+        .action-btn{
             position: absolute;
-            right: 0;
             top: 0;
-            width: 2.25em;
             bottom: 0;
+            width: 2.25em;
             display: block;
-            background-image: url("../images/cancel-bet.png");
             background-repeat: no-repeat;
             background-position: center;
-            background-color: black;
+            &.closeList{
+                right: 0;
+                background-color: red;
+                background-image: url("../images/cancel-bet.png");
+            }
+            &.acceptList{
+                right: 2.5em;
+                background-color: yellowgreen;
+                background-image: url("../images/select-enable.png");
+            }
         }
     }
     .friend-cls{
@@ -103,8 +110,13 @@
           font-family: "opensansbold";
         }
     }
-    .status.inactive{
-      background-image: url("../images/status-disable.png");
+    .status{
+      &.inactive{
+        background-image: url("../images/status-disable.png");
+      }
+      &.active{
+        background-image: url("../images/status-friend.png");
+      }
     }
     &.enemy-cls{
       .status.active{
@@ -114,11 +126,6 @@
     &.celeberity-cls{
       .status.active{
         background-image: url("../images/status-celebrity.png");
-      }
-    }
-    &.friend-cls{
-      .status.active{
-        background-image: url("../images/status-friend.png");
       }
     }
 }

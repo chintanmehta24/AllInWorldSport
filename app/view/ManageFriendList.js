@@ -15,7 +15,7 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			itemId: "titleId",
 			cls: "overlay-title-cls",
 			docked: "top",
-			tpl: "{type}<span class='closeList'></span>"
+			tpl: "{type}<span class='action-btn acceptList'></span><span class='action-btn closeList'></span>"
 		}, {
 			xtype: "container",
 			itemId: "topToolbar",
@@ -69,8 +69,11 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 				_this.destroy();
 		}, me);
 		me.down("#titleId").on("tap", function(target){
-			if(target.getTarget(".closeList"))
-				this.closeFriendList();
+			if(target.getTarget(".action-btn")){
+				if(target.getTarget(".acceptList"))
+					this.saveFriendList();
+				this.hide();
+			}
 		}, me, {element: "element"});
 		me.getStore().load();
 	},
@@ -96,15 +99,12 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 				break;
 		}
 	},
-	closeFriendList: function(){
-		
-		var ListViewManageFriend = Ext.getCmp('listViewManageFriends'); //Avinash
+	saveFriendList: function(){
+		var ListViewManageFriend = this,	//Ext.getCmp('listViewManageFriends'); //Avinash
 		participantID = []; //Avinash
 		var record = ListViewManageFriend.getSelection(); //Avinash
 		for(var i = 0 ; i < ListViewManageFriend.getSelectionCount() ; i++){ //Avinash
 			participantID[i]= record[i].data.MemberId; //Avinash
 		} //Avinash
-		
-		this.hide();
 	}
 });

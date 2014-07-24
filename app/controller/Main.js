@@ -189,5 +189,49 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		viewport.translate( xPos ? 0 : 320, 0, {
 			duration : 250
 		});
+	},
+	
+	registerWithFacebook: function(){
+		var me = this,
+			FB_CONFIG = {
+				APP_ID: '739948199396979',
+	            REDIRECT_URI: 'http://home.terrificsoftware.com/PowerPlay/',
+	            PERMISSIONS: "user_friends,user_events,email,public_profile",
+	            AUTH_URL: ""
+			},
+			outh_url = "https://www.facebook.com/dialog/oauth?" + "client_id=" + FB_CONFIG.APP_ID + 
+						"&redirect_uri=" + FB_CONFIG.REDIRECT_URI + 
+						"&scope=" + FB_CONFIG.PERMISSIONS + 
+						"&response_type=token" + "&display=touch";
+			// From Mobile device login using InAppBrowser cordova Plugin
+			var windowObj = window.open(outh_url, '_blank', 'location=no'),
+                callbackHandler = function(event) {
+                    var windowURL = event.url,
+                        fbRawResponse = '';
+                    if (windowURL.indexOf('access_token') != -1) {
+                        fbRawResponse = windowURL.substring(windowURL.indexOf('#') + 1).split('&');
+                        windowObj.close();
+                        var accessToken = fbRawResponse[0].split('=')[1],
+                        	expiresIn = fbRawResponse[1].split('=')[1];
+                    	me.getFacebookUserDetail(accessToken);
+                    }
+                };
+            windowObj.addEventListener('loadstart', callbackHandler);
+	},
+	
+	getFacebookUserDetail: function(accessToken){
+		Ext.Ajax.request({
+			url: "https://graph.facebook.com/v2.0/me",
+			params: {
+				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
+			},
+			method: "GET",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+        		console.log(obj);
+			},
+			failure: function(){
+			}
+		});
 	}
 });

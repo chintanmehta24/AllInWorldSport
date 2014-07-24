@@ -167,7 +167,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			mode: "MULTI",
 			hideToolbar: true,
 			listType: "Friends",
-			id : "listViewManageFriends"
+//			id : "listViewManageFriends"
 		}).show();
 		store = list.getStore();
 		store.clearFilter(true);
@@ -198,7 +198,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				mode: "MULTI",
 				hideToolbar: true,
 				listType: "Enemies",
-				id : "listViewManageFriends" //Avinash
+//				id : "listViewManageFriends" //Avinash
 			}).show(),
 			store = list.getStore();
 		store.clearFilter(true);

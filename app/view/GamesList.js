@@ -48,11 +48,27 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 			delegate: "searchfield",
 			event: "keyup",
 			fn: "onSearchFieldKeyPress"
-		}]
+		},
+		{
+			event: "painted",
+			single: true,
+			fn: "onPainted"
+		}
+		]
 	},
 	onSearchFieldKeyPress: function(ths, e){
 		var me = this,
 			value = ths.getValue(),
+			store = me.getStore();
+		store.load({
+			jsonData: {
+				searchString: value
+			}
+		});
+	},
+	onPainted: function(){
+		var me = this,
+			value = "",
 			store = me.getStore();
 		store.load({
 			jsonData: {

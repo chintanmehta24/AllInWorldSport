@@ -17,6 +17,9 @@ Ext.define('AllInOneWorldSport.controller.Main', {
             },
 			"login button[action=facebookLogin]":{
 				tap : "registerWithFacebook"
+			},
+			"login button[action=forgetPassword]":{
+				tap : "doForgetPassword"
 			}
         }
     },
@@ -165,7 +168,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			message : "Please wait"
 		});
 		Ext.Ajax.request({
-			url : "http://home.terrificsoftware.com:8085/powerPlayService/CreateSession",
+			url : " http://service.allinworldsportsapp.com/PowerPlayService/CreateSession",
 			method : "GET",
 			dataType : 'json',
 			headers : {
@@ -236,5 +239,22 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			failure: function(){
 			}
 		});
+	},
+	
+	doForgetPassword: function(btn){
+		Ext.Msg.prompt(
+			'ALL IN',
+			'ForgetPasswords?',
+			function(btn,text){
+				if(btn == 'ok')
+				{
+					
+				}
+			},
+			null,
+			false, // false, default (single line)
+			null,
+			{placeHolder : 'LoginNames'}
+		);
 	}
 });

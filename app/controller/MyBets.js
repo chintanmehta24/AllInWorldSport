@@ -38,6 +38,13 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 			else if(btnName == "ExpiredALLINBets")
 				BetStatus = "Expired";
 		}
+		else if(btnText == "Celebrities" || btnName == "AcceptedCelebritiesBets" || btnName == "ExpiredCelebritiesBets"){
+			BetCode = 3;
+			if(btnName == "AcceptedCelebritiesBets")
+				BetStatus = "Accepted";
+			else if(btnName == "ExpiredCelebritiesBets")
+				BetStatus = "Expired";
+		}
 		
 		this.getBetList(BetCode,BetStatus);
 		

@@ -24,6 +24,9 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					text: "Enemies",
 					action: "ListMyBets"
 				},{
+					text: "Celebrities",
+					action: "ListMyBets"
+				},{
 					text: "ALL IN",
 					action: "ListMyBets"
 				},{
@@ -37,6 +40,11 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					text: " - Enemies",
 					cls: ["my-bet-btn-cls", "left-padded-cls"],
 					name : "AcceptedEnemiesBets",
+					action: "ListMyBets"
+				},{
+					text: " - Celebrities",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "AcceptedCelebritiesBets",
 					action: "ListMyBets"
 				},{
 					text: " - ALL IN",
@@ -54,6 +62,11 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 					text: " - Enemies",
 					cls: ["my-bet-btn-cls", "left-padded-cls"],
 					name : "ExpiredEnemiesBets",
+					action: "ListMyBets"
+				},{
+					text: " - Celebrities",
+					cls: ["my-bet-btn-cls", "left-padded-cls"],
+					name : "ExpiredCelebritiesBets",
 					action: "ListMyBets"
 				},{
 					text: " - ALL IN",

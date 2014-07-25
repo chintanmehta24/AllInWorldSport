@@ -65,7 +65,8 @@ Ext.define("AllInOneWorldSport.view.Login", {
 					cls : "forgot-btn-cls"
 				},
 				items : [{
-					text : "Forgot Password?"
+					text : "Forgot Password?",
+					action : "forgetPassword"
 				}, {
 					text : "Register",
 					action: "switchLoginView"
@@ -114,7 +115,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			xtype : "label",
 			cls : "login-info",
 			itemId: "loginInfoText",
-			html : "LOGIN USING YOUR FACEBOOK OR TWITTER ACCOUNT"
+			html : "LOGIN USING YOUR FACEBOOK ACCOUNT"
 		}, {
 			xtype : "container",
 			layout : {
@@ -140,7 +141,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 		},
 		{
 				xtype : "container",
-				html : 'version - 0.23',
+				html : 'version - 0.24',
 				layout : {
 				type : "hbox",
 				align : "right",
@@ -172,7 +173,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			// FirstName.hide();
 			// LastName.hide();
 			// EmailAddress.hide();
-			infoText.setHtml("LOGIN USING YOUR FACEBOOK OR TWITTER ACCOUNT");
+			infoText.setHtml("LOGIN USING YOUR FACEBOOK ACCOUNT");
 		}else{
 			loginContainer.hide();
 			registerContainer.show();
@@ -181,7 +182,7 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			// FirstName.show();
 			// LastName.show();
 			// EmailAddress.show();
-			infoText.setHtml("REGISTER USING YOUR FACEBOOK OR TWITTER ACCOUNT");
+			infoText.setHtml("REGISTER USING YOUR FACEBOOK ACCOUNT");
 		}
 		me.reset();
 	}

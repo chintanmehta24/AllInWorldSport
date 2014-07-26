@@ -238,10 +238,20 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			success: function(response, opts){
 				var obj = Ext.decode(response.responseText);
         		console.log(obj);
-        		me.getFacebookFriendsList(accessToken);
+				
+			var loginContainer = me.down("#loginBtnContainer"),
+				registerContainer = me.down("#registerBtnContainer"),
+				
+        		if(loginContainer.isHidden())
+					me.doFacebookRegistration(obj);
+				else
+					me.doFacebookLogin(obj)
+				
 			},
 			failure: function(){
-				alert("Error Facebook Profile");
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
 			}
 		});
 	},
@@ -318,5 +328,134 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			null,
 			{placeHolder : 'LoginName'}
 		);
+	},
+	
+	doFacebookRegistration:function(FacebookObject){
+		var GLOBAL = AllInOneWorldSport.Global;
+		var data = {
+			"Member" : {
+				DisplayName: FacebookObject.id.toString(),
+				FirstName: FacebookObject.first_name,
+				LastName: FacebookObject.last_name,
+				LoginName: FacebookObject.id.toString(),
+				Password: "Facebook",
+				FacebookUId: FacebookObject.id.toString(),
+				SecretAnswer: "",
+				EmailAddress: "",
+				MemberType: "Person",
+				TaxId: "",
+				SecretQuestion: "",
+				PrimaryPhone: "",
+				Notes: "",
+				WebURL: "",
+				ImageURL: "",
+				IPAddress: "",
+				Title: "",
+				MiddleName: "",
+				HomePhone: "",
+				MobilePhone: "",
+				Gender: FacebookObject.gender,
+				CivilStatus: "",
+				LegalId: "",
+				BusinessTitle: "",
+				FaxPhone: "",
+				OrgName: "",
+				BusinessType: "Member"
+			},
+			"token" : GLOBAL.getAccessToken()
+		}
+		
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		Ext.Ajax.request({
+			url : GLOBAL.SERVER_URL + "/RegisterFaceBookMember",
+			method : "POST",
+			disableCaching : false,
+			jsonData : data,
+			success : function(responce) {
+				var viewport = Ext.Viewport,
+					mainPanel = viewport.down("#mainviewport");
+				viewport.setMasked(false);
+				var data = Ext.decode(responce.responseText);
+				console.log(data);
+				if(data.errorReason && data.errorReason.ReasonCode){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
+					return;
+				}
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('New Password',data.NewPassword);
+				},100);
+				
+				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id.toString());
+				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");
+				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
+				var mainMenu = mainPanel.down("mainmenu");
+				if(!mainMenu){
+					mainMenu = mainPanel.add({xtype: "mainmenu"});
+				}
+				mainPanel.animateActiveItem(mainMenu, {type: "slide", duration: 450});
+				
+			},
+			failure : function(responce) {
+				Ext.Viewport.setMasked(false);
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
+				console.log(responce);
+			}
+		});
+	},
+	
+	doFacebookLogin:function(FacebookObject){
+		var GLOBAL = AllInOneWorldSport.Global,
+			currentUser = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
+		data = {
+			FacebookUId: FacebookObject.id,
+			"token" : GLOBAL.getAccessToken()
+		};
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		Ext.Ajax.request({
+			url : GLOBAL.SERVER_URL + "/FacebookLogin",
+			method : "POST",
+			disableCaching : false,
+			jsonData : data,
+			success : function(responce) {
+				var viewport = Ext.Viewport,
+					mainPanel = viewport.down("#mainviewport");
+				viewport.setMasked(false);
+				var data = Ext.decode(responce.responseText);
+				console.log(data);
+				if(data.errorReason && data.errorReason.ReasonCode){
+					Ext.Function.defer(function(){
+						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+					},100);
+					return;
+				}
+				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id);
+				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");
+				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
+				var mainMenu = mainPanel.down("mainmenu");
+				if(!mainMenu){
+					mainMenu = mainPanel.add({xtype: "mainmenu"});
+				}
+				mainPanel.animateActiveItem(mainMenu, {type: "slide", duration: 450});
+				
+			},
+			failure : function(responce) {
+				Ext.Viewport.setMasked(false);
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
+				console.log(responce);
+			}
+		});
 	}
+	
 });

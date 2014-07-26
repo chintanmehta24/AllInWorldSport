@@ -225,7 +225,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										xtype :"selectfield",
 										cls : "selectfield-cls",
 										autoSelect: false,
-										usePicker: false,
+										usePicker: true,
 										defaultTabletPickerConfig: {
 											height: 320
 										},
@@ -253,7 +253,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 										xtype :"selectfield",
 										cls : "selectfield-cls",
 										autoSelect: false,
-										usePicker: false,
+										usePicker: true,
 										defaultTabletPickerConfig: {
 											height: 320
 										},

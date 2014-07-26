@@ -203,7 +203,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			FB_CONFIG = {
 				APP_ID: '739948199396979',
 	            REDIRECT_URI: 'http://home.terrificsoftware.com/PowerPlay/',
-	            PERMISSIONS: "user_friends,user_events,email,public_profile,read_friendlists",
+	            PERMISSIONS: "user_friends,user_events,email,public_profile",
 	            AUTH_URL: ""
 			},
 			outh_url = "https://www.facebook.com/dialog/oauth?" + "client_id=" + FB_CONFIG.APP_ID + 
@@ -220,14 +220,15 @@ Ext.define('AllInOneWorldSport.controller.Main', {
                         windowObj.close();
                         var accessToken = fbRawResponse[0].split('=')[1],
                         	expiresIn = fbRawResponse[1].split('=')[1];
-                    	me.getFacebookUserDetail(accessToken);
+                    	me.getFacebookUserDetail(accessToken, true);
                     }
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
-			me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
+			//me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
 	},
 	
-	getFacebookUserDetail: function(accessToken){
+	getFacebookUserDetail: function(accessToken, status){
+		var me = this;
 		Ext.Ajax.request({
 			url: "https://graph.facebook.com/v2.0/me",
 			params: {
@@ -237,15 +238,17 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			success: function(response, opts){
 				var obj = Ext.decode(response.responseText);
         		console.log(obj);
+        		me.getFacebookFriendsList(accessToken);
 			},
 			failure: function(){
+				alert("Error Facebook Profile");
 			}
 		});
 	},
 	
 	getFacebookFriendsList: function(accessToken){
 		Ext.Ajax.request({
-			url: "https://graph.facebook.com/v2.0/friends",
+			url: "https://graph.facebook.com/v2.0/me/friends",
 			params: {
 				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
 				"limit": 5000
@@ -256,6 +259,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
         		console.log(obj);
 			},
 			failure: function(){
+				alert("Error Facebook Friend List");
 			}
 		});
 	},

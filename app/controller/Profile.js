@@ -136,10 +136,29 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		var options      = new ContactFindOptions();
 		options.filter   = "";
 		options.multiple = true;
-		options.desiredFields = [navigator.contacts.fieldType.id, ];
-		var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
+		var fields       = ["displayName", "name", "phoneNumbers", "emails"];
+		Ext.Viewport.add({
+			xtype: "list",
+			itemTpl: "<div>{displayName}</div><div>{emails}</div>",
+			store: "PhoneContacts",
+			height: 400,
+			width: 300
+		}).show();
 		navigator.contacts.find(fields, function(contacts){
-			console.log(Ext.encode(contacts));
+			var store = Ext.getStore("PhoneContacts");
+			var arrayPhone = [];
+			Ext.Array.forEach(contacts, function(c){
+				var obj = {
+					id: c.id,
+					rawId: c.rawId,
+					displayName: c.displayName,
+					phoneNumbers: c.phoneNumbers ? c.phoneNumbers[0].value: "",
+					emails: c.emails ? c.emails[0].value : ""
+				};
+				console.log(Ext.encode(obj));
+				arrayPhone.push(obj);
+			});
+			store.add(arrayPhone);
 		}, function(){alert("Error");}, options);		
 	}
 });

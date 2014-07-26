@@ -61,12 +61,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.model.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.model.MyBets": [],
+  "AllInOneWorldSport.model.PhoneContact": [],
   "AllInOneWorldSport.proxy.AWSProxy": [],
   "AllInOneWorldSport.store.Friends": [],
   "AllInOneWorldSport.store.GameLists": [],
   "AllInOneWorldSport.store.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.store.ListParticipants": [],
   "AllInOneWorldSport.store.MyBets": [],
+  "AllInOneWorldSport.store.PhoneContacts": [],
   "AllInOneWorldSport.view.AboutGame": [],
   "AllInOneWorldSport.view.AccountSetting": [],
   "AllInOneWorldSport.view.BetDetail": [],
@@ -837,6 +839,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.model.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.model.MyBets": [],
+  "AllInOneWorldSport.model.PhoneContact": [],
   "AllInOneWorldSport.proxy.AWSProxy": [
     "proxy.awsajax"
   ],
@@ -845,6 +848,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.store.LeaderBoardTopFivePlayers": [],
   "AllInOneWorldSport.store.ListParticipants": [],
   "AllInOneWorldSport.store.MyBets": [],
+  "AllInOneWorldSport.store.PhoneContacts": [],
   "AllInOneWorldSport.view.AboutGame": [
     "widget.aboutgame"
   ],

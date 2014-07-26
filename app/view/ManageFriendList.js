@@ -37,7 +37,8 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 					iconCls: "lock_closed"
 				},
 				{
-					iconCls: "add"
+					iconCls: "add",
+					action: "showPhonebookContactList"
 				},
 				{
 					iconCls: "delete"
@@ -59,6 +60,10 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 			event: "painted",
 			single: true,
 			fn: "onPainted"
+		},{
+			delegate: "button[action=showPhonebookContactList]",
+			event: "tap",
+			fn: "showPhonebookContactList"
 		}]
 	},
 	
@@ -106,5 +111,11 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 		for(var i = 0 ; i < ListViewManageFriend.getSelectionCount() ; i++){ //Avinash
 			participantID[i]= record[i].data.MemberId; //Avinash
 		} //Avinash
+	},
+	
+	showPhonebookContactList : function(){
+		Ext.Viewport.add({
+			xtype: "phonebookcontactlist"}
+		).show();
 	}
 });

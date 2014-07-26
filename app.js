@@ -75,7 +75,8 @@ Ext.application({
 		'MyBetFromFriends',
 		'AccountSetting',
 		'LeaderBoard',
-		'OtherUserProfile'
+		'OtherUserProfile',
+		'PhoneContactList'
     ],
 
     icon: {

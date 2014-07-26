@@ -1,7 +1,7 @@
 Ext.define('AllInOneWorldSport.store.PhoneContacts', {
     extend: 'Ext.data.Store',
 	config:{
-		model: "AllInOneWorldSport.model.MyBets",
+		model: "AllInOneWorldSport.model.PhoneContact",
 		autoLoad: false
 	},
 	constructor: function(){

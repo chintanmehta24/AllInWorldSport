@@ -240,12 +240,12 @@ Ext.define('AllInOneWorldSport.controller.Main', {
         		console.log(obj);
 				
 			var loginContainer = me.down("#loginBtnContainer"),
-				registerContainer = me.down("#registerBtnContainer"),
+				registerContainer = me.down("#registerBtnContainer");
 				
         		if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
 				else
-					me.doFacebookLogin(obj)
+					me.doFacebookLogin(obj);
 				
 			},
 			failure: function(){

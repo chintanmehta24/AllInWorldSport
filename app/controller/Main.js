@@ -250,13 +250,52 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			function(btn,text){
 				if(btn == 'ok')
 				{
+					var GLOBAL = AllInOneWorldSport.Global;
+					var data = {
+						"LoginName" : text,
+						"token" : GLOBAL.getAccessToken()
+					};
 					
+					Ext.Viewport.setMasked({
+						xtype : "loadmask",
+						message : "Please wait"
+					});
+					Ext.Ajax.request({
+						url : GLOBAL.SERVER_URL + "/ResetMemberPassword",
+						method : "POST",
+						disableCaching : false,
+						jsonData : data,
+						success : function(responce) {
+							var viewport = Ext.Viewport,
+								mainPanel = viewport.down("#mainviewport");
+							viewport.setMasked(false);
+							var data = Ext.decode(responce.responseText);
+							console.log(data);
+							if(data.errorReason && data.errorReason.ReasonCode){
+								Ext.Function.defer(function(){
+									Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+								},100);
+								return;
+							}
+							Ext.Function.defer(function(){
+								Ext.Msg.alert('New Password',data.NewPassword);
+							},100);
+							
+						},
+						failure : function(responce) {
+							Ext.Viewport.setMasked(false);
+							Ext.Function.defer(function(){
+								Ext.Msg.alert('Communication Error');
+							},100);
+							console.log(responce);
+						}
+					});
 				}
 			},
 			null,
 			false, // false, default (single line)
 			null,
-			{placeHolder : 'LoginNames'}
+			{placeHolder : 'LoginName'}
 		);
 	}
 });

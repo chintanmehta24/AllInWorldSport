@@ -168,7 +168,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			message : "Please wait"
 		});
 		Ext.Ajax.request({
-			url : " http://service.allinworldsportsapp.com/PowerPlayService/CreateSession",
+			url : "http://home.terrificsoftware.com:8085/powerPlayService/CreateSession",
+			//url : "http://service.allinworldsportsapp.com/PowerPlayService/CreateSession",
 			method : "GET",
 			dataType : 'json',
 			headers : {
@@ -223,6 +224,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
                     }
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
+			me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
 	},
 	
 	getFacebookUserDetail: function(accessToken){

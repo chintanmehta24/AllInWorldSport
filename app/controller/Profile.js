@@ -129,5 +129,17 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
 		mainPanel.animateActiveItem(accountsettings, {type: "slide", direction: "left", duration: 450});
 		
+	},
+	
+	getPhoneContactList: function(){
+		// find all contacts with '' in any name field
+		var options      = new ContactFindOptions();
+		options.filter   = "";
+		options.multiple = true;
+		options.desiredFields = [navigator.contacts.fieldType.id, ];
+		var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
+		navigator.contacts.find(fields, function(contacts){
+			console.log(Ext.encode(contacts));
+		}, function(){alert("Error");}, options);		
 	}
 });

@@ -162,14 +162,14 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 	},
 
 	createSession : function() {
-		var me = this;
+		var me = this,
+			global = AllInOneWorldSport.Global;
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
 		});
 		Ext.Ajax.request({
-			url : "http://home.terrificsoftware.com:8085/powerPlayService/CreateSession",
-			//url : "http://service.allinworldsportsapp.com/PowerPlayService/CreateSession",
+			url : global.SERVER_URL + "/CreateSession",
 			method : "GET",
 			dataType : 'json',
 			headers : {
@@ -203,7 +203,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			FB_CONFIG = {
 				APP_ID: '739948199396979',
 	            REDIRECT_URI: 'http://home.terrificsoftware.com/PowerPlay/',
-	            PERMISSIONS: "user_friends,user_events,email,public_profile",
+	            PERMISSIONS: "user_friends,user_events,email,public_profile,read_friendlists",
 	            AUTH_URL: ""
 			},
 			outh_url = "https://www.facebook.com/dialog/oauth?" + "client_id=" + FB_CONFIG.APP_ID + 
@@ -232,6 +232,23 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			url: "https://graph.facebook.com/v2.0/me",
 			params: {
 				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
+			},
+			method: "GET",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+        		console.log(obj);
+			},
+			failure: function(){
+			}
+		});
+	},
+	
+	getFacebookFriendsList: function(accessToken){
+		Ext.Ajax.request({
+			url: "https://graph.facebook.com/v2.0/friends",
+			params: {
+				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
+				"limit": 5000
 			},
 			method: "GET",
 			success: function(response, opts){

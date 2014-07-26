@@ -36,7 +36,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 					docked: "top",
 				}],
 				itemTpl: ["<div class='row-cls'>",
-							"<div class='thumb' style='background-image: url(resources/images/person.png)'></div>",//"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
+							"<div class='thumb <tpl if=\"Profile.IsOnline\">active</tpl>'> <tpl if=\"Profile.PhotoUrl\"> style='background-image: url(\"{PhotoUrl}\")' </tpl></div>",//"<div class='thumb' style='background-image: url(\"{PhotoUrl}\")'></div>",
 							//"<div class='status <tpl if=\"Profile.IsOnline\">active<tpl else>inactive</tpl>'></div>",
 							"<div class='title'>{Profile.FullName}</div>",
 							"<span class='title'>Amount: {Bet.Amount}</span>",

@@ -81,7 +81,10 @@
           height: 2em;
           width: 2em;
           background-size: 2.25em;
-          border: 2px solid red;
+          
+		  &.active{
+			border: 2px solid green;
+		  }
       }
       .status{
         width: 1.5em;

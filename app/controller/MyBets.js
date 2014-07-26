@@ -183,7 +183,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 		});
 	},
 	
-	onBetFriendListSelect: function(ths, index, record, e, eOpts){
+	onBetFriendListSelect: function(ths, index, target, record, eOpts){
 		var me = this;
 		if(eOpts.getTarget(".action-btns")){
 			if(eOpts.getTarget(".accept-btn")){
@@ -195,6 +195,20 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 			if(eOpts.getTarget(".reject-btn")){
 				Ext.Msg.alert("Bet Rejected");
 			}
+			
+			
+		}
+		else if(eOpts.getTarget(".thumb")){
+			var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			otheruserprofile = mainPanel.down("otherUserProfile");
+			if(!otheruserprofile){
+				otheruserprofile = mainPanel.add({xtype: "otherUserProfile"});
+			}
+			AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+			mainPanel.animateActiveItem(otheruserprofile, {type: "slide", direction: "left", duration: 450});
+			
+			otheruserprofile.setProfileData(record.get('Profile'));
 		}
 	}
 });

@@ -120,6 +120,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								xtype : "button",
 								text : "CONNECT TO<br>FACEBOOK",
 								cls: "action-btn-cls",
+								action : "facebookLogin",
 								flex: 1,
 							},
 							/*{

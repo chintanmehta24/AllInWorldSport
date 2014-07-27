@@ -240,7 +240,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
         		console.log(obj);
 				
 			var loginContainer = me.down("#loginBtnContainer"),
-				registerContainer = me.down("#registerBtnContainer"),
+				registerContainer = me.down("#registerBtnContainer");
 				
         		if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
@@ -386,9 +386,6 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					},100);
 					return;
 				}
-				Ext.Function.defer(function(){
-					Ext.Msg.alert('New Password',data.NewPassword);
-				},100);
 				
 				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id.toString());
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");

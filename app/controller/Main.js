@@ -245,7 +245,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
         		if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
 				else
-					me.doFacebookLogin(obj)
+					me.doFacebookLogin(obj);
 				
 			},
 			failure: function(){

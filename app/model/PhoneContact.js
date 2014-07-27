@@ -10,6 +10,9 @@ Ext.define('AllInOneWorldSport.model.PhoneContact', {
             { name: 'phoneNumbers', type: 'auto' },
             { name: 'emails', type: 'auto' }
 
-        ]
+        ],
+        proxy: {
+        	type: "memory"
+        }
     }
 });

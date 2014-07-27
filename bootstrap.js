@@ -87,6 +87,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.view.NavigationBar": [],
   "AllInOneWorldSport.view.NextDrawing": [],
   "AllInOneWorldSport.view.OtherUserProfile": [],
+  "AllInOneWorldSport.view.PhoneContactList": [],
   "AllInOneWorldSport.view.Profile": [],
   "AllInOneWorldSport.view.TicketRules": [],
   "AllInOneWorldSport.view.WinnerCircle": [],
@@ -902,6 +903,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "AllInOneWorldSport.view.OtherUserProfile": [
     "widget.otherUserProfile"
+  ],
+  "AllInOneWorldSport.view.PhoneContactList": [
+    "widget.phonebookcontactlist"
   ],
   "AllInOneWorldSport.view.Profile": [
     "widget.profile"

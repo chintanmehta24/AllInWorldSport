@@ -135,11 +135,10 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 						Ext.getCmp('sharingPanel').hide();
 						var PhoneNumber = "";
 						for(var i = 0 ; i < ContactData.length;i++){
-							
 							if(i == 0)
-								PhoneNumber = ContactData[i].phoneNumbers;
+								PhoneNumber = ContactData[i].get("phoneNumbers");
 							else
-								PhoneNumber = ContactData[i].phoneNumbers + "," + PhoneNumber
+								PhoneNumber = ContactData[i].get("phoneNumbers") + "," + PhoneNumber;
 						}
 						var msg = {
 							body : "Hi,Install the amzing app"
@@ -163,9 +162,9 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 						var Emails = "";
 						for(var i = 0 ; i < ContactData.length;i++){
 							if(i == 0)
-								Emails = ContactData[i].emails;
+								Emails = ContactData[i].get("emails");
 							else
-								Emails = ContactData[i].emails + "," + Emails
+								Emails = ContactData[i].get("emails") + "," + Emails;
 						}
 						console.log(Emails);
 						window.location = "mailto:"+Emails+"?" + Ext.urlEncode(msg);

@@ -16,7 +16,10 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 			},	
 			"button[action=buyCoinsNavigation]":{
 				tap : "buyCoins"
-			},			
+			},		
+			"button[action=friendList]":{
+				tap:"showFriendList"
+			}
 		}
 	},
 	
@@ -77,5 +80,16 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 			mainPanel.animateActiveItem(buycoins, {type: "slide", direction: "left", duration: 450});
 		}
 	},
+	
+	showFriendList:function(){
+		var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			FriendList = mainPanel.down("friendlist");
+		if(!FriendList){
+			FriendList = mainPanel.add({xtype: "friendlist"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(FriendList, {type: "slide", direction: "left", duration: 450});
+	}
 	
 });

@@ -26,7 +26,8 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "chat"
     	},{
-    		iconCls: "friends"
+    		iconCls: "friends",
+			action : "friendList"
     	},{
     		iconCls: "tickets",
     		badgeText: "4",

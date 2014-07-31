@@ -1,53 +1,30 @@
-Ext.define("AllInOneWorldSport.view.ManageFriendList", {
+Ext.define("AllInOneWorldSport.view.FriendList", {
 	extend : "Ext.dataview.DataView",
-	xtype : "managefriendlist",
+	xtype : "friendlist",
 	config : {
 		listType: "Friends", //"Enemies", "Celebrities", "Friends"
-		hideToolbar: false,
+		/*hideToolbar: false,
 		autoDestory: true,
 		hideOnMaskTap: true,
 		modal: true,
 		centered: true,
 		width: "90%",
-		height: "80%",
-		items: [{
+		height: "80%",*/
+		style : "background-color: transparent;background-image: url('resources/images/MyBets.jpg');background-size: 100% 100%;background-position: center;",
+		items: [
+		{
+				xtype: "navbar",
+				docked: "top"
+		},	
+		{
 			xtype: "label",
 			itemId: "titleId",
 			cls: "overlay-title-cls",
 			docked: "top",
-			tpl: "{type}<span class='action-btn acceptList'></span><span class='action-btn closeList'></span>"
-		}, {
-			xtype: "container",
-			itemId: "topToolbar",
-			layout: {
-				type: "hbox",
-				pack: "end"
-			},
-			docked: "top",
-			defaults: {
-				xtype: "button",
-				ui: "plain",
-				iconMask: true
-			},
-			items: [
-				{
-					iconCls: "lock_open"
-				},
-				{
-					iconCls: "lock_closed"
-				},
-				{
-					iconCls: "add",
-					action: "showPhonebookContactList"
-				},
-				{
-					iconCls: "delete"
-				},
-				/*{
-					iconCls: "team"
-				}*/
-			]
-		}],
+			//tpl: "{type}<span class='action-btn acceptList'></span><span class='action-btn closeList'></span>"
+			tpl: "{type}"
+		},
+		],
 		itemCls: "friend-cls",
 		cls: "friends-list-cls",
 		itemTpl: ["<div class='row-cls'>",
@@ -84,13 +61,13 @@ Ext.define("AllInOneWorldSport.view.ManageFriendList", {
 	},
 	
 	initialize: function(){
-		var me = this,
+		var me = this;
 			listType = me.getListType(),
 			titleCmp = me.down("#titleId"),
 			toolbar = me.down("#topToolbar");
 		me.callParent(arguments);
 		titleCmp.setData({type: listType});
-		toolbar.setHidden(me.getHideToolbar());
+		//toolbar.setHidden(me.getHideToolbar());
 		switch(listType){
 			case "Enemies":
 				me.addCls("enemy-cls");

@@ -78,7 +78,8 @@ Ext.application({
 		'LeaderBoard',
 		'OtherUserProfile',
 		'PhoneContactList',
-		'InAppDetail'
+		'InAppDetail',
+		'FriendList'
     ],
 
     icon: {

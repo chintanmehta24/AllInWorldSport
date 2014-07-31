@@ -63,16 +63,43 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 		
 	},
 	
-	buyCoins:function(){
+	buyCoins:function(btn){
+		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
 		});
-		window.storekit.purchase("Allin100Coins", 1);
+		if(btn.getItemId() == "5000CoinPack")
+			window.storekit.purchase("Allin5000Coins", 1);
+		else if(btn.getItemId() == "50000CoinPack")
+			window.storekit.purchase("Allin50000Coins", 1);
+		else if(btn.getItemId() == "150000CoinPack")
+			window.storekit.purchase("Allin150000Coins", 1);
+		else if(btn.getItemId() == "400000CoinPack")
+			window.storekit.purchase("Allin400000Coins", 1);
 	},
 	
 	getCoins:function(transactionId, productId){
-		Ext.Msg.alert("getCoins","getCoins");
+		
+		var Credits = 0,
+			Amount = 0;
+		if(productId == "Allin5000Coins"){
+			Credits = 5000;
+			Amount = 0.99
+		}
+		else if(productId == "Allin50000Coins"){
+			Credits = 50000;
+			Amount = 4.99
+		}
+		else if(productId == "Allin150000Coins"){
+			Credits = 150000;
+			Amount = 9.99
+		}
+		else if(productId == "Allin400000Coins"){
+			Credits = 400000;
+			Amount = 12.99
+		}
+		Ext.Msg.alert("Temp","Credits "+Credits);
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
@@ -86,8 +113,8 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 				
 					MemberId: current_user.MemberId,
 					FundType: "InAppPurchase",
-					Amount: 0.99,
-					Credits: 100, //Number of Coins Purchased
+					Amount: Amount,
+					Credits: Credits, //Number of Coins Purchased
 					RefNum: transactionId, //Possibly the Receipt we need to discuss this
 					FirstName: current_user.Member.FirstName,
 					LastName: current_user.Member.LastName,
@@ -109,6 +136,8 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 					},100);
 					return;
 				}
+				localStorage.setItem("CURRENT_USER_CREDITBALANCE",data.MemberBalance.CreditBalance);
+				
 				Ext.Function.defer(function(){
 						Ext.Msg.alert('Message', "Added Coins Successfully");
 				},100);

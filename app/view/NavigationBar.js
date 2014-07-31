@@ -45,22 +45,22 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "home",
 			action: "homeNavigation",
-    	}]
-    },
-	listeners: {
-		painted: function (element, options) {
-			var me = this,
-				current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
-			if(current_user){
-				var ticketBalance = me.down("#Tickets");
-				var CoinBalance = me.down("#Coins");
-				var creditBalance = Ext.decode(localStorage.getItem("CURRENT_USER_CREDITBALANCE"));
-				
-				var balanceInK = creditBalance/1000;
-				
-				ticketBalance.setBadgeText(current_user.MemberBalance.TicketBalance);
-				CoinBalance.setBadgeText(balanceInK+"K");
+    	}],
+		listeners: {
+			painted: function (element, options) {
+				var me = this,
+					current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+				if(current_user){
+					var ticketBalance = me.down("#Tickets");
+					var CoinBalance = me.down("#Coins");
+					var creditBalance = Ext.decode(localStorage.getItem("CURRENT_USER_CREDITBALANCE"));
+					
+					var balanceInK = creditBalance/1000;
+					
+					ticketBalance.setBadgeText(current_user.MemberBalance.TicketBalance);
+					CoinBalance.setBadgeText(balanceInK+"K");
+				}
 			}
 		}
-	}
+    }
 });

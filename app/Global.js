@@ -2,8 +2,8 @@ Ext.define('AllInOneWorldSport.Global',{
 	singleton: true,
 	SESSION: null,
 	CURRENT_LOGIN_USER: null,
-	SERVER_URL: "http://home.terrificsoftware.com:8085/PowerPlayService",
-	//SERVER_URL: " http://service.allinworldsportsapp.com/PowerPlayService",
+	//SERVER_URL: "http://home.terrificsoftware.com:8085/PowerPlayService",
+	SERVER_URL: "http://service.allinworldsportsapp.com/PowerPlayService",
 	NavigationStack : [],
 	UTF8: {
 		// public method for url encoding

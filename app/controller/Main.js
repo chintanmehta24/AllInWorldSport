@@ -27,6 +27,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
     //called when the Application is launched, remove if not needed
     launch: function(app) {
         this.createSession();
+		this.loadInAppStore();
     },
 	doRegister : function(btn) {
 		var form = btn.up("login"),
@@ -451,6 +452,45 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 					Ext.Msg.alert('Communication Error');
 				},100);
 				console.log(responce);
+			}
+		});
+	},
+	
+	loadInAppStore:function(){
+		var me = this;
+		window.storekit.init({
+
+			debug: true, /* Because we like to see logs on the console */
+
+			purchase: function (transactionId, productId) {
+				AllInOneWorldSport.app.getController('BuyCoins').getCoins(transactionId,productId);
+				console.log('purchased: ' + productId);
+			},
+			restore: function (transactionId, productId) {
+				console.log('restored: ' + productId);
+			},
+			restoreCompleted: function () {
+			   console.log('all restore complete');
+			},
+			restoreFailed: function (errCode) {
+				console.log('restore failed: ' + errCode);
+			},
+			error: function (errno, errtext) {
+				console.log('Failed: ' + errtext);
+			},
+			ready: function () {
+				var productIds = [
+					"Allin100Coins", 
+					
+				];
+				window.storekit.load(productIds, function(validProducts, invalidProductIds) {
+					$.each(validProducts, function (i, val) {
+						console.log("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
+					});
+					if(invalidProductIds.length) {
+						console.log("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
+					}
+				});
 			}
 		});
 	}

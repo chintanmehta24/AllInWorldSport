@@ -35,6 +35,7 @@ Ext.application({
         "Profile",
 		"AccountSetting",
 		"MyBets",
+		"BuyCoins"
     ],
     
     models: [
@@ -76,7 +77,8 @@ Ext.application({
 		'AccountSetting',
 		'LeaderBoard',
 		'OtherUserProfile',
-		'PhoneContactList'
+		'PhoneContactList',
+		'InAppDetail'
     ],
 
     icon: {

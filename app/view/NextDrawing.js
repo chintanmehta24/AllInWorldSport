@@ -25,6 +25,7 @@ Ext.define("AllInOneWorldSport.view.NextDrawing", {
 			}, {
 				xtype: "button",
 				text: "Invite Friends",
+				action: "inviteFriendsThroughFacebook",
 				cls: "invite-btn-cls",
 				ui: 'round'
 			}]

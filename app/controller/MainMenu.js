@@ -22,7 +22,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=gotoFreeStuff]":{
             	tap: "gotoNextDrawing"
             },
-            "mainmenu button[action=inviteFriendsThroughFacebook]": {
+            "button[action=inviteFriendsThroughFacebook]": {
             	tap: "inviteFriendsThroughFacebook"
             },
 			// "mainmenu button[action=popupWonWindow]":{
@@ -501,6 +501,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
     		Ext.Msg.alert("Facebook", "No Facebook account attached");
     		return;
     	}
+    	Ext.Viewport.setMasked({xtype: "loadmask"});
 		Ext.Ajax.request({
 			url: "https://graph.facebook.com/v2.0/me/friends",
 			params: {
@@ -509,6 +510,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			},
 			method: "GET",
 			success: function(response, opts){
+		    	Ext.Viewport.setMasked(false);
 				var obj = Ext.decode(response.responseText);
         		var friendsList = obj.data,
         			friendDataView = Ext.Viewport.add({
@@ -519,6 +521,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
         		friendDataViewStore.add(friendsList);
 			},
 			failure: function(){
+		    	Ext.Viewport.setMasked(false);
 				alert("Error Facebook Friend List");
 			}
 		});

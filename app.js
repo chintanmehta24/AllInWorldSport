@@ -79,7 +79,8 @@ Ext.application({
 		'OtherUserProfile',
 		'PhoneContactList',
 		'InAppDetail',
-		'FriendList'
+		'FriendList',
+		'FacebookFriendList'
     ],
 
     icon: {

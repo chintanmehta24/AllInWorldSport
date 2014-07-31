@@ -22,9 +22,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"mainmenu button[action=gotoFreeStuff]":{
             	tap: "gotoNextDrawing"
             },
-			"mainmenu button[action=popupWonWindow]":{
-            	tap: "popupWonWindow"
+            "mainmenu button[action=inviteFriendsThroughFacebook]": {
+            	tap: "inviteFriendsThroughFacebook"
             },
+			// "mainmenu button[action=popupWonWindow]":{
+            	// tap: "popupWonWindow"
+            // },
 			"mainmenu button[action=showMyBets]":{
             	tap: "showMyBets"
             },
@@ -492,4 +495,32 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		
 	},
 	
+	inviteFriendsThroughFacebook: function(){
+    	var facebookData = Ext.decode(localStorage.getItem("FACEBOOK_DATA"));
+    	if(!facebookData){
+    		Ext.Msg.alert("Facebook", "No Facebook account attached");
+    		return;
+    	}
+		Ext.Ajax.request({
+			url: "https://graph.facebook.com/v2.0/me/friends",
+			params: {
+				"access_token": facebookData.access_token,
+				"limit": 5000
+			},
+			method: "GET",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+        		var friendsList = obj.data,
+        			friendDataView = Ext.Viewport.add({
+	        			xtype: "facebookfriendlist"
+	        		}).show(),
+	        		friendDataViewStore = friendDataView.getStore();
+        		friendDataViewStore.removeAll();
+        		friendDataViewStore.add(friendsList);
+			},
+			failure: function(){
+				alert("Error Facebook Friend List");
+			}
+		});
+	}
 });

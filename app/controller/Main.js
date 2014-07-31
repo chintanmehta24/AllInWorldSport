@@ -205,8 +205,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		var me = this,
 			FB_CONFIG = {
 				APP_ID: '739948199396979',
-	            REDIRECT_URI: 'http://home.terrificsoftware.com/PowerPlay/',
-	            PERMISSIONS: "user_friends,user_events,email,public_profile",
+	            REDIRECT_URI: 'http://goo.gl/Limtf',	//'http://home.terrificsoftware.com/PowerPlay/',
+	            PERMISSIONS: "user_friends,user_events,email,public_profile,manage_friendlists,read_friendlists",
 	            AUTH_URL: ""
 			},
 			outh_url = "https://www.facebook.com/dialog/oauth?" + "client_id=" + FB_CONFIG.APP_ID + 
@@ -220,10 +220,14 @@ Ext.define('AllInOneWorldSport.controller.Main', {
                         fbRawResponse = '';
                     if (windowURL.indexOf('access_token') != -1) {
                         fbRawResponse = windowURL.substring(windowURL.indexOf('#') + 1).split('&');
-                        windowObj.close();
                         var accessToken = fbRawResponse[0].split('=')[1],
                         	expiresIn = fbRawResponse[1].split('=')[1];
+                    	localStorage.setItem("FACEBOOK_DATA", Ext.encode({
+                    		access_token: accessToken,
+                    		expires_in: expiresIn
+                    	}));
                     	me.getFacebookUserDetail(accessToken, true);
+                        windowObj.close();
                     }
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
@@ -462,6 +466,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 	
 	loadInAppStore:function(){
 		var me = this;
+		if(typeof window.storekit === "undefined"){
+			console.log("not device");
+			return ;
+		}
 		window.storekit.init({
 
 			debug: true, /* Because we like to see logs on the console */

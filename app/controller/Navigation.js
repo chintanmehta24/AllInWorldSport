@@ -88,8 +88,10 @@ Ext.define('AllInOneWorldSport.controller.Navigation', {
 		if(!FriendList){
 			FriendList = mainPanel.add({xtype: "friendlist"});
 		}
-		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
-		mainPanel.animateActiveItem(FriendList, {type: "slide", direction: "left", duration: 450});
+		if(FriendList != mainPanel.getActiveItem()){
+			AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+			mainPanel.animateActiveItem(FriendList, {type: "slide", direction: "left", duration: 450});
+		}
 	}
 	
 });

@@ -51,6 +51,7 @@ Ext.Loader.addClassPathMappings({
 Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.Global": [],
   "AllInOneWorldSport.controller.AccountSetting": [],
+  "AllInOneWorldSport.controller.BuyCoins": [],
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
   "AllInOneWorldSport.controller.MyBets": [],
@@ -75,7 +76,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.view.BetPage": [],
   "AllInOneWorldSport.view.BuyCoins": [],
   "AllInOneWorldSport.view.Dashboard": [],
+  "AllInOneWorldSport.view.FacebookFriendList": [],
+  "AllInOneWorldSport.view.FriendList": [],
   "AllInOneWorldSport.view.GamesList": [],
+  "AllInOneWorldSport.view.InAppDetail": [],
   "AllInOneWorldSport.view.LeaderBoard": [],
   "AllInOneWorldSport.view.Login": [],
   "AllInOneWorldSport.view.Main": [],
@@ -691,17 +695,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -830,6 +823,7 @@ Ext.ClassManager.addNameAlternateMappings({
 Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.Global": [],
   "AllInOneWorldSport.controller.AccountSetting": [],
+  "AllInOneWorldSport.controller.BuyCoins": [],
   "AllInOneWorldSport.controller.Main": [],
   "AllInOneWorldSport.controller.MainMenu": [],
   "AllInOneWorldSport.controller.MyBets": [],
@@ -868,8 +862,17 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.view.Dashboard": [
     "widget.dashboard"
   ],
+  "AllInOneWorldSport.view.FacebookFriendList": [
+    "widget.facebookfriendlist"
+  ],
+  "AllInOneWorldSport.view.FriendList": [
+    "widget.friendlist"
+  ],
   "AllInOneWorldSport.view.GamesList": [
     "widget.gameslist"
+  ],
+  "AllInOneWorldSport.view.InAppDetail": [
+    "widget.inappdetail"
   ],
   "AllInOneWorldSport.view.LeaderBoard": [
     "widget.leaderboard"
@@ -1720,17 +1723,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],

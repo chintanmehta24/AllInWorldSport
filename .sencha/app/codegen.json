@@ -352,6 +352,18 @@
         "controllerNamespace": "AllInOneWorldSport.controller",
         "appStores": ""
       }
+    },
+    "app/model/PhoneContacts.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "b440abe61f1cfb3bbc31c9554696b4c7e9e2c329",
+      "parameters": {
+        "appName": "AllInOneWorldSport",
+        "modelNamespace": "AllInOneWorldSport.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "PhoneContacts",
+        "name": "PhoneContacts",
+        "fields": "id:auto:null,rawId:auto:null,displayName:auto:null,nickName:auto:null,phoneNumbers:auto:null,emails:auto:null"
+      }
     }
   }
 }

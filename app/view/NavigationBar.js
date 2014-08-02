@@ -41,7 +41,8 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
     	},{
     		iconCls: "global",
 			action: "myBetNavigation",
-    		badgeText: "1"
+			itemId : "MyBets",
+    		badgeText: "0"
     	},{
     		iconCls: "home",
 			action: "homeNavigation",
@@ -53,12 +54,15 @@ Ext.define('AllInOneWorldSport.view.NavigationBar', {
 				if(current_user){
 					var ticketBalance = me.down("#Tickets");
 					var CoinBalance = me.down("#Coins");
+					var MyBets = me.down("#MyBets");
 					var creditBalance = Ext.decode(localStorage.getItem("CURRENT_USER_CREDITBALANCE"));
+					var memberBalance = Ext.decode(localStorage.getItem("CURRENT_USER_MEMBERBALANCE"));
 					
-					var balanceInK = creditBalance/1000;
+					var balanceInK = memberBalance.CreditBalance/1000;
 					
-					ticketBalance.setBadgeText(current_user.MemberBalance.TicketBalance);
+					ticketBalance.setBadgeText(memberBalance.TicketBalance);
 					CoinBalance.setBadgeText(balanceInK+"K");
+					MyBets.setBadgeText(memberBalance.BetBalance.NumberOfBetsCreated);
 				}
 			}
 		}

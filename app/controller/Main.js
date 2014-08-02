@@ -95,7 +95,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD",values.Password);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				localStorage.setItem("CURRENT_USER_CREDITBALANCE",Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance.CreditBalance);
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
@@ -146,7 +146,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				localStorage.setItem("CURRENT_USER_LOGINNAME",values.LoginName);
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD",values.Password);
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				localStorage.setItem("CURRENT_USER_CREDITBALANCE",Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance.CreditBalance);
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
@@ -397,7 +397,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id.toString());
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				localStorage.setItem("CURRENT_USER_CREDITBALANCE",Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance.CreditBalance);
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
@@ -446,7 +446,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id);
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				localStorage.setItem("CURRENT_USER_CREDITBALANCE",Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance.CreditBalance);
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance));
 				var mainMenu = mainPanel.down("mainmenu");
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});

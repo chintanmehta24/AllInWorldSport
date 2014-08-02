@@ -13,7 +13,7 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 					"<div>",
 						"<div class='teamname'>{FirstName} {LastName}</div >",
 						"<tpl if='xindex=0'>",
-							"<div class='thumb' style='background-image:url(\"resources/images/thumb_1.png\")'></div>",
+							"<div class='thumb' style='background-image:url(URL)'></div>",
 						"<tpl else>", 
 							"<div class='thumb' style='background-image:url(\"resources/images/thumb_2.png\")'></div>",						
 						"</tpl>",

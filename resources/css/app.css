@@ -1496,200 +1496,200 @@ input, textarea {
   font-size: .8em;
   padding: 1.2em;
 }
-/* line 33, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 33, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%;
 }
-/* line 51, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 51, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6 {
   font-weight: normal;
   color: #222222;
 }
-/* line 52, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 52, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1 img, .x-html h2 img, .x-html h3 img, .x-html h4 img, .x-html h5 img, .x-html h6 img {
   margin: 0;
 }
-/* line 53, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 53, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h1 {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.50em;
 }
-/* line 54, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 54, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 55, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 55, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h3 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 56, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 56, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h4 {
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em;
 }
-/* line 57, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 57, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h5 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1.50em;
 }
-/* line 58, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 58, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html h6 {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 59, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 59, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p {
   margin: 0 0 1.5em;
 }
-/* line 60, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 60, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p .left {
   display: inline;
   float: left;
   margin: 1.5em 1.5em 1.5em 0;
   padding: 0;
 }
-/* line 61, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 61, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html p .right {
   display: inline;
   float: right;
   margin: 1.5em 0 1.5em 1.5em;
   padding: 0;
 }
-/* line 62, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 62, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html a {
   text-decoration: underline;
   color: #0066cc;
 }
-/* line 18, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 18, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:visited {
   color: #004c99;
 }
-/* line 21, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 21, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:focus {
   color: #0099ff;
 }
-/* line 24, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:hover {
   color: #0099ff;
 }
-/* line 27, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 27, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .x-html a:active {
   color: #bf00ff;
 }
-/* line 63, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 63, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html blockquote {
   margin: 1.5em;
   color: #666666;
   font-style: italic;
 }
-/* line 64, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 64, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html strong, .x-html dfn {
   font-weight: bold;
 }
-/* line 65, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 65, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html em, .x-html dfn {
   font-style: italic;
 }
-/* line 66, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 66, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html sup, .x-html sub {
   line-height: 0;
 }
-/* line 67, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 67, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html abbr, .x-html acronym {
   border-bottom: 1px dotted #666666;
 }
-/* line 68, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 68, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html address {
   margin: 0 0 1.5em;
   font-style: italic;
 }
-/* line 69, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 69, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html del {
   color: #666666;
 }
-/* line 70, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 70, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html pre {
   margin: 1.5em 0;
   white-space: pre;
 }
-/* line 71, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 71, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html pre, .x-html code, .x-html tt {
   font: 1em "andale mono", "lucida console", monospace;
   line-height: 1.5;
 }
-/* line 72, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 72, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html li ul, .x-html li ol {
   margin: 0;
 }
-/* line 73, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 73, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ul, .x-html ol {
   margin: 0 1.5em 1.5em 0;
   padding-left: 1.5em;
 }
-/* line 74, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 74, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ul {
   list-style-type: disc;
 }
-/* line 75, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 75, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html ol {
   list-style-type: decimal;
 }
-/* line 76, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 76, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dl {
   margin: 0 0 1.5em 0;
 }
-/* line 77, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 77, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dl dt {
   font-weight: bold;
 }
-/* line 78, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 78, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html dd {
   margin-left: 1.5em;
 }
-/* line 79, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 79, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html table {
   margin-bottom: 1.4em;
   width: 100%;
 }
-/* line 80, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 80, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html th {
   font-weight: bold;
 }
-/* line 81, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 81, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html thead th {
   background: #c3d9ff;
 }
-/* line 82, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 82, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html th, .x-html td, .x-html caption {
   padding: 4px 10px 4px 5px;
 }
-/* line 85, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 85, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html table.striped tr:nth-child(even) td,
 .x-html table tr.even td {
   background: #e5ecf9;
 }
-/* line 86, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 86, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html tfoot {
   font-style: italic;
 }
-/* line 87, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 87, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html caption {
   background: #eeeeee;
 }
-/* line 88, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 88, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html .quiet {
   color: #666666;
 }
-/* line 89, ../../../../../Users/chintan mehta/bin/Sencha/Cmd/5.0.0.160/extensions/sencha-compass/gems/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 89, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .x-html .loud {
   color: #111111;
 }
@@ -2101,7 +2101,11 @@ input, textarea {
 .x-ie .x-mask[visibility='visible'] ~ div:not(.x-panel) .x-input-el,
 .x-ie .x-mask[visibility='visible'] ~ div:not(.x-floating) .x-input-el,
 .x-ie .x-mask[visibility='visible'] ~ div:not(.x-center) .x-input-el,
-.x-ie .x-mask[visibility='visible'] ~ div:not(.x-msgbox) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-mask) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-panel) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-floating) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-center) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-msgbox) .x-input-el {
+.x-ie .x-mask[visibility='visible'] ~ div:not(.x-msgbox) .x-input-el, .x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-mask) .x-input-el,
+.x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-panel) .x-input-el,
+.x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-floating) .x-input-el,
+.x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-center) .x-input-el,
+.x-ie .x-mask:not(.x-item-hidden) ~ div:not(.x-msgbox) .x-input-el {
   visibility: collapse;
 }
 
@@ -4264,7 +4268,7 @@ body.x-desktop {
   line-height: 1em;
 }
 /* line 28, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-button.x-item-disabled .x-button-label, .x-button.x-item-disabled .x-badge, .x-button.x-item-disabled .x-hasbadge .x-badge, .x-hasbadge .x-button.x-item-disabled .x-badge, .x-button.x-item-disabled .x-button-icon {
+.x-button.x-item-disabled .x-button-label, .x-button.x-item-disabled .x-badge, .x-button.x-item-disabled .x-button-icon {
   opacity: .5;
 }
 
@@ -4282,17 +4286,17 @@ body.x-desktop {
   height: 0px;
 }
 /* line 42, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-ie .x-button .x-button-label, .x-ie .x-button .x-badge, .x-ie .x-button .x-hasbadge .x-badge, .x-hasbadge .x-ie .x-button .x-badge {
+.x-ie .x-button .x-button-label, .x-ie .x-button .x-badge {
   overflow: visible;
 }
 
 /* line 47, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-iconalign-left .x-button-label, .x-iconalign-left .x-badge, .x-iconalign-left .x-hasbadge .x-badge, .x-hasbadge .x-iconalign-left .x-badge {
+.x-iconalign-left .x-button-label, .x-iconalign-left .x-badge {
   margin-left: .6em;
 }
 
 /* line 50, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-iconalign-right .x-button-label, .x-iconalign-right .x-badge, .x-iconalign-right .x-hasbadge .x-badge, .x-hasbadge .x-iconalign-right .x-badge {
+.x-iconalign-right .x-button-label, .x-iconalign-right .x-badge {
   margin-right: .6em;
 }
 
@@ -4315,11 +4319,11 @@ body.x-desktop {
   padding: 0 .6em;
 }
 /* line 70, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge, .x-toolbar .x-button .x-hasbadge .x-badge, .x-hasbadge .x-toolbar .x-button .x-badge {
+.x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge {
   font-size: .7em;
 }
 /* line 74, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge, .x-toolbar .x-button .x-hasbadge .x-badge, .x-hasbadge .x-toolbar .x-button .x-badge, .x-toolbar .x-button .x-hasbadge .x-badge {
+.x-toolbar .x-button .x-button-label, .x-toolbar .x-button .x-badge, .x-toolbar .x-button .x-hasbadge .x-badge {
   line-height: 1.6em;
 }
 /* line 79, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
@@ -4349,7 +4353,7 @@ body.x-desktop {
   min-height: 0;
 }
 /* line 102, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
-.x-button-small .x-button-label, .x-button.x-button-action-small .x-button-label, .x-button.x-button-confirm-small .x-button-label, .x-button.x-button-decline-small .x-button-label, .x-button-small .x-badge, .x-button.x-button-action-small .x-badge, .x-button.x-button-confirm-small .x-badge, .x-button.x-button-decline-small .x-badge, .x-button-small .x-hasbadge .x-badge, .x-hasbadge .x-button-small .x-badge, .x-button.x-button-action-small .x-hasbadge .x-badge, .x-hasbadge .x-button.x-button-action-small .x-badge, .x-button.x-button-confirm-small .x-hasbadge .x-badge, .x-hasbadge .x-button.x-button-confirm-small .x-badge, .x-button.x-button-decline-small .x-hasbadge .x-badge, .x-hasbadge .x-button.x-button-decline-small .x-badge,
+.x-button-small .x-button-label, .x-button.x-button-action-small .x-button-label, .x-button.x-button-confirm-small .x-button-label, .x-button.x-button-decline-small .x-button-label, .x-button-small .x-badge, .x-button.x-button-action-small .x-badge, .x-button.x-button-confirm-small .x-badge, .x-button.x-button-decline-small .x-badge,
 .x-toolbar .x-button-small .x-button-label,
 .x-toolbar .x-button.x-button-action-small .x-button-label,
 .x-toolbar .x-button.x-button-confirm-small .x-button-label,
@@ -4357,14 +4361,6 @@ body.x-desktop {
 .x-toolbar .x-button-small .x-badge,
 .x-toolbar .x-button.x-button-action-small .x-badge,
 .x-toolbar .x-button.x-button-confirm-small .x-badge,
-.x-toolbar .x-button.x-button-decline-small .x-badge,
-.x-toolbar .x-button-small .x-hasbadge .x-badge, .x-hasbadge
-.x-toolbar .x-button-small .x-badge,
-.x-toolbar .x-button.x-button-action-small .x-hasbadge .x-badge, .x-hasbadge
-.x-toolbar .x-button.x-button-action-small .x-badge,
-.x-toolbar .x-button.x-button-confirm-small .x-hasbadge .x-badge, .x-hasbadge
-.x-toolbar .x-button.x-button-confirm-small .x-badge,
-.x-toolbar .x-button.x-button-decline-small .x-hasbadge .x-badge, .x-hasbadge
 .x-toolbar .x-button.x-button-decline-small .x-badge {
   font-size: .6em;
 }
@@ -4407,7 +4403,7 @@ body.x-desktop {
 /* line 148, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-back,
 .x-webkit .x-toolbar .x-button-back {
-  margin-left: 0.772em;
+  margin-left: 0.77217em;
   padding-left: .4em;
 }
 /* line 152, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
@@ -4423,7 +4419,7 @@ body.x-desktop {
 /* line 162, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
 .x-webkit .x-button-forward,
 .x-webkit .x-toolbar .x-button-forward {
-  margin-right: 0.782em;
+  margin-right: 0.78217em;
   padding-right: .4em;
 }
 /* line 167, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Button.scss */
@@ -4517,7 +4513,7 @@ body.x-desktop {
   border-color: #990000;
   min-width: 2em;
   line-height: 1.2em;
-  top: -0.2em;
+  top: -.2em;
   padding: .1em .3em;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
@@ -5187,7 +5183,7 @@ body.x-desktop {
 /* line 35, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-top {
   margin-top: -0.68em;
-  margin-left: -0.816em;
+  margin-left: -0.8155em;
   width: 1.631em;
   height: 0.7em;
   -webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAPCAYAAABut3YUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPZJREFUeNpi/PX7LwOFwAyIG6HseiA+Ra5BjBQ6xg+IVwAxJ5T/HYgjgHgTOYYxUeCQUiBeh+QQBih7HVSOLiHDDMSTgTiTgLrpQJwLxH9p5RhOaLT4EakeFF3RQPyF2o6RhkaBGYkheRmIPYH4KbXSjC4QnyTDIch6danhGCcgPgwNGXKBNNQMb0ocEwXE24GYn4FyADJjI76Ej88x7UC8FIjZGKgHQDlxGtRsZmISMMjy+dBQoSXYBC0gv+NyDD80xzgx0AeAqg4fIH6NHk0qQHyMjg6B1WvHYDkNFjIgwS1ALMowMOAjEAeBHINe2Q0U+AUQYACQ10C2QNhRogAAAABJRU5ErkJggg==') no-repeat;
@@ -5196,7 +5192,7 @@ body.x-desktop {
 }
 /* line 45, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-bottom {
-  margin-left: -0.816em;
+  margin-left: -0.8155em;
   width: 1.631em;
   height: 0.7em;
   -webkit-mask: 0 0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAPCAYAAABut3YUAAAEJGlDQ1BJQ0MgUHJvZmlsZQAAOBGFVd9v21QUPolvUqQWPyBYR4eKxa9VU1u5GxqtxgZJk6XtShal6dgqJOQ6N4mpGwfb6baqT3uBNwb8AUDZAw9IPCENBmJ72fbAtElThyqqSUh76MQPISbtBVXhu3ZiJ1PEXPX6yznfOec7517bRD1fabWaGVWIlquunc8klZOnFpSeTYrSs9RLA9Sr6U4tkcvNEi7BFffO6+EdigjL7ZHu/k72I796i9zRiSJPwG4VHX0Z+AxRzNRrtksUvwf7+Gm3BtzzHPDTNgQCqwKXfZwSeNHHJz1OIT8JjtAq6xWtCLwGPLzYZi+3YV8DGMiT4VVuG7oiZpGzrZJhcs/hL49xtzH/Dy6bdfTsXYNY+5yluWO4D4neK/ZUvok/17X0HPBLsF+vuUlhfwX4j/rSfAJ4H1H0qZJ9dN7nR19frRTeBt4Fe9FwpwtN+2p1MXscGLHR9SXrmMgjONd1ZxKzpBeA71b4tNhj6JGoyFNp4GHgwUp9qplfmnFW5oTdy7NamcwCI49kv6fN5IAHgD+0rbyoBc3SOjczohbyS1drbq6pQdqumllRC/0ymTtej8gpbbuVwpQfyw66dqEZyxZKxtHpJn+tZnpnEdrYBbueF9qQn93S7HQGGHnYP7w6L+YGHNtd1FJitqPAR+hERCNOFi1i1alKO6RQnjKUxL1GNjwlMsiEhcPLYTEiT9ISbN15OY/jx4SMshe9LaJRpTvHr3C/ybFYP1PZAfwfYrPsMBtnE6SwN9ib7AhLwTrBDgUKcm06FSrTfSj187xPdVQWOk5Q8vxAfSiIUc7Z7xr6zY/+hpqwSyv0I0/QMTRb7RMgBxNodTfSPqdraz/sDjzKBrv4zu2+a2t0/HHzjd2Lbcc2sG7GtsL42K+xLfxtUgI7YHqKlqHK8HbCCXgjHT1cAdMlDetv4FnQ2lLasaOl6vmB0CMmwT/IPszSueHQqv6i/qluqF+oF9TfO2qEGTumJH0qfSv9KH0nfS/9TIp0Wboi/SRdlb6RLgU5u++9nyXYe69fYRPdil1o1WufNSdTTsp75BfllPy8/LI8G7AUuV8ek6fkvfDsCfbNDP0dvRh0CrNqTbV7LfEEGDQPJQadBtfGVMWEq3QWWdufk6ZSNsjG2PQjp3ZcnOWWing6noonSInvi0/Ex+IzAreevPhe+CawpgP1/pMTMDo64G0sTCXIM+KdOnFWRfQKdJvQzV1+Bt8OokmrdtY2yhVX2a+qrykJfMq4Ml3VR4cVzTQVz+UoNne4vcKLoyS+gyKO6EHe+75Fdt0Mbe5bRIf/wjvrVmhbqBN97RD1vxrahvBOfOYzoosH9bq94uejSOQGkVM6sN/7HelL4t10t9F4gPdVzydEOx83Gv+uNxo7XyL/FtFl8z9ZAHF4bBsrEwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAY9JREFUSA3FVbFKA0EQfbOXuzMgpLLyG2wVBEHSBSRFSvMNltZi5x9Y2kmqFKLY+QFpBStbK6uAJJe92xt3DkM2yV1yOYg5WG7nzcybx+wOS1GUtElRD+A6dvqRJmZGHMfHKbxnAh/sRg8NU0o7Sor7vj9Aqk4B+vh/MfQJVmd7tdpb1hlHQGMSmz4BTQfb5nagfe9iH/iWIllnnGrD0Pda1n50sO1sGU+B751PhUiRRTGCaRvUBdOdGFv5LHcQeB3LPXb5F4/J9UFrcwmiBztpwZyjskGGgavQV/d5FCvFSEKUJE3Fqm8FNfIIymM05JS7Yei9FOWsFSOJWuOIkb4S8WER0Sqcmb4IqhUEeF8Vl3dnluKFJDXqxDoGS861AGW564QITanOOPXq9h71QGg7WPFWJiawwwD8FAfNPKU6MwvHWKaAQbkX0ImDxPxNTCkhWa48B1VWFJvriTbJRCc8v0wiviqclYRMC8kjawWNZmLMSLCpf9P/pnfGPYlsL48ss7oVgyi9yd65pahywC+kjlEYVbHNjwAAAABJRU5ErkJggg==') no-repeat;
@@ -5205,7 +5201,7 @@ body.x-desktop {
 }
 /* line 54, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Panel.scss */
 .x-webkit .x-anchor.x-anchor-left {
-  margin-left: -0.666em;
+  margin-left: -0.6655em;
   margin-top: -0.35em;
   height: 1.631em;
   width: 0.7em;
@@ -5536,18 +5532,30 @@ body.x-desktop {
   border-left-color: black;
 }
 /* line 13, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button, .x-toolbar-light .x-field-select .x-component-outer, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer {
+.x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button,
+.x-toolbar-light .x-field-select .x-component-outer, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer {
   border: 1px solid black;
   border-top-color: black;
   background-color: #262626;
   color: white;
 }
 /* line 20, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-light .x-button.x-button-back:before, .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar .x-toolbar-light .x-button.x-button-back:before, .x-toolbar .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar-light .x-field-select .x-component-outer.x-button-back:before, .x-toolbar-light .x-field-select .x-component-outer.x-button-forward:before, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-back:before, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-forward:before {
+.x-toolbar-light .x-button.x-button-back:before, .x-toolbar-light .x-button.x-button-forward:before, .x-toolbar .x-toolbar-light .x-button.x-button-back:before, .x-toolbar .x-toolbar-light .x-button.x-button-forward:before,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-back:before,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-forward:before, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-back:before, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-forward:before {
   background: black;
 }
 /* line 26, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-light .x-button, .x-toolbar-light .x-button.x-button-back:after, .x-toolbar-light .x-button.x-button-forward:after, .x-toolbar .x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button.x-button-back:after, .x-toolbar .x-toolbar-light .x-button.x-button-forward:after, .x-toolbar-light .x-field-select .x-component-outer, .x-toolbar-light .x-field-select .x-component-outer.x-button-back:after, .x-toolbar-light .x-field-select .x-component-outer.x-button-forward:after, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-back:after, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-forward:after {
+.x-toolbar-light .x-button, .x-toolbar-light .x-button.x-button-back:after, .x-toolbar-light .x-button.x-button-forward:after, .x-toolbar .x-toolbar-light .x-button, .x-toolbar .x-toolbar-light .x-button.x-button-back:after, .x-toolbar .x-toolbar-light .x-button.x-button-forward:after,
+.x-toolbar-light .x-field-select .x-component-outer,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-back:after,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-forward:after, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-back:after, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-forward:after {
   background-image: none;
   background-color: #262626;
   background-image: -webkit-linear-gradient(top, #4d4d4d, #333333 3%, #1a1a1a);
@@ -5556,7 +5564,19 @@ body.x-desktop {
   background-image: linear-gradient(top, #4d4d4d, #333333 3%, #1a1a1a);
 }
 /* line 31, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-light .x-button.x-button-pressing, .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar-light .x-button.x-button-pressed, .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar-light .x-button.x-button-active, .x-toolbar-light .x-button.x-button-active:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressing, .x-toolbar .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressed, .x-toolbar .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-light .x-button.x-button-active, .x-toolbar .x-toolbar-light .x-button.x-button-active:after, .x-toolbar-light .x-field-select .x-component-outer.x-button-pressing, .x-toolbar-light .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar-light .x-field-select .x-component-outer.x-button-pressed, .x-toolbar-light .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar-light .x-field-select .x-component-outer.x-button-active, .x-toolbar-light .x-field-select .x-component-outer.x-button-active:after, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-pressing, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-pressed, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-active, .x-toolbar .x-toolbar-light .x-field-select .x-component-outer.x-button-active:after {
+.x-toolbar-light .x-button.x-button-pressing, .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar-light .x-button.x-button-pressed, .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar-light .x-button.x-button-active, .x-toolbar-light .x-button.x-button-active:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressing, .x-toolbar .x-toolbar-light .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-light .x-button.x-button-pressed, .x-toolbar .x-toolbar-light .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-light .x-button.x-button-active, .x-toolbar .x-toolbar-light .x-button.x-button-active:after,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressing,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressing:after,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressed,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressed:after,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-active,
+.x-toolbar-light .x-field-select .x-component-outer.x-button-active:after, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressing, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressed, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-active, .x-toolbar
+.x-toolbar-light .x-field-select .x-component-outer.x-button-active:after {
   background-image: none;
   background-color: #1f1f1f;
   background-image: -webkit-linear-gradient(top, #050505, #121212 10%, #1f1f1f 65%, #202020);
@@ -5565,7 +5585,8 @@ body.x-desktop {
   background-image: linear-gradient(top, #050505, #121212 10%, #1f1f1f 65%, #202020);
 }
 /* line 76, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
-.x-toolbar-light .x-label, .x-toolbar-light .x-form-label {
+.x-toolbar-light .x-label,
+.x-toolbar-light .x-form-label {
   font-weight: bold;
   color: white;
   text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
@@ -5603,27 +5624,51 @@ body.x-desktop {
   border-left-color: #616161;
 }
 /* line 13, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button, .x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer {
+.x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button,
+.x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer {
   border: 1px solid #a0a0a0;
   border-top-color: #adadad;
-  background-color: #d3d3d3;
+  background-color: lightgrey;
   color: black;
 }
 /* line 20, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar-neutral .x-button.x-button-forward:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:before, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:before, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:before, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:before, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:before {
+.x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar-neutral .x-button.x-button-forward:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:before, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:before,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:before,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:before, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:before, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:before {
   background: #a0a0a0;
 }
 /* line 26, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-neutral .x-button, .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar-neutral .x-button.x-button-forward:after, .x-toolbar .x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:after, .x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:after, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:after, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:after, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:after {
+.x-toolbar-neutral .x-button, .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar-neutral .x-button.x-button-forward:after, .x-toolbar .x-toolbar-neutral .x-button, .x-toolbar .x-toolbar-neutral .x-button.x-button-back:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-forward:after,
+.x-toolbar-neutral .x-field-select .x-component-outer,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:after,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:after, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-back:after, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-forward:after {
   background-image: none;
-  background-color: #d3d3d3;
+  background-color: lightgrey;
   background-image: -webkit-linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
   background-image: -moz-linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
   background-image: -o-linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
   background-image: linear-gradient(top, #fafafa, #e0e0e0 3%, #c7c7c7);
 }
 /* line 31, ../../touch/resources/themes/stylesheets/sencha-touch/default/mixins/_Class.scss */
-.x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar-neutral .x-button.x-button-active, .x-toolbar-neutral .x-button.x-button-active:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-active, .x-toolbar .x-toolbar-neutral .x-button.x-button-active:after, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-active, .x-toolbar-neutral .x-field-select .x-component-outer.x-button-active:after, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-active, .x-toolbar .x-toolbar-neutral .x-field-select .x-component-outer.x-button-active:after {
+.x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar-neutral .x-button.x-button-active, .x-toolbar-neutral .x-button.x-button-active:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressing:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed, .x-toolbar .x-toolbar-neutral .x-button.x-button-pressed:after, .x-toolbar .x-toolbar-neutral .x-button.x-button-active, .x-toolbar .x-toolbar-neutral .x-button.x-button-active:after,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing:after,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed:after,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-active,
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-active:after, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressing:after, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-pressed:after, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-active, .x-toolbar
+.x-toolbar-neutral .x-field-select .x-component-outer.x-button-active:after {
   background-image: none;
   background-color: #cccccc;
   background-image: -webkit-linear-gradient(top, #b2b2b2, #bfbfbf 10%, #cccccc 65%, #cdcdcd);
@@ -5632,7 +5677,8 @@ body.x-desktop {
   background-image: linear-gradient(top, #b2b2b2, #bfbfbf 10%, #cccccc 65%, #cdcdcd);
 }
 /* line 76, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/_Toolbar.scss */
-.x-toolbar-neutral .x-label, .x-toolbar-neutral .x-form-label {
+.x-toolbar-neutral .x-label,
+.x-toolbar-neutral .x-form-label {
   font-weight: bold;
   color: #070707;
   text-shadow: rgba(255, 255, 255, 0.25) 0 0.08em 0;
@@ -6056,7 +6102,7 @@ body.x-desktop {
   height: 2.2em;
   margin: .5em;
   margin-top: -1.1em;
-  right: -0.5em;
+  right: -.5em;
 }
 
 /* line 31, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Field.scss */
@@ -6241,7 +6287,7 @@ body.x-desktop {
   right: 0.7em;
   -webkit-mask-size: 1em;
   -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGRTdGMTE3NDA3MjA2ODExOTJDQUMyNUQwRUE4NjdEQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQTFBMDFDQ0I5NEYxMURGQUU1RjlGMEFERUNDQTVEMCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMkRCMDIxMkI5NEUxMURGQUU1RjlGMEFERUNDQTVEMCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjMwRTE0QzVBNDIyMjY4MTFCQ0ZCOTAzOTcwNzcyRkVCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZFN0YxMTc0MDcyMDY4MTE5MkNBQzI1RDBFQTg2N0RCIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+HfrH/AAAAeVJREFUeNrs2cFHBGEUAPA3zYqIiIhOnTpFRHSKrp26RqeuEV077R/QqWtE166dOkVERHRa9hQRnZalFcv0Hk/W1Mx+38z3vvlm5j3eZW+/9+abne+9KEkSaFPMQMtCwQpWsIIVrGAFK1jBClawgo2ik/4hiqJGwLKuvfpIc5xSkWqYr5hzU1s/mRNxXTPsJ+ZqluvXlwOmSj3XBDvG3M1rpAmYYoUrFzr4ZNqTawqm2MH8Dhh7ZXJUbcAUx4FinzBnJcAUl4FhP/jIgRSYKvkYCJaO2LbNv08RMMUy5nsA4COTLy0XYIqtil9iF6aflq7AwBWuAvuQ9ZKSBgNX2ieWjtKSzeXBNZgqfe8J+4W5aXtbcg0GrvibB/BhkeuhBJhigzsghT0veh+WAlMcCGHvMOMQwcCdcIntYy6WmXhIg2PuiAvsEHO97IhHGgzckb4D8L6LmZYPMHBnhiWwXVdDPF9g4A4Vwd66nFr6BAN3ygbbw1yoMzjmjplgB5hrrufSvsHAHesZDOD2JAbxVYCBOzfIAZ9JbR6qAgN3cPwP9kZy1VIlGLiTdluCmoOBO/pnS9Bk8DzmS3pL4BMcpZEe1qX0GI/atC4dQYXRMa1MU0IX4gpWsIIVrGAFK1jBCnYUPwIMAPUPAyFL+nRdAAAAAElFTkSuQmCC');
-  margin-top: -0.5em;
+  margin-top: -.5em;
 }
 
 /* line 20, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/field/_Select.scss */
@@ -6587,7 +6633,8 @@ body.x-desktop {
 }
 /* line 146, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list-round.x-list-ungrouped .x-list-item-tpl,
-.x-list-round.x-list-ungrouped .x-list-item .x-dock-horizontal, .x-list-round.x-list-grouped .x-list-item-tpl, .x-list-round.x-list-grouped .x-list-item .x-dock-horizontal {
+.x-list-round.x-list-ungrouped .x-list-item .x-dock-horizontal, .x-list-round.x-list-grouped .x-list-item-tpl,
+.x-list-round.x-list-grouped .x-list-item .x-dock-horizontal {
   border: 1px solid #dedede;
   border-width: 1px 1px 0 1px;
   background: #f7f7f7;
@@ -6915,7 +6962,7 @@ body.x-desktop {
   position: absolute;
   width: auto;
   height: 0.5em;
-  top: 0.938em;
+  top: 0.9375em;
   left: 0;
   background-image: none;
   background-color: #dddddd;
@@ -6975,7 +7022,7 @@ body.x-desktop {
  * @class Ext.tab.Panel
  */
 /* line 11, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
-.x-tab.x-item-disabled span.x-button-label, .x-tab.x-item-disabled span.x-badge, .x-tab.x-item-disabled .x-hasbadge span.x-badge, .x-hasbadge .x-tab.x-item-disabled span.x-badge,
+.x-tab.x-item-disabled span.x-button-label, .x-tab.x-item-disabled span.x-badge,
 .x-tab.x-item-disabled .x-button-icon {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
@@ -7029,7 +7076,7 @@ body.x-desktop {
   border-radius: 0.9em;
 }
 /* line 34, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
-.x-tabbar.x-docked-top .x-tab .x-button-label, .x-tabbar.x-docked-top .x-tab .x-badge, .x-tabbar.x-docked-top .x-tab .x-hasbadge .x-badge, .x-hasbadge .x-tabbar.x-docked-top .x-tab .x-badge {
+.x-tabbar.x-docked-top .x-tab .x-button-label, .x-tabbar.x-docked-top .x-tab .x-badge {
   font-size: .8em;
   line-height: 1.2em;
   text-rendering: optimizeLegibility;
@@ -7055,13 +7102,13 @@ body.x-desktop {
   padding: 0.3em 0.8em;
 }
 /* line 59, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
-.x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label, .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-badge, .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-hasbadge .x-badge, .x-hasbadge .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-badge {
+.x-tabbar.x-docked-top .x-tab.x-tab-icon .x-button-label, .x-tabbar.x-docked-top .x-tab.x-tab-icon .x-badge {
   margin: 0;
   margin-left: .8em;
   padding: .1em 0 .2em 0;
   display: inline-block;
   position: relative;
-  top: -0.2em;
+  top: -.2em;
 }
 
 /* line 73, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
@@ -7095,7 +7142,7 @@ body.x-desktop {
   line-height: 1.1em;
 }
 /* line 98, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
-.x-tabbar.x-docked-bottom .x-tab .x-button-label, .x-tabbar.x-docked-bottom .x-tab .x-badge, .x-tabbar.x-docked-bottom .x-tab .x-hasbadge .x-badge, .x-hasbadge .x-tabbar.x-docked-bottom .x-tab .x-badge {
+.x-tabbar.x-docked-bottom .x-tab .x-button-label, .x-tabbar.x-docked-bottom .x-tab .x-badge {
   margin: 0;
   padding: .1em 0 .2em 0;
   font-size: 9px;
@@ -7232,7 +7279,7 @@ body.x-desktop {
 
 /* line 135, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral {
-  border-top-color: #d3d3d3;
+  border-top-color: lightgrey;
   border-bottom-color: #bababa;
   background-image: none;
   background-color: #e0e0e0;
@@ -7267,7 +7314,7 @@ body.x-desktop {
 /* line 165, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral.x-docked-bottom .x-tab-active {
   background-image: none;
-  background-color: #d3d3d3;
+  background-color: lightgrey;
   background-image: -webkit-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
   background-image: -moz-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
   background-image: -o-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
@@ -7285,7 +7332,7 @@ body.x-desktop {
 /* line 182, ../../touch/resources/themes/stylesheets/sencha-touch/default/src/tab/_Panel.scss */
 .x-tabbar-neutral.x-docked-top .x-tab-active {
   background-image: none;
-  background-color: #d3d3d3;
+  background-color: lightgrey;
   background-image: -webkit-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
   background-image: -moz-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
   background-image: -o-linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
@@ -7447,7 +7494,7 @@ body.x-desktop {
   background-size: cover;
 }
 /* line 16, ../sass/_accountSetting.scss */
-.account-setting-cls .profile-photobtn-cls.x-button .x-button-label, .account-setting-cls .profile-photobtn-cls.x-button .x-badge, .account-setting-cls .profile-photobtn-cls.x-button .x-hasbadge .x-badge, .x-hasbadge .account-setting-cls .profile-photobtn-cls.x-button .x-badge {
+.account-setting-cls .profile-photobtn-cls.x-button .x-button-label, .account-setting-cls .profile-photobtn-cls.x-button .x-badge {
   padding-top: 0.75em;
   line-height: 1;
   white-space: normal;
@@ -7536,7 +7583,7 @@ body.x-desktop {
 .account-setting-cls .volume-slider-cls .x-thumb {
   width: 0.75em;
   height: 1.35em;
-  margin-left: -0.063em;
+  margin-left: -0.0625em;
 }
 /* line 81, ../sass/_accountSetting.scss */
 .account-setting-cls .volume-slider-cls .x-thumb:after {
@@ -7565,7 +7612,7 @@ body.x-desktop {
   padding: 0.5em 0.25em;
 }
 /* line 99, ../sass/_accountSetting.scss */
-.account-setting-cls .action-btn-cls.x-button .x-button-label, .account-setting-cls .action-btn-cls.x-button .x-badge, .account-setting-cls .action-btn-cls.x-button .x-hasbadge .x-badge, .x-hasbadge .account-setting-cls .action-btn-cls.x-button .x-badge {
+.account-setting-cls .action-btn-cls.x-button .x-button-label, .account-setting-cls .action-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
   color: white;
   font-size: 0.65em;
@@ -7614,7 +7661,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 133, ../sass/_accountSetting.scss */
-.account-setting-cls .accountsetting-save-btn .x-button-label, .account-setting-cls .accountsetting-save-btn .x-badge, .account-setting-cls .accountsetting-save-btn .x-hasbadge .x-badge, .x-hasbadge .account-setting-cls .accountsetting-save-btn .x-badge {
+.account-setting-cls .accountsetting-save-btn .x-button-label, .account-setting-cls .accountsetting-save-btn .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 136, ../sass/_accountSetting.scss */
@@ -7701,7 +7748,7 @@ body.x-desktop {
   height: 1.5em;
 }
 /* line 45, ../sass/_login.scss */
-.login-cls.x-form .forgot-btn-cls .x-button-label, .login-cls.x-form .forgot-btn-cls .x-badge, .login-cls.x-form .forgot-btn-cls .x-hasbadge .x-badge, .x-hasbadge .login-cls.x-form .forgot-btn-cls .x-badge {
+.login-cls.x-form .forgot-btn-cls .x-button-label, .login-cls.x-form .forgot-btn-cls .x-badge {
   text-align: left;
   font-weight: normal;
   text-decoration: underline;
@@ -7720,7 +7767,7 @@ body.x-desktop {
   border: 0;
 }
 /* line 57, ../sass/_login.scss */
-.login-cls.x-form .login-btn-cls .x-button-label, .login-cls.x-form .login-btn-cls .x-badge, .login-cls.x-form .login-btn-cls .x-hasbadge .x-badge, .x-hasbadge .login-cls.x-form .login-btn-cls .x-badge {
+.login-cls.x-form .login-btn-cls .x-button-label, .login-cls.x-form .login-btn-cls .x-badge {
   color: white;
 }
 /* line 60, ../sass/_login.scss */
@@ -7749,16 +7796,16 @@ body.x-desktop {
   -o-border-radius: 0.25em;
   border-radius: 0.25em;
   padding: 0;
-  min-width: 7.14em;
-  max-width: 7.14em;
-  width: 7.14em;
+  min-width: 7.13984em;
+  max-width: 7.13984em;
+  width: 7.13984em;
   height: 1.85em;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 /* line 84, ../sass/_login.scss */
-.login-cls.x-form .twitter-btn-cls .x-button-label, .login-cls.x-form .twitter-btn-cls .x-badge, .login-cls.x-form .twitter-btn-cls .x-hasbadge .x-badge, .x-hasbadge .login-cls.x-form .twitter-btn-cls .x-badge, .login-cls.x-form .facebook-btn-cls .x-button-label, .login-cls.x-form .facebook-btn-cls .x-badge, .login-cls.x-form .facebook-btn-cls .x-hasbadge .x-badge, .x-hasbadge .login-cls.x-form .facebook-btn-cls .x-badge {
+.login-cls.x-form .twitter-btn-cls .x-button-label, .login-cls.x-form .twitter-btn-cls .x-badge, .login-cls.x-form .facebook-btn-cls .x-button-label, .login-cls.x-form .facebook-btn-cls .x-badge {
   visibility: hidden;
 }
 /* line 87, ../sass/_login.scss */
@@ -7805,7 +7852,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 17, ../sass/_mainMenu.scss */
-.main-menu-cls .play-btn-cls.x-button .x-button-label, .main-menu-cls .play-btn-cls.x-button .x-badge, .main-menu-cls .play-btn-cls.x-button .x-hasbadge .x-badge, .x-hasbadge .main-menu-cls .play-btn-cls.x-button .x-badge {
+.main-menu-cls .play-btn-cls.x-button .x-button-label, .main-menu-cls .play-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 20, ../sass/_mainMenu.scss */
@@ -7831,7 +7878,7 @@ body.x-desktop {
   padding: 0.5em 0.25em;
 }
 /* line 31, ../sass/_mainMenu.scss */
-.main-menu-cls .action-btn-cls.x-button .x-button-label, .main-menu-cls .action-btn-cls.x-button .x-badge, .main-menu-cls .action-btn-cls.x-button .x-hasbadge .x-badge, .x-hasbadge .main-menu-cls .action-btn-cls.x-button .x-badge {
+.main-menu-cls .action-btn-cls.x-button .x-button-label, .main-menu-cls .action-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
   color: white;
   font-size: 0.75em;
@@ -8008,7 +8055,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 112, ../sass/_gameList.scss */
-.games-list-cls.x-list-normal .betgame-btn-cls .x-button-label, .games-list-cls.x-list-normal .betgame-btn-cls .x-badge, .games-list-cls.x-list-normal .betgame-btn-cls .x-hasbadge .x-badge, .x-hasbadge .games-list-cls.x-list-normal .betgame-btn-cls .x-badge {
+.games-list-cls.x-list-normal .betgame-btn-cls .x-button-label, .games-list-cls.x-list-normal .betgame-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 115, ../sass/_gameList.scss */
@@ -8065,7 +8112,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 30, ../sass/_aboutGame.scss */
-.about-game-cls .bet-btn-cls .x-button-label, .about-game-cls .bet-btn-cls .x-badge, .about-game-cls .bet-btn-cls .x-hasbadge .x-badge, .x-hasbadge .about-game-cls .bet-btn-cls .x-badge {
+.about-game-cls .bet-btn-cls .x-button-label, .about-game-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 33, ../sass/_aboutGame.scss */
@@ -8131,7 +8178,7 @@ body.x-desktop {
   font-size: 0.9em;
 }
 /* line 35, ../sass/_betPage.scss */
-.bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-button-label, .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-badge, .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-hasbadge .x-badge, .x-hasbadge .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-badge {
+.bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-button-label, .bet-page-cls .bet-container-cls .team-detail-cls .x-button .x-badge {
   color: white;
   line-height: 1.5;
 }
@@ -8160,7 +8207,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 54, ../sass/_betPage.scss */
-.bet-page-cls .about-btn-cls.x-button .x-button-label, .bet-page-cls .about-btn-cls.x-button .x-badge, .bet-page-cls .about-btn-cls.x-button .x-hasbadge .x-badge, .x-hasbadge .bet-page-cls .about-btn-cls.x-button .x-badge {
+.bet-page-cls .about-btn-cls.x-button .x-button-label, .bet-page-cls .about-btn-cls.x-button .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 57, ../sass/_betPage.scss */
@@ -8191,7 +8238,7 @@ body.x-desktop {
   max-width: 10em;
 }
 /* line 10, ../sass/_betDetail.scss */
-.bet-detail-cls .canecl-btn-cls .x-button-label, .bet-detail-cls .canecl-btn-cls .x-badge, .bet-detail-cls .canecl-btn-cls .x-hasbadge .x-badge, .x-hasbadge .bet-detail-cls .canecl-btn-cls .x-badge {
+.bet-detail-cls .canecl-btn-cls .x-button-label, .bet-detail-cls .canecl-btn-cls .x-badge {
   color: #d4d2d2;
   text-align: left;
 }
@@ -8314,7 +8361,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 117, ../sass/_betDetail.scss */
-.bet-detail-cls .bet-btn-cls .x-button-label, .bet-detail-cls .bet-btn-cls .x-badge, .bet-detail-cls .bet-btn-cls .x-hasbadge .x-badge, .x-hasbadge .bet-detail-cls .bet-btn-cls .x-badge {
+.bet-detail-cls .bet-btn-cls .x-button-label, .bet-detail-cls .bet-btn-cls .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 120, ../sass/_betDetail.scss */
@@ -8347,7 +8394,7 @@ body.x-desktop {
   text-transform: uppercase;
 }
 /* line 137, ../sass/_betDetail.scss */
-.bet-detail-cls .bet-action-cls .x-button-label, .bet-detail-cls .bet-action-cls .x-badge, .bet-detail-cls .bet-action-cls .x-hasbadge .x-badge, .x-hasbadge .bet-detail-cls .bet-action-cls .x-badge {
+.bet-detail-cls .bet-action-cls .x-button-label, .bet-detail-cls .bet-action-cls .x-badge {
   font-family: "OpenSansBold";
   color: white;
   font-size: 0.75em;
@@ -8448,7 +8495,7 @@ body.x-desktop {
   background-color: rgba(0, 0, 0, 0.4);
 }
 /* line 57, ../sass/_profile.scss */
-.profile-cls .x-form-fieldset .photo-action-btn.x-button .x-button-label, .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-badge, .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-hasbadge .x-badge, .x-hasbadge .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-badge {
+.profile-cls .x-form-fieldset .photo-action-btn.x-button .x-button-label, .profile-cls .x-form-fieldset .photo-action-btn.x-button .x-badge {
   text-transform: uppercase;
   color: white;
   font-size: 0.75em;
@@ -8484,7 +8531,7 @@ body.x-desktop {
   margin-right: 0.75em;
 }
 /* line 79, ../sass/_profile.scss */
-.profile-cls .profile-action-btn.x-button .x-button-label, .profile-cls .profile-action-btn.x-button .x-badge, .profile-cls .profile-action-btn.x-button .x-hasbadge .x-badge, .x-hasbadge .profile-cls .profile-action-btn.x-button .x-badge {
+.profile-cls .profile-action-btn.x-button .x-button-label, .profile-cls .profile-action-btn.x-button .x-badge {
   font-family: "OpenSansBold";
   text-transform: uppercase;
   color: white;
@@ -8516,7 +8563,7 @@ body.x-desktop {
   border-radius: 1em;
 }
 /* line 99, ../sass/_profile.scss */
-.profile-cls .profile-save-btn .x-button-label, .profile-cls .profile-save-btn .x-badge, .profile-cls .profile-save-btn .x-hasbadge .x-badge, .x-hasbadge .profile-cls .profile-save-btn .x-badge {
+.profile-cls .profile-save-btn .x-button-label, .profile-cls .profile-save-btn .x-badge {
   font-family: "OpenSansBold";
 }
 /* line 102, ../sass/_profile.scss */
@@ -8751,7 +8798,7 @@ body.x-desktop {
   background-size: contain;
 }
 /* line 28, ../sass/_profileBuyCoins.scss */
-.profile-buy-coins-cls .buy-coins-btn-cls .x-button-label, .profile-buy-coins-cls .buy-coins-btn-cls .x-badge, .profile-buy-coins-cls .buy-coins-btn-cls .x-hasbadge .x-badge, .x-hasbadge .profile-buy-coins-cls .buy-coins-btn-cls .x-badge {
+.profile-buy-coins-cls .buy-coins-btn-cls .x-button-label, .profile-buy-coins-cls .buy-coins-btn-cls .x-badge {
   text-align: left;
   font-family: "OpenSansBold";
   text-transform: uppercase;
@@ -8779,7 +8826,7 @@ body.x-desktop {
 /* line 1, ../sass/_myBet.scss */
 .my-bet-cls {
   background-color: transparent;
-  background-image: url("../images/MyBets.jpg");
+  background-image: url("../images/gamesevent_background.jpg");
   background-size: 100% 100%;
   background-position: center;
   /*
@@ -8847,7 +8894,7 @@ body.x-desktop {
   padding-left: 1.25em;
 }
 /* line 63, ../sass/_myBet.scss */
-.my-bet-cls .my-bet-btn-cls .x-button-label, .my-bet-cls .my-bet-btn-cls .x-badge, .my-bet-cls .my-bet-btn-cls .x-hasbadge .x-badge, .x-hasbadge .my-bet-cls .my-bet-btn-cls .x-badge {
+.my-bet-cls .my-bet-btn-cls .x-button-label, .my-bet-cls .my-bet-btn-cls .x-badge {
   text-align: left;
   color: white;
 }
@@ -9004,7 +9051,7 @@ body.x-desktop {
   width: 6em;
 }
 /* line 24, ../sass/_nextDrawing.scss */
-.next-drawing-cls .invite-btn-cls .x-button-label, .next-drawing-cls .invite-btn-cls .x-badge, .next-drawing-cls .invite-btn-cls .x-hasbadge .x-badge, .x-hasbadge .next-drawing-cls .invite-btn-cls .x-badge {
+.next-drawing-cls .invite-btn-cls .x-button-label, .next-drawing-cls .invite-btn-cls .x-badge {
   color: white;
   white-space: normal;
   font-family: "OpenSansLight";
@@ -9279,7 +9326,7 @@ body.x-desktop {
   background-size: contain;
 }
 /* line 196, ../sass/app.scss */
-.buytickets-cls .ticket-btn-cls .x-button-label, .buytickets-cls .ticket-btn-cls .x-badge, .buytickets-cls .ticket-btn-cls .x-hasbadge .x-badge, .x-hasbadge .buytickets-cls .ticket-btn-cls .x-badge {
+.buytickets-cls .ticket-btn-cls .x-button-label, .buytickets-cls .ticket-btn-cls .x-badge {
   color: white;
   text-align: left;
   font-family: "OpenSansBold";
@@ -9331,13 +9378,13 @@ body.x-desktop {
   border-radius: 1.5em;
 }
 /* line 240, ../sass/app.scss */
-.won-popup-cls .detail-btn-cls .x-button-label, .won-popup-cls .detail-btn-cls .x-badge, .won-popup-cls .detail-btn-cls .x-hasbadge .x-badge, .x-hasbadge .won-popup-cls .detail-btn-cls .x-badge {
+.won-popup-cls .detail-btn-cls .x-button-label, .won-popup-cls .detail-btn-cls .x-badge {
   font-family: "OpenSansBold";
   text-transform: uppercase;
   font-size: 1.25em;
   color: black;
 }
 /* line 248, ../sass/app.scss */
-.won-popup-cls .close-btn-cls .x-button-label, .won-popup-cls .close-btn-cls .x-badge, .won-popup-cls .close-btn-cls .x-hasbadge .x-badge, .x-hasbadge .won-popup-cls .close-btn-cls .x-badge {
+.won-popup-cls .close-btn-cls .x-button-label, .won-popup-cls .close-btn-cls .x-badge {
   color: #bababa;
 }

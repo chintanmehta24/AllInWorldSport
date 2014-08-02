@@ -340,7 +340,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 				
 				var me = this,
 				current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
-				creditBalance = Ext.decode(localStorage.getItem("CURRENT_USER_CREDITBALANCE"));
+				memberBalance = Ext.decode(localStorage.getItem("CURRENT_USER_MEMBERBALANCE"));
 				
 				if(current_user){
 					var LoginName = me.query("[name=LoginName]");
@@ -352,9 +352,9 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					var CoinBalance = me.query("[name=CoinBalance]");
 					var TicketBalance = me.query("[name=TicketBalance]");
 					
-					CoinBalance[0].setText(creditBalance);
-					TicketBalance[0].setText(current_user.MemberBalance.TicketBalance);
-					Level[0].setHtml(current_user.MemberBalance.ExperiencePoint.LevelDescription);
+					CoinBalance[0].setText(memberBalance.CreditBalance);
+					TicketBalance[0].setText(memberBalance.TicketBalance);
+					Level[0].setHtml(memberBalance.ExperiencePoint.LevelDescription);
 					
 				}
 			}

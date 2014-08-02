@@ -267,6 +267,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					},100);
 					return;
 				}
+				
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(data.MemberBalance));
+				
 				if(!mainMenu){
 					mainMenu = mainPanel.add({xtype: "mainmenu"});
 				}

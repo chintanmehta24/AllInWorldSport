@@ -93,7 +93,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 					return;
 				}
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
-				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")).MemberBalance));
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(data.MemberBalance));
 				
 				var viewport = Ext.Viewport,
 					mainPanel = viewport.down("#mainviewport"),

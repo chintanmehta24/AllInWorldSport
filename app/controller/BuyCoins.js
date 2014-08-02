@@ -136,7 +136,7 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 					},100);
 					return;
 				}
-				localStorage.setItem("CURRENT_USER_CREDITBALANCE",data.MemberBalance.CreditBalance);
+				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(data.MemberBalance));
 				
 				Ext.Function.defer(function(){
 						Ext.Msg.alert('Message', "Added Coins Successfully");

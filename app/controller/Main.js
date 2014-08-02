@@ -246,8 +246,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var obj = Ext.decode(response.responseText);
         		console.log(obj);
 				
-			var loginContainer = me.down("#loginBtnContainer"),
-				registerContainer = me.down("#registerBtnContainer");
+			var loginContainer = Ext.Viewport.down("#loginBtnContainer"),
+				registerContainer = Ext.Viewport.down("#registerBtnContainer");
 				
         		if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);

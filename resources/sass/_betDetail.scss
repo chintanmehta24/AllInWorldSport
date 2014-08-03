@@ -131,8 +131,6 @@
     border: 0;
     @include border-radius(1em);
     margin-right: 0.5em;
-    padding: 0.5em;
-    font-size: 0.9em;
     text-transform: uppercase;
     .x-button-label{
       font-family: "OpenSansBold";
@@ -143,7 +141,7 @@
       margin-right: 0;
     }
     &.x-button-pressing{
-      @include background-gradient(rgba(211,37,46,0.65), "recessed");
+      @include background-gradient(darken(rgba(211,37,46,1), 15%), "recessed");
     }
   }
 }

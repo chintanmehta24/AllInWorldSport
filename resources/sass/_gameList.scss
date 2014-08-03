@@ -103,7 +103,8 @@
   .betgame-btn-cls{
     background-color: #F5FD94;
     background-image: none;
-    margin: 0.25em auto;
+    margin: 0.25em -webkit-calc(50% - 6em);
+    margin: 0.25em calc(50% - 6em);
     max-width: 12em;
     border: 0;
     font-size: 1.125em;

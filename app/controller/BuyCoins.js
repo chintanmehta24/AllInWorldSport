@@ -99,7 +99,7 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 			Credits = 400000;
 			Amount = 12.99
 		}
-		Ext.Msg.alert("Temp","Credits "+Credits);
+		
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",

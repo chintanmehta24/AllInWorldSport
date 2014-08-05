@@ -35,25 +35,27 @@
       padding: 0.5em;
       background: rgba(255,255,255,0.4);
     }
-    .date, .eventname{
-      position: absolute;
-      font-family: "OpenSansLight";
-      font-weight: bold;
-      font-size: 0.6em;
-      top: 0.75em;
-    }
     .date{
-      left: 1em;
+      // left: 1em;
     }
     .eventname{
-      right: 1em;
+      text-align: right;
+      // right: 1em;
     }
     .participats{
       @include st-box();
       @include st-box-orient(horizontal);
       @include st-box-align(center);
-      padding-top: 0.5em;
+      // padding-top: 0.5em;
       width: 100%;
+      .date, .eventname{
+        // position: absolute;
+        font-family: "OpenSansLight";
+        font-weight: bold;
+        font-size: 0.6em;
+        // top: 0.75em;
+        width: auto !important;
+      }
       > div{
         @include st-box();
         @include st-box-flex(1);

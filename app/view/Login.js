@@ -154,6 +154,14 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			delegate: "button[action=switchLoginView]",
 			event: "tap",
 			fn: "switchLoginView"
+		}, {
+			delegate: "[name=Password]",
+			event: "action",
+			fn: 'doLoginFire'
+		}, {
+			delegate: "[name=LoginName]",
+			event: "action",
+			fn: 'doLoginFire'
 		}]
 	},
 	switchLoginView: function(btn){
@@ -185,5 +193,17 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			infoText.setHtml("REGISTER USING YOUR FACEBOOK ACCOUNT");
 		}
 		me.reset();
+	},
+	
+	doLoginFire: function(){
+		var me = this,
+			loginBtn = me.down("button[action=doLogin]");
+		if(!loginBtn.isHidden()){
+			var loginName = me.down("[name=LoginName]"),
+				password = me.down("[name=Password]");
+			if(!(Ext.isEmpty(loginName.getValue() && Ext.isEmpty(password.getValue())))){
+				loginBtn.fireEvent("tap", loginBtn);
+			}
+		}
 	}
 });

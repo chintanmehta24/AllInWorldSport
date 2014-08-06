@@ -171,7 +171,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 		var me = this,
 			FB_CONFIG = {
 				APP_ID: '739948199396979',
-	            REDIRECT_URI: 'http://home.terrificsoftware.com/PowerPlay/',
+	            REDIRECT_URI: 'http://goo.gl/Limtf',	//'http://home.terrificsoftware.com/PowerPlay/',
 	            PERMISSIONS: "user_friends,user_events,email,public_profile",
 	            AUTH_URL: ""
 			},

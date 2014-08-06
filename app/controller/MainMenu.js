@@ -384,6 +384,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					return;
 				}
 		};
+		/*	sorting using Balance.CreaditBalance	*/
+		topFivePlayers.sort(new Ext.util.Sorter({
+			sorterFn: function(rec1, rec2){
+				return rec1.get("Balance").CreditBalance < rec2.get("Balance").CreditBalance;
+			}
+		}));
 		topFivePlayers.load({
 					callback: function(records, operation, success){
 						//Ext.Viewport.setMasked(false);
@@ -409,6 +415,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 					return;
 				}
 		};
+		/*	sorting using Balance.CreaditBalance	*/
+		friendStore.sort(new Ext.util.Sorter({
+			sorterFn: function(rec1, rec2){
+				return rec1.get("Balance").BetBalance.NumberOfWins < rec2.get("Balance").BetBalance.NumberOfWins;
+			}
+		}));
 		friendStore.load({
 					callback: function(records, operation, success){
 						Ext.Viewport.setMasked(false);

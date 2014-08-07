@@ -143,12 +143,14 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 								text : "ADD FRIENDS FROM<br>CONTACT LIST",
 								cls: "action-btn-cls",
 								flex: 1,
+								action : "addFriendFromContactList"
 							},
 							{
 								xtype : "button",
 								text : "MANAGE<br>FRIENDS",
 								cls: "action-btn-cls",
 								flex: 1,
+								action: "showMyfriends"
 							}
 						]
 					},

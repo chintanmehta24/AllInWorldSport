@@ -17,6 +17,13 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			"profile button[action=sshowFriends]":{
 				tap : "sshowFriends"
 			}*/
+			"accountsetting button[action=showMyfriends]": {
+				tap: "showMyFriends"
+			},
+			"accountsetting button[action=addFriendFromContactList]": {
+				tap: "addFriendFromContactList"
+			},
+			
 		}
 	},
 	
@@ -289,5 +296,18 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			}
 		});
 	},
+	
+	showMyFriends: function(btn){
+		Ext.Viewport.add({
+			xtype: "managefriendlist",
+			listType: "Friends"
+		}).show();
+	},
+	
+	addFriendFromContactList : function(){
+		Ext.Viewport.add({
+			xtype: "phonebookcontactlist"}
+		).show();
+	}
 	
 });

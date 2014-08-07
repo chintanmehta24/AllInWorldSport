@@ -61,6 +61,9 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             "betdetail button[action=finalizeBet]": {
             	tap: "doConfirmBet"
             },
+			"betdetail button[action=BetAllCoins]": {
+            	tap: "betAllCoins"
+            },
 			
 			
         }
@@ -540,5 +543,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				alert("Error Facebook Friend List");
 			}
 		});
-	}
+	},
+	
+	betAllCoins : function(btn){
+		var AmountField =  Ext.getCmp("amountID");
+		var memberBalance = Ext.decode(localStorage.getItem("CURRENT_USER_MEMBERBALANCE"));
+		AmountField.setMaxValue(memberBalance.CreditBalance);
+		AmountField.setValue(memberBalance.CreditBalance);
+	},
 });

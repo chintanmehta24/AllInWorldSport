@@ -79,15 +79,28 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			html: "HOW MUCH DO YOU WANT TO BET?"
 		},
 		{
-			xtype :"spinnerfield",
-			name: "Amount",
-			id:"amountID",
-			groupButtons: false,
-			minValue: 50,
-			maxValue: 100000,
-			stepValue:50,
-			value: 50
-		}, 
+			xtype: "container",
+			layout: "hbox",
+			items:[
+				{
+					xtype :"spinnerfield",
+					name: "Amount",
+					id:"amountID",
+					groupButtons: false,
+					minValue: 50,
+					maxValue: 100000,
+					stepValue:50,
+					value: 50
+				}, 
+				{
+					xtype : "button",
+					cls :"bet-action-cls",
+					text: "ALL IN",
+					action: "BetAllCoins"
+					
+				},
+			]
+		},
 		{
 			xtype :"label",
 			cls: "field-label-cls",
@@ -111,7 +124,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				text: "CELEBRITIES"
 			},*/
 			{
-				text: "ALL IN",
+				text: "ALL",
 				action : "setAllIN" //Avinash
 			}]
 		}, {

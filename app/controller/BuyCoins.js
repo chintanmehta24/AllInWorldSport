@@ -69,35 +69,41 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 			xtype : "loadmask",
 			message : "Please wait"
 		});
-		if(btn.getItemId() == "5000CoinPack")
+		if(btn.getItemId() == "Allin500Coins")
+			window.storekit.purchase("Allin500Coins", 1);
+		else if(btn.getItemId() == "Allin1500Coins")
+			window.storekit.purchase("Allin1500Coins", 1);
+		else if(btn.getItemId() == "Allin5000Coins")
 			window.storekit.purchase("Allin5000Coins", 1);
-		else if(btn.getItemId() == "50000CoinPack")
-			window.storekit.purchase("Allin50000Coins", 1);
-		else if(btn.getItemId() == "150000CoinPack")
-			window.storekit.purchase("Allin150000Coins", 1);
-		else if(btn.getItemId() == "400000CoinPack")
-			window.storekit.purchase("Allin400000Coins", 1);
+		else if(btn.getItemId() == "Allin10000Coins")
+			window.storekit.purchase("Allin10000Coins", 1);
+		else if(btn.getItemId() == "Allin20000Coins")
+			window.storekit.purchase("Allin20000Coins", 1);
 	},
 	
 	getCoins:function(transactionId, productId){
 		
 		var Credits = 0,
 			Amount = 0;
-		if(productId == "Allin5000Coins"){
-			Credits = 5000;
+		if(productId == "Allin500Coins"){
+			Credits = 500;
 			Amount = 0.99
 		}
-		else if(productId == "Allin50000Coins"){
-			Credits = 50000;
+		else if(productId == "Allin1500Coins"){
+			Credits = 1500;
+			Amount = 1.99
+		}
+		else if(productId == "Allin5000Coins"){
+			Credits = 5000;
 			Amount = 4.99
 		}
-		else if(productId == "Allin150000Coins"){
-			Credits = 150000;
+		else if(productId == "Allin10000Coins"){
+			Credits = 10000;
 			Amount = 9.99
 		}
-		else if(productId == "Allin400000Coins"){
-			Credits = 400000;
-			Amount = 12.99
+		else if(productId == "Allin20000Coins"){
+			Credits = 20000;
+			Amount = 19.99
 		}
 		
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));

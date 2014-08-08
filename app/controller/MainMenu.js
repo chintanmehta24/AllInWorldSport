@@ -224,13 +224,6 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			}
 		}
 		
-		Ext.Viewport.setMasked({
-			xtype : "loadmask",
-			message : "Please wait"
-		});
-		/*************/
-	
-	
 		var me = this,
 			betdetailForm = btn.up("betdetail"),
 			values = betdetailForm.getValues(),
@@ -239,6 +232,21 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			mainPanel = viewport.down("#mainviewport"),
 			mainMenu = mainPanel.down("mainmenu"),
 			currentUser = Ext.decode(localStorage.CURRENT_LOGIN_USER);
+			
+		//Check Balance
+		var memberBalance = Ext.decode(localStorage.getItem("CURRENT_USER_MEMBERBALANCE"));
+		if(memberBalance.CreditBalance < values.Amount){
+			Ext.Msg.alert("Message","Insufficient Balance");
+			return;
+		}
+		
+		
+		Ext.Viewport.setMasked({
+			xtype : "loadmask",
+			message : "Please wait"
+		});
+		/*************/
+			
 		Ext.Ajax.request({
 			url : AllInOneWorldSport.Global.SERVER_URL + "/BET",
 			method : "POST",

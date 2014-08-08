@@ -21,29 +21,35 @@ Ext.define("AllInOneWorldSport.view.BuyCoins", {
 				action : "buyCoins",
 				badgeText: "$4.99"
 			},*/{
-				text: "5,000 coin pack",
+				text: "500 coin pack",
 				icon:  "resources/images/buy_coins_2.png",
-				itemId : "5000CoinPack",
+				itemId : "Allin500Coins",
 				action : "buyCoins",
 				badgeText: "$0.99"
 			},{
-				text: "50,000 coin pack",
+				text: "1,500 coin pack",
 				icon:  "resources/images/buy_coins_3.png",
-				itemId : "50000CoinPack",
+				itemId : "Allin1500Coins",
+				action : "buyCoins",
+				badgeText: "$1.99"
+			},{
+				text: "5,000 coin pack",
+				icon:  "resources/images/buy_coins_4.png",
+				itemId : "Allin5000Coins",
 				action : "buyCoins",
 				badgeText: "$4.99"
 			},{
-				text: "150,000 coin pack",
-				icon:  "resources/images/buy_coins_4.png",
-				itemId : "150000CoinPack",
+				text: "10,000 coin pack",
+				icon:  "resources/images/buy_coins_5.png",
+				itemId : "Allin10000Coins",
 				action : "buyCoins",
 				badgeText: "$9.99"
 			},{
-				text: "400,000 coin pack",
+				text: "20,000 coin pack",
 				icon:  "resources/images/buy_coins_5.png",
-				itemId : "400000CoinPack",
+				itemId : "Allin20000Coins",
 				action : "buyCoins",
-				badgeText: "$12.99"
+				badgeText: "$19.99"
 			}]
 		}]
 	}

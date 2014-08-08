@@ -492,10 +492,11 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			ready: function () {
 				var productIds = [
+					"Allin500Coins",
+					"Allin1500Coins",
 					"Allin5000Coins",
-					"Allin50000Coins",
-					"Allin150000Coins",
-					"Allin400000Coins"
+					"Allin10000Coins",
+					"Allin20000Coins"
 					
 				];
 				window.storekit.load(productIds, function(validProducts, invalidProductIds) {

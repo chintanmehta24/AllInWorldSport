@@ -64,6 +64,8 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 			BetFrom.setHtml("BETS FROM ENEMIES");
 		else if(BetCode == 4)
 			BetFrom.setHtml("BETS FROM ALL IN");
+		else if(BetCode == 3)
+			BetFrom.setHtml("BETS FROM CELEBRITIES");
 		
 		
 	},

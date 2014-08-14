@@ -250,3 +250,40 @@ $form-slider-size: 0.5em;
     }
   }
 }
+
+.drawingrules-cls{
+  @include background-allin("../images/next_drawing_background.jpg");
+  .x-form-fieldset-title{
+    font-family: "OpenSansBold";
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: white;
+    margin: 0.5em;
+    text-shadow: none;
+  }
+  .x-form-fieldset-inner{
+    @include border-radius(0);
+    border: 0;
+    background: transparent;
+  }
+  .ticket-btn-cls{
+    @include border-radius(0);
+    background-image: none;
+    background-color: rgba(white, 0);
+    margin-top: 0.5em;
+    padding: 0.5em 0.5em 0.5em 1.5em;
+    border: 0;
+    .x-button-icon {
+      background-position: left center;
+      background-size: contain;
+    }
+    .x-button-label{
+      color: white;
+      text-align: left;
+      font-family: "OpenSansBold";
+      text-transform: uppercase;
+      font-size: 0.65em;
+      white-space: normal;
+    }
+  }
+}

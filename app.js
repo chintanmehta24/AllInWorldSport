@@ -81,7 +81,8 @@ Ext.application({
 		'PhoneContactList',
 		'InAppDetail',
 		'FriendList',
-		'FacebookFriendList'
+		'FacebookFriendList',
+		'DrawingRules'
     ],
 
     icon: {

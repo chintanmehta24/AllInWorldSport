@@ -64,7 +64,12 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			"betdetail button[action=BetAllCoins]": {
             	tap: "betAllCoins"
             },
-			
+			"nextdrawing button[action=drawingRules]": {
+            	tap: "gotoDrawingRules"
+            },
+			"drawingrules button[action=closeDrawingRules]": {
+            	tap: "closeDrawingRules"
+            },
 			
         }
     },
@@ -559,4 +564,22 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		AmountField.setMaxValue(memberBalance.CreditBalance);
 		AmountField.setValue(memberBalance.CreditBalance);
 	},
+	
+	gotoDrawingRules : function(btn){
+		/*var viewport = Ext.Viewport,
+			mainPanel = viewport.down("#mainviewport"),
+			drawingRules = mainPanel.down("drawingrules");
+		if(!drawingRules){
+			drawingRules = mainPanel.add({xtype: "drawingrules"});
+		}
+		AllInOneWorldSport.Global.NavigationStack.push(mainPanel.getActiveItem());
+		mainPanel.animateActiveItem(drawingRules, {type: "slide", direction: "left", duration: 450});*/
+		Ext.Viewport.add({
+			xtype: "drawingrules"}
+		).show();
+	},
+	
+	closeDrawingRules : function(){
+		Ext.Viewport.down("#drawingRules").hide();
+	}
 });

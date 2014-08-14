@@ -141,7 +141,8 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 								PhoneNumber = ContactData[i].get("phoneNumbers") + "," + PhoneNumber;
 						}
 						var msg = {
-							body : "Hi,Install the amzing app"
+							body : 'Hey come play this sweet new sports app called ALL IN World Sports (insert emoticon after "Sports" smiley face with sunglasses on) I can bet with you on any college or NFL game!<br>Download it now : <a href=\"https://itunes.apple.com/us/app/all-in-world-sports/id901953801?mt=8\">Download the GolfTipU App!</a>'
+							
 						};
 						console.log(PhoneNumber);
 						window.location = "sms:"+PhoneNumber+"?" + Ext.urlEncode(msg);
@@ -157,7 +158,7 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 						Ext.getCmp('sharingPanel').hide();
 						var msg = {
 							subject : 'ALL IN',
-							body : 'Hi,Install the amzing app'
+							body : 'Hey come play this sweet new sports app called ALL IN World Sports (insert emoticon after "Sports" smiley face with sunglasses on) I can bet with you on any college or NFL game!<br>Download it now : <a href=\"https://itunes.apple.com/us/app/all-in-world-sports/id901953801?mt=8\">Download the GolfTipU App!</a>'
 						};
 						var Emails = "";
 						for(var i = 0 ; i < ContactData.length;i++){

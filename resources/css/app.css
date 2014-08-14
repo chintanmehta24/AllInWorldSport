@@ -9384,3 +9384,57 @@ body.x-desktop {
 .won-popup-cls .close-btn-cls .x-button-label, .won-popup-cls .close-btn-cls .x-badge {
   color: #bababa;
 }
+
+/* line 254, ../sass/app.scss */
+.drawingrules-cls {
+  background-color: transparent;
+  background-image: url("../images/next_drawing_background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+/* line 256, ../sass/app.scss */
+.drawingrules-cls .x-form-fieldset-title {
+  font-family: "OpenSansBold";
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: white;
+  margin: 0.5em;
+  text-shadow: none;
+}
+/* line 264, ../sass/app.scss */
+.drawingrules-cls .x-form-fieldset-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+/* line 269, ../sass/app.scss */
+.drawingrules-cls .ticket-btn-cls {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0);
+  margin-top: 0.5em;
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  border: 0;
+}
+/* line 276, ../sass/app.scss */
+.drawingrules-cls .ticket-btn-cls .x-button-icon {
+  background-position: left center;
+  background-size: contain;
+}
+/* line 280, ../sass/app.scss */
+.drawingrules-cls .ticket-btn-cls .x-button-label, .drawingrules-cls .ticket-btn-cls .x-badge {
+  color: white;
+  text-align: left;
+  font-family: "OpenSansBold";
+  text-transform: uppercase;
+  font-size: 0.65em;
+  white-space: normal;
+}

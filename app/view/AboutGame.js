@@ -43,14 +43,17 @@ Ext.define("AllInOneWorldSport.view.AboutGame",{
 		var me = this,
 			record = me.getGameEventRecord();
 		if(record){
+			dd = record.getData();
 			var data = record.getData(),
 				team1 = data.EventParticipants[0],
-				team2 = data.EventParticipants[1];
+				team2 = data.EventParticipants[1],
+				eventDate = data.StartDate;
+
 			me.down("#firstTeamId").setHtml(team1.FirstName + " " + team1.LastName);
 			me.down("#secondTeamId").setHtml(team2.FirstName + " " + team2.LastName);
 			me.down("#eventPlaceDetail").setHtml(data.Location+ "<br>" + 
-												Ext.Date.format(new Date(), "l F d, Y") + "<br>" + 
-												Ext.Date.format(new Date(), "g:i A T"));
+												Ext.Date.format(eventDate, "l F d, Y") + "<br>" + 
+												Ext.Date.format(eventDate, "g:i A T"));
 		}
 	}
 });

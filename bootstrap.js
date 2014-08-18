@@ -76,6 +76,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.view.BetPage": [],
   "AllInOneWorldSport.view.BuyCoins": [],
   "AllInOneWorldSport.view.Dashboard": [],
+  "AllInOneWorldSport.view.DrawingRules": [],
   "AllInOneWorldSport.view.FacebookFriendList": [],
   "AllInOneWorldSport.view.FriendList": [],
   "AllInOneWorldSport.view.GamesList": [],
@@ -861,6 +862,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "AllInOneWorldSport.view.Dashboard": [
     "widget.dashboard"
+  ],
+  "AllInOneWorldSport.view.DrawingRules": [
+    "widget.drawingrules"
   ],
   "AllInOneWorldSport.view.FacebookFriendList": [
     "widget.facebookfriendlist"

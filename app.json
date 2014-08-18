@@ -43,6 +43,11 @@
             "path": "cordova.js"
         },
         {
+        	"path": "https://connect.facebook.net/en_US/all.js",
+        	"async": true,
+        	"id":"facebook-jssdk"
+        },
+        {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
         },

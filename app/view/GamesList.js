@@ -6,6 +6,7 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 		store: "GameLists",
 		itemCls: "game-event-cls",
 		infinite: true,
+		grouped: true,
 		variableHeights: true,
 		itemTpl: new Ext.XTemplate([//"<div class='headerdetail'>",
 					"<div class='participats'><div class='date'>{StartDate:this.getDate}</div>",

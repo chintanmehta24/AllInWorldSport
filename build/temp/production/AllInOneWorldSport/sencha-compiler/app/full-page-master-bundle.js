@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\xampp\htdocs\AllInWorldSport\app.js
+// @require c:\xampp\htdocs\AllInWorldSport\app.js

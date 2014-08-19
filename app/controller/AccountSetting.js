@@ -258,7 +258,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 				BusinessType: "Member"
 			},
 			"token" : GLOBAL.getAccessToken()
-		}
+		};
 		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
@@ -309,5 +309,4 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			xtype: "phonebookcontactlist"}
 		).show();
 	}
-	
 });

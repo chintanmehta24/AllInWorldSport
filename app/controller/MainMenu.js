@@ -527,7 +527,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 	},
 	
 	inviteFriendsThroughFacebook: function(){
-    	var facebookData = Ext.decode(localStorage.getItem("FACEBOOK_DATA"));
+    	/*var facebookData = Ext.decode(localStorage.getItem("FACEBOOK_DATA"));
     	if(!facebookData){
     		Ext.Msg.alert("Facebook", "No Facebook account attached");
     		return;
@@ -554,6 +554,71 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			failure: function(){
 		    	Ext.Viewport.setMasked(false);
 				alert("Error Facebook Friend List");
+			}
+		});*/
+		var me = this,
+			facebookUrl = "https://www.facebook.com/v2.0/dialog/apprequests",
+			app_id = "277412065764445",
+			message = "YOUR_MESSAGE_HERE!",
+			redirect_uri = "http://allinworldsportsapp.com:8082/",
+			requestUrl = Ext.String.format("{0}?app_id={1}&message={2}&redirect_uri={3}", facebookUrl, app_id, message, redirect_uri);
+			var windowObj = window.open(requestUrl, '_blank', 'location=no'),
+                callbackHandler = function(event) {
+                    var windowURL = event.url,
+                        PARAMS = {},
+                        paramsArray = [],
+                        fbIds = [];
+                    if (windowURL.indexOf(redirect_uri) != -1) {
+                    	var startIndex = windowURL.indexOf("?")+1,
+                    		endIndex = windowURL.indexOf("#_=_"),
+                    		length = windowURL.length,
+	                        queryString = decodeURI(windowURL.substring(startIndex, (endIndex == -1 ? length : endIndex)));
+                        paramsArray = queryString.split('&');
+                        Ext.Array.forEach(paramsArray, function(urlParam){
+                        	var splitKeyValue = urlParam.split("=");
+                        	PARAMS[splitKeyValue[0]] = splitKeyValue[1];
+                        });
+                        Ext.Object.each(PARAMS, function(key){
+                        	var test = /to\[\d+\]/.test(key);	//check "to[0]","to[1]"
+                        	if(test){
+                        		fbIds.push(PARAMS[key]);
+                        	}
+                        });
+                    	me.inviteFacebookFriend(fbIds);
+                        windowObj.close();
+                    }
+                };
+            windowObj.addEventListener('loadstart', callbackHandler);
+		
+	},
+	
+	inviteFacebookFriend: function(fbFriendIds){
+		var global = AllInOneWorldSport.Global,
+			logged_In_User = Ext.decode(localStorage.CURRENT_LOGIN_USER),
+			viewport = Ext.Viewport;
+		if(fbFriendIds.length == 0){
+			viewport.setMasked(false);
+			return;
+		}
+		var friendId = fbFriendIds.pop();
+		viewport.setMasked({xtype: "loadmask", message: "loading... " + (fbFriendIds.length+1)});
+		Ext.Ajax.request({
+			url: global.SERVER_URL + "/TellaFriendReferMember",
+			jsonData: {
+				token: global.getAccessToken(),
+				FacebookId: friendId,
+				FirstName: "",
+				Message: "Invite Message",
+		        SponsorMemberid: logged_In_User.MemberId
+			},
+			method: "POST",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+				me.inviteFacebookFriend.call(me, fbFriendIds);
+			},
+			failure: function(){
+				Ext.Msg.alert("Error Facebook Friend List");
+				viewport.setMasked(false);
 			}
 		});
 	},

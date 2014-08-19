@@ -557,18 +557,18 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			}
 		});*/
 		var me = this,
-			facebookUrl = "https://www.facebook.com/v2.0/dialog/apprequests",
+			facebookUrl = "https://m.facebook.com/v2.0/dialog/apprequests",
 			app_id = "277412065764445",
 			message = "YOUR_MESSAGE_HERE!",
 			redirect_uri = "http://allinworldsportsapp.com:8082/",
 			requestUrl = Ext.String.format("{0}?app_id={1}&message={2}&redirect_uri={3}", facebookUrl, app_id, message, redirect_uri);
-			var windowObj = window.open(requestUrl, '_blank', 'location=no'),
+			var windowObj = window.open(encodeURI(requestUrl), '_blank', 'location=no'),
                 callbackHandler = function(event) {
                     var windowURL = event.url,
                         PARAMS = {},
                         paramsArray = [],
                         fbIds = [];
-                    if (windowURL.indexOf(redirect_uri) != -1) {
+                    if (windowURL.indexOf(redirect_uri) == 0) {
                     	var startIndex = windowURL.indexOf("?")+1,
                     		endIndex = windowURL.indexOf("#_=_"),
                     		length = windowURL.length,
@@ -593,7 +593,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 	},
 	
 	inviteFacebookFriend: function(fbFriendIds){
-		var global = AllInOneWorldSport.Global,
+		var me = this,
+			global = AllInOneWorldSport.Global,
 			logged_In_User = Ext.decode(localStorage.CURRENT_LOGIN_USER),
 			viewport = Ext.Viewport;
 		if(fbFriendIds.length == 0){

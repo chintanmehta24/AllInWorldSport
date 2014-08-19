@@ -204,8 +204,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 	registerWithFacebook: function(){
 		var me = this,
 			FB_CONFIG = {
-				APP_ID: '739948199396979',
-	            REDIRECT_URI: 'http://goo.gl/Limtf',	//'http://home.terrificsoftware.com/PowerPlay/',
+				APP_ID: '277412065764445',
+	            REDIRECT_URI: 'http://allinworldsportsapp.com:8082/',	//'http://home.terrificsoftware.com/PowerPlay/',
 	            PERMISSIONS: "user_friends,user_events,email,public_profile,manage_friendlists,read_friendlists",
 	            AUTH_URL: ""
 			},

@@ -8,6 +8,7 @@ Ext.define('AllInOneWorldSport.store.GameLists', {
                 return Ext.Date.format(record.get('StartDate'), "l, F d, Y");
             }
         }
+		
 	},
 	constructor: function(){
 		var me = this;

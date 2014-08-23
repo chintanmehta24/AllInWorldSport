@@ -486,9 +486,13 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			restoreFailed: function (errCode) {
 				console.log('restore failed: ' + errCode);
+				Ext.Viewport.setMasked(false);
 			},
 			error: function (errno, errtext) {
 				console.log('Failed: ' + errtext);
+				Ext.Viewport.setMasked(false);
+				Ext.Msg.alert('Message',''+errtext);
+				
 			},
 			ready: function () {
 				var productIds = [

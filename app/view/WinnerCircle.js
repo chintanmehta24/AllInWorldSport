@@ -14,7 +14,8 @@ Ext.define("AllInOneWorldSport.view.WinnerCircle", {
 		cls: "winner-circle-cls",
 		itemCls: "winner-item-cls",
 		itemTpl: new Ext.XTemplate(["<div class='date'>{SelectionDate:this.getFormatDate}</div>",
-					 "<div class='thumb' style='background-image:url(\"{Url}\")'></div>",
+					// "<div class='thumb' style='background-image:url(\"{Url}\")'></div>",
+					"<div class='thumb' style='background-image:url(\"resources/images/t-shirt.png\")'></div>",
 					 "<div class='prizeName'>{Name}</div>",
 					 "<div class='winnerName'>{FullName}</div>"].join(""),{
 				 	getFormatDate: function(date){

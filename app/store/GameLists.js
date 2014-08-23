@@ -6,7 +6,8 @@ Ext.define('AllInOneWorldSport.store.GameLists', {
 		 grouper: {
             groupFn: function(record) {
                 return Ext.Date.format(record.get('StartDate'), "l, F d, Y");
-            }
+            },
+            sortProperty: "StartDate"
         }
 	},
 	constructor: function(){

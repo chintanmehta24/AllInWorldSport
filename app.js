@@ -45,7 +45,8 @@ Ext.application({
 		"LeaderBoardTopFivePlayers",
 		"Friend",
 		"MyBets",
-		"PhoneContact"
+		"PhoneContact",
+		"WinnerPrize"
     ],
     
     stores: [
@@ -54,7 +55,8 @@ Ext.application({
 		"LeaderBoardTopFivePlayers",
 		"Friends",
 		"MyBets",
-		"PhoneContacts"
+		"PhoneContacts",
+		"WinnerPrizes"
     ],
 
     views: [

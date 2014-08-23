@@ -157,7 +157,7 @@ $form-slider-size: 0.5em;
       }
       .prizeName {
         margin-right: 0.5em;
-        @include st-box-flex(1.5);
+        @include st-box-flex(1);
         width: 0px;
       }
       .winnerName{

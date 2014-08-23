@@ -13,8 +13,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
             	tap: "onProfileBtnTap"
             },
             "mainmenu button[action=gotoLeaderBoard]":{
-            	tap: "goToLeaderBoard"
-            	// tap: "goToWinnerCircle"
+            	// tap: "goToLeaderBoard"
+            	tap: "goToWinnerCircle"
             },
 			"mainmenu button[action=gotoTicketRules]":{
             	tap: "gotoTicketRules"

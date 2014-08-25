@@ -47,6 +47,22 @@ Ext.define("AllInOneWorldSport.view.NextDrawing", {
 			]
 		},
 		{
+			xtype: "container",
+			layout: {
+				type: "hbox",
+				align: "center"
+			},
+			items: [
+			{xtype : "spacer"},
+			{
+				xtype: "button",
+				text: "Winner Circle",
+				action: "goToWinnerCircle",
+				style : "background: transparent;border: 0;font-size: 0.6em;color: white;"
+			}
+			]
+		},
+		{
 			xtype: 'panel',
 			flex: 1,
 			cls:"main-content-cls",

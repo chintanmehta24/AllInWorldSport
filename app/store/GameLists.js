@@ -9,6 +9,7 @@ Ext.define('AllInOneWorldSport.store.GameLists', {
             },
             sortProperty: "StartDate"
         }
+		
 	},
 	constructor: function(){
 		var me = this;

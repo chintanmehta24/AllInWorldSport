@@ -10,6 +10,7 @@ Ext.define("AllInOneWorldSport.view.DrawingRules", {
 		layout: "vbox",
 		cls: "drawingrules-cls",
 		itemId : "drawingRules",
+		scrollable: true,
 		items:[{
 			xtype: "button",
 			style : "background-image: url('resources/images/cancel-bet.png');background-repeat: no-repeat;background-position: center;position: absolute;display: block;background-color:transparent;border: 0;right:0;margin-top: -0.8em;",
@@ -32,6 +33,10 @@ Ext.define("AllInOneWorldSport.view.DrawingRules", {
 				text: "If prize is not claimed within 72 hours of notification, prize is forfeited",
 			},{
 				text: "ALL IN World Sports, LLC is not responsible for any lost, damaged or stolen prizes",
+			},{
+				text: "ALL IN World Sports, Apple is not a sponsor nor is involved in any way",
+			},{
+				text: "ALL IN World Sports, the contest or sweepstake prizes are not Apple products",
 			}]
 		}]
 	}

@@ -116,7 +116,7 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 				store.filter(function(rec){
 					var data = rec.getData();
 					
-					if(data.Bet.Status == BetStatus && data.MyBet == true){
+					if(data.Bet.Status == BetStatus ){
 						return true;
 						
 					}

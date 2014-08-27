@@ -10,7 +10,7 @@ Ext.define("AllInOneWorldSport.view.FriendList", {
 		centered: true,
 		width: "90%",
 		height: "80%",*/
-		style : "background-color: transparent;background-image: url('resources/images/MyBets.jpg');background-size: 100% 100%;background-position: center;",
+		style : "background-color:#2CA5FF;background-image: url('resources/images/MyBets.jpg');background-size: 100% 100%;background-position: center;",
 		items: [
 		{
 				xtype: "navbar",

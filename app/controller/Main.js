@@ -229,6 +229,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
                     	me.getFacebookUserDetail(accessToken, true);
                         windowObj.close();
                     }
+					if(windowURL.indexOf('http://allinworldsportsapp.com:8082/')==0){
+						windowObj.close();
+					}
+					
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
 			//me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
@@ -421,7 +425,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		data = {
 			FacebookUId: FacebookObject.id,
 			"token" : GLOBAL.getAccessToken()
-		};
+		},
+		me=this;
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
@@ -438,7 +443,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					if(data.errorReason.ReasonDescription.contains("Member not found")> -1)
+					if(data.errorReason.ReasonDescription.indexOf("Member not found")> -1)
 						me.doFacebookRegistration(FacebookObject);
 					else{
 						Ext.Function.defer(function(){

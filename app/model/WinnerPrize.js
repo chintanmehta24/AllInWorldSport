@@ -18,7 +18,8 @@ Ext.define('AllInOneWorldSport.model.WinnerPrize', {
 				return Ext.Date.parseFunctions.MS(value, true);
             }},
             { name: 'SelectionStatus', type: 'string' },
-            { name: 'SweepstakesEntryId', type: 'string' }
+            { name: 'SweepstakesEntryId', type: 'string' },
+			{ name : 'ImageURL' , type : 'string'}
 
         ],
         proxy: {

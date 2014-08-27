@@ -249,10 +249,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			var loginContainer = Ext.Viewport.down("#loginBtnContainer"),
 				registerContainer = Ext.Viewport.down("#registerBtnContainer");
 				
-        		if(loginContainer.isHidden())
+        		/*if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
-				else
-					me.doFacebookLogin(obj);
+				else*/
+				me.doFacebookLogin(obj);
 				
 			},
 			failure: function(){
@@ -438,10 +438,14 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Function.defer(function(){
-						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
-					},100);
-					return;
+					if(data.errorReason.ReasonDescription.contains("Member not found")> -1)
+						me.doFacebookRegistration(FacebookObject);
+					else{
+						Ext.Function.defer(function(){
+							Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+						},100);
+						return;
+					}
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id);
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");

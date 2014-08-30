@@ -364,6 +364,18 @@
         "name": "PhoneContacts",
         "fields": "id:auto:null,rawId:auto:null,displayName:auto:null,nickName:auto:null,phoneNumbers:auto:null,emails:auto:null"
       }
+    },
+    "app/model/WinnerPrizes.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "b440abe61f1cfb3bbc31c9554696b4c7e9e2c329",
+      "parameters": {
+        "appName": "AllInOneWorldSport",
+        "modelNamespace": "AllInOneWorldSport.model",
+        "baseClass": "Ext.data.Model",
+        "modelFileName": "WinnerPrizes",
+        "name": "WinnerPrizes",
+        "fields": "ChangeStatus:int:null,Id:auto:null,UniqueID:string:null,ExternalPrizeDistributions:auto:null,FulfillmentStatus:string:null,FullName:string:null,MemberId:string:null,Name:string:null,Place:int:null,PrizeLevelId:string:null,PrizeResultId:string:null,SelectionDate:date:null,SelectionStatus:string:null,SweepstakesEntryId:string:null"
+      }
     }
   }
 }

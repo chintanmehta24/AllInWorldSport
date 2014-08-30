@@ -145,12 +145,13 @@ $form-slider-size: 0.5em;
       font-family: "OpenSansBold";
       font-size: 0.75em;
       .thumb{
-        width: 2em;
-        height: 2em;
+        width: 2.3em;
+        height: 2.3em;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        margin-right: 0.5em;
+        margin-right: 1em;
+		margin-left: 1em;
       }
       .date{
         width: 6.25em;

@@ -229,6 +229,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
                     	me.getFacebookUserDetail(accessToken, true);
                         windowObj.close();
                     }
+					if(windowURL.indexOf('http://allinworldsportsapp.com:8082/')==0){
+						windowObj.close();
+					}
+					
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
 			//me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
@@ -249,10 +253,10 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			var loginContainer = Ext.Viewport.down("#loginBtnContainer"),
 				registerContainer = Ext.Viewport.down("#registerBtnContainer");
 				
-        		if(loginContainer.isHidden())
+        		/*if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
-				else
-					me.doFacebookLogin(obj);
+				else*/
+				me.doFacebookLogin(obj);
 				
 			},
 			failure: function(){
@@ -370,7 +374,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				BusinessType: "Member"
 			},
 			"token" : GLOBAL.getAccessToken()
-		}
+		};
 		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
@@ -421,7 +425,8 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		data = {
 			FacebookUId: FacebookObject.id,
 			"token" : GLOBAL.getAccessToken()
-		};
+		},
+		me=this;
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
@@ -438,10 +443,14 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				var data = Ext.decode(responce.responseText);
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
-					Ext.Function.defer(function(){
-						Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
-					},100);
-					return;
+					if(data.errorReason.ReasonDescription.indexOf("Member not found")> -1)
+						me.doFacebookRegistration(FacebookObject);
+					else{
+						Ext.Function.defer(function(){
+							Ext.Msg.alert('Error', data.errorReason.ReasonDescription);
+						},100);
+						return;
+					}
 				}
 				localStorage.setItem("CURRENT_USER_LOGINNAME",FacebookObject.id);
 				localStorage.setItem("CURRENT_USER_LOGINPASSWORD","Facebook");

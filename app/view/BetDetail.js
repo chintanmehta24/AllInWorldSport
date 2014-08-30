@@ -54,7 +54,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 				height: 320
 			},
 			name: "Spread",
-			options: [{
+			/*options: [{
 				text: "1",
 				value: "1"
 			},{
@@ -72,7 +72,7 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 			{
 				text: "5",
 				value: "5"
-			}]
+			}]*/
 		}, {
 			xtype :"label",
 			cls: "field-label-cls",
@@ -157,6 +157,17 @@ Ext.define("AllInOneWorldSport.view.BetDetail",{
 	onPageActivate: function(){
 		var me = this;
 		// me.reset();
+		
+		var options = [];
+		for(var i = 1 ; i<=40;i++){
+			options.push(
+			{
+				value:i.toString(),
+				text:i.toString()
+			});
+		}
+		me.down("[name=Spread]").setOptions(options);
+		
 		me.setValues({
 			Spread: 1,
 			Amount: "50"

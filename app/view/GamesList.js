@@ -52,11 +52,15 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 			event: "keyup",
 			fn: "onSearchFieldKeyPress"
 		},
-		{
+		/*{
 			event: "painted",
 			single: true,
 			fn: "onPainted"
-		}
+		},*/
+		{
+			event: "activate",
+			fn: "onPageActivate"
+		},
 		]
 	},
 	onSearchFieldKeyPress: function(ths, e){
@@ -70,6 +74,16 @@ Ext.define("AllInOneWorldSport.view.GamesList",{
 		});
 	},
 	onPainted: function(){
+		var me = this,
+			value = "",
+			store = me.getStore();
+		store.load({
+			jsonData: {
+				searchString: value
+			}
+		});
+	},
+	onPageActivate: function(){
 		var me = this,
 			value = "",
 			store = me.getStore();

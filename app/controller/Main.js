@@ -475,53 +475,73 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 	
 	loadInAppStore:function(){
 		var me = this;
-		if(typeof window.storekit === "undefined"){
-			console.log("not device");
-			return ;
-		}
-		window.storekit.init({
-
-			debug: true, /* Because we like to see logs on the console */
-
-			purchase: function (transactionId, productId) {
-				AllInOneWorldSport.app.getController('BuyCoins').getCoins(transactionId,productId);
-				console.log('purchased: ' + productId);
-			},
-			restore: function (transactionId, productId) {
-				console.log('restored: ' + productId);
-			},
-			restoreCompleted: function () {
-			   console.log('all restore complete');
-			},
-			restoreFailed: function (errCode) {
-				console.log('restore failed: ' + errCode);
-				Ext.Viewport.setMasked(false);
-			},
-			error: function (errno, errtext) {
-				console.log('Failed: ' + errtext);
-				Ext.Viewport.setMasked(false);
-				Ext.Msg.alert('Message',''+errtext);
-				
-			},
-			ready: function () {
-				var productIds = [
-					"Allin500Coins",
-					"Allin1500Coins",
-					"Allin5000Coins",
-					"Allin10000Coins",
-					"Allin20000Coins"
+		if(typeof window.storekit !== "undefined" && Ext.os.is.iOS){
+			window.storekit.init({
+	
+				debug: true, /* Because we like to see logs on the console */
+	
+				purchase: function (transactionId, productId) {
+					AllInOneWorldSport.app.getController('BuyCoins').getCoins(transactionId,productId);
+					console.log('purchased: ' + productId);
+				},
+				restore: function (transactionId, productId) {
+					console.log('restored: ' + productId);
+				},
+				restoreCompleted: function () {
+				   console.log('all restore complete');
+				},
+				restoreFailed: function (errCode) {
+					console.log('restore failed: ' + errCode);
+					Ext.Viewport.setMasked(false);
+				},
+				error: function (errno, errtext) {
+					console.log('Failed: ' + errtext);
+					Ext.Viewport.setMasked(false);
+					Ext.Msg.alert('Message',''+errtext);
 					
-				];
-				window.storekit.load(productIds, function(validProducts, invalidProductIds) {
-					$.each(validProducts, function (i, val) {
-						console.log("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
+				},
+				ready: function () {
+					var productIds = [
+						"Allin500Coins",
+						"Allin1500Coins",
+						"Allin5000Coins",
+						"Allin10000Coins",
+						"Allin20000Coins"
+						
+					];
+					window.storekit.load(productIds, function(validProducts, invalidProductIds) {
+						$.each(validProducts, function (i, val) {
+							console.log("id: " + val.id + " title: " + val.title + " val: " + val.description + " price: " + val.price);
+						});
+						if(invalidProductIds.length) {
+							console.log("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
+						}
 					});
-					if(invalidProductIds.length) {
-						console.log("Invalid Product IDs: " + JSON.stringify(invalidProductIds));
-					}
+				}
+			});
+		}else if(Ext.os.is.Android){
+			inappbilling.init(function(){
+				inappbilling.getPurchases(function(list){
+					alert(typeof list == "string" ? list : Ext.encode(list));
+					inappbilling.getAvailableProducts(function(list){
+						alert(typeof list == "string" ? list : Ext.encode(list));
+						// allin10000coins
+						inappbilling.getProductDetails(function(){
+							alert(typeof list == "string" ? list : Ext.encode(list));
+						},function(){
+							Ext.Msg.alert("failure", "Android - inaapbilling - init -- getPurchases - getProductDetails");
+						}, ["allin10000coins"]);
+					},function(){
+					});
+				}, function(){
+					Ext.Msg.alert("failure", "Android - inaapbilling - init -- getPurchases");
 				});
-			}
-		});
+			}, function(){
+				Ext.Msg.alert("failure", "Android - inaapbilling - init");
+			}, {
+				showLog: true
+			}, "allinandroidcoins");
+		}
 	}
 	
 });

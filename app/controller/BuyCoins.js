@@ -69,16 +69,30 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 			xtype : "loadmask",
 			message : "Please wait"
 		});
-		if(btn.getItemId() == "Allin500Coins")
-			window.storekit.purchase("Allin500Coins", 1);
-		else if(btn.getItemId() == "Allin1500Coins")
-			window.storekit.purchase("Allin1500Coins", 1);
-		else if(btn.getItemId() == "Allin5000Coins")
-			window.storekit.purchase("Allin5000Coins", 1);
-		else if(btn.getItemId() == "Allin10000Coins")
-			window.storekit.purchase("Allin10000Coins", 1);
-		else if(btn.getItemId() == "Allin20000Coins")
-			window.storekit.purchase("Allin20000Coins", 1);
+		if(typeof window.storekit !== "undefined" && Ext.os.is.iOS){
+			if(btn.getItemId() == "Allin500Coins")
+				window.storekit.purchase("Allin500Coins", 1);
+			else if(btn.getItemId() == "Allin1500Coins")
+				window.storekit.purchase("Allin1500Coins", 1);
+			else if(btn.getItemId() == "Allin5000Coins")
+				window.storekit.purchase("Allin5000Coins", 1);
+			else if(btn.getItemId() == "Allin10000Coins")
+				window.storekit.purchase("Allin10000Coins", 1);
+			else if(btn.getItemId() == "Allin20000Coins")
+				window.storekit.purchase("Allin20000Coins", 1);
+		}else if(Ext.os.is.Android){
+			inappbilling.buy(function(){
+				alert(Ext.encode(list));
+				//need to consume
+                inappbilling.consumePurchase(function(){
+					alert(Ext.encode(list));
+                }, function(){
+					Ext.Msg.alert("failure", "Android - inaapbilling - consume");
+				}, [btn.getItemId().toLowerCase()]);
+			},function(){
+				Ext.Msg.alert("failure", "Android - inaapbilling - buy");
+			}, [btn.getItemId().toLowerCase()]);
+		}
 	},
 	
 	getCoins:function(transactionId, productId){

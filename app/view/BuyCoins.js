@@ -23,31 +23,36 @@ Ext.define("AllInOneWorldSport.view.BuyCoins", {
 			},*/{
 				text: "500 coin pack",
 				icon:  "resources/images/buy_coins_2.png",
-				itemId : "Allin500Coins",
+				itemId : "Allin500Coins", // InApp Purchase Product Id for IOS
+				name : "allin500_coins", //InApp Purchase Product ID for Android
 				action : "buyCoins",
 				badgeText: "$0.99"
 			},{
 				text: "1,500 coin pack",
 				icon:  "resources/images/buy_coins_3.png",
-				itemId : "Allin1500Coins",
+				itemId : "Allin1500Coins",// InApp Purchase Product Id for IOS
+				name : "allin1500coins", //InApp Purchase Product ID for Android
 				action : "buyCoins",
 				badgeText: "$1.99"
 			},{
 				text: "5,000 coin pack",
 				icon:  "resources/images/buy_coins_4.png",
-				itemId : "Allin5000Coins",
+				itemId : "Allin5000Coins",// InApp Purchase Product Id for IOS
+				name : "allin5000coins", //InApp Purchase Product ID for Android
 				action : "buyCoins",
 				badgeText: "$4.99"
 			},{
 				text: "10,000 coin pack",
 				icon:  "resources/images/buy_coins_5.png",
-				itemId : "Allin10000Coins",
+				itemId : "Allin10000Coins",// InApp Purchase Product Id for IOS
+				name : "allin10000coins", //InApp Purchase Product ID for Android
 				action : "buyCoins",
 				badgeText: "$9.99"
 			},{
 				text: "20,000 coin pack",
 				icon:  "resources/images/buy_coins_5.png",
-				itemId : "Allin20000Coins",
+				itemId : "Allin20000Coins",// InApp Purchase Product Id for IOS
+				name : "allin20000coins", //InApp Purchase Product ID for Android
 				action : "buyCoins",
 				badgeText: "$19.99"
 			}]

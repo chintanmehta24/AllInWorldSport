@@ -64,7 +64,7 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 	},
 	
 	buyCoins:function(btn){
-		
+		var me = this;
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"
@@ -81,17 +81,32 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 			else if(btn.getItemId() == "Allin20000Coins")
 				window.storekit.purchase("Allin20000Coins", 1);
 		}else if(Ext.os.is.Android){
-			inappbilling.buy(function(){
-				alert(Ext.encode(list));
+		
+			//get Product ID for android "Add Product Id in name Field"
+			var ProductID = btn.getInitialConfig('name');
+			
+			inappbilling.buy(function(successMsg){
+				console.log("Message "+successMsg.orderId);
+				me.getCoins(message.orderId,successMsg.productId); // Add the Coins In All In
+				
 				//need to consume
                 inappbilling.consumePurchase(function(){
-					alert(Ext.encode(list));
-                }, function(){
-					Ext.Msg.alert("failure", "Android - inaapbilling - consume");
-				}, [btn.getItemId().toLowerCase()]);
-			},function(){
-				Ext.Msg.alert("failure", "Android - inaapbilling - buy");
-			}, [btn.getItemId().toLowerCase()]);
+					Ext.Viewport.setMasked(false);
+				}, function(err){
+					Ext.Viewport.setMasked(false);
+					Ext.Msg.alert("Error", ""+err);
+				}, ProductID);
+				
+			},function(err){
+				Ext.Viewport.setMasked(false);
+				Ext.Msg.alert("Error", ""+err);
+				
+				// In case Buy items and Not Consumed Products so we can handle in Error
+				inappbilling.consumePurchase(function(){
+				}, function(err){
+				}, ProductID);
+				
+			}, ProductID);
 		}
 	},
 	
@@ -99,25 +114,51 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 		
 		var Credits = 0,
 			Amount = 0;
-		if(productId == "Allin500Coins"){
-			Credits = 500;
-			Amount = 0.99
+		if(Ext.os.is.Android){
+			if(productId == "allin500_coins"){
+				Credits = 500;
+				Amount = 0.99;
+			}
+			else if(productId == "allin1500coins"){
+				Credits = 1500;
+				Amount = 1.99;
+			}
+			else if(productId == "allin5000coins"){
+				Credits = 5000;
+				Amount = 4.99;
+			}
+			else if(productId == "allin10000coins"){
+				Credits = 10000;
+				Amount = 9.99;
+			}
+			else if(productId == "allin20000coins"){
+				Credits = 20000;
+				Amount = 19.99;
+			}
 		}
-		else if(productId == "Allin1500Coins"){
-			Credits = 1500;
-			Amount = 1.99
-		}
-		else if(productId == "Allin5000Coins"){
-			Credits = 5000;
-			Amount = 4.99
-		}
-		else if(productId == "Allin10000Coins"){
-			Credits = 10000;
-			Amount = 9.99
-		}
-		else if(productId == "Allin20000Coins"){
-			Credits = 20000;
-			Amount = 19.99
+		else 
+		{
+			// For IOS
+			if(productId == "Allin500Coins"){
+				Credits = 500;
+				Amount = 0.99
+			}
+			else if(productId == "Allin1500Coins"){
+				Credits = 1500;
+				Amount = 1.99
+			}
+			else if(productId == "Allin5000Coins"){
+				Credits = 5000;
+				Amount = 4.99
+			}
+			else if(productId == "Allin10000Coins"){
+				Credits = 10000;
+				Amount = 9.99
+			}
+			else if(productId == "Allin20000Coins"){
+				Credits = 20000;
+				Amount = 19.99
+			}
 		}
 		
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));

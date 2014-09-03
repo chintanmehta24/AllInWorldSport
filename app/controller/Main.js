@@ -522,25 +522,25 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		}else if(Ext.os.is.Android){
 			inappbilling.init(function(){
 				inappbilling.getPurchases(function(list){
-					alert(typeof list == "string" ? list : Ext.encode(list));
+					//alert(typeof list == "string" ? list : Ext.encode(list));
 					inappbilling.getAvailableProducts(function(list){
-						alert(typeof list == "string" ? list : Ext.encode(list));
+						//alert(typeof list == "string" ? list : Ext.encode(list));
 						// allin10000coins
 						inappbilling.getProductDetails(function(){
-							alert(typeof list == "string" ? list : Ext.encode(list));
+							//alert(typeof list == "string" ? list : Ext.encode(list));
 						},function(){
-							Ext.Msg.alert("failure", "Android - inaapbilling - init -- getPurchases - getProductDetails");
-						}, ["allin10000coins"]);
+							//Ext.Msg.alert("Message", "Android - inaapbilling - init -- getPurchases - getProductDetails");
+						}, ["allin10000coins","allin1500coins","allin20000coins","allin500_coins","allin5000coins"]);
 					},function(){
 					});
 				}, function(){
-					Ext.Msg.alert("failure", "Android - inaapbilling - init -- getPurchases");
+					//Ext.Msg.alert("failure", "Android - inaapbilling - init -- getPurchases");
 				});
 			}, function(){
-				Ext.Msg.alert("failure", "Android - inaapbilling - init");
+				Ext.Msg.alert("Message", "Android store not load");
 			}, {
 				showLog: true
-			}, "allinandroidcoins");
+			}, ["allin10000coins","allin1500coins","allin20000coins","allin500_coins","allin5000coins"]);
 		}
 	}
 	

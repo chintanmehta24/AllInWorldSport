@@ -16,6 +16,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			},
 			"profile button[action=gotoAccountSettings]":{
 				tap: "gotoAccountSettings"
+			},
+			"profile button[action=takeProfilePhoto]": {
+				tap: "takeProfilePhoto"
 			}
 		}
 	},
@@ -162,5 +165,61 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			});
 			store.add(arrayPhone);
 		}, function(){alert("Error");}, options);		
+	},
+	
+	takeProfilePhoto: function(){
+		navigator.camera.getPicture(function(fileURL){
+			console.log("Success" + fileURL);
+			var options = new FileUploadOptions();
+			options.fileKey = "files[]";
+			options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
+			options.mimeType = "image/png";
+
+			var params = {};			
+			options.params = params;
+
+			var ft = new FileTransfer(),
+				viewport = Ext.Viewport,
+				ftURL = "http://fileupload.allinworldsportsapp.com/FileTransferHandler.ashx";
+			ft.onprogress = function(progressEvent) {
+				if (progressEvent.lengthComputable) {
+					var mask = viewport.getMasked();
+				  mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),2) + "%");
+				}
+			};				
+			viewport.setMasked({
+				xtype: "loadmask",
+				message: "Uploading..."
+			});
+			ft.upload(fileURL, encodeURI(ftURL), function(obj){
+				viewport.setMasked(false);
+				console.log("Success: "+ Ext.encode(obj));
+				alert("Success: "+ Ext.encode(obj));
+			}, function(obj){
+				viewport.setMasked(false);
+				console.log("Fail: "+ Ext.encode(obj));
+				alert("Fail: "+ Ext.encode(obj));
+			}, options);
+		}, function(error){
+			console.log(Ext.encode(error));
+			alert("Fail " + Ext.encode(error));
+		}, {
+			quality : 50,
+			destinationType : 1,
+			/*  DATA_URL : 0,      // Return image as base64-encoded string
+			    FILE_URI : 1,      // Return image file URI
+			    NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)	*/
+			sourceType : 0,
+			/*	PHOTOLIBRARY : 0,
+			    CAMERA : 1,
+			    SAVEDPHOTOALBUM : 2	*/
+			//allowEdit : true,
+			//correctOrientation: true,
+			encodingType: 1,
+			/* JPEG : 0,               // Return JPEG encoded image
+			    PNG : 1	*/
+			saveToPhotoAlbum: false,
+			mediaType: 0
+		});
 	}
 });

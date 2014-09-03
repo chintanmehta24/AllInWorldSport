@@ -51,7 +51,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     					cls: "photo-action-btn"
     				},
     				items: [{
-    					text: "upload"
+    					text: "upload",
+    					action: "takeProfilePhoto"
     				}, {
     					text: "delete"
     				}]

@@ -168,6 +168,37 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 	},
 	
 	takeProfilePhoto: function(){
+		var me = this;
+		Ext.Msg.show({
+			title: "Profile Image", 
+			message: "Select an option",
+			buttons: [{
+				itemId: "0",
+				text: "Gallery", 
+				ui:"action"
+			},{
+				itemId:"1",
+				text:"Camera", 
+				ui:"action"
+			}, {
+				itemId: "cancel",
+				text: "Cancel",
+				ui: "decline"
+			}],
+			promptConfig: false,
+			scope: me,
+			fn: function(btn){
+				console.log(arguments);
+				if(btn == "cancel"){
+					return;
+				}
+				this.openCordovaPicker(Number(btn));
+			}
+		});
+	},
+	
+	openCordovaPicker: function(sourceType){
+		
 		navigator.camera.getPicture(function(fileURL){
 			console.log("Success" + fileURL);
 			var options = new FileUploadOptions();
@@ -194,22 +225,25 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			ft.upload(fileURL, encodeURI(ftURL), function(obj){
 				viewport.setMasked(false);
 				console.log("Success: "+ Ext.encode(obj));
-				alert("Success: "+ Ext.encode(obj));
+				Ext.Msg.alert("Success", "Image has been uploaded");
+				// alert("Success: "+ Ext.encode(obj));
 			}, function(obj){
 				viewport.setMasked(false);
 				console.log("Fail: "+ Ext.encode(obj));
-				alert("Fail: "+ Ext.encode(obj));
+				Ext.Msg.alert("Error", "Image upload failed");
+				// alert("Fail: "+ Ext.encode(obj));
 			}, options);
 		}, function(error){
 			console.log(Ext.encode(error));
-			alert("Fail " + Ext.encode(error));
+			Ext.Msg.alert("Error", Ext.encode(error));
+			// alert("Fail " + Ext.encode(error));
 		}, {
 			quality : 50,
 			destinationType : 1,
 			/*  DATA_URL : 0,      // Return image as base64-encoded string
 			    FILE_URI : 1,      // Return image file URI
 			    NATIVE_URI : 2     // Return image native URI (e.g., assets-library:// on iOS or content:// on Android)	*/
-			sourceType : 0,
+			sourceType : sourceType,	//	0,
 			/*	PHOTOLIBRARY : 0,
 			    CAMERA : 1,
 			    SAVEDPHOTOALBUM : 2	*/

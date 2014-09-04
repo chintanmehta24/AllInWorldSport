@@ -83,7 +83,7 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 		}else if(Ext.os.is.Android){
 		
 			//get Product ID for android "Add Product Id in name Field"
-			var ProductID = btn.getInitialConfig('name');
+			var ProductID = btn.getItemId().toLowerCase();
 			
 			inappbilling.buy(function(successMsg){
 				console.log("Message "+successMsg.orderId);
@@ -115,7 +115,7 @@ Ext.define('AllInOneWorldSport.controller.BuyCoins', {
 		var Credits = 0,
 			Amount = 0;
 		if(Ext.os.is.Android){
-			if(productId == "allin500_coins"){
+			if(productId == "allin500coins"){
 				Credits = 500;
 				Amount = 0.99;
 			}

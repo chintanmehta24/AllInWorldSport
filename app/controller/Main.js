@@ -530,7 +530,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 							//alert(typeof list == "string" ? list : Ext.encode(list));
 						},function(){
 							//Ext.Msg.alert("Message", "Android - inaapbilling - init -- getPurchases - getProductDetails");
-						}, ["allin10000coins","allin1500coins","allin20000coins","allin500_coins","allin5000coins"]);
+						}, ["allin10000coins","allin1500coins","allin20000coins","allin500coins","allin5000coins"]);
 					},function(){
 					});
 				}, function(){
@@ -540,7 +540,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				Ext.Msg.alert("Message", "Android store not load");
 			}, {
 				showLog: true
-			}, ["allin10000coins","allin1500coins","allin20000coins","allin500_coins","allin5000coins"]);
+			}, ["allin10000coins","allin1500coins","allin20000coins","allin500coins","allin5000coins"]);
 		}
 	}
 	

@@ -63,6 +63,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.model.MyBets": [],
   "AllInOneWorldSport.model.PhoneContact": [],
+  "AllInOneWorldSport.model.WinnerPrize": [],
   "AllInOneWorldSport.proxy.AWSProxy": [],
   "AllInOneWorldSport.store.Friends": [],
   "AllInOneWorldSport.store.GameLists": [],
@@ -70,6 +71,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "AllInOneWorldSport.store.ListParticipants": [],
   "AllInOneWorldSport.store.MyBets": [],
   "AllInOneWorldSport.store.PhoneContacts": [],
+  "AllInOneWorldSport.store.WinnerPrizes": [],
   "AllInOneWorldSport.view.AboutGame": [],
   "AllInOneWorldSport.view.AccountSetting": [],
   "AllInOneWorldSport.view.BetDetail": [],
@@ -847,6 +849,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.model.ListParticipant": [],
   "AllInOneWorldSport.model.MyBets": [],
   "AllInOneWorldSport.model.PhoneContact": [],
+  "AllInOneWorldSport.model.WinnerPrize": [],
   "AllInOneWorldSport.proxy.AWSProxy": [
     "proxy.awsajax"
   ],
@@ -856,6 +859,7 @@ Ext.ClassManager.addNameAliasMappings({
   "AllInOneWorldSport.store.ListParticipants": [],
   "AllInOneWorldSport.store.MyBets": [],
   "AllInOneWorldSport.store.PhoneContacts": [],
+  "AllInOneWorldSport.store.WinnerPrizes": [],
   "AllInOneWorldSport.view.AboutGame": [
     "widget.aboutgame"
   ],

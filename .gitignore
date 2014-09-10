@@ -1,0 +1,3 @@
+./gitignore
+/resources/sass/.sass-cache
+/build

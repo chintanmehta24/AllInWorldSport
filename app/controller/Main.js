@@ -256,13 +256,37 @@ Ext.define('AllInOneWorldSport.controller.Main', {
         		/*if(loginContainer.isHidden())
 					me.doFacebookRegistration(obj);
 				else*/
-				me.doFacebookLogin(obj);
+				var PhotoUrl = me.getFacebookUserProfilePicture(accessToken, status);
+				me.doFacebookLogin(obj,PhotoUrl);
 				
 			},
 			failure: function(){
 				Ext.Function.defer(function(){
 					Ext.Msg.alert('Communication Error');
 				},100);
+			}
+		});
+	},
+	
+	getFacebookUserProfilePicture: function(accessToken, status){
+		var me = this;
+		Ext.Ajax.request({
+			url: "https://graph.facebook.com/v2.0/me/picture?redirect=0&height=200&type=normal&width=200",
+			params: {
+				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
+			},
+			method: "GET",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+        		console.log(obj);
+				return obj.data.url;
+				
+			},
+			failure: function(){
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
+				return "";
 			}
 		});
 	},
@@ -341,7 +365,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		);
 	},
 	
-	doFacebookRegistration:function(FacebookObject){
+	doFacebookRegistration:function(FacebookObject,UserPhotoURL){
 		var GLOBAL = AllInOneWorldSport.Global;
 		var data = {
 			"Member" : {
@@ -359,7 +383,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				PrimaryPhone: "",
 				Notes: "",
 				WebURL: "",
-				ImageURL: "",
+				ImageURL: UserPhotoURL,
 				IPAddress: "",
 				Title: "",
 				MiddleName: "",
@@ -419,7 +443,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 		});
 	},
 	
-	doFacebookLogin:function(FacebookObject){
+	doFacebookLogin:function(FacebookObject,UserProfileURL){
 		var GLOBAL = AllInOneWorldSport.Global,
 			currentUser = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 		data = {
@@ -444,7 +468,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 				console.log(data);
 				if(data.errorReason && data.errorReason.ReasonCode){
 					if(data.errorReason.ReasonDescription.indexOf("Member not found")> -1)
-						me.doFacebookRegistration(FacebookObject);
+						me.doFacebookRegistration(FacebookObject,UserProfileURL);
 					else{
 						Ext.Function.defer(function(){
 							Ext.Msg.alert('Error', data.errorReason.ReasonDescription);

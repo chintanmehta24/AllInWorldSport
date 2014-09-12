@@ -329,7 +329,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		var me = this,
 			current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 			member = current_user.Member,
-			photoUrl = member.WebURL,
+			photoUrl = member.WebURL || "",
 			isUrlOnAllInWorld = photoUrl.indexOf("http://images.allinworldsportsapp.com") >= 0,
 			fileName = photoUrl.substr(photoUrl.lastIndexOf("/") + 1),
 			successFn = function(){

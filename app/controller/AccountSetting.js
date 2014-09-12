@@ -222,7 +222,10 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 			success: function(response, opts){
 				var obj = Ext.decode(response.responseText);
         		console.log(obj);
-				me.doFacebookRegistration(obj);
+				
+				var PhotoUrl = me.getFacebookUserProfilePicture(accessToken, status);
+				me.doFacebookRegistration(obj,PhotoUrl);
+				
 				
 			},
 			failure: function(){
@@ -233,7 +236,30 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 		});
 	},
 	
-	doFacebookRegistration:function(FacebookObject){
+	getFacebookUserProfilePicture: function(accessToken, status){
+		var me = this;
+		Ext.Ajax.request({
+			url: "https://graph.facebook.com/v2.0/me/picture?redirect=0&height=200&type=normal&width=200",
+			params: {
+				"access_token": accessToken,	// "CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD",
+			},
+			method: "GET",
+			success: function(response, opts){
+				var obj = Ext.decode(response.responseText);
+        		console.log(obj);
+				return obj.data.url;
+				
+			},
+			failure: function(){
+				Ext.Function.defer(function(){
+					Ext.Msg.alert('Communication Error');
+				},100);
+				return "";
+			}
+		});
+	},
+	
+	doFacebookRegistration:function(FacebookObject,UserPhotoURL){
 		var GLOBAL = AllInOneWorldSport.Global;
 		var data = {
 			"Member" : {
@@ -251,7 +277,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 				PrimaryPhone: "",
 				Notes: "",
 				WebURL: "",
-				ImageURL: "",
+				ImageURL: UserPhotoURL,
 				IPAddress: "",
 				Title: "",
 				MiddleName: "",

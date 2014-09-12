@@ -88,6 +88,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 	                MemberId: current_user.MemberId,
 					WebURL:values.Status,
 					Notes:values.AboutMe,
+					PhotoUrl: current_user.Member.PhotoUrl
 				},
 				Participants : Participants,
 	            token: AllInOneWorldSport.Global.getAccessToken()

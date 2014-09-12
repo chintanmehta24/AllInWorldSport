@@ -3,6 +3,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     xtype: 'profile', 
     config: {
     	cls: "profile-cls",
+    	profilePickImageUrl: null,
     	items: [{
 			xtype: "navbar",
 			docked: "top"
@@ -38,7 +39,8 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     				html: "photo",
     				cls: "x-form-label"
     			},{
-    				xtype: "img",
+    				xtype: "button",
+    				action: "takeProfilePhoto",
     				cls: "photo-preview-cls"
     			},{
     				xtype: "container",
@@ -52,9 +54,10 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     				},
     				items: [{
     					text: "upload",
-    					action: "takeProfilePhoto"
+    					action: "uploadProfilePhoto"
     				}, {
-    					text: "delete"
+    					text: "delete",
+    					action: "deleteProfilePhoto"
     				}]
     			}]
     		}, {
@@ -109,12 +112,17 @@ Ext.define('AllInOneWorldSport.view.Profile', {
 				var me = this,
 					current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 				if(current_user){
+					me.setProfilePickImageUrl(null);
 					me.setValues({
 						FirstName: current_user.Member.FirstName,
 						Email: current_user.Member.EmailAddress,
 						AboutMe: current_user.Member.Notes,
 						Status: current_user.Member.ProfileStatus,
 					});
+					if(!Ext.isEmpty(current_user.Member.PhotoUrl)){
+						me.down("button[action=takeProfilePhoto]").element
+						.setStyle("backgroundImage", 'url("' + current_user.Member.PhotoUrl + '")');
+					}
 				}
 			}
 		}

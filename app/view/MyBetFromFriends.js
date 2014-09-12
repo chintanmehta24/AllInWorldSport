@@ -52,7 +52,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 						"<tpl if='Bet.Status==\"Pending\"'><div class='row-cls action-btns'>",
 							"<div class='accept-btn'>Accept</div>",
 							"<div class='spacer-cls'></div>",
-							"<div class='reject-btn'>Reject</div>",
+							//"<div class='reject-btn'>Reject</div>",
 						"</div></tpl>"].join(""),
 				// itemTpl: "<div class='thumb' style='background-image: url(resources/images/person.png);'></div>",
 							//"<div class='status {IsOnline}'></div>,",

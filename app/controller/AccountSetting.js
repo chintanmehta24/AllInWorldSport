@@ -107,8 +107,12 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 		var Participants = [];
 		var participate1 = ParticipantTeams[0].getRecord(),
 			participate2 = ParticipantTeams[1].getRecord();
-		Participants.push(participate1.getData());
-		Participants.push(participate2.getData());
+		
+		if(participate1!=null)
+			Participants.push(participate1.getData());
+		if(participate2!=null)
+			Participants.push(participate2.getData());
+			
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
 			//loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
 		
@@ -197,7 +201,11 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
                         var accessToken = fbRawResponse[0].split('=')[1],
                         	expiresIn = fbRawResponse[1].split('=')[1];
                     	me.getFacebookUserDetail(accessToken, true);
+						windowObj.close();
                     }
+					if(windowURL.indexOf('http://allinworldsportsapp.com:8082/')==0){
+						windowObj.close();
+					}
                 };
             windowObj.addEventListener('loadstart', callbackHandler);
 			//me.getFacebookUserDetail("CAAKgZBp2TxnMBAAChY7oCWk99AytBnrnkDdFHpIh47oUqn6tKIlfQTrj4gCSSEGQRqkFk1E6VSrzyyglmRZAu7jrEOycsU9M20vz6GuG5iRwW4eeGVXZCRHvs3IZAgwOWl4Mkj5tQBbNUoYZBAnxXZBgFML7OVj7pThx0yvxwZBluYGKM8uyPyRUhkZCbDErQNB4I30Iw88htCQ5DGiZB782FXOno9jIAE0sZD");
@@ -282,7 +290,7 @@ Ext.define('AllInOneWorldSport.controller.AccountSetting', {
 					return;
 				}
 				Ext.Function.defer(function(){
-						Ext.Msg.alert('Message', "Connected to facebook scucessfully.");
+						Ext.Msg.alert('Message', "Connected to facebook successfully.");
 					},100);
 				
 				

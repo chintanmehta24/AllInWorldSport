@@ -2,6 +2,7 @@ Ext.define("AllInOneWorldSport.view.MyBet", {
 	extend : "Ext.Panel",
 	xtype : "mybet",
 	config : {
+		scrollable: true,
 		cls: "my-bet-cls",
 		items: [{
 			xtype: "navbar",

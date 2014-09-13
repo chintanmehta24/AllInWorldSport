@@ -561,7 +561,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 		var me = this,
 			facebookUrl = "https://m.facebook.com/v2.0/dialog/apprequests",
 			app_id = "277412065764445",
-			message = "YOUR_MESSAGE_HERE!",
+			message = "Welcome to ALL IN World Sports",
 			redirect_uri = "http://allinworldsportsapp.com:8082/",
 			requestUrl = Ext.String.format("{0}?app_id={1}&message={2}&redirect_uri={3}", facebookUrl, app_id, message, redirect_uri);
 			var windowObj = window.open(encodeURI(requestUrl), '_blank', 'location=no'),

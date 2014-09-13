@@ -88,7 +88,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 	                MemberId: current_user.MemberId,
 					WebURL:values.Status,
 					Notes:values.AboutMe,
-					PhotoUrl: current_user.Member.PhotoUrl
+					ImageURL: current_user.Member.PhotoUrl
 				},
 				Participants : Participants,
 	            token: AllInOneWorldSport.Global.getAccessToken()
@@ -297,10 +297,9 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 	                EmailAddress: current_user.Member.EmailAddress,
 	                PrimaryPhone: current_user.Member.PrimaryPhone,
 	                MemberId: current_user.MemberId,
-					WebURL: current_user.Member.WebURL,
+					WebURL: current_user.Member.ProfileStatus,
 					Notes: current_user.Member.Notes,
-					ProfileStatus: current_user.Member.ProfileStatus,
-					PhotoUrl: imageUrl
+					ImageURL: imageUrl
 				},
 	            token: AllInOneWorldSport.Global.getAccessToken()
 			},
@@ -315,6 +314,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 				}
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(data.MemberBalance));
+				Ext.Msg.alert('Message', "Image uploaded successfully.");
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);

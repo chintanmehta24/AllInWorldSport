@@ -101,7 +101,7 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 			me.setMasked(false);
 		}, function(){
 			me.setMasked({xtype: "loadmask"});
-			alert("Error");
+			Ext.Msg.alert("Error","Something went wronge");
 		}, options);		
 	},
 	saveFriendList: function(){

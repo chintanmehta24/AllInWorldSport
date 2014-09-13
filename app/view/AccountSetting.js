@@ -21,7 +21,10 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					text: "Change Photo",
 					ui: "plain",
 					cls: "profile-photobtn-cls",
+					//cls: "photo-preview-cls",
 					iconAlign: "top",
+					action: "takeProfilePhoto",
+					itemId : "accountSettingProfilePicture",
 					icon: "resources/images/person.png"
 				}, {
 					xtype: "togglefield",
@@ -412,6 +415,11 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 				}
 			}
 		});
+		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER"));
+		if(!Ext.isEmpty(current_user.Member.PhotoUrl)){
+			me.down("#accountSettingProfilePicture").setIcon(
+			current_user.Member.PhotoUrl);
+		}
 		
 	},
 	

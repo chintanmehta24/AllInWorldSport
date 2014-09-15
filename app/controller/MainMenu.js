@@ -609,7 +609,7 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 			url: global.SERVER_URL + "/TellaFriendReferMember",
 			jsonData: {
 				token: global.getAccessToken(),
-				FacebookId: friendId,
+				FacebookUId: friendId,
 				FirstName: "",
 				Message: "Invite Message",
 		        SponsorMemberid: logged_In_User.MemberId

@@ -61,6 +61,14 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			return;
 		}
 		
+		//Check Email Validation
+		if(me.emailValidate(values.Email) == false){
+			Ext.Function.defer(function(){
+				Ext.Msg.alert("Error", "Email address is not valid");
+			},100);
+			return;
+		}
+		
 		var Participants = [];
 		var participate1 = ParticipantTeams[0].getRecord(),
 			participate2 = ParticipantTeams[1].getRecord();
@@ -354,5 +362,18 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		}else{
 			successFn();
 		}
+	},
+	
+	emailValidate:function(email) {
+		//var x = document.forms["myForm"]["email"].value;
+		/*var atpos = email.indexOf("@");
+		var dotpos = email.lastIndexOf(".");
+		if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+			return false;
+		}
+		else 
+			return true;*/
+			var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(email);
 	}
 });

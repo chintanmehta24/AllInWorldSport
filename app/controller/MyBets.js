@@ -116,9 +116,22 @@ Ext.define('AllInOneWorldSport.controller.MyBets', {
 				store.filter(function(rec){
 					var data = rec.getData();
 					
-					if(data.Bet.Status == BetStatus ){
-						return true;
+					if(BetStatus == "Pending"){
+						if(data.Bet.Status == BetStatus && data.Bet.Accepted == false){
+							return true;
+						}
+					}
+					else if(BetStatus == "Accepted"){
 						
+						//if(data.Bet.Status == BetStatus && data.Bet.Accepted == true){
+						if(data.Bet.Accepted){
+							return true;
+						}
+					}
+					else if(BetStatus == "Expired"){
+						if(data.Bet.Status == BetStatus && data.Bet.Accepted == false){
+							return true;
+						}
 					}
 					return false;
 				});

@@ -47,6 +47,7 @@ Ext.define('AllInOneWorldSport.view.OtherUserProfile', {
     				cls: "x-form-label"
     			},{
     				xtype: "img",
+					id : "id_otherUserProfilePicture",
     				cls: "photo-preview-cls"
     			},{
     				xtype: "container",
@@ -70,6 +71,7 @@ Ext.define('AllInOneWorldSport.view.OtherUserProfile', {
     			name: "Participant1",
 				id:"Participant1ID",
 				placeHolder: "Team1",
+				readOnly:true
 				
     		}, {
     			
@@ -77,6 +79,7 @@ Ext.define('AllInOneWorldSport.view.OtherUserProfile', {
     			name: "Participant2",
 				id:"Participant2ID",
 				placeHolder: "Team2",
+				readOnly:true
 				
     		}]
     	}/*,{
@@ -110,9 +113,17 @@ Ext.define('AllInOneWorldSport.view.OtherUserProfile', {
 		var me = this;
 		me.setValues(ProfileData);
 		
+		if(!Ext.isEmpty(ProfileData.PhotoUrl)){
+			Ext.getCmp('id_otherUserProfilePicture').setSrc(
+			ProfileData.PhotoUrl);
+		}
+		
 		var teamsAraay = Ext.Array.filter(ProfileData.Teams , function(obj){if(obj.Status == "Favorite") return true;});
 		var Participant1 = me.down("[name:Participant1]");
 		Participant1.setValue(teamsAraay.Name)
+		
+		
+		
 		
 		
 	}

@@ -41,6 +41,7 @@ Ext.define('AllInOneWorldSport.view.Profile', {
     			},{
     				xtype: "button",
     				action: "takeProfilePhoto",
+					id:'id_ProfilePicture',
     				cls: "photo-preview-cls"
     			},{
     				xtype: "container",
@@ -123,6 +124,23 @@ Ext.define('AllInOneWorldSport.view.Profile', {
 						me.down("button[action=takeProfilePhoto]").element
 						.setStyle("backgroundImage", 'url("' + current_user.Member.PhotoUrl + '")');
 					}
+					
+					var teams = current_user.Member.Teams;
+					for(var i = 0;i<teams.length;i++){
+						if(teams[i].Status == "Favorite")
+						{
+							if(teams[i].LeagueName == "NFL"){
+								if(Ext.getCmp('Participant1ID')!=null)
+									Ext.getCmp('Participant1ID').setValue(teams[i].ParticipantId);
+								
+							}
+							else if(teams[i].LeagueName == "NCAA"){
+								if(Ext.getCmp('Participant2ID')!=null)
+								Ext.getCmp('Participant2ID').setValue(teams[i].ParticipantId);
+							}
+						}
+					}
+					
 				}
 			}
 		}

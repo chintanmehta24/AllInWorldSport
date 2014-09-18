@@ -6,6 +6,7 @@ Ext.define('AllInOneWorldSport.model.Friend', {
             { name: 'Balance', type: 'auto' },
             { name: 'BetEntries', type: 'auto' },
             { name: 'Bets', type: 'auto' },
+			{ name: 'Profile', type: 'auto' },
             { name: 'EmailAddress', type: 'string' },
             { name: 'FacebookUId', type: 'number' },
             { name: 'FirstName', type: 'string' },

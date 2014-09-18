@@ -62,11 +62,13 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		}
 		
 		//Check Email Validation
-		if(me.emailValidate(values.Email) == false){
-			Ext.Function.defer(function(){
-				Ext.Msg.alert("Error", "Email address is not valid");
-			},100);
-			return;
+		if(values.Email != ""){
+			if(me.emailValidate(values.Email) == false){
+				Ext.Function.defer(function(){
+					Ext.Msg.alert("Error", "Email address is not valid");
+				},100);
+				return;
+			}
 		}
 		
 		var Participants = [];
@@ -289,6 +291,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 	},
 	
 	updateProfilePicture: function(imageUrl){
+		var me = this;
 		var current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 			loginName = localStorage.getItem("CURRENT_USER_LOGINNAME");
 		Ext.Ajax.request({
@@ -322,7 +325,13 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 				}
 				localStorage.setItem("CURRENT_LOGIN_USER", Ext.encode(data));
 				localStorage.setItem("CURRENT_USER_MEMBERBALANCE",Ext.encode(data.MemberBalance));
-				Ext.Msg.alert('Message', "Image uploaded successfully.");
+				if(imageUrl == ""){
+					Ext.getCmp('id_ProfilePicture').element
+						.setStyle("backgroundImage", 'url(resources/images/person.png)');
+					Ext.Msg.alert('Message', "Image deleted successfully.");
+				}
+				else
+					Ext.Msg.alert('Message', "Image uploaded successfully.");
 			},
 			failure : function(responce) {
 				Ext.Viewport.setMasked(false);
@@ -338,13 +347,17 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		var me = this,
 			current_user = Ext.decode(localStorage.getItem("CURRENT_LOGIN_USER")),
 			member = current_user.Member,
-			photoUrl = member.WebURL || "",
+			photoUrl = member.PhotoUrl || "",
 			isUrlOnAllInWorld = photoUrl.indexOf("http://images.allinworldsportsapp.com") >= 0,
 			fileName = photoUrl.substr(photoUrl.lastIndexOf("/") + 1),
 			successFn = function(){
 					me.updateProfilePicture("");
 			};
 		if(isUrlOnAllInWorld){
+			Ext.Viewport.setMasked({
+				xtype : "loadmask",
+				message : "Please wait"
+			});
 			Ext.Ajax.request({
 				url : "http://fileupload.allinworldsportsapp.com/FileTransferHandler.ashx",
 				method : "DELETE",
@@ -353,10 +366,11 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 					"f": fileName
 				},
 				success: function(){
+					Ext.Viewport.setMasked(false);
 					successFn();
 				},
 				failure: function(){
-					
+					Ext.Viewport.setMasked(false);
 				}
 			});
 		}else{

@@ -58,7 +58,9 @@ Ext.define("AllInOneWorldSport.view.FriendList", {
 				this.hide();
 			}
 		}, me, {element: "element"});
-		me.getStore().load();
+		var store = me.getStore();
+		store.clearFilter(true);
+		store.load();
 	},
 	
 	initialize: function(){

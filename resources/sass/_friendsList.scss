@@ -37,6 +37,9 @@
           @include st-box-orient(horizontal);
           @include st-box-align(center);
         }
+        .reverse-cls{
+          @include st-box-direction(reverse, row);
+        }
         .action-btns{
           display: none;
           .spacer-cls{
@@ -46,9 +49,9 @@
             padding: 0 1em;
             line-height: 2;
             color: white;
-			font-size: 0.75em;
-			border-radius: 1.5em;
-			border: 0;
+      			font-size: 0.75em;
+      			border-radius: 1.5em;
+      			border: 0;
           }
           .accept-btn{
             @include background-gradient($confirm-color);
@@ -58,9 +61,11 @@
           }
         }
         &.x-item-selected{
-          .action-btns{
-            @include st-box();
-            margin-top: 0.5em;
+          .show-accept-btn{
+            &.action-btns{
+              @include st-box();
+              margin-top: 0.5em;
+            }
           }
         }
         margin-top: 0.5em;

@@ -446,8 +446,10 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 							callbackFn.apply(this, arguments);
 						}
 						var cnt = 0;
-						friendStore.clearFilter(true);
-						friendStore.filter(function(rec){
+						friendStore.clearFilter();
+						console.log(friendStore.getCount());
+						friendStore.filter(function(rec, index){
+							console.log("Index: ", index);
 							if(cnt<5){
 								cnt++;
 								return true;

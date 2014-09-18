@@ -44,47 +44,6 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 							 "<span>{Balance.TicketBalance}</span>", 
 						"</div>"].join(""),
 			store : 'LeaderBoardTopFivePlayers',
-			/*store : {
-				fields: [
-					 "PlayerName" ,
-					 "BestWin" ,
-					 "MostWin" ,
-					 "MostBetCreated" ,
-					 "HeighestBalance" ,
-					 "Tickets", 
-				],
-				data : [
-					{
-						"PlayerName": "Player 1" ,
-						"BestWin": 25 ,
-						"MostWin": 25 ,
-						"MostBetCreated": 25 ,
-						"HeighestBalance": 25 ,
-						"Tickets": 25 
-					}, {
-						"PlayerName": "Player 2" ,
-						"BestWin": 25 ,
-						"MostWin": 25 ,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25 
-					}, {
-						"PlayerName": "Player 3" ,
-						"BestWin": 25,
-						"MostWin": 25,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25
-					}, {
-						"PlayerName": "Player 4",
-						"BestWin": 25,
-						"MostWin": 25,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25
-					}
-				]
-			},*/
 			items: [{
 				xtype: "label",
 				cls: "leaderlist-title-cls",
@@ -109,47 +68,6 @@ Ext.define("AllInOneWorldSport.view.LeaderBoard", {
 				single: true,
 				fn: "onPainted"
 			}],
-			/*store : {
-				fields: [
-					 "PlayerName" ,
-					 "BestWin" ,
-					 "MostWin" ,
-					 "MostBetCreated" ,
-					 "HeighestBalance" ,
-					 "Tickets", 
-				],
-				data : [
-					{
-						"PlayerName": "Player 1" ,
-						"BestWin": 25 ,
-						"MostWin": 25 ,
-						"MostBetCreated": 25 ,
-						"HeighestBalance": 25 ,
-						"Tickets": 25 
-					}, {
-						"PlayerName": "Player 2" ,
-						"BestWin": 25 ,
-						"MostWin": 25 ,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25 
-					}, {
-						"PlayerName": "Player 3" ,
-						"BestWin": 25,
-						"MostWin": 25,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25
-					}, {
-						"PlayerName": "Player 4",
-						"BestWin": 25,
-						"MostWin": 25,
-						"MostBetCreated": 25,
-						"HeighestBalance": 25,
-						"Tickets": 25
-					}
-				]
-			},*/
 			items: [{
 				xtype: "label",
 				cls: "leaderlist-title-cls",

@@ -3,6 +3,7 @@ Ext.define('AllInOneWorldSport.model.MyBets', {
     
     config: {
         fields: [
+            { name: 'CreatedByMe', type: 'boolean' },
             { name: 'Bet', type: 'auto' },
             { name: 'Entry', type: 'auto' },
             { name: 'Event', type: 'auto' },

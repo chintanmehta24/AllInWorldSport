@@ -409,9 +409,11 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 						if(!success){
 							callbackFn.apply(this, arguments);
 						}
+						
+						/*******************************
 						topFivePlayers.sort(new Ext.util.Sorter({
 							sorterFn: function(rec1, rec2){
-								return rec1.get("Balance").CreditBalance < rec2.get("Balance").CreditBalance;
+								return rec1.get("Balance").BetBalance.NumberOfWins < rec2.get("Balance").BetBalance.NumberOfWins;
 							}
 						}));
 						var arrayId = [],
@@ -423,6 +425,8 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 						topFivePlayers.filter(function(rec){
 							return Ext.Array.indexOf(arrayId, rec.getId()) != -1;
 						});
+						/*******************************/
+						
 						/*Ext.Viewport.setMasked({
 							xtype : "loadmask",
 							message : "Please wait"

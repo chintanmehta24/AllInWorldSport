@@ -74,7 +74,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 							},
 							{
 								xtype: "button",
-								text: "8",
+								text: "0",
 								name : 'CoinBalance',
 								cls: 'balance-btn-cls'
 							}
@@ -97,7 +97,7 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 							},
 							{
 								xtype: "button",
-								text: "8",
+								text: "0",
 								name : 'TicketBalance',
 								cls: 'balance-btn-cls'
 							}
@@ -357,8 +357,8 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 					var CoinBalance = me.query("[name=CoinBalance]");
 					var TicketBalance = me.query("[name=TicketBalance]");
 					
-					CoinBalance[0].setText(memberBalance.CreditBalance);
-					TicketBalance[0].setText(memberBalance.TicketBalance);
+					CoinBalance[0].setText(""+memberBalance.CreditBalance);
+					TicketBalance[0].setText(""+memberBalance.TicketBalance);
 					Level[0].setHtml(memberBalance.ExperiencePoint.LevelDescription);
 					
 				}

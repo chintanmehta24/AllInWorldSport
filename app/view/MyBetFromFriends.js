@@ -40,7 +40,7 @@ Ext.define("AllInOneWorldSport.view.MyBetFromFriends", {
 							//"<div class='status <tpl if=\"Profile.IsOnline\">active<tpl else>inactive</tpl>'></div>",
 							"<div class='title'>{Profile.FullName}&nbsp;</div>",
 							"<div></div>",
-							"<span class='title' style='text-align: right;'><div>{Bet.Status}</div><div>Amount: {Bet.Amount}</div></span>",
+							"<span class='title' style='text-align: right;'><div style='font-size: 0.7em;'>{Bet.Status}</div><div style='margin-bottom: 1em;'>Amount: {Bet.Amount}</div></span>",
 						"</div>",
 						"<div class='row-cls reverse-cls' style='font-size:0.7em;'>",
 							"<tpl for='Event.EventParticipants'>",

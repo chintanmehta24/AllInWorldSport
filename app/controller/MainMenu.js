@@ -403,17 +403,26 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				}
 		};
 		/*	sorting using Balance.CreaditBalance	*/
-		topFivePlayers.sort(new Ext.util.Sorter({
-			sorterFn: function(rec1, rec2){
-				return rec1.get("Balance").CreditBalance < rec2.get("Balance").CreditBalance;
-			}
-		}));
 		topFivePlayers.load({
 					callback: function(records, operation, success){
 						//Ext.Viewport.setMasked(false);
 						if(!success){
 							callbackFn.apply(this, arguments);
 						}
+						topFivePlayers.sort(new Ext.util.Sorter({
+							sorterFn: function(rec1, rec2){
+								return rec1.get("Balance").CreditBalance < rec2.get("Balance").CreditBalance;
+							}
+						}));
+						var arrayId = [],
+							cnt = 0;
+						topFivePlayers.each(function(rec){
+							if(cnt++ >= 5)return;
+							arrayId.push(rec.getId());
+						});
+						topFivePlayers.filter(function(rec){
+							return Ext.Array.indexOf(arrayId, rec.getId()) != -1;
+						});
 						/*Ext.Viewport.setMasked({
 							xtype : "loadmask",
 							message : "Please wait"
@@ -434,27 +443,26 @@ Ext.define('AllInOneWorldSport.controller.MainMenu', {
 				}
 		};
 		/*	sorting using Balance.CreaditBalance	*/
-		friendStore.sort(new Ext.util.Sorter({
-			sorterFn: function(rec1, rec2){
-				return rec1.get("Balance").BetBalance.NumberOfWins < rec2.get("Balance").BetBalance.NumberOfWins;
-			}
-		}));
 		friendStore.load({
 					callback: function(records, operation, success){
 						Ext.Viewport.setMasked(false);
 						if(!success){
 							callbackFn.apply(this, arguments);
 						}
-						var cnt = 0;
 						friendStore.clearFilter();
-						console.log(friendStore.getCount());
-						friendStore.filter(function(rec, index){
-							console.log("Index: ", index);
-							if(cnt<5){
-								cnt++;
-								return true;
+						friendStore.sort(new Ext.util.Sorter({
+							sorterFn: function(rec1, rec2){
+								return rec1.get("Balance").BetBalance.NumberOfWins < rec2.get("Balance").BetBalance.NumberOfWins;
 							}
-							return false;
+						}));
+						var arrayId = [],
+							cnt = 0;
+						friendStore.each(function(rec){
+							if(cnt++ >= 5)return;
+							arrayId.push(rec.getId());
+						});
+						friendStore.filter(function(rec){
+							return Ext.Array.indexOf(arrayId, rec.getId()) != -1;
 						});
 					}
 				});

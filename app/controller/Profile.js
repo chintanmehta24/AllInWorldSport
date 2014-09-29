@@ -250,8 +250,10 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		var me = this,
 			formPanel = btn.up("profile"),
 			fileURL = formPanel.getProfilePickImageUrl();
-		if(Ext.isEmpty(fileURL))
+		if(Ext.isEmpty(fileURL)){
+			Ext.Msg.alert("Message", "Tap the image to select photo then click on upload button");
 			return;
+		}
 		var options = new FileUploadOptions(),
 			viewport = Ext.Viewport;
 		options.fileKey = "files[]";
@@ -267,7 +269,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		ft.onprogress = function(progressEvent) {
 			if (progressEvent.lengthComputable) {
 				var mask = viewport.getMasked();
-			  mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),2) + "%");
+			  mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),2) * 100 + "%");
 			}
 		};				
 		viewport.setMasked({

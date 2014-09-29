@@ -7,6 +7,10 @@ Ext.define("AllInOneWorldSport.view.Login", {
 	config : {
 		cls : "login-cls",
 		layout : "vbox",
+		scrollable: {
+			direction: 'vertical',
+			directionLock: true
+		},
 		items : [{
 			xtype : "image",
 			src : "resources/images/logo.png",

@@ -420,6 +420,10 @@ Ext.define("AllInOneWorldSport.view.AccountSetting", {
 			me.down("#accountSettingProfilePicture").setIcon(
 			current_user.Member.PhotoUrl);
 		}
+		else
+		{
+			me.down("#accountSettingProfilePicture").setIcon("resources/images/person.png");
+		}
 		
 	},
 	

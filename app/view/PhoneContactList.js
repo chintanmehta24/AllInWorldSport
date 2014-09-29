@@ -2,6 +2,10 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 	extend : "Ext.dataview.DataView",
 	xtype : "phonebookcontactlist",
 	config : {
+		scrollable: {
+			direction: 'vertical',
+			directionLock: true
+		},
 		hideOnMaskTap: true,
 		modal: true,
 		centered: true,
@@ -37,8 +41,11 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 		],
 		itemCls: "friend-cls",
 		cls: "friends-list-cls friend-cls",
-		itemTpl: ["<div class='row-cls' style='line-height: 2;'>","<div class='title'>{displayName}</div><div style='padding-right: 2em'>{phoneNumbers}</div>","</div>",
+		/*itemTpl: ["<div class='row-cls' style='line-height: 2;'>","<div class='title'>{displayName}</div><div style='padding-right: 2em'>{phoneNumbers}</div>","</div>",
 				"<div class='row-cls' style='line-height: 2;'>","<div class='title'>{emails}</div>","</div>"].join(""),
+		*/
+		itemTpl: ["<div class='row-cls' style='line-height: 2;font-size:0.8em;'>","<div class='title'>{displayName}</div><div style='padding-right: 3.5em;font-size:0.8em;'>{phoneNumbers}</div>","</div>",
+				"<div class='row-cls' style='line-height: 2;font-size:0.8em;'>","<div class='title'>{emails}</div>","</div>"].join(""),
 		store: "PhoneContacts",
 		mode: "MULTI",
 		listeners: [{
@@ -75,34 +82,64 @@ Ext.define("AllInOneWorldSport.view.PhoneContactList", {
 	},
 	
 	initialize: function(){
-		
-		this.callParent(arguments);
-		var me = this,
-			options      = new ContactFindOptions(),
-			fields       = ["displayName", "name", "phoneNumbers", "emails"];
-		options.filter   = "";
-		options.multiple = true;
-		me.setMasked({xtype: "loadmask"});
-		navigator.contacts.find(fields, function(contacts){
-			var store = Ext.getStore("PhoneContacts");
-			var arrayPhone = [];
-			Ext.Array.forEach(contacts, function(c){
-				var obj = {
-					id: c.id,
-					rawId: c.rawId,
-					displayName: c.displayName,
-					phoneNumbers: c.phoneNumbers ? c.phoneNumbers[0].value: "",
-					emails: c.emails ? c.emails[0].value : ""
-				};
-				//	console.log(Ext.encode(obj));
-				arrayPhone.push(obj);
-			});
-			store.add(arrayPhone);
-			me.setMasked(false);
-		}, function(){
+		if(Ext.os.is.Android){
+			this.callParent(arguments);
+			var me = this,
+				options      = new ContactFindOptions(),
+				fields       = ["displayName", "name", "phoneNumbers", "emails"];
+			options.filter   = "";
+			options.multiple = true;
 			me.setMasked({xtype: "loadmask"});
-			Ext.Msg.alert("Warning","Something went wrong");
-		}, options);		
+			navigator.contacts.find(fields, function(contacts){
+				var store = Ext.getStore("PhoneContacts");
+				var arrayPhone = [];
+				Ext.Array.forEach(contacts, function(c){
+					var obj = {
+						id: c.id,
+						rawId: c.rawId,
+						displayName: c.displayName,
+						phoneNumbers: c.phoneNumbers ? c.phoneNumbers[0].value: "",
+						emails: c.emails ? c.emails[0].value : ""
+					};
+					//	console.log(Ext.encode(obj));
+					arrayPhone.push(obj);
+				});
+				store.add(arrayPhone);
+				me.setMasked(false);
+			}, function(){
+				me.setMasked({xtype: "loadmask"});
+				Ext.Msg.alert("Warning","Something went wrong");
+			}, options);	
+		}
+		else{
+			this.callParent(arguments);
+			var me = this,
+				options      = new ContactFindOptions(),
+				fields       = ["displayName", "name", "phoneNumbers", "emails"];
+			options.filter   = "";
+			options.multiple = true;
+			me.setMasked({xtype: "loadmask"});
+			navigator.contacts.find(fields, function(contacts){
+				var store = Ext.getStore("PhoneContacts");
+				var arrayPhone = [];
+				Ext.Array.forEach(contacts, function(c){
+					var obj = {
+						id: c.id,
+						rawId: c.rawId,
+						displayName: c.name.formatted,
+						phoneNumbers: c.phoneNumbers ? c.phoneNumbers[0].value: "",
+						emails: c.emails ? c.emails[0].value : ""
+					};
+					//	console.log(Ext.encode(obj));
+					arrayPhone.push(obj);
+				});
+				store.add(arrayPhone);
+				me.setMasked(false);
+			}, function(){
+				me.setMasked({xtype: "loadmask"});
+				Ext.Msg.alert("Warning","Something went wrong");
+			}, options);	
+		}
 	},
 	saveFriendList: function(){
 		var me = this;

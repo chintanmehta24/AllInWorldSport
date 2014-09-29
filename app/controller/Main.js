@@ -312,7 +312,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 	doForgetPassword: function(btn){
 		Ext.Msg.prompt(
 			'ALL IN',
-			'Forget Passwords?',
+			'Forgot Password?',
 			function(btn,text){
 				if(btn == 'ok')
 				{
@@ -370,7 +370,7 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			null,
 			false, // false, default (single line)
 			null,
-			{placeHolder : 'LoginName'}
+			{placeHolder : 'Login Name'}
 		);
 	},
 	

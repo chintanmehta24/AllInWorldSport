@@ -328,6 +328,8 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 				if(imageUrl == ""){
 					Ext.getCmp('id_ProfilePicture').element
 						.setStyle("backgroundImage", 'url(resources/images/person.png)');
+					Ext.Viewport.down("#accountSettingProfilePicture").setIcon("resources/images/person.png");
+					
 					Ext.Msg.alert('Message', "Image deleted successfully.");
 				}
 				else

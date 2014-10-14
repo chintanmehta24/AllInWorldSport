@@ -66,6 +66,15 @@ Ext.define('AllInOneWorldSport.controller.Main', {
 			},
 			"token" : GLOBAL.getAccessToken()
 		};
+		
+		//validation
+		if(values.DisplayName == "" || values.LoginName == "" || values.Password == ""){
+			Ext.Function.defer(function(){
+				Ext.Msg.alert("Message","Required field is empty");
+			},100);
+			return;
+		}
+		
 		Ext.Viewport.setMasked({
 			xtype : "loadmask",
 			message : "Please wait"

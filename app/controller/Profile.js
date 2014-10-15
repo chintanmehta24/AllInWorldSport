@@ -269,7 +269,8 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 		ft.onprogress = function(progressEvent) {
 			if (progressEvent.lengthComputable) {
 				var mask = viewport.getMasked();
-			  mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),2) * 100 + "%");
+				mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),1) * 100 + "%");
+			  //mask.setMessage("Uploading..." + Ext.Number.toFixed((progressEvent.loaded / progressEvent.total),2) * 100 + "%");
 			}
 		};				
 		viewport.setMasked({
@@ -282,7 +283,7 @@ Ext.define('AllInOneWorldSport.controller.Profile', {
 			var response = Ext.decode(obj.response),
 				data = Ext.isArray(response) ? response[0]: response,
 				url = data && data.name; 
-			formPanel.getProfilePickImageUrl(null);
+			formPanel.setProfilePickImageUrl(null);
 			me.updateProfilePicture("http://images.allinworldsportsapp.com/"+url);
 			// component.element.setStyle("backgroundImage", 'url("http://images.allinworldsportsapp.com/' + url + '")');
 		}, function(obj){

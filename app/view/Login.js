@@ -195,6 +195,8 @@ Ext.define("AllInOneWorldSport.view.Login", {
 			// LastName.show();
 			// EmailAddress.show();
 			infoText.setHtml("REGISTER USING YOUR FACEBOOK ACCOUNT");
+			if(Ext.os.is.iOS)
+				DisplayName.focus();
 		}
 		me.reset();
 	},
